@@ -1,0 +1,26 @@
+modLoader="neoforgesml"
+loaderVersion="[1,)"
+license="MIT"
+
+[[mods]]
+modId="redliner"
+version="1.0.0"
+displayName="Redliner"
+displayURL="https://github.com/ransombiyato/redliner101"
+logoFile="redliner_logo.png"
+description="""
+A momentum-based katana mod inspired by the Roblox game Redliner.
+Hold the Redliner katana to enable Source-style bunny hopping with momentum preservation.
+Use dash charges to launch forward with speed-scaled damage!
+"""
+authors="ransombiyato"
+contacts=[
+    "https://github.com/ransombiyato/redliner101"
+]
+
+[[dependencies.redliner]]
+    modId="neoforge"
+    mandatory=true
+    versionRange="[21,)"
+    ordering="NONE"
+    side="BOTH"

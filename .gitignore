@@ -1,0 +1,31 @@
+# Gradle
+.gradle/
+build/
+bin/
+out/
+*.jar
+*.zip
+
+# IDE
+.idea/
+.eclipse/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Minecraft
+run/
+echo/
+
+# Maven
+target/
+.m2/
+
+# Node
+node_modules/
+npm-debug.log
