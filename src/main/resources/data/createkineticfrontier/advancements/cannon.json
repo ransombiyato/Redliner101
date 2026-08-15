@@ -1,0 +1,31 @@
+{
+  "parent": "createkineticfrontier:launch",
+  "display": {
+    "icon": {
+      "item": "createkineticfrontier:kinetic_cannon"
+    },
+    "title": {
+      "translate": "advancements.createkineticfrontier.cannon.title"
+    },
+    "description": {
+      "translate": "advancements.createkineticfrontier.cannon.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "cannon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "createkineticfrontier:kinetic_cannon"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

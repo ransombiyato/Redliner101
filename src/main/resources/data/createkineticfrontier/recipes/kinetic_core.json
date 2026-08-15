@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BGB",
+    "PFP",
+    "BGB"
+  ],
+  "key": {
+    "B": {
+      "item": "create:brass_casing"
+    },
+    "G": {
+      "item": "create:cogwheel"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "F": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "id": "createkineticfrontier:kinetic_core",
+    "count": 1
+  }
+}

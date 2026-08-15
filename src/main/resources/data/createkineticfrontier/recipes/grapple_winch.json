@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CEC",
+    "BSB",
+    "ICI"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "B": {
+      "item": "create:brass_casing"
+    },
+    "S": {
+      "item": "create:shaft"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "id": "createkineticfrontier:grapple_winch",
+    "count": 1
+  }
+}

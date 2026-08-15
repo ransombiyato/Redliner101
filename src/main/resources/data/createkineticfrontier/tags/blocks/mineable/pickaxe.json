@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "createkineticfrontier:kinetic_core",
+    "createkineticfrontier:momentum_launcher",
+    "createkineticfrontier:kinetic_rail",
+    "createkineticfrontier:grapple_winch",
+    "createkineticfrontier:kinetic_brake",
+    "createkineticfrontier:flywheel_array",
+    "createkineticfrontier:kinetic_cannon",
+    "createkineticfrontier:kinetic_sensor"
+  ]
+}

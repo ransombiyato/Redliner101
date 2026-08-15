@@ -1,0 +1,31 @@
+{
+  "parent": "createkineticfrontier:hook",
+  "display": {
+    "icon": {
+      "item": "createkineticfrontier:kinetic_rail"
+    },
+    "title": {
+      "translate": "advancements.createkineticfrontier.rail.title"
+    },
+    "description": {
+      "translate": "advancements.createkineticfrontier.rail.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "rail": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "createkineticfrontier:kinetic_rail"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

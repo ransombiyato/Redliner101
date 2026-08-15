@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createkineticfrontier:block/flywheel_array"
+    },
+    "facing=south": {
+      "model": "createkineticfrontier:block/flywheel_array"
+    },
+    "facing=east": {
+      "model": "createkineticfrontier:block/flywheel_array"
+    },
+    "facing=west": {
+      "model": "createkineticfrontier:block/flywheel_array"
+    }
+  }
+}

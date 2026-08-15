@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createkineticfrontier:block/kinetic_core"
+    },
+    "facing=south": {
+      "model": "createkineticfrontier:block/kinetic_core"
+    },
+    "facing=east": {
+      "model": "createkineticfrontier:block/kinetic_core"
+    },
+    "facing=west": {
+      "model": "createkineticfrontier:block/kinetic_core"
+    }
+  }
+}

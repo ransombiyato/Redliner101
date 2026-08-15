@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createkineticfrontier:block/grapple_winch"
+    },
+    "facing=south": {
+      "model": "createkineticfrontier:block/grapple_winch"
+    },
+    "facing=east": {
+      "model": "createkineticfrontier:block/grapple_winch"
+    },
+    "facing=west": {
+      "model": "createkineticfrontier:block/grapple_winch"
+    }
+  }
+}
