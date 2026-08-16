@@ -1,24 +1,34 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useEffect, useMemo, useState } from "react";
 
 import { ActionButton, AppScreen, palette, Section, Stat } from "@/components/guyvs/ui";
+import { getBattleCamera } from "@/lib/guyvs/battle-camera";
 import { useProject } from "@/lib/guyvs/project-store";
 import { stepBattle, type SimActor } from "@/lib/guyvs/simulation";
+import type { Guy } from "@/lib/guyvs/types";
 
-type DisplayActor = SimActor & { accent: string; name: string };
+type DisplayActor = SimActor & { accent: string; name: string; portraitKey?: Guy["portraitKey"] };
 type RoundState = "setup" | "countdown" | "live" | "result";
 
 const WIDTH = 332;
 const HEIGHT = 380;
 const RADIUS = 18;
+const portraitImages: Record<NonNullable<Guy["portraitKey"]>, number> = {
+  sprinter: require("../../assets/images/roster/sprinter-mannequin.jpg"),
+  dash: require("../../assets/images/roster/dash-mannequin.jpg"),
+  stoic: require("../../assets/images/roster/stoic-mannequin.jpg"),
+  arc: require("../../assets/images/roster/arc-mannequin.jpg"),
+};
 
 function FighterSilhouette({ actor, side }: { actor: DisplayActor; side: "left" | "right" }) {
   const lean = Math.max(-18, Math.min(18, actor.vx / 18));
   const hit = actor.impact > 0;
+  const portrait = actor.portraitKey ? portraitImages[actor.portraitKey] : undefined;
   return (
     <View style={[styles.actor, { left: actor.x - 31, top: actor.y - 48, opacity: actor.health > 0 ? 1 : 0.25, transform: [{ rotate: `${lean}deg` }, { scale: hit ? 1.12 : 1 }] }]}>
       <View style={styles.healthTrack}><View style={[styles.healthFill, { width: `${Math.max(0, Math.min(100, actor.health))}%`, backgroundColor: actor.health > 40 ? actor.accent : palette.warning }]} /></View>
       <View style={styles.figure}>
+        {portrait ? <Image source={portrait} resizeMode="cover" style={styles.portrait} /> : null}
         <View style={[styles.arm, side === "left" ? styles.armLeft : styles.armRight, { backgroundColor: actor.accent }]} />
         <View style={[styles.arm, side === "left" ? styles.armRight : styles.armLeft, styles.backArm, { backgroundColor: actor.accent }]} />
         <View style={[styles.head, { borderColor: hit ? palette.warning : actor.accent }]}><Text style={[styles.initial, { color: actor.accent }]}>{actor.name.slice(0, 1).toUpperCase()}</Text></View>
@@ -50,6 +60,7 @@ export default function BattlesScreen() {
     id: guy.id,
     name: guy.name,
     accent: guy.accent,
+    portraitKey: guy.portraitKey,
     x: index === 0 ? 84 : WIDTH - 84,
     y: 210,
     vx: index === 0 ? 170 : -170,
@@ -62,6 +73,9 @@ export default function BattlesScreen() {
   const alive = actors.filter((actor) => actor.health > 0);
   const impact = actors.find((actor) => actor.impact > 0);
   const winner = alive.length === 1 ? alive[0] : undefined;
+  const camera = useMemo(() => getBattleCamera(actors, WIDTH, HEIGHT - 34), [actors]);
+  const cameraOffsetX = (WIDTH / 2 - camera.focusX) * camera.zoom;
+  const cameraOffsetY = ((HEIGHT - 34) / 2 - camera.focusY) * camera.zoom;
 
   useEffect(() => {
     setActors(initial);
@@ -113,12 +127,14 @@ export default function BattlesScreen() {
     <View style={styles.stats}><Stat label="Duel" value={`${actors.length || 0} Guys`} /><Stat label="State" value={roundState.toUpperCase()} color={roundState === "live" ? palette.lime : palette.magenta} /><Stat label="Frame" value={tick} color={palette.cyan} /></View>
 
     <View style={[styles.stage, { backgroundColor: arena?.background || palette.ink }]}>
-      <View style={[styles.stageFrame, { borderColor: arena?.shapes[0]?.color || palette.cyan }]} />
-      <View style={styles.stageHeader}><Text style={styles.stageTitle}>{arena?.name ?? "Practice Ring"}</Text><Text style={[styles.stageStatus, impact && styles.impactStatus]}>{stageStatus}</Text></View>
-      <View style={styles.centerMark}><Text style={styles.centerMarkText}>VS</Text></View>
-      {actors.map((actor, index) => <FighterSilhouette key={actor.id} actor={actor} side={index === 0 ? "left" : "right"} />)}
-      {impact ? <View pointerEvents="none" style={[styles.hitBurst, { left: Math.max(28, Math.min(WIDTH - 56, impact.x - 20)), top: Math.max(70, Math.min(HEIGHT - 100, impact.y - 20)) }]}><Text style={styles.hitBurstText}>HIT!</Text></View> : null}
-      <View style={[styles.stageFloor, { backgroundColor: arena?.shapes[0]?.color || palette.magenta }]} />
+      <View style={styles.stageHeader}><Text style={styles.stageTitle}>{arena?.name ?? "Practice Ring"}</Text><Text style={[styles.stageStatus, impact && styles.impactStatus]}>{stageStatus} · {camera.label}</Text></View>
+      <View style={[styles.cameraWorld, { transform: [{ translateX: cameraOffsetX }, { translateY: cameraOffsetY }, { scale: camera.zoom }] }]}>
+        <View style={[styles.stageFrame, { borderColor: arena?.shapes[0]?.color || palette.cyan }]} />
+        <View style={styles.centerMark}><Text style={styles.centerMarkText}>VS</Text></View>
+        {actors.map((actor, index) => <FighterSilhouette key={actor.id} actor={actor} side={index === 0 ? "left" : "right"} />)}
+        {impact ? <View pointerEvents="none" style={[styles.hitBurst, { left: Math.max(28, Math.min(WIDTH - 56, impact.x - 20)), top: Math.max(70, Math.min(HEIGHT - 100, impact.y - 20)) }]}><Text style={styles.hitBurstText}>HIT!</Text></View> : null}
+        <View style={[styles.stageFloor, { backgroundColor: arena?.shapes[0]?.color || palette.magenta }]} />
+      </View>
       {showDebug ? <Text style={styles.debug}>gravity · body bounce · impact damage · frame {tick}</Text> : null}
 
       {roundState === "setup" ? <View style={styles.setupOverlay}>
@@ -149,6 +165,7 @@ const styles = StyleSheet.create({
   subtitle: { color: palette.muted, marginTop: -8, fontSize: 14, lineHeight: 20 },
   stats: { flexDirection: "row", gap: 10 },
   stage: { height: HEIGHT, width: "100%", borderRadius: 22, overflow: "hidden", position: "relative", borderWidth: 1, borderColor: palette.border },
+  cameraWorld: { position: "absolute", top: 0, left: 0, width: WIDTH, height: HEIGHT },
   stageFrame: { position: "absolute", top: 44, left: 12, right: 12, bottom: 22, borderWidth: 3, borderRadius: 12, opacity: 0.95 },
   stageHeader: { position: "absolute", top: 12, left: 16, right: 16, zIndex: 6, flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   stageTitle: { color: palette.text, fontSize: 11, fontWeight: "900", letterSpacing: 0.8, textTransform: "uppercase" },
@@ -159,7 +176,8 @@ const styles = StyleSheet.create({
   actor: { position: "absolute", width: 62, alignItems: "center", zIndex: 4 },
   healthTrack: { height: 5, width: 54, borderRadius: 5, backgroundColor: palette.panel, overflow: "hidden", marginBottom: 3 },
   healthFill: { height: 5, borderRadius: 5 },
-  figure: { width: 44, height: 57, position: "relative", alignItems: "center" },
+  figure: { width: 44, height: 57, position: "relative", alignItems: "center", overflow: "hidden", borderRadius: 10, backgroundColor: palette.ink },
+  portrait: { position: "absolute", inset: 0, width: 44, height: 57, opacity: 0.52 },
   head: { width: 20, height: 20, borderRadius: 10, backgroundColor: palette.ink, borderWidth: 3, alignItems: "center", justifyContent: "center", zIndex: 3 },
   initial: { fontSize: 10, fontWeight: "900" },
   body: { position: "absolute", top: 18, width: 18, height: 24, borderRadius: 6, zIndex: 2 },

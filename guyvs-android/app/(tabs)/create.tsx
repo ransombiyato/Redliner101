@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { router } from "expo-router";
 
 import { ActionButton, AppScreen, palette, Section } from "@/components/guyvs/ui";
-import { makeArena, makeGuy } from "@/lib/guyvs/defaults";
+import { BUILT_IN_GUY_ROSTER, makeArena, makeBuiltInRoster, makeGuy } from "@/lib/guyvs/defaults";
 import { useProject } from "@/lib/guyvs/project-store";
 
 const tools = [
@@ -24,6 +24,9 @@ export default function CreateScreen() {
             <ActionButton label="+ Guy" onPress={() => { addGuy(makeGuy(`Guy ${Date.now().toString().slice(-3)}`)); router.push("/guys" as never); }} />
             <ActionButton label="+ Arena" tone="magenta" onPress={() => { addArena(makeArena(`Arena ${Date.now().toString().slice(-3)}`)); router.push("/arenas" as never); }} />
           </View>
+        </Section>
+        <Section title="Built-in Guy roster" subtitle={`${BUILT_IN_GUY_ROSTER.length} original physics archetypes using locally bundled non-identifiable stock mannequin portraits. You can edit every Guy after adding them.`}>
+          <ActionButton label={`Add all ${BUILT_IN_GUY_ROSTER.length} roster Guys`} tone="lime" onPress={() => { makeBuiltInRoster().forEach(addGuy); router.push("/guys" as never); }} />
         </Section>
         {tools.map((tool) => (
           <Section key={tool.title} title={tool.title} subtitle={tool.detail}>

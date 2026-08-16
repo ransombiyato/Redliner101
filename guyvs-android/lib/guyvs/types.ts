@@ -89,6 +89,8 @@ export type VisualEffect = {
 export type Guy = {
   id: string;
   name: string;
+  /** Key for an optional locally bundled stock portrait with recorded reuse terms. */
+  portraitKey?: "sprinter" | "dash" | "stoic" | "arc";
   health: number;
   bodyParts: BodyPart[];
   dvd: DvdPhysics;
