@@ -38,3 +38,11 @@ run/
 **/src/generated/**/.cache/
 repo/
 !**/src/**/repo/
+
+### GuyVs Android build outputs ###
+guyvs-android/node_modules/
+guyvs-android/.expo/
+guyvs-android/dist/
+guyvs-android/android/.gradle/
+guyvs-android/android/app/build/
+guyvs-android/android/local.properties

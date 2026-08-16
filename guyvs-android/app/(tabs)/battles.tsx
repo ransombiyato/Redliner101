@@ -1,0 +1,28 @@
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { useEffect, useMemo, useState } from "react";
+
+import { ActionButton, AppScreen, palette, Section, Stat } from "@/components/guyvs/ui";
+import { useProject } from "@/lib/guyvs/project-store";
+import { stepBattle, type SimActor } from "@/lib/guyvs/simulation";
+
+type DisplayActor = SimActor & { accent: string; name: string };
+const WIDTH = 312; const HEIGHT = 350; const RADIUS = 16;
+
+export default function BattlesScreen() {
+  const { state } = useProject();
+  const [paused, setPaused] = useState(false); const [slow, setSlow] = useState(false); const [showDebug, setShowDebug] = useState(false); const [tick, setTick] = useState(0);
+  const initial = useMemo<DisplayActor[]>(() => state.project.guys.slice(0, 8).map((guy, index) => ({ id: guy.id, name: guy.name, accent: guy.accent, x: 48 + index * 42, y: 40 + (index % 2) * 70, vx: 120 + index * 23, vy: 0, radius: RADIUS, health: guy.health, impact: 0 })), [state.project.guys]);
+  const [actors, setActors] = useState(initial); useEffect(() => setActors(initial), [initial]);
+  useEffect(() => { if (paused) return; const interval = setInterval(() => { const profiles = Object.fromEntries(state.project.guys.map((guy) => [guy.id, guy.dvd])); setActors((current) => stepBattle(current, profiles, { width: WIDTH, height: HEIGHT, floor: HEIGHT }, slow ? 0.004 : 0.016) as DisplayActor[]); setTick((value) => value + 1); }, slow ? 32 : 16); return () => clearInterval(interval); }, [paused, slow, state.project.guys]);
+  const restart = () => { setActors(initial); setTick(0); setPaused(false); };
+  const impulse = () => setActors((current) => current.map((actor, index) => ({ ...actor, vx: actor.vx + (index % 2 ? -1 : 1) * 220, vy: -320, impact: 0.2 })));
+  return <AppScreen><ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+    <Text style={styles.title}>Battle Lab</Text><Text style={styles.subtitle}>A live, deterministic physics loop with momentum, floor/wall bounce, and body collisions.</Text>
+    <View style={styles.stats}><Stat label="Actors" value={actors.length} /><Stat label="Ticks" value={tick} color={palette.magenta} /><Stat label="Mode" value={paused ? "PAUSE" : slow ? "SLOW" : "LIVE"} color={palette.lime} /></View>
+    <View style={styles.canvas}>{actors.length ? actors.map((actor) => <View key={actor.id} style={[styles.actor, { left: actor.x - RADIUS, top: actor.y - RADIUS, borderColor: actor.impact ? palette.warning : actor.accent }]}><View style={[styles.actorCore, { backgroundColor: actor.accent }]} /><Text numberOfLines={1} style={styles.actorName}>{actor.name.slice(0, 6)}</Text>{showDebug ? <Text style={styles.velocity}>{Math.round(actor.vx)},{Math.round(actor.vy)}</Text> : null}</View>) : <Text style={styles.empty}>Add Guys in the creator to start a simulation.</Text>}{showDebug ? <Text style={styles.debug}>collision · gravity · velocity</Text> : null}</View>
+    <Section title="Simulation controls" subtitle="Battle actions alter only the runtime actors until you restart the lab."><View style={styles.controls}><ActionButton label={paused ? "Resume" : "Pause"} tone="cyan" onPress={() => setPaused((value) => !value)} /><ActionButton label={slow ? "Normal" : "Slow"} tone="magenta" onPress={() => setSlow((value) => !value)} /></View><View style={styles.controls}><ActionButton label="Impulse" tone="lime" onPress={impulse} /><ActionButton label="Restart" tone="ghost" onPress={restart} /></View><View style={styles.controls}><ActionButton label="Frame +1" tone="ghost" onPress={() => { setPaused(true); const profiles = Object.fromEntries(state.project.guys.map((guy) => [guy.id, guy.dvd])); setActors((current) => stepBattle(current, profiles, { width: WIDTH, height: HEIGHT, floor: HEIGHT }, 0.016) as DisplayActor[]); setTick((value) => value + 1); }} /><ActionButton label={showDebug ? "Hide debug" : "Show debug"} tone="ghost" onPress={() => setShowDebug((value) => !value)} /></View></Section>
+    <Section title="Active rule set" subtitle={`${state.project.arenas[0]?.name ?? "No arena"} · gravity ${state.project.arenas[0]?.gravity ?? 0} · ${state.project.guys.length} source Guys`}><Text style={styles.note}>The lab samples each Guy’s saved gravity, speed cap, wall bounce, and floor bounce. Arena collision shapes, attacks, abilities, and AI assets are available from the same project model and are ready for future simulation passes.</Text></Section>
+  </ScrollView></AppScreen>;
+}
+
+const styles = StyleSheet.create({ content: { padding: 18, gap: 16, paddingBottom: 32 }, title: { color: palette.text, fontSize: 30, fontWeight: "900", letterSpacing: -0.8 }, subtitle: { color: palette.muted, marginTop: -8, fontSize: 14, lineHeight: 20 }, stats: { flexDirection: "row", gap: 10 }, canvas: { height: HEIGHT, width: "100%", backgroundColor: palette.ink, borderRadius: 20, overflow: "hidden", borderWidth: 1, borderColor: palette.border, position: "relative" }, actor: { position: "absolute", width: 32, alignItems: "center", gap: 2 }, actorCore: { height: 28, width: 28, borderRadius: 10, borderWidth: 3, borderColor: palette.text }, actorName: { color: palette.text, fontSize: 8, fontWeight: "800", maxWidth: 42 }, velocity: { color: palette.lime, fontSize: 7, fontWeight: "700" }, empty: { color: palette.muted, alignSelf: "center", marginTop: HEIGHT / 2 - 20 }, debug: { position: "absolute", left: 10, bottom: 10, color: palette.lime, fontSize: 10, fontWeight: "700" }, controls: { flexDirection: "row", gap: 10 }, note: { color: palette.muted, fontSize: 13, lineHeight: 19 } });
