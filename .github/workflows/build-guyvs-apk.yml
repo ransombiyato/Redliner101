@@ -50,6 +50,11 @@ jobs:
       - name: Install JavaScript dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Report runner capacity
+        run: |
+          free -h
+          df -h .
+
       - name: Build debug APK
         run: |
           chmod +x android/gradlew
