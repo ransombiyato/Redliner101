@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "my-hadrian-port-mod",
+  "name": "My Hadrian Port Mod",
+  "author": "Your name",
+  "version": "1.0.0",
+  "description": "Replace this description. Place only your own Android-ready replacement payload in payload/game.droid before importing.",
+  "targetGame": "deltarune-hadrian-android",
+  "supportedGameVersions": ["hadrian-android"],
+  "patches": [
+    {
+      "source": "payload/game.droid",
+      "target": "chapter3_windows/game.droid",
+      "mode": "COPY"
+    }
+  ]
+}
