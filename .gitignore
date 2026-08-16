@@ -46,3 +46,5 @@ guyvs-android/dist/
 guyvs-android/android/.gradle/
 guyvs-android/android/app/build/
 guyvs-android/android/local.properties
+
+guyvs-android/android/build/
