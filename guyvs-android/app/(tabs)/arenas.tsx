@@ -1,5 +1,5 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { useEffect, useState } from "react";
+import { PanResponder, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
 
 import { ActionButton, AppScreen, NumericField, palette, Section, TextField } from "@/components/guyvs/ui";
 import { makeArena, uid } from "@/lib/guyvs/defaults";
@@ -9,6 +9,29 @@ export default function ArenasScreen() {
   const { state, addArena, replaceArena } = useProject();
   const [selectedId, setSelectedId] = useState(state.project.arenas[0]?.id ?? "");
   const [draftPoints, setDraftPoints] = useState<{ x: number; y: number }[]>([]);
+  const draftRef = useRef<{ x: number; y: number }[]>([]);
+  const ringResponder = useRef(PanResponder.create({
+    onStartShouldSetPanResponder: (event) => event.nativeEvent.touches.length <= 1,
+    onMoveShouldSetPanResponder: () => true,
+    onPanResponderGrant: (event) => {
+      if (event.nativeEvent.touches.length > 1) return;
+      const point = { x: Math.round(event.nativeEvent.locationX), y: Math.round(event.nativeEvent.locationY) };
+      draftRef.current = [point];
+      setDraftPoints([point]);
+    },
+    onPanResponderMove: (event) => {
+      if (event.nativeEvent.touches.length > 1) return;
+      const point = { x: Math.round(event.nativeEvent.locationX), y: Math.round(event.nativeEvent.locationY) };
+      const previous = draftRef.current[draftRef.current.length - 1];
+      if (!previous || Math.hypot(point.x - previous.x, point.y - previous.y) >= 7) {
+        draftRef.current = [...draftRef.current, point];
+        setDraftPoints(draftRef.current);
+      }
+    },
+    onPanResponderRelease: () => undefined,
+    onPanResponderTerminate: () => undefined,
+    onPanResponderTerminationRequest: () => true,
+  })).current;
   useEffect(() => { if (!state.project.arenas.some((arena) => arena.id === selectedId)) setSelectedId(state.project.arenas[0]?.id ?? ""); }, [selectedId, state.project.arenas]);
   const arena = state.project.arenas.find((item) => item.id === selectedId);
   const update = (patch: Partial<typeof arena>) => arena && replaceArena({ ...arena, ...patch });
@@ -18,7 +41,7 @@ export default function ArenasScreen() {
     {arena ? <>
       <Section title="Arena settings" subtitle="These values affect every active combatant during the battle simulation."><TextField value={arena.name} onChangeText={(name) => update({ name })} placeholder="Arena name" /><TextField value={arena.background} onChangeText={(background) => update({ background })} placeholder="#111827" autoCapitalize="characters" /><NumericField label="Gravity" value={arena.gravity} step={20} min={0} max={5000} onChange={(gravity) => update({ gravity })} /></Section>
       <Section title="Ring & collision shapes" subtitle="Shape data is saved as editable geometry; use presets or build a custom collision boundary below.">{arena.shapes.map((shape) => <View key={shape.id} style={styles.row}><View style={[styles.shapeIcon, { borderColor: shape.color }]} /><View style={styles.flex}><Text style={styles.itemTitle}>{shape.type.toUpperCase()} boundary</Text><Text style={styles.itemMeta}>{shape.points.length ? `${shape.points.length} custom points · ` : ""}{shape.size.x}×{shape.size.y} · {Math.round(shape.bounce * 100)}% bounce</Text></View><ActionButton label="−" tone="danger" small onPress={() => update({ shapes: arena.shapes.filter((item) => item.id !== shape.id) })} /></View>)}<View style={styles.presetRow}><ActionButton label="Circle" tone="ghost" small onPress={() => update({ shapes: [...arena.shapes, { id: uid("shape"), type: "circle", points: [], position: { x: 180, y: 210 }, size: { x: 180, y: 180 }, rotation: 0, bounce: 0.85, friction: 0.25, color: "#22D3EE" }] })} /><ActionButton label="Triangle" tone="ghost" small onPress={() => update({ shapes: [...arena.shapes, { id: uid("shape"), type: "triangle", points: [{ x: 0, y: 180 }, { x: 160, y: 0 }, { x: 320, y: 180 }], position: { x: 0, y: 130 }, size: { x: 320, y: 180 }, rotation: 0, bounce: 0.9, friction: 0.25, color: "#F472B6" }] })} /><ActionButton label="Platform" tone="ghost" small onPress={() => update({ shapes: [...arena.shapes, { id: uid("shape"), type: "rectangle", points: [], position: { x: 180, y: 240 }, size: { x: 120, y: 28 }, rotation: 0, bounce: 0.7, friction: 0.4, color: "#F472B6" }] })} /></View></Section>
-      <Section title="Custom shape ring" subtitle="Tap the canvas to place points in the boundary, then convert them into a reusable polygon. This keeps your raw geometry editable rather than rasterizing it."><View style={styles.drawCanvas} onStartShouldSetResponder={() => true} onResponderRelease={(event) => setDraftPoints((points) => [...points, { x: Math.round(event.nativeEvent.locationX), y: Math.round(event.nativeEvent.locationY) }])}>{draftPoints.map((point, index) => <View key={`${point.x}-${point.y}-${index}`} style={[styles.point, { left: point.x - 5, top: point.y - 5 }]} />)}<Text style={styles.canvasHint}>{draftPoints.length ? `${draftPoints.length} points captured` : "Tap to trace a custom boundary"}</Text></View><View style={styles.presetRow}><ActionButton label="Clear" tone="ghost" small onPress={() => setDraftPoints([])} /><ActionButton label="Make custom ring" tone="magenta" small disabled={draftPoints.length < 3} onPress={() => { update({ shapes: [...arena.shapes, { id: uid("shape"), type: "polygon", points: draftPoints, position: { x: 0, y: 0 }, size: { x: 320, y: 210 }, rotation: 0, bounce: 0.88, friction: 0.3, color: "#A3E635" }] }); setDraftPoints([]); }} /></View></Section>
+      <Section title="Custom shape ring" subtitle="Press inside the canvas and drag slowly to draw. A double tap does nothing; use Clear to start over safely."><View style={styles.drawCanvas} {...ringResponder.panHandlers}>{draftPoints.map((point, index) => <View key={`${point.x}-${point.y}-${index}`} pointerEvents="none" style={[styles.point, { left: point.x - 5, top: point.y - 5 }]} />)}<Text pointerEvents="none" style={styles.canvasHint}>{draftPoints.length ? `${draftPoints.length} points captured · keep dragging` : "Press and drag to trace a boundary"}</Text></View><View style={styles.presetRow}><ActionButton label="Clear" tone="ghost" small onPress={() => { draftRef.current = []; setDraftPoints([]); }} /><ActionButton label="Make custom ring" tone="magenta" small disabled={draftPoints.length < 3} onPress={() => { update({ shapes: [...arena.shapes, { id: uid("shape"), type: "polygon", points: draftPoints, position: { x: 0, y: 0 }, size: { x: 320, y: 210 }, rotation: 0, bounce: 0.88, friction: 0.3, color: "#A3E635" }] }); draftRef.current = []; setDraftPoints([]); }} /></View></Section>
       <Section title="Physics zones" subtitle="Zones are functional local modifiers ready for the battle lab.">{arena.zones.map((zone) => <View key={zone.id} style={styles.row}><View style={[styles.zoneIcon, { backgroundColor: zone.color }]} /><View style={styles.flex}><Text style={styles.itemTitle}>{zone.type}</Text><Text style={styles.itemMeta}>{zone.size.x}×{zone.size.y} · strength {zone.strength}</Text></View><ActionButton label="−" tone="danger" small onPress={() => update({ zones: arena.zones.filter((item) => item.id !== zone.id) })} /></View>)}<ActionButton label="Add bounce zone" tone="lime" onPress={() => update({ zones: [...arena.zones, { id: uid("zone"), type: "bounce", position: { x: 180, y: 250 }, size: { x: 110, y: 56 }, strength: 1.2, color: "#A3E635" }] })} /></Section>
     </> : <Section title="No arenas" subtitle="Create an editable arena to begin."><ActionButton label="Create Arena" onPress={() => addArena(makeArena())} /></Section>}
   </ScrollView></AppScreen>;

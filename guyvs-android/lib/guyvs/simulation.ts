@@ -17,7 +17,7 @@ export function stepBattle(actors: SimActor[], profiles: Record<string, DvdPhysi
     }
     if (y < actor.radius) { y = actor.radius; vy = Math.abs(vy) * 0.72; }
     if (y > bounds.floor - actor.radius) { y = bounds.floor - actor.radius; vy *= -(profile?.floorBounce ?? 0.82); }
-    return { ...actor, x, y, vx, vy, impact: Math.max(0, actor.impact - deltaSeconds) };
+    return { ...actor, x, y, vx, vy, health: Math.max(0, actor.health), impact: Math.max(0, actor.impact - deltaSeconds) };
   });
 
   for (let left = 0; left < next.length; left += 1) {
@@ -27,10 +27,13 @@ export function stepBattle(actors: SimActor[], profiles: Record<string, DvdPhysi
       if (distance < minimum) {
         const nx = dx / distance; const ny = dy / distance; const overlap = (minimum - distance) / 2;
         a.x -= nx * overlap; a.y -= ny * overlap; b.x += nx * overlap; b.y += ny * overlap;
+        const relativeSpeed = Math.hypot(a.vx - b.vx, a.vy - b.vy);
+        const damage = Math.min(18, Math.max(1, Math.round(relativeSpeed * 0.018)));
         const swapX = a.vx; const swapY = a.vy;
         a.vx = b.vx * 0.78 - nx * 80; a.vy = b.vy * 0.78 - ny * 80;
         b.vx = swapX * 0.78 + nx * 80; b.vy = swapY * 0.78 + ny * 80;
-        a.impact = 0.12; b.impact = 0.12;
+        a.health = Math.max(0, a.health - damage); b.health = Math.max(0, b.health - damage);
+        a.impact = 0.22; b.impact = 0.22;
       }
     }
   }

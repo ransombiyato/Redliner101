@@ -20,6 +20,11 @@ const MAPPING = {
   "chevron.right": "chevron-right",
   "hammer.fill": "construction",
   "square.grid.2x2.fill": "grid-view",
+  "person.fill": "person",
+  "circle.fill": "circle",
+  "bolt.fill": "bolt",
+  "flame.fill": "local-fire-department",
+  "wrench.fill": "build",
 } as IconMapping;
 
 /**
