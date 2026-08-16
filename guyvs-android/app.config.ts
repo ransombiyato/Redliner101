@@ -68,7 +68,6 @@ const config: ExpoConfig = {
     intentFilters: [
       {
         action: "VIEW",
-        autoVerify: true,
         data: [
           {
             scheme: env.scheme,
@@ -97,18 +96,6 @@ const config: ExpoConfig = {
       {
         supportsBackgroundPlayback: true,
         supportsPictureInPicture: true,
-      },
-    ],
-    [
-      "expo-splash-screen",
-      {
-        image: "./assets/images/splash-icon.png",
-        imageWidth: 200,
-        resizeMode: "contain",
-        backgroundColor: "#0B1020",
-        dark: {
-          backgroundColor: "#0B1020",
-        },
       },
     ],
     [
