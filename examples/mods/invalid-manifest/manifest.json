@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "INVALID ID",
+  "name": "Invalid Example",
+  "author": "DemiForge",
+  "version": "not-a-version",
+  "targetGame": "dummy-game",
+  "patches": [{"source": "../unsafe.txt", "target": "../unsafe.txt"}]
+}

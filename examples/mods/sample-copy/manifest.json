@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-copy",
+  "name": "Sample Copy Patch",
+  "author": "DemiForge",
+  "version": "1.0.0",
+  "description": "Replaces a dummy-game text file only after creating a backup.",
+  "targetGame": "dummy-game",
+  "supportedGameVersions": ["1.0.0"],
+  "patches": [
+    {
+      "source": "payload/message.txt",
+      "target": "content/message.txt",
+      "mode": "COPY"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.DemiForge" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/forge_background</item>
+        <item name="android:navigationBarColor">@color/forge_background</item>
+        <item name="android:colorAccent">@color/forge_primary</item>
+    </style>
+</resources>

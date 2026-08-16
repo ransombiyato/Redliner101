@@ -1,50 +1,10 @@
-### Gradle ###
-.gradle
+.gradle/
 build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/**/build/
-
-### IntelliJ IDEA ###
+**/build/
 .idea/
-*.iws
 *.iml
-*.ipr
-out/
-!**/src/**/out/
-
-.run/
-
-### Eclipse ###
-.apt_generated
-.classpath
-.eclipse/
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/**/bin/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+local.properties
 .DS_Store
-
-### Minecraft Modding ###
-run/
-!**/src/**/run/
-**/src/generated/**/.cache/
-repo/
-!**/src/**/repo/
-
-### GuyVs Android build outputs ###
-guyvs-android/node_modules/
-guyvs-android/.expo/
-guyvs-android/dist/
-guyvs-android/android/.gradle/
-guyvs-android/android/app/build/
-guyvs-android/android/local.properties
-
-guyvs-android/android/build/
+*.apk
+*.aab
+!gradle/wrapper/gradle-wrapper.jar

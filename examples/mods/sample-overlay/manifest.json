@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-overlay",
+  "name": "Sample Overlay",
+  "author": "DemiForge",
+  "version": "1.0.0",
+  "description": "Writes a harmless overlay file into the dummy game environment.",
+  "targetGame": "dummy-game",
+  "supportedGameVersions": ["1.0.0"],
+  "patches": [
+    {
+      "source": "payload/greeting.txt",
+      "target": "content/greeting.txt",
+      "mode": "OVERLAY"
+    }
+  ]
+}
