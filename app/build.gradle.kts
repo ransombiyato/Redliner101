@@ -38,4 +38,5 @@ dependencies {
     implementation(project(":core"))
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.documentfile:documentfile:1.0.1")
+    implementation("com.github.MuntashirAkon:apksig-android:4.4.0")
 }

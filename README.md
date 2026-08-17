@@ -1,8 +1,8 @@
 # DemiForge
 
-**DemiForge** is a lightweight native Android Kotlin/Gradle mod manager for **Hadrian's Android Deltarune port**. It does not distribute game files, circumvent licensing, alter application packages, or bypass Android sandboxing. It manages user-supplied, Android-ready mod payloads only in an externally accessible workspace the user selects and reviews.
+**DemiForge** is a lightweight native Android Kotlin/Gradle mod manager for **Hadrian's Android Deltarune port**. It does not distribute game files, circumvent licensing, or bypass Android sandboxing. For APK-packaged Hadrian builds, it operates on a user-selected original APK and produces a separately signed, modded copy.
 
-DemiForge persists Android Storage Access Framework access only to the selected directory. It inventories recognised `game.droid`, `data.droid`, and WAD payload paths, requires confirmation of a workspace-layout fingerprint, validates manifest targets, previews every replacement and backup size, creates app-private originals, applies the selected replacements, and restores the latest backup when needed. It accepts a mod directory or a safely extracted ZIP package; it never writes an APK or protected private application directory.
+DemiForge inventories recognised `game.droid`, `data.droid`, and WAD payload paths under the selected APK's `assets/` directory. It preserves a private original backup, accepts a chosen Android-ready replacement for an exact discovered target, rebuilds the APK archive, signs it with its local Android Keystore key, verifies that signature, and opens Android's installer. It accepts a mod directory or a safely extracted ZIP package, but it never writes an installed APK or protected private application directory in place.
 
 The project builds locally with:
 
@@ -11,4 +11,4 @@ The project builds locally with:
 ./gradlew assembleDebug
 ```
 
-Start with [`docs/HADRIAN_PORT_SETUP.md`](docs/HADRIAN_PORT_SETUP.md) for the exact on-device workflow, then use [`examples/hadrian-port-mod-template`](examples/hadrian-port-mod-template) to package a compatible replacement payload. The research evidence, architecture, safety boundary, and build verification are under [`docs/`](docs/).
+Start with [`docs/HADRIAN_APK_PATCHER.md`](docs/HADRIAN_APK_PATCHER.md) for the direct on-device workflow. The research evidence, architecture, safety boundary, and build verification are under [`docs/`](docs/).

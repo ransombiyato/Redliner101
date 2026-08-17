@@ -110,7 +110,7 @@ class MainActivity : Activity() {
             letterSpacing = 0.08f
         })
         root.addView(TextView(this).apply {
-            text = "Hadrian Android port mod manager"
+            text = "Hadrian Android port · direct APK modding"
             setTextColor(textColor)
             textSize = 13f
             setPadding(0, dp(2), 0, dp(12))
@@ -120,7 +120,7 @@ class MainActivity : Activity() {
             gravity = Gravity.CENTER
             addView(tabButton("Home") { showDashboard() }, LinearLayout.LayoutParams(0, dp(42), 1f))
             addView(tabButton("Mods") { showMods() }, LinearLayout.LayoutParams(0, dp(42), 1f))
-            addView(tabButton("Workspace") { showWorkspace() }, LinearLayout.LayoutParams(0, dp(42), 1.25f))
+            addView(tabButton("APK") { startActivity(Intent(this@MainActivity, HadrianApkActivity::class.java)) }, LinearLayout.LayoutParams(0, dp(42), 1f))
             addView(tabButton("Logs") { showLogs() }, LinearLayout.LayoutParams(0, dp(42), 1f))
         })
         root.addView(ScrollView(this).apply {
@@ -133,29 +133,18 @@ class MainActivity : Activity() {
 
     private fun showDashboard() {
         content.removeAllViews()
-        val inspection = hadrian.gameInspection()
-        val workspace = hadrian.selectedWorkspace()
-        content.addView(title("Hadrian port status"))
+        content.addView(title("Patch the real Hadrian APK"))
         content.addView(card().apply {
-            addView(line(inspection.displayName, inspection.status.name.replace('_', ' ')))
-            addView(body(inspection.message))
-            addView(line("Workspace", workspace?.let { "${it.payloads.size} payload(s)" } ?: "Not selected"))
-            addView(line("Installed mods", storage.discover().size.toString()))
-            if (workspace != null) addView(line("Layout ID", workspace.layoutFingerprint))
+            addView(line("Correct target", "Original .apk"))
+            addView(body("Hadrian's game payloads are packaged under the APK's assets. Editing an unzipped folder does not change the installed game. Use the APK tab to back up, replace, rebuild, sign, verify, and install a modded copy."))
         })
 
-        content.addView(title("Real modding workflow"))
-        if (workspace == null) {
-            content.addView(primaryButton("Select Hadrian port workspace") { chooseHadrianWorkspace() })
-            content.addView(body("Pick the externally accessible folder used by your installed Hadrian port. DemiForge will only inspect that folder; it never scans apps or modifies the APK."))
-        } else {
-            content.addView(primaryButton("Review workspace and payloads") { showWorkspace() })
-            content.addView(secondaryButton("Preview enabled mod changes") { showPreflight() })
-            hadrian.latestBackup()?.let { backup ->
-                content.addView(secondaryButton("Restore latest backup (${backup.actionCount} file(s))") { restoreLatest() })
-            }
-            content.addView(body("DemiForge can replace only the detected game.droid, data.droid, or WAD payload paths you review. Each apply operation creates an app-private backup first."))
-        }
+        content.addView(primaryButton("Open direct APK patcher") { startActivity(Intent(this, HadrianApkActivity::class.java)) })
+        content.addView(body("No Gradle or Deltarune recompilation happens on your phone. A new signature means Android may require the original port to be uninstalled first, so back up saves before installing the modded copy."))
+
+        content.addView(title("Mod packages"))
+        content.addView(card().apply { addView(line("Installed packages", storage.discover().size.toString())) })
+        content.addView(secondaryButton("Manage mod packages") { showMods() })
 
         content.addView(title("Safety"))
         content.addView(card().apply {

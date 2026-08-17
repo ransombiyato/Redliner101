@@ -32,3 +32,29 @@
 - [x] Require an explicit recognised-port marker before writing any mod file, with a clear manual-review route for new port versions.
 - [x] Exercise a structurally faithful port-data fixture through import, enable, apply, restore, disable, and re-apply flows.
 - [x] Add ZIP mod-package import with archive traversal and size protections for practical phone-based mod installation.
+
+## Current Release Compatibility Check
+
+- [ ] Confirm the authoritative current Hadrian Android-port release URL and published update details.
+- [ ] Compare its confirmed external workspace behavior with DemiForge's recognised payload requirements.
+- [ ] Report the verified support status and latest release link without overstating compatibility.
+
+## Hadrian APK Rebuild Workflow
+
+- [ ] Confirm the actual payload filenames and paths beneath the supplied Hadrian APK's `assets/` directory.
+- [x] Replace the external-workspace flow that cannot affect an installed APK with direct user-selected APK patching.
+- [x] Add backup, rebuild, signing, and installation-handoff safeguards for a modified user-supplied APK.
+- [ ] Test APK payload replacement, archive integrity, and restoration against a non-game-data fixture.
+- [ ] Build, verify, document, commit, and deliver the APK-rebuild version of DemiForge.
+
+## Fast-Path Verification
+
+- [x] Determine whether the observed Hadrian APK can load game payloads externally without replacing the APK.
+- [x] If no external game-payload route exists, preserve the signing and reinstall warning in the APK-patching workflow.
+
+## User-Requested Playable Mod
+
+- [x] Confirm the Chapter 5 scope: replace only Kris with Flowey-themed visuals and Kris-owned battle actions; leave the rest of the party unchanged.
+- [ ] Obtain the requested mod concept, target chapter, gameplay requirements, and original Hadrian APK.
+- [ ] Create the requested game content and Android-compatible replacement payload.
+- [ ] Build, sign, verify, and deliver the finished modded APK with save-safe installation steps.
