@@ -58,3 +58,13 @@
 - [ ] Obtain the requested mod concept, target chapter, gameplay requirements, and original Hadrian APK.
 - [ ] Create the requested game content and Android-compatible replacement payload.
 - [ ] Build, sign, verify, and deliver the finished modded APK with save-safe installation steps.
+
+## Genuine Mobile GameMaker Editor
+
+- [x] Research the UndertaleModTool data model, Android `game.droid` requirements, and feasible on-device resource editing approach.
+- [ ] Inspect the user-supplied Hadrian package to map its actual GameMaker resource and code structures.
+- [ ] Implement reading and editable views for sprites, strings, object metadata, rooms, and scripts in the GameMaker payload.
+- [ ] Implement controlled edits, serialization, resource replacement, and payload rebuild validation.
+- [ ] Build a phone-usable editor interface that exposes actual game resources rather than arbitrary file replacement.
+- [ ] Validate the edited payload in a rebuilt, signed user-supplied APK and deliver the true editor/modded build.
+- [x] Implement a bounds-checked FORM chunk indexer and read-only STRG resource preview as the editor foundation.

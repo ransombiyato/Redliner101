@@ -6,6 +6,9 @@ import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import com.android.apksig.ApkSigner
 import com.android.apksig.ApkVerifier
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerChunk
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerFormInspector
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEntry
 import com.ransombiyato.demiforge.core.storage.ApkArchive
 import com.ransombiyato.demiforge.core.storage.ApkPayloadEntry
 import java.nio.file.Files
@@ -15,6 +18,7 @@ import java.security.KeyStore
 import java.security.PrivateKey
 import java.security.cert.X509Certificate
 import java.time.Instant
+import java.util.zip.ZipFile
 
 data class HadrianApkSelection(
     val id: String,
@@ -30,6 +34,13 @@ data class HadrianPatchedApk(
     val verifiedV1: Boolean,
     val verifiedV2: Boolean,
     val verifiedV3: Boolean,
+)
+
+data class HadrianGameMakerInspection(
+    val targetPath: String,
+    val chunks: List<GameMakerChunk>,
+    val stringCount: Int,
+    val stringPreview: List<GameMakerStringEntry>,
 )
 
 /**
@@ -95,6 +106,29 @@ class HadrianApkPatchService(private val context: Context) {
         } finally {
             Files.deleteIfExists(unsigned)
         }
+    }
+
+    fun inspectGameMakerPayload(selection: HadrianApkSelection, targetPath: String, previewLimit: Int = 24): HadrianGameMakerInspection {
+        require(previewLimit in 1..100) { "String preview limit must be between 1 and 100." }
+        require(selection.payloads.any { it.path == targetPath }) { "Payload is not part of the selected APK." }
+        require(targetPath.lowercase().endsWith(".droid")) { "Only GameMaker .droid payloads can be structurally inspected." }
+        val extracted = root.resolve("inspection/${selection.id}-${targetPath.substringAfterLast('/')}")
+        Files.createDirectories(extracted.parent)
+        ZipFile(selection.originalBackup.toFile()).use { archive ->
+            val entry = requireNotNull(archive.getEntry(targetPath)) { "APK no longer contains $targetPath." }
+            require(!entry.isDirectory) { "Selected payload is a directory." }
+            archive.getInputStream(entry).use { input ->
+                Files.newOutputStream(extracted).use { output -> input.copyTo(output) }
+            }
+        }
+        val index = GameMakerFormInspector.inspect(extracted)
+        val hasStrings = index.chunks.any { it.name == "STRG" }
+        return HadrianGameMakerInspection(
+            targetPath = targetPath,
+            chunks = index.chunks,
+            stringCount = if (hasStrings) GameMakerFormInspector.stringCount(extracted, index) else 0,
+            stringPreview = if (hasStrings) GameMakerFormInspector.readStrings(extracted, index, previewLimit) else emptyList(),
+        )
     }
 
     private fun signingKey(): PrivateKey = (keyStore().getKey(KEY_ALIAS, null) as? PrivateKey)

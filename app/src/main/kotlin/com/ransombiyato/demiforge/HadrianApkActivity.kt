@@ -12,6 +12,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.core.content.FileProvider
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerResourceCategory
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -33,6 +34,7 @@ class HadrianApkActivity : Activity() {
     private var selection: HadrianApkSelection? = null
     private var pendingTarget: String? = null
     private var patched: HadrianPatchedApk? = null
+    private var inspection: HadrianGameMakerInspection? = null
     private val replacements = linkedMapOf<String, Path>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +57,7 @@ class HadrianApkActivity : Activity() {
                     selection = patcher.prepare(uri)
                     replacements.clear()
                     patched = null
+                    inspection = null
                 }
                 PICK_REPLACEMENT -> {
                     val target = requireNotNull(pendingTarget) { "No APK target was selected." }
@@ -80,7 +83,7 @@ class HadrianApkActivity : Activity() {
             setTypeface(null, 1)
         })
         addView(TextView(this@HadrianApkActivity).apply {
-            text = "Hadrian Deltarune port — no Gradle, no game recompilation"
+            text = "Hadrian Deltarune port · GameMaker resource inspector"
             setTextColor(textColor)
             textSize = 13f
             setPadding(0, dp(2), 0, dp(10))
@@ -109,8 +112,34 @@ class HadrianApkActivity : Activity() {
             content.addView(card().apply {
                 addView(line(payload.path, if (replacement == null) "Original" else "Replacement ready"))
                 addView(body("${formatBytes(payload.sizeBytes)} · ${replacement?.fileName?.toString() ?: "No replacement selected"}"))
+                if (payload.path.lowercase().endsWith(".droid")) {
+                    addView(secondaryButton("Inspect GameMaker resources") { inspectPayload(payload.path) })
+                }
                 addView(secondaryButton("Choose replacement") { chooseReplacement(payload.path) })
             })
+        }
+        inspection?.let { result ->
+            content.addView(card().apply {
+                addView(line("Resource inspection", result.targetPath))
+                addView(body("Read-only first pass. DemiForge parsed this GameMaker FORM payload directly; these are actual resource chunks, not guessed files."))
+                addView(line("Chunks", result.chunks.size.toString()))
+                addView(line("Strings", result.stringCount.toString()))
+            })
+            result.chunks.groupBy { it.category }.toSortedMap(compareBy { it.label }).forEach { (category, chunks) ->
+                content.addView(card().apply {
+                    addView(line(category.label, chunks.joinToString { it.name }))
+                    addView(body(chunks.joinToString { "${it.name} · ${formatBytes(it.payloadSize)}" }))
+                })
+            }
+            if (result.stringPreview.isNotEmpty()) {
+                content.addView(body("String preview (first ${result.stringPreview.size} entries)"))
+                result.stringPreview.forEach { string ->
+                    content.addView(card().apply {
+                        addView(line("#${string.index}", "byte ${string.offset}"))
+                        addView(body(string.content.take(600)))
+                    })
+                }
+            }
         }
         if (replacements.isNotEmpty()) {
             content.addView(primaryButton("Build and sign modded APK (${replacements.size} file(s))") { buildPatched() })
@@ -128,6 +157,7 @@ class HadrianApkActivity : Activity() {
             selection = null
             replacements.clear()
             patched = null
+            inspection = null
             render()
         })
     }
@@ -155,6 +185,15 @@ class HadrianApkActivity : Activity() {
             render()
         } catch (exception: Exception) {
             showError("The original backup was preserved. ${exception.message}")
+        }
+    }
+
+    private fun inspectPayload(targetPath: String) {
+        try {
+            inspection = patcher.inspectGameMakerPayload(requireNotNull(selection), targetPath)
+            render()
+        } catch (exception: Exception) {
+            showError("Could not parse $targetPath as GameMaker data: ${exception.message}")
         }
     }
 
