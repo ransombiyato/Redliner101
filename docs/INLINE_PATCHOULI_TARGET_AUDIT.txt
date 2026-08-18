@@ -1,0 +1,5 @@
+INLINE_REMOVED
+PATCHOULI_REMOVED
+TARGET
+11:minecraftVersion=1.21.11
+13:helperMinecraftVersion=1.21.1

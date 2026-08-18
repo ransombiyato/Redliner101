@@ -53,7 +53,7 @@ Status values: `DONE` means implemented and checked; `IN PROGRESS` means partial
 | API-40 | Rendering | Particle provider/single-quad API | ConjureParticle and providers | IN PROGRESS | Re-audit particle classes |
 | API-41 | Rendering | Texture/DynamicTexture/NativeImage API | pattern texture manager and tooltip | IN PROGRESS | Re-audit texture calls |
 | API-42 | Patchouli | Patchouli processors/components and persistence APIs | Patchouli interop package | IN PROGRESS | Display-entity serialization now uses the ValueOutput bridge and GUI components use local PoseStack adapters; remaining Patchouli symbols require compile verification |
-| API-43 | Inline | HoverEvent/ClickEvent factories and InlineStyle changes | inline pattern data/renderer | IN PROGRESS | Inline renderer now uses the current InlineStyle component access and local PoseStack path; remaining text-event API verification pending |
+| API-43 | Inline | HoverEvent/ClickEvent factories and InlineStyle changes | inline pattern data/renderer | IN PROGRESS | Inline renderer uses the local PoseStack path and InlinePatternData now uses `HoverEvent.ShowItem`/`ClickEvent.CopyToClipboard`; source audit clean, compile pending |
 | API-44 | External | EMI/other integration API changes | integration packages and recipe categories | OPEN | Current CI reports category/type issues |
 | API-45 | Kotlin | Kotlin/Java generic boundaries, inaccessible mapped types, Optional interop | OpFlight and remaining Kotlin files | OPEN | Run Kotlin compiler after Java batches |
 | API-46 | Regression | Preserve all v0.11.3 features and registered IDs | registries, recipes, tags, resources, network IDs | OPEN | Compare against baseline after compile passes |
