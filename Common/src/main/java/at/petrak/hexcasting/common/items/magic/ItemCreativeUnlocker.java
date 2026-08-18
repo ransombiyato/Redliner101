@@ -22,11 +22,14 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -36,6 +39,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Consumer;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
@@ -46,20 +50,15 @@ public class ItemCreativeUnlocker extends Item implements MediaHolderItem {
 
     static {
         DiscoveryHandlers.addDebugItemDiscoverer((player, type) -> {
-            for (ItemStack item : player.getInventory().items) {
+            for (ItemStack item : player.getInventory().getNonEquipmentItems()) {
                 if (isDebug(item, type)) {
                     return item;
                 }
             }
 
-            // Technically possible with commands!
-            for (ItemStack item : player.getInventory().armor) {
-                if (isDebug(item, type)) {
-                    return item;
-                }
-            }
-
-            for (ItemStack item : player.getInventory().offhand) {
+            // Technically possible with commands: armor and offhand are equipment slots.
+            for (int slot = 36; slot <= 40; slot++) {
+                ItemStack item = player.getInventory().getItem(slot);
                 if (isDebug(item, type)) {
                     return item;
                 }
@@ -160,7 +159,7 @@ public class ItemCreativeUnlocker extends Item implements MediaHolderItem {
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+    public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, EquipmentSlot slot) {
         if (isDebug(stack, DISPLAY_MEDIA) && !level.isClientSide()) {
             debugDisplay(stack, HexDataComponents.MEDIA_EXTRACTIONS, "withdrawn", "all_media", entity);
             debugDisplay(stack, HexDataComponents.MEDIA_INSERTIONS, "inserted", "infinite_media", entity);
@@ -173,12 +172,18 @@ public class ItemCreativeUnlocker extends Item implements MediaHolderItem {
             stack.remove(type);
             for (long i : list) {
                 if (i < 0) {
-                    entity.sendSystemMessage(Component.translatable("hexcasting.debug.media_" + langKey,
+                    if (!(entity instanceof ServerPlayer player)) {
+                        continue;
+                    }
+                    player.sendSystemMessage(Component.translatable("hexcasting.debug.media_" + langKey,
                             stack.getDisplayName(),
                             Component.translatable("hexcasting.debug." + allKey).withStyle(ChatFormatting.GRAY))
                         .withStyle(ChatFormatting.LIGHT_PURPLE));
                 } else {
-                    entity.sendSystemMessage(Component.translatable("hexcasting.debug.media_" + langKey + ".with_dust",
+                    if (!(entity instanceof ServerPlayer player)) {
+                        continue;
+                    }
+                    player.sendSystemMessage(Component.translatable("hexcasting.debug.media_" + langKey + ".with_dust",
                             stack.getDisplayName(),
                             Component.literal("" + i).withStyle(ChatFormatting.WHITE),
                             Component.literal(String.format("%.2f", i * 1.0 / MediaConstants.DUST_UNIT)).withStyle(
@@ -196,7 +201,7 @@ public class ItemCreativeUnlocker extends Item implements MediaHolderItem {
             impetus.setInfiniteMedia();
             context.getLevel().playSound(null, context.getClickedPos(), HexSounds.SPELL_CIRCLE_FIND_BLOCK,
                 SoundSource.PLAYERS, 1f, 1f);
-            return InteractionResult.sidedSuccess(context.getLevel().isClientSide());
+            return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
@@ -240,16 +245,18 @@ public class ItemCreativeUnlocker extends Item implements MediaHolderItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents,
-        TooltipFlag isAdvanced) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+        Consumer<Component> tooltipComponents, TooltipFlag isAdvanced) {
+        var components = new ArrayList<Component>();
         Component emphasized = infiniteMedia(null);
 
         MutableComponent modName = Component.translatable("item.hexcasting.creative_unlocker.mod_name").withStyle(
             (s) -> s.withColor(ItemMediaHolder.HEX_COLOR));
 
-        tooltipComponents.add(
+        components.add(
             Component.translatable("hexcasting.spelldata.onitem", emphasized).withStyle(ChatFormatting.GRAY));
-        tooltipComponents.add(Component.translatable("item.hexcasting.creative_unlocker.tooltip", modName).withStyle(ChatFormatting.GRAY));
+        components.add(Component.translatable("item.hexcasting.creative_unlocker.tooltip", modName).withStyle(ChatFormatting.GRAY));
+        components.forEach(tooltipComponents);
     }
 
     private static void collectChildrenRecursively(AdvancementNode root, List<AdvancementNode> out) {

@@ -16,6 +16,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.Style;
@@ -46,12 +47,12 @@ public class HexAdditionalRenderers {
 
     private static void renderSentinel(Sentinel sentinel, LocalPlayer owner,
         PoseStack ps, float partialTicks) {
-        ps.pushMatrix();
+        ps.pushPose();
 
         // zero vector is the player
         var mc = Minecraft.getInstance();
         var camera = mc.gameRenderer.getMainCamera();
-        var playerPos = camera.getPosition();
+        var playerPos = camera.position();
         ps.translate(
             sentinel.position().x - playerPos.x,
             sentinel.position().y - playerPos.y,
@@ -73,8 +74,6 @@ public class HexAdditionalRenderers {
 
         var tess = Tesselator.getInstance();
         var neo = ps.last().pose();
-        RenderSystem.setShader(GameRenderer::getRendertypeLinesShader);
-        RenderSystem.defaultBlendFunc();
 
         var pigment = IXplatAbstractions.INSTANCE.getPigment(owner);
         var colProvider = pigment.getColorProvider();
@@ -116,8 +115,8 @@ public class HexAdditionalRenderers {
             v.accept(bottom, Icos.TOP_RING[(i + 3) % 5]);
         }
         //tess.end();
-        BufferUploader.drawWithShader(buf.buildOrThrow());
-        ps.popMatrix();
+        RenderTypes.lines().draw(buf.buildOrThrow());
+        ps.popPose();
 
     }
 

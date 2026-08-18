@@ -13,6 +13,8 @@ import java.awt.geom.Line2D;
 import java.util.*;
 import java.util.concurrent.*;
 
+import static at.petrak.hexcasting.api.HexAPI.modLoc;
+
 public class PatternTextureManager {
 
     //TODO: remove if not needed anymore for comparison
@@ -105,9 +107,9 @@ public class PatternTextureManager {
                 double dist = line.ptSegDist(x, y);
                 int alpha = (int) (Mth.clamp(halfWidth - dist + 0.5, 0, 1) * 255);
                 if (alpha > 0) {
-                    int oldAlpha = ARGB.alpha(image.getPixelRGBA(x, y));
+                    int oldAlpha = ARGB.alpha(image.getPixel(x, y));
                     int newAlpha = Math.max(oldAlpha, alpha);
-                    image.setPixelRGBA(x, y, 0xFFFFFF | (newAlpha << 24));
+                    image.setPixel(x, y, 0xFFFFFF | (newAlpha << 24));
                 }
             }
         }

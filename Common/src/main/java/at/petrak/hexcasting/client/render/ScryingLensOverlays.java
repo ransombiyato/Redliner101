@@ -12,6 +12,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
+import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -43,7 +44,7 @@ public class ScryingLensOverlays {
                 float gCol = Math.max(0.0F, Mth.sin((note / 24F + 0.33333334F) * Mth.TWO_PI) * 0.65F + 0.35F);
                 float bCol = Math.max(0.0F, Mth.sin((note / 24F + 0.6666667F) * Mth.TWO_PI) * 0.65F + 0.35F);
 
-                int noteColor = 0xFF_000000 | Mth.color(rCol, gCol, bCol);
+                int noteColor = 0xFF_000000 | ARGB.colorFromFloat(1f, rCol, gCol, bCol);
 
                 var instrument = state.getValue(NoteBlock.INSTRUMENT);
 

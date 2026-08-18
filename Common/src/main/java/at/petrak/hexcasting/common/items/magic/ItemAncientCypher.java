@@ -5,8 +5,10 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.function.Consumer;
 
 public class ItemAncientCypher extends ItemCypher {
     public static final String TAG_HEX_NAME = "hex_name";
@@ -23,7 +25,7 @@ public class ItemAncientCypher extends ItemCypher {
 
     @Override
     public Component getName(ItemStack stack) {
-        var descID = this.getDescriptionId(stack);
+        var descID = this.getDescriptionId();
         var hexName = stack.get(HexDataComponents.HEX_NAME);
         if (hexName != null) {
             return Component.translatable(descID + ".preset", Component.translatable(hexName));
@@ -33,9 +35,11 @@ public class ItemAncientCypher extends ItemCypher {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+        Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        var components = new ArrayList<Component>();
         // display media fullness as usual
-        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        super.appendHoverText(stack, context, display, components::add, tooltipFlag);
 
         var patterns = stack.get(HexDataComponents.HEX_HOLDER_PATTERNS);
 
@@ -47,7 +51,8 @@ public class ItemAncientCypher extends ItemCypher {
                 storedHex.append(iota.display().plainCopy().withStyle(ChatFormatting.DARK_PURPLE));
             }
 
-            tooltipComponents.add(storedHex);
+            components.add(storedHex);
         }
+        components.forEach(tooltipComponents);
     }
 }

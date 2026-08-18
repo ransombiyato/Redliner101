@@ -41,3 +41,11 @@ The official upstream reference used for comparison is the [FallingColors/HexMod
 Fabric’s official modern rendering guide documents the 1.21.11-style split extraction/drawing model and custom `RenderPipeline` construction: register pipelines with `RenderPipelines.register(RenderPipeline.builder(...).withLocation(...).build())`, collect geometry during extraction, and submit/draw through staged buffers or the relevant render context. The reference is https://docs.fabricmc.net/develop/rendering/world. This confirms that the old `ShaderInstance` plus `RenderType.CompositeState`/`RenderStateShard` mixin path must be replaced rather than widened.
 
 The 1.21.11 mappings further confirm that `RenderPipelines.register(RenderPipeline)` and `RenderPipelines.ENTITY_SNIPPET` are private at compile time, while `RenderType.create(String, RenderSetup)` is package-private. The port therefore uses static mixin invokers (`AccessorRenderPipelines` and `AccessorRenderTypeFactory`) rather than relying on access-widener entries. `RenderSetup.builder(RenderPipeline)` supports texture, lightmap, overlay, crumbling, and buffer-size configuration. `ElytraModel` is non-generic and accepts `HumanoidRenderState`; `SubmitNodeCollector.CustomGeometryRenderer` exposes `render(PoseStack.Pose, VertexConsumer)` for custom geometry submission.
+
+
+## Additional 1.21.11 client API findings
+
+- Fabric’s legacy model predicate provider APIs are removed from Minecraft 1.21.4 onward; 1.21.11 item variants should use the item-model definition/property system instead of `ItemProperties`/`ItemPropertyFunction`. Reference: [Fabric Wiki — Model Predicate Providers](https://wiki.fabricmc.net/tutorial:model_predicate_providers).
+- 1.21.11 `ClientTooltipComponent` requires `getHeight(Font)` and `renderImage(Font, int, int, int, int, GuiGraphics)`; GUI textures use `GuiGraphics.blit(RenderPipeline, Identifier, ...)`.
+- 1.21.11 `NativeImage` pixel methods are `getPixel` and `setPixel`; `DynamicTexture` accepts a debug-name `Supplier<String>` plus `NativeImage`, and `TextureManager.register` requires an `Identifier`.
+- 1.21.11 particle rendering uses `SingleQuadParticle` and fixed `ParticleRenderType` values; the legacy custom `ParticleRenderType.begin(...)` interface is removed.

@@ -10,8 +10,10 @@ import net.minecraft.util.Unit;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.function.Consumer;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
@@ -28,8 +30,10 @@ public class ItemFocus extends Item implements IotaHolderItem, VariantItem {
     }
 
     @Override
-    public String getDescriptionId(ItemStack stack) {
-        return super.getDescriptionId(stack) + (stack.has(HexDataComponents.SEALED_IOTA_HOLDER) ? ".sealed" : "");
+    public Component getName(ItemStack stack) {
+        return stack.has(HexDataComponents.SEALED_IOTA_HOLDER)
+            ? Component.translatable(getDescriptionId() + ".sealed")
+            : super.getName(stack);
     }
 
     @Override
@@ -53,8 +57,11 @@ public class ItemFocus extends Item implements IotaHolderItem, VariantItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        IotaHolderItem.appendHoverText(this, stack, tooltipComponents, tooltipFlag);
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+        Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        var components = new ArrayList<Component>();
+        IotaHolderItem.appendHoverText(this, stack, components, tooltipFlag);
+        components.forEach(tooltipComponents);
     }
 
     public static boolean isSealed(ItemStack stack) {

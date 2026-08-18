@@ -8,9 +8,11 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.function.Consumer;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
@@ -40,8 +42,10 @@ public class ItemThoughtKnot extends Item implements IotaHolderItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, TooltipContext context,
-        List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        IotaHolderItem.appendHoverText(this, pStack, pTooltipComponents, pIsAdvanced);
+    public void appendHoverText(ItemStack pStack, Item.TooltipContext context, TooltipDisplay display,
+        Consumer<Component> tooltipComponents, TooltipFlag pIsAdvanced) {
+        var components = new ArrayList<Component>();
+        IotaHolderItem.appendHoverText(this, pStack, components, pIsAdvanced);
+        components.forEach(tooltipComponents);
     }
 }

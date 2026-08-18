@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.component.TooltipDisplay;
+import java.util.ArrayList;
 import java.util.function.Consumer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -68,6 +69,8 @@ public class ItemAbacus extends Item implements IotaHolderItem {
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        IotaHolderItem.appendHoverText(this, stack, tooltipComponents, tooltipFlag);
+        var components = new ArrayList<Component>();
+        IotaHolderItem.appendHoverText(this, stack, components, tooltipFlag);
+        components.forEach(tooltipComponents);
     }
 }

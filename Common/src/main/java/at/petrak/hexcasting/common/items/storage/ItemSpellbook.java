@@ -12,12 +12,16 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EquipmentSlot;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 import static at.petrak.hexcasting.common.items.storage.ItemFocus.NUM_VARIANTS;
@@ -30,7 +34,9 @@ public class ItemSpellbook extends Item implements IotaHolderItem, VariantItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag isAdvanced) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+        Consumer<Component> tooltipComponents, TooltipFlag isAdvanced) {
+        var tooltip = new ArrayList<Component>();
         boolean sealed = isSealed(stack);
         boolean empty = false;
         if (stack.has(HexDataComponents.SELECTED_SPELLBOOK_PAGE)) {
@@ -75,11 +81,12 @@ public class ItemSpellbook extends Item implements IotaHolderItem, VariantItem {
 
         IotaHolderItem.appendHoverText(this, stack, tooltip, isAdvanced);
 
-        super.appendHoverText(stack, context, tooltip, isAdvanced);
+        tooltip.forEach(tooltipComponents);
+        super.appendHoverText(stack, context, display, tooltipComponents, isAdvanced);
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity pEntity, int pSlotId, boolean pIsSelected) {
+    public void inventoryTick(ItemStack stack, ServerLevel level, Entity pEntity, EquipmentSlot pSlot) {
         int index = getPage(stack, 0);
         stack.set(HexDataComponents.SELECTED_SPELLBOOK_PAGE, index);
 
