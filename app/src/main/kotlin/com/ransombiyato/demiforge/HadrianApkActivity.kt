@@ -189,9 +189,10 @@ class HadrianApkActivity : Activity() {
                     addView(line("Kris → Flowey candidates", "${candidates.krisObjects.size} object(s), ${candidates.floweySprites.size} sprite(s)"))
                     addView(body("Objects:\n" + candidates.krisObjects.joinToString("\n") { "OBJT #${it.index}  ${it.name} → current SPRT #${it.spriteIndex}" }))
                     addView(body("Sprites:\n" + candidates.floweySprites.joinToString("\n") { "SPRT #${it.index}  ${it.name}" }))
-                    if (candidates.krisObjects.size == 1 && candidates.floweySprites.size == 1) {
-                        addView(primaryButton("Add this Kris → Flowey visual alias") {
-                            spriteAliases.getOrPut(result.targetPath) { linkedMapOf() }[candidates.krisObjects.single().index] = candidates.floweySprites.single().index
+                    if (candidates.krisObjects.isNotEmpty() && candidates.floweySprites.size == 1) {
+                        addView(primaryButton("Alias all ${candidates.krisObjects.size} Kris object(s) to Flowey") {
+                            val aliases = spriteAliases.getOrPut(result.targetPath) { linkedMapOf() }
+                            candidates.krisObjects.forEach { aliases[it.index] = candidates.floweySprites.single().index }
                             patched = null
                             render()
                         })
