@@ -23,13 +23,13 @@ pkSubproj {
     ])
     modrinthJar = remapJar.archiveFile
     modrinthDependencies([
-        "paucal:dabyDTwJ", // 0.6.0-fabric
-        "patchouli:1.20.1-80-fabric",
+        "paucal:0.7.1-noelle+1.21.1-fabric",
+        "patchouli:1.21.1-92-fabric",
         "fabric-language-kotlin:1.9.4+kotlin.1.8.21",
-        "inline:1.20.1-1.0.1-fabric",
-        "cloth-config:11.1.106+fabric",
-        "cardinal-components-api:5.2.1",
-        "fabric-api:0.84.0+1.20.1",
+        "inline:1.21.1-1.2.2-fabric",
+        "cloth-config:21.11.153+fabric",
+        "cardinal-components-api:7.3.2",
+        "fabric-api:0.141.6+1.21.11",
     ])
 }
 
@@ -128,10 +128,10 @@ dependencies {
     shadowBundle project(path: ':Common', configuration: 'transformProductionFabric')
 
     // === MANDATORY DEPS ===
-    modImplementation("libs:paucal:$paucalVersion+$minecraftVersion-fabric")
+    modImplementation("libs:paucal:$paucalVersion+$helperMinecraftVersion-fabric")
     // dear mod devs, don't put the platform in the middle of your version code
-    modImplementation "vazkii.patchouli:Patchouli:1.21-$patchouliVersion-FABRIC-SNAPSHOT"
-    modImplementation "com.samsthenerd.inline:inline-fabric:$minecraftVersion-$inlineVersion"
+    modImplementation "vazkii.patchouli:Patchouli:1.21.1-92-FABRIC"
+    modImplementation "com.samsthenerd.inline:inline-fabric:$helperMinecraftVersion-$inlineVersion"
     modImplementation "io.wispforest:accessories-fabric:$accessoriesVersion"
 
     modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:$cardinalComponentsVersion"
@@ -151,7 +151,7 @@ dependencies {
     modLocalRuntime "dev.emi:emi-fabric:${emiVersion}"
 
     modLocalRuntime "dev.architectury:architectury-fabric:$architecturyVersion"
-    modLocalRuntime "com.samsthenerd.inline:inline-fabric:$minecraftVersion-$inlineVersion"
+    modLocalRuntime "com.samsthenerd.inline:inline-fabric:$helperMinecraftVersion-$inlineVersion"
 
 //    modImplementation "maven.modrinth:gravity-api:$gravityApiVersion"
     modApi("com.github.Virtuoel:Pehkui:${pehkuiVersion}", {
