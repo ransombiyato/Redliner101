@@ -5,6 +5,7 @@ import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -49,11 +50,15 @@ public class ItemLoreFragment extends Item {
             return InteractionResult.SUCCESS;
         }
 
+        if (!(level instanceof ServerLevel slevel)) {
+            return InteractionResult.SUCCESS;
+        }
+
         AdvancementHolder unfoundLore = null;
         var shuffled = new ArrayList<>(NAMES);
         Collections.shuffle(shuffled);
         for (var advID : shuffled) {
-            var adv = splayer.server.getAdvancements().get(advID);
+            var adv = slevel.getServer().getAdvancements().get(advID);
             if (adv == null) {
                 continue; // uh oh
             }
