@@ -11,6 +11,7 @@ import com.ransombiyato.demiforge.core.gamemaker.GameMakerFormInspector
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerNamedResource
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectSpriteAlias
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectSpriteEditor
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectResource
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEdit
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEditor
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEntry
@@ -48,12 +49,19 @@ data class HadrianGameMakerInspection(
     val stringPreview: List<GameMakerStringEntry>,
     val namedResources: Map<String, List<GameMakerNamedResource>>,
     val resourcePreviewErrors: Map<String, String>,
+    val objectSpriteReferences: List<GameMakerObjectResource>,
 )
 
 data class HadrianResourceSearch(
     val targetPath: String,
     val query: String,
     val matches: List<GameMakerNamedResource>,
+)
+
+data class HadrianKrisFloweyCandidates(
+    val targetPath: String,
+    val krisObjects: List<GameMakerObjectResource>,
+    val floweySprites: List<GameMakerNamedResource>,
 )
 
 /**
@@ -144,6 +152,9 @@ class HadrianApkPatchService(private val context: Context) {
                 .onSuccess { namedResources[chunkName] = it }
                 .onFailure { resourcePreviewErrors[chunkName] = it.message ?: "Could not index this resource chunk." }
         }
+        val objectSpriteReferences = runCatching { GameMakerObjectSpriteEditor.readObjects(extracted, index).take(100) }
+            .onFailure { resourcePreviewErrors["OBJT sprite references"] = it.message ?: "Could not read object sprite references." }
+            .getOrDefault(emptyList())
         return HadrianGameMakerInspection(
             targetPath = targetPath,
             chunks = index.chunks,
@@ -151,6 +162,7 @@ class HadrianApkPatchService(private val context: Context) {
             stringPreview = if (hasStrings) GameMakerFormInspector.readStrings(extracted, index, previewLimit) else emptyList(),
             namedResources = namedResources,
             resourcePreviewErrors = resourcePreviewErrors,
+            objectSpriteReferences = objectSpriteReferences,
         )
     }
 
@@ -200,6 +212,17 @@ class HadrianApkPatchService(private val context: Context) {
             .flatMap { chunk -> GameMakerFormInspector.readNamedResources(source, chunk, index).filter { it.name?.contains(query, ignoreCase = true) == true } }
             .take(500)
         return HadrianResourceSearch(targetPath, query.trim(), matches)
+    }
+
+    fun findKrisFloweyCandidates(selection: HadrianApkSelection, targetPath: String): HadrianKrisFloweyCandidates {
+        require(targetPath.lowercase().endsWith(".droid")) { "Only GameMaker .droid payloads can be searched." }
+        val source = extractPayload(selection, targetPath, "inspection")
+        val index = GameMakerFormInspector.inspect(source)
+        val krisObjects = GameMakerObjectSpriteEditor.readObjects(source, index).filter { it.name?.contains("kris", ignoreCase = true) == true }
+        val floweySprites = GameMakerFormInspector.readNamedResources(source, "SPRT", index).filter { resource ->
+            resource.name?.let { it.contains("flowey", ignoreCase = true) || it.contains("flowery", ignoreCase = true) } == true
+        }
+        return HadrianKrisFloweyCandidates(targetPath, krisObjects, floweySprites)
     }
 
     private fun extractPayload(selection: HadrianApkSelection, targetPath: String, folder: String): Path {

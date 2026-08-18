@@ -40,6 +40,7 @@ class HadrianApkActivity : Activity() {
     private var patched: HadrianPatchedApk? = null
     private var inspection: HadrianGameMakerInspection? = null
     private var resourceSearch: HadrianResourceSearch? = null
+    private var krisFloweyCandidates: HadrianKrisFloweyCandidates? = null
     private val replacements = linkedMapOf<String, Path>()
     private val stringEdits = linkedMapOf<String, LinkedHashMap<Int, String>>()
     private val spriteAliases = linkedMapOf<String, LinkedHashMap<Int, Int>>()
@@ -66,6 +67,7 @@ class HadrianApkActivity : Activity() {
                     patched = null
                     inspection = null
                     resourceSearch = null
+                    krisFloweyCandidates = null
                     stringEdits.clear()
                     spriteAliases.clear()
                 }
@@ -163,14 +165,39 @@ class HadrianApkActivity : Activity() {
                     })
                 }
             }
+            if (result.objectSpriteReferences.isNotEmpty()) {
+                content.addView(card().apply {
+                    addView(line("Object → sprite map", "${result.objectSpriteReferences.size} indexed"))
+                    addView(body(result.objectSpriteReferences.joinToString("\n") { resource ->
+                        "OBJT #${resource.index}  ${resource.name ?: "<unnamed>"} → SPRT #${resource.spriteIndex}"
+                    }))
+                })
+            }
             if (result.resourcePreviewErrors.isNotEmpty()) {
                 content.addView(warningCard(result.resourcePreviewErrors.entries.joinToString("\n") { (chunk, error) -> "$chunk: $error" }))
             }
             content.addView(secondaryButton("Search all named resources") { searchResources(result.targetPath) })
+            content.addView(secondaryButton("Find Kris → Flowey candidates") { findKrisFloweyCandidates(result.targetPath) })
             resourceSearch?.takeIf { it.targetPath == result.targetPath }?.let { search ->
                 content.addView(card().apply {
                     addView(line("Search: ${search.query}", "${search.matches.size} match(es)"))
                     addView(body(search.matches.joinToString("\n") { match -> "${match.chunkName} #${match.index}  ${match.name ?: "<unnamed>"}" }))
+                })
+            }
+            krisFloweyCandidates?.takeIf { it.targetPath == result.targetPath }?.let { candidates ->
+                content.addView(card().apply {
+                    addView(line("Kris → Flowey candidates", "${candidates.krisObjects.size} object(s), ${candidates.floweySprites.size} sprite(s)"))
+                    addView(body("Objects:\n" + candidates.krisObjects.joinToString("\n") { "OBJT #${it.index}  ${it.name} → current SPRT #${it.spriteIndex}" }))
+                    addView(body("Sprites:\n" + candidates.floweySprites.joinToString("\n") { "SPRT #${it.index}  ${it.name}" }))
+                    if (candidates.krisObjects.size == 1 && candidates.floweySprites.size == 1) {
+                        addView(primaryButton("Add this Kris → Flowey visual alias") {
+                            spriteAliases.getOrPut(result.targetPath) { linkedMapOf() }[candidates.krisObjects.single().index] = candidates.floweySprites.single().index
+                            patched = null
+                            render()
+                        })
+                    } else {
+                        addView(body("DemiForge will not guess among multiple candidates. Review the actual IDs, then add a specific alias."))
+                    }
                 })
             }
             val edits = stringEdits[result.targetPath].orEmpty()
@@ -205,6 +232,7 @@ class HadrianApkActivity : Activity() {
             patched = null
             inspection = null
             resourceSearch = null
+            krisFloweyCandidates = null
             stringEdits.clear()
             spriteAliases.clear()
             render()
@@ -241,6 +269,7 @@ class HadrianApkActivity : Activity() {
         try {
             inspection = patcher.inspectGameMakerPayload(requireNotNull(selection), targetPath)
             resourceSearch = null
+            krisFloweyCandidates = null
             render()
         } catch (exception: Exception) {
             showError("Could not parse $targetPath as GameMaker data: ${exception.message}")
@@ -328,6 +357,15 @@ class HadrianApkActivity : Activity() {
                 }
             }
             .show()
+    }
+
+    private fun findKrisFloweyCandidates(targetPath: String) {
+        try {
+            krisFloweyCandidates = patcher.findKrisFloweyCandidates(requireNotNull(selection), targetPath)
+            render()
+        } catch (exception: Exception) {
+            showError(exception.message ?: "Could not search Kris and Flowey candidates.")
+        }
     }
 
     private fun install(output: HadrianPatchedApk) {

@@ -73,3 +73,4 @@
 - [x] Implement and test same-or-shorter UTF-8 STRG edits that preserve GameMaker offsets and reinject the edited payload into a rebuilt APK fixture.
 - [x] Add on-device named-resource search across actual sprite, object, room, script, and code chunks to locate Kris and Flowey entries after payload inspection.
 - [x] Implement and test an offset-preserving object-to-existing-sprite alias operation for mapped Kris visuals, with a combined APK draft workflow.
+- [x] Add a guarded Kris-to-Flowey candidate finder that requires one reviewed actual object and sprite match before it stages an automatic alias.
