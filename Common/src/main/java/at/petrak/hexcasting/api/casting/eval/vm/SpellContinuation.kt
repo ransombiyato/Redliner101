@@ -1,5 +1,6 @@
 package at.petrak.hexcasting.api.casting.eval.vm
 
+import at.petrak.hexcasting.api.utils.CodecHelper
 import com.mojang.datafixers.util.Either
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
@@ -28,7 +29,7 @@ sealed interface SpellContinuation {
             SpellContinuation::class.java.simpleName
         ) { recursed: Codec<SpellContinuation> ->
             Codec.withAlternative<SpellContinuation>(
-                Codec.unit(Supplier<SpellContinuation> { Done }),
+                CodecHelper.unit(Supplier<SpellContinuation> { Done }),
                 RecordCodecBuilder.create<NotDone> { inst ->
                     inst.group(
                         ContinuationFrame.Type.TYPED_CODEC.fieldOf("frame").forGetter { it.frame },
