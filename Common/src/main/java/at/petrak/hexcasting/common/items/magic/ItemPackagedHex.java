@@ -106,7 +106,7 @@ public abstract class ItemPackagedHex extends ItemMediaHolder implements HexHold
         var sPlayer = (ServerPlayer) player;
         var ctx = new PackagedItemCastEnv(sPlayer, usedHand);
         var vm = CastingVM.empty(ctx);
-        var clientView = vm.queueExecuteAndWrapIotas(instrs, sPlayer.serverLevel());
+        var clientView = vm.queueExecuteAndWrapIotas(instrs, net.minecraft.world.entity.ai.goal.Goal.getServerLevel(sPlayer));
 
         var patterns = instrs.stream()
                 .filter(i -> i instanceof PatternIota)
@@ -132,7 +132,7 @@ public abstract class ItemPackagedHex extends ItemMediaHolder implements HexHold
             // Somehow we lost spraying particles on each new pattern, so do it here
             // this also nicely prevents particle spam on trinkets
             new ParticleSpray(player.position(), new Vec3(0.0, 1.5, 0.0), 0.4, Math.PI / 3, 30)
-                    .sprayParticles(sPlayer.serverLevel(), ctx.getPigment());
+                    .sprayParticles(net.minecraft.world.entity.ai.goal.Goal.getServerLevel(sPlayer), ctx.getPigment());
         }
 
         var sound = ctx.getSound().sound();

@@ -10,7 +10,7 @@ import at.petrak.hexcasting.api.utils.asTranslatedComponent
 import at.petrak.hexcasting.api.utils.lightPurple
 import at.petrak.hexcasting.common.lib.HexItems
 import at.petrak.hexcasting.ktxt.*
-import net.minecraft.Util
+import net.minecraft.util.Util
 import net.minecraft.core.BlockPos
 import net.minecraft.network.chat.Component
 import net.minecraft.world.damagesource.DamageSource

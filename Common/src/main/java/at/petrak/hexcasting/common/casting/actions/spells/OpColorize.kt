@@ -8,7 +8,7 @@ import at.petrak.hexcasting.api.casting.mishaps.MishapBadOffhandItem
 import at.petrak.hexcasting.api.misc.MediaConstants
 import at.petrak.hexcasting.api.pigment.FrozenPigment
 import at.petrak.hexcasting.xplat.IXplatAbstractions
-import net.minecraft.Util
+import net.minecraft.util.Util
 import net.minecraft.world.item.ItemStack
 
 object OpColorize : SpellAction {

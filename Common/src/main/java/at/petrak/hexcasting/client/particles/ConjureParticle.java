@@ -14,7 +14,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureManager;
-import net.minecraft.util.FastColor;
+import net.minecraft.util.ARGB;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -31,9 +31,9 @@ public class ConjureParticle extends TextureSheetParticle {
         this.quadSize *= 0.9f;
         this.setParticleSpeed(dx, dy, dz);
 
-        var r = FastColor.ARGB32.red(color);
-        var g = FastColor.ARGB32.green(color);
-        var b = FastColor.ARGB32.blue(color);
+        var r = ARGB.red(color);
+        var g = ARGB.green(color);
+        var b = ARGB.blue(color);
         this.setColor(r / 255f, g / 255f, b / 255f);
         this.setAlpha(0.3f);
 

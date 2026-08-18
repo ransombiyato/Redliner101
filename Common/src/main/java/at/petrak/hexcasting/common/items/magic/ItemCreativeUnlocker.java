@@ -9,7 +9,7 @@ import at.petrak.hexcasting.common.lib.HexDataComponents;
 import at.petrak.hexcasting.common.lib.HexItems;
 import at.petrak.hexcasting.common.lib.HexSounds;
 import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.advancements.AdvancementNode;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;

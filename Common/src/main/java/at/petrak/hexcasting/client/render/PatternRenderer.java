@@ -9,7 +9,7 @@ import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.resources.Identifier;
-import net.minecraft.util.FastColor;
+import net.minecraft.util.ARGB;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 
@@ -69,11 +69,11 @@ public class PatternRenderer {
 
             var isGlowyInline = patSets.getName().equals("inlineglowy");
 
-            if(FastColor.ARGB32.alpha(patColors.outerEndColor()) != 0 && FastColor.ARGB32.alpha(patColors.outerStartColor()) != 0){
+            if(ARGB.alpha(patColors.outerEndColor()) != 0 && ARGB.alpha(patColors.outerStartColor()) != 0){
                 RenderLib.drawLineSeq(ps.last().pose(), zappyRenderSpace, (float)patSets.getOuterWidth(staticPoints.finalScale),
                         patColors.outerStartColor(), patColors.outerEndColor(), VCDrawHelper.getHelper(worldlyBits, ps,outerZ));
             }
-            if(FastColor.ARGB32.alpha(patColors.innerEndColor()) != 0 && FastColor.ARGB32.alpha(patColors.innerStartColor()) != 0) {
+            if(ARGB.alpha(patColors.innerEndColor()) != 0 && ARGB.alpha(patColors.innerStartColor()) != 0) {
                 RenderLib.drawLineSeq(ps.last().pose(), zappyRenderSpace, (float)patSets.getInnerWidth(staticPoints.finalScale),
                         patColors.innerStartColor(), patColors.innerEndColor(), VCDrawHelper.getHelper(worldlyBits, ps,isGlowyInline ? 1f : innerZ));
             }
@@ -83,12 +83,12 @@ public class PatternRenderer {
 
         float dotZ = 0.0011f;
 
-        if(FastColor.ARGB32.alpha(patColors.startingDotColor()) != 0) {
+        if(ARGB.alpha(patColors.startingDotColor()) != 0) {
             RenderLib.drawSpot(ps.last().pose(), staticPoints.dotsScaled.get(0), (float)patSets.getStartDotRadius(staticPoints.finalScale),
                     patColors.startingDotColor(), VCDrawHelper.getHelper(worldlyBits, ps, dotZ));
         }
 
-        if(FastColor.ARGB32.alpha(patColors.gridDotsColor()) != 0) {
+        if(ARGB.alpha(patColors.gridDotsColor()) != 0) {
             for(int i = 1; i < staticPoints.dotsScaled.size(); i++){
                 Vec2 gridDot = staticPoints.dotsScaled.get(i);
                 RenderLib.drawSpot(ps.last().pose(), gridDot, (float)patSets.getGridDotsRadius(staticPoints.finalScale),
@@ -115,7 +115,7 @@ public class PatternRenderer {
 
         VertexConsumer vc;
 
-        if(FastColor.ARGB32.alpha(patColors.outerStartColor()) != 0) {
+        if(ARGB.alpha(patColors.outerStartColor()) != 0) {
             VCDrawHelper vcHelper = VCDrawHelper.getHelper(worldlyBits, ps, outerZ, textures.get("outer"));
             vc = vcHelper.vcSetupAndSupply(VertexFormat.Mode.QUADS);
 
@@ -129,7 +129,7 @@ public class PatternRenderer {
             vcHelper.vcEndDrawer(vc);
         }
 
-        if(FastColor.ARGB32.alpha(patColors.innerStartColor()) != 0) {
+        if(ARGB.alpha(patColors.innerStartColor()) != 0) {
             VCDrawHelper vcHelper = VCDrawHelper.getHelper(worldlyBits, ps, innerZ, textures.get("inner"));
             vc = vcHelper.vcSetupAndSupply(VertexFormat.Mode.QUADS);
 

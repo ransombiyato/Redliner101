@@ -4,7 +4,7 @@ import com.mojang.blaze3d.platform.NativeImage;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.resources.Identifier;
-import net.minecraft.util.FastColor;
+import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.util.Tuple;
 import net.minecraft.world.phys.Vec2;
@@ -104,7 +104,7 @@ public class PatternTextureManager {
                 double dist = line.ptSegDist(x, y);
                 int alpha = (int) (Mth.clamp(halfWidth - dist + 0.5, 0, 1) * 255);
                 if (alpha > 0) {
-                    int oldAlpha = FastColor.ARGB32.alpha(image.getPixelRGBA(x, y));
+                    int oldAlpha = ARGB.alpha(image.getPixelRGBA(x, y));
                     int newAlpha = Math.max(oldAlpha, alpha);
                     image.setPixelRGBA(x, y, 0xFFFFFF | (newAlpha << 24));
                 }
