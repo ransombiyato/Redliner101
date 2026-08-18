@@ -7,9 +7,8 @@ import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.client.render.HexPatternPoints;
 import at.petrak.hexcasting.common.lib.HexBlockEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtOps;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
@@ -80,22 +79,23 @@ public class BlockEntityAkashicBookshelf extends HexBlockEntity {
     }
 
     @Override
-    protected void saveModData(CompoundTag compoundTag, HolderLookup.Provider registries) {
+    protected void saveModData(ValueOutput output) {
         if (this.pattern != null && this.iota != null) {
-            compoundTag.put(TAG_PATTERN, HexPattern.CODEC.encodeStart(NbtOps.INSTANCE, pattern).getOrThrow());
-            compoundTag.put(TAG_IOTA, IotaType.TYPED_CODEC.encodeStart(NbtOps.INSTANCE, iota).getOrThrow());
+            output.store(TAG_PATTERN, HexPattern.CODEC, this.pattern);
+            output.store(TAG_IOTA, IotaType.TYPED_CODEC, this.iota);
         } else {
-            compoundTag.putBoolean(TAG_DUMMY, false);
+            output.putBoolean(TAG_DUMMY, false);
         }
     }
 
     @Override
-    protected void loadModData(CompoundTag tag, HolderLookup.Provider registries) {
-        if (tag.contains(TAG_PATTERN) && tag.contains(TAG_IOTA)) {
-            this.pattern = HexPattern.CODEC.parse(NbtOps.INSTANCE, tag.getCompound(TAG_PATTERN)).getOrThrow();
-            //this.iotaTag = tag.getCompound(TAG_IOTA);
-            this.iota = IotaType.TYPED_CODEC.parse(NbtOps.INSTANCE, tag.getCompound(TAG_IOTA)).getOrThrow();
-        } else if (tag.contains(TAG_DUMMY)) {
+    protected void loadModData(ValueInput input) {
+        var pattern = input.read(TAG_PATTERN, HexPattern.CODEC);
+        var iota = input.read(TAG_IOTA, IotaType.TYPED_CODEC);
+        if (pattern.isPresent() && iota.isPresent()) {
+            this.pattern = pattern.get();
+            this.iota = iota.get();
+        } else if (input.getBooleanOr(TAG_DUMMY, false)) {
             this.pattern = null;
             //this.iotaTag = null;
             this.iota = null;

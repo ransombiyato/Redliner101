@@ -7,11 +7,10 @@ import com.mojang.authlib.GameProfile;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.core.UUIDUtil;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtOps;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -123,28 +122,20 @@ public class BlockEntityRedstoneImpetus extends BlockEntityAbstractImpetus {
     }
 
     @Override
-    protected void saveModData(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveModData(tag, registries);
+    protected void saveModData(ValueOutput output) {
+        super.saveModData(output);
         if (this.storedPlayer != null) {
-            tag.putUUID(TAG_STORED_PLAYER, this.storedPlayer);
+            output.store(TAG_STORED_PLAYER, UUIDUtil.CODEC, this.storedPlayer);
         }
         if (this.storedPlayerProfile != null) {
-            tag.put(TAG_STORED_PLAYER_PROFILE, ExtraCodecs.GAME_PROFILE.encodeStart(NbtOps.INSTANCE, storedPlayerProfile).getOrThrow());
+            output.store(TAG_STORED_PLAYER_PROFILE, ExtraCodecs.AUTHLIB_GAME_PROFILE, this.storedPlayerProfile);
         }
     }
 
     @Override
-    protected void loadModData(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadModData(tag, registries);
-        if (tag.contains(TAG_STORED_PLAYER, Tag.TAG_INT_ARRAY)) {
-            this.storedPlayer = tag.getUUID(TAG_STORED_PLAYER);
-        } else {
-            this.storedPlayer = null;
-        }
-        if (tag.contains(TAG_STORED_PLAYER_PROFILE, Tag.TAG_COMPOUND)) {
-            this.storedPlayerProfile = ExtraCodecs.GAME_PROFILE.parse(NbtOps.INSTANCE, tag.getCompound(TAG_STORED_PLAYER_PROFILE)).getOrThrow();
-        } else {
-            this.storedPlayerProfile = null;
-        }
+    protected void loadModData(ValueInput input) {
+        super.loadModData(input);
+        this.storedPlayer = input.read(TAG_STORED_PLAYER, UUIDUtil.CODEC).orElse(null);
+        this.storedPlayerProfile = input.read(TAG_STORED_PLAYER_PROFILE, ExtraCodecs.AUTHLIB_GAME_PROFILE).orElse(null);
     }
 }

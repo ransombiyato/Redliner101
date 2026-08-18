@@ -11,9 +11,10 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.network.chat.ComponentSerialization;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -287,45 +288,35 @@ public abstract class BlockEntityAbstractImpetus extends HexBlockEntity implemen
     }
 
     @Override
-    protected void saveModData(CompoundTag tag, HolderLookup.Provider registries) {
+    protected void saveModData(ValueOutput output) {
         if (this.executionState != null) {
-            tag.put(TAG_EXECUTION_STATE, this.executionState.save());
+            output.store(TAG_EXECUTION_STATE, CompoundTag.CODEC, this.executionState.save());
         }
 
-        tag.putLong(TAG_MEDIA, this.media);
+        output.putLong(TAG_MEDIA, this.media);
 
         if (this.displayMsg != null && this.displayItem != null) {
-            tag.putString(TAG_ERROR_MSG, Component.Serializer.toJson(this.displayMsg, registries));
-            tag.put(TAG_ERROR_DISPLAY, this.displayItem.save(registries, new CompoundTag()));
+            output.store(TAG_ERROR_MSG, ComponentSerialization.CODEC, this.displayMsg);
+            output.store(TAG_ERROR_DISPLAY, ItemStack.CODEC, this.displayItem);
         }
-        if (this.pigment != null)
-            tag.put(TAG_PIGMENT, FrozenPigment.CODEC.encodeStart(NbtOps.INSTANCE, pigment).getOrThrow());
+        if (this.pigment != null) {
+            output.store(TAG_PIGMENT, FrozenPigment.CODEC, this.pigment);
+        }
     }
 
     @Override
-    protected void loadModData(CompoundTag tag, HolderLookup.Provider registries) {
+    protected void loadModData(ValueInput input) {
         this.executionState = null;
-        if (tag.contains(TAG_EXECUTION_STATE, Tag.TAG_COMPOUND)) {
-            this.lazyExecutionState = tag.getCompound(TAG_EXECUTION_STATE);
-        } else {
-            this.lazyExecutionState = null;
-        }
+        this.lazyExecutionState = input.read(TAG_EXECUTION_STATE, CompoundTag.CODEC).orElse(null);
 
-        if (tag.contains(TAG_MEDIA, Tag.TAG_LONG)) {
-            this.media = tag.getLong(TAG_MEDIA);
-        }
+        this.media = input.getLongOr(TAG_MEDIA, 0L);
 
-        if (tag.contains(TAG_ERROR_MSG, Tag.TAG_STRING) && tag.contains(TAG_ERROR_DISPLAY, Tag.TAG_COMPOUND)) {
-            var msg = Component.Serializer.fromJson(tag.getString(TAG_ERROR_MSG), registries);
-            var display = ItemStack.parseOptional(registries, tag.getCompound(TAG_ERROR_DISPLAY));
-            this.displayMsg = msg;
-            this.displayItem = display;
-        } else {
-            this.displayMsg = null;
-            this.displayItem = null;
-        }
-        if (tag.contains(TAG_PIGMENT, Tag.TAG_COMPOUND))
-            this.pigment = FrozenPigment.CODEC.parse(NbtOps.INSTANCE, tag.getCompound(TAG_PIGMENT)).getOrThrow();
+        var msg = input.read(TAG_ERROR_MSG, ComponentSerialization.CODEC);
+        var display = input.read(TAG_ERROR_DISPLAY, ItemStack.CODEC);
+        this.displayMsg = msg.orElse(null);
+        this.displayItem = display.orElse(null);
+
+        this.pigment = input.read(TAG_PIGMENT, FrozenPigment.CODEC).orElse(null);
     }
 
     public void applyScryingLensOverlay(List<Pair<ItemStack, Component>> lines,

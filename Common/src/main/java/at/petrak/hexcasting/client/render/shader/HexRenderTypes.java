@@ -1,6 +1,7 @@
 package at.petrak.hexcasting.client.render.shader;
 
 import at.petrak.hexcasting.api.HexAPI;
+import at.petrak.hexcasting.mixin.accessor.client.AccessorRenderTypeFactory;
 import net.minecraft.client.renderer.rendertype.RenderSetup;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.util.Util;
@@ -14,7 +15,7 @@ public final class HexRenderTypes {
     }
 
     private static final Function<Identifier, RenderType> GRAYSCALE_PROVIDER = Util.memoize(texture ->
-        RenderType.create(
+        AccessorRenderTypeFactory.hex$create(
             HexAPI.MOD_ID + ":grayscale",
             RenderSetup.builder(HexShaders.GRAYSCALE)
                 .withTexture("Sampler0", texture)

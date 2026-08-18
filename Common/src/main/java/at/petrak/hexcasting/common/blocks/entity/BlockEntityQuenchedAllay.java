@@ -4,8 +4,8 @@ import at.petrak.hexcasting.api.block.HexBlockEntity;
 import at.petrak.hexcasting.common.blocks.BlockQuenchedAllay;
 import at.petrak.hexcasting.common.lib.HexBlockEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.BiFunction;
@@ -23,12 +23,12 @@ public class BlockEntityQuenchedAllay extends HexBlockEntity {
     }
 
     @Override
-    protected void saveModData(CompoundTag tag, HolderLookup.Provider registries) {
+    protected void saveModData(ValueOutput output) {
 
     }
 
     @Override
-    protected void loadModData(CompoundTag tag, HolderLookup.Provider registries) {
+    protected void loadModData(ValueInput input) {
 
     }
 }

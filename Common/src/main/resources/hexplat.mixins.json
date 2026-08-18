@@ -20,8 +20,9 @@
   ],
   "client": [
     "accessor.client.AccessorBlockEntityRenderDispatcher",
+    "accessor.client.AccessorRenderPipelines",
+    "accessor.client.AccessorRenderTypeFactory",
     "accessor.client.AccessorMouseHandler",
     "client.MixinClientLevel",
-    "client.MixinPlayerRenderer"
   ]
 }

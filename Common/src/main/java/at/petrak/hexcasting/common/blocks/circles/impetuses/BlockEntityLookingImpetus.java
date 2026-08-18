@@ -5,8 +5,8 @@ import at.petrak.hexcasting.api.casting.circles.BlockEntityAbstractImpetus;
 import at.petrak.hexcasting.common.lib.HexBlockEntities;
 import at.petrak.hexcasting.common.lib.HexSounds;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -86,14 +86,14 @@ public class BlockEntityLookingImpetus extends BlockEntityAbstractImpetus {
     }
 
     @Override
-    protected void saveModData(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveModData(tag, registries);
-        tag.putInt(TAG_LOOK_AMOUNT, this.lookAmount);
+    protected void saveModData(ValueOutput output) {
+        super.saveModData(output);
+        output.putInt(TAG_LOOK_AMOUNT, this.lookAmount);
     }
 
     @Override
-    protected void loadModData(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadModData(tag, registries);
-        this.lookAmount = tag.getInt(TAG_LOOK_AMOUNT);
+    protected void loadModData(ValueInput input) {
+        super.loadModData(input);
+        this.lookAmount = input.getIntOr(TAG_LOOK_AMOUNT, 0);
     }
 }
