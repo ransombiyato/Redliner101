@@ -144,7 +144,7 @@ public abstract class PlayerBasedCastEnv extends CastingEnvironment {
             double healthToRemove = Math.max(costLeft / mediaToHealth, 0.5);
             if (simulate) {
                 long simulatedRemovedMedia = Mth.ceil(Math.min(this.caster.getHealth(), healthToRemove) * mediaToHealth);
-                if (this.caster.isInvulnerableTo(this.caster.damageSources().source(HexDamageTypes.OVERCAST))) {
+                if (this.caster.isInvulnerableTo(this.world, this.caster.damageSources().source(HexDamageTypes.OVERCAST))) {
                     simulatedRemovedMedia = 0;
                 }
                 costLeft -= simulatedRemovedMedia;
