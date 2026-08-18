@@ -1,0 +1,33 @@
+# Loom and Gradle configuration audit
+
+## Loom/version references
+./Common/build.gradle:1:architectury {
+./Common/build.gradle:5:loom {
+./Common/build.gradle:38:    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+./Neoforge/build.gradle:6:architectury {
+./Neoforge/build.gradle:109:    modRuntimeOnly "dev.architectury:architectury-neoforge:$architecturyVersion"
+./Neoforge/build.gradle:140:loom {
+./Neoforge/gradle.properties:5:loom.platform=neoforge
+./Fabric/build.gradle:2:    // id 'fabric-loom' version "1.8.9"
+./Fabric/build.gradle:6:architectury {
+./Fabric/build.gradle:37:loom {
+./Fabric/build.gradle:153:    modLocalRuntime "dev.architectury:architectury-fabric:$architecturyVersion"
+./Fabric/gradle.properties:7:loom.platform=fabric
+./build.gradle:5:    id 'dev.architectury.loom' version '1.13-SNAPSHOT' apply false
+./build.gradle:7:    id 'architectury-plugin' version '3.4-SNAPSHOT'
+./build.gradle:17:architectury {
+./build.gradle:47:    apply plugin: 'dev.architectury.loom'
+./build.gradle:48:    apply plugin: 'architectury-plugin'
+./build.gradle:76:    loom {
+./build.gradle:82:        mappings loom.officialMojangMappings()
+./build.gradle:88:        loom {
+./build.gradle:133:    architectury {
+./gradle.properties:14:loom.ignoreDependencyLoomVersionValidation=true
+./gradle.properties:18:fabric_loader_version=0.19.3
+./gradle.properties:34:architecturyVersion=13.0.2
+./settings.gradle:13:        maven { url "https://maven.architectury.dev/" }
+
+## Wrapper and Gradle versions
+gradle/wrapper/gradle-wrapper.properties:3:distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-bin.zip
+
+## Active Gradle processes

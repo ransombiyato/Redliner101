@@ -91,3 +91,19 @@ The source-wide audit found the following hit counts in authored Common/Fabric s
 | UUID/profile APIs | 16 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
 
 The counts are stored in `docs/PORT_1.21.11_API_FAMILY_SUMMARY.txt`. The next work phase is to review these candidates in related batches, update the checklist item status, and only then run consolidated compilation/CI validation.
+
+## Interim compile findings
+
+| ID | Area | Finding | Evidence | Status | Required follow-up |
+|---|---|---|---|---|---|
+| INF-04 | Build infrastructure | The local `:Common:compileJava :Common:compileKotlin` run did not reach compilation within the allotted time and remained in Gradle configuration after reporting `Mod was built with a newer version of Loom (1.14.10), you are using Loom (1.13.469)`. | `docs/LOCAL_1.21.11_COMPILE.log` | OPEN | Audit all Loom/plugin declarations and cache state; rerun with the exact configured Loom version or document why the resolved version differs. |
+| INF-05 | Build infrastructure | A stale/missing Fabric Loom cache lock was detected and rebuilt: `ACQUIRED_PREVIOUS_OWNER_MISSING`. | `docs/LOCAL_1.21.11_COMPILE.log` | OPEN | Ensure no stale Gradle processes/locks remain before the next consolidated compile. |
+
+| INF-06 | Build infrastructure | The configured `dev.architectury.loom` plugin is `1.13-SNAPSHOT`, resolving to `1.13.469`; direct checks for an `architectury-loom:1.14.10` artifact returned HTTP 404, so blindly changing the version is not valid. | `docs/BUILD_CONFIG_AUDIT.txt`, `docs/LOCAL_1.21.11_COMPILE.log` | OPEN | Determine the correct published Loom version compatible with this project and the 1.21.11 mappings, then update the build only if verified. |
+
+| INF-07 | CI/build | Current consolidated CI run `32153687493` on audit commit `85a1b15` completed with failure during Java compilation; the failure is source/API compilation, not a successful artifact build. | `docs/LATEST_CI_STATUS.txt`, `docs/CI_32153687493_FAILED.log` | OPEN | Classify every diagnostic into the API-family rows below before the next validation run. |
+| INF-08 | CI/build | Prior run `32153548296` was cancelled while the audit commit was being superseded; it is not a source verdict. | `docs/LATEST_CI_STATUS.txt` | RECORDED | Ignore as a build result; retain only as workflow history. |
+
+The current CI source diagnostics reinforce that the unfinished families are concentrated in recipe/datagen APIs, HolderGetter-based advancement builders, custom ingredient codecs, command storage APIs, villager/brainsweep ingredients, interop rendering, and remaining registry/import symbols. These are tracked by API-14, API-19, API-20, API-22 through API-35, and API-37 through API-45; they must be fixed as grouped batches rather than one diagnostic at a time.
+
+| INF-09 | CI diagnostics | The complete current CI run `32153687493` contains 813 source diagnostic lines across 48 unique authored source files, plus Gradle/process diagnostics. | `docs/CI_32153687493_ERROR_INDEX.txt` | RECORDED | Use this index as the batch-fix baseline; do not start another CI-only error loop. |

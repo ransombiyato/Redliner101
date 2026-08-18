@@ -1,0 +1,820 @@
+# CI 32153687493 complete diagnostic index
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:292: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:207: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java:5: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java:12: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:9: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:18: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:21: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:147: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java:41: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java:12: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java:16: method set in class DimensionDataStorage cannot be applied to given types;
+Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java:15: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java:14: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java:22: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:74: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:139: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:94: no suitable method found for create(Level)
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java:65: no suitable method found for create(Level)
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:71: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:72: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:86: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:93: incompatible types: CompoundTag cannot be converted to ValueOutput
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java:79: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:51: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java:88: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:102: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:62: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:42: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java:42: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:138: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:287: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:289: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java:35: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java:23: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:278: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:308: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:325: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:329: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:63: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java:191: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:41: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:74: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:31: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:71: incompatible types: CompoundTag cannot be converted to ValueOutput
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:28: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:47: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:56: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:75: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:45: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:65: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:80: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:81: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:86: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:94: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:24: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:25: incompatible types: int cannot be converted to Matrix3x2f
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:26: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:27: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:28: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:54: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:55: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:58: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: HoverEvent is abstract; cannot be instantiated
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:48: ClickEvent is abstract; cannot be instantiated
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:64: incompatible types: Style cannot be converted to InlineStyle
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:67: incompatible types: float cannot be converted to Matrix3x2f
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:70: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:72: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:73: no suitable method found for renderPattern(@org.jetbrains.annotations.NotNull HexPattern,Matrix3x2fStack,isFlat ? n[...], 1)),isGlowy ? [...]TINGS,isGlowy ? [...]olor),int,int)
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:78: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:90: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:91: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:97: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:153: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:154: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:59: HexplatRecipes is not abstract and does not override abstract method buildRecipes() in RecipeProvider
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:80: incompatible types: PackOutput cannot be converted to Provider
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:85: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:103: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:105: no suitable method found for shapeless(RecipeCategory,ItemThoughtKnot)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:110: no suitable method found for shaped(RecipeCategory,ItemFocus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:120: no suitable method found for shaped(RecipeCategory,ItemFocus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:131: no suitable method found for shaped(RecipeCategory,ItemSpellbook)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:155: no suitable method found for shaped(RecipeCategory,ItemArtifact)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:169: no suitable method found for shaped(RecipeCategory,ItemAbacus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:179: no suitable method found for shaped(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:191: no suitable method found for shaped(RecipeCategory,ItemDyePigment)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:229: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:236: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:244: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:252: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:259: no suitable method found for shaped(RecipeCategory,ItemJewelerHammer)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:269: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:275: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:281: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:288: no suitable method found for shaped(RecipeCategory,Block)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:304: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:315: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:326: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:333: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:344: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:351: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:358: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:364: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:371: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:378: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:386: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:391: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:396: no suitable method found for shapeless(RecipeCategory,ButtonBlock)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:401: no suitable method found for shaped(RecipeCategory,BlockEmptyImpetus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:411: no suitable method found for shaped(RecipeCategory,BlockEmptyDirectrix)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:421: no suitable method found for shaped(RecipeCategory,BlockAkashicBookshelf)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:430: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:452: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:457: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:462: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:467: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:476: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:479: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:482: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:485: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:488: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:491: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:494: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:497: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:500: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:503: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:506: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:509: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:512: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:519: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:558: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:568: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:575: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:582: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:590: no suitable method found for shaped(RecipeCategory,ItemStaff)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:603: no suitable method found for shaped(RecipeCategory,ItemPridePigment)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:619: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:623: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:648: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:677: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:703: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:715: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:715: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:728: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:735: no suitable method found for shaped(RecipeCategory,ItemLike)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:744: no suitable method found for shapeless(RecipeCategory,ItemLike,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:756: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:763: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:771: no suitable method found for shapeless(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:777: no suitable method found for shapeless(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:783: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:792: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:804: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:23: CreateCrushingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:50: no suitable method found for of(ItemStack)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:101: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:19: FarmersDelightCuttingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:47: no suitable method found for of(ItemStack)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:103: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java:30: incompatible types: no instance(s) of type variable(s) T exist so that Stream<T> conforms to HolderSet<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:21: BrainsweepRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:53: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:56: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:57: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:62: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:26: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:28: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:41: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:43: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:49: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:50: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:51: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:52: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:53: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:54: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:55: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:56: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:57: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:58: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:59: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:60: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:62: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:63: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:64: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:65: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:68: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:34: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:35: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:29: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:31: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:37: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:49: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:52: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:62: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:75: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:80: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:89: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:91: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:93: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:95: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:97: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:99: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:101: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:103: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:105: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:109: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:111: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:113: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:115: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:117: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:119: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:121: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:123: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:125: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:127: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:130: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:132: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:135: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:137: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:139: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:144: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:43: incompatible types: inference variable T has incompatible bounds
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:50: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:55: incompatible types: inference variable T has incompatible bounds
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:62: incompatible types: ItemCreativeUnlocker cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:123: incompatible types: ItemLoreFragment cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:16: <T>createCodec(Codec<T>) is not public in Bounds; cannot be accessed from outside package
+Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java:13: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:65: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:71: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:81: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:109: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:121: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-18T15:23:50.9129209Z FAILURE: Build failed with an exception.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-18T15:23:50.9157356Z * What went wrong:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-18T15:23:50.9157994Z Execution failed for task ':Common:compileJava'.
+Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java:16: method set in class DimensionDataStorage cannot be applied to given types;
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:94: no suitable method found for create(Level)
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java:65: no suitable method found for create(Level)
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:73: no suitable method found for renderPattern(@org.jetbrains.annotations.NotNull HexPattern,Matrix3x2fStack,isFlat ? n[...], 1)),isGlowy ? [...]TINGS,isGlowy ? [...]olor),int,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:103: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:105: no suitable method found for shapeless(RecipeCategory,ItemThoughtKnot)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:110: no suitable method found for shaped(RecipeCategory,ItemFocus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:120: no suitable method found for shaped(RecipeCategory,ItemFocus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:131: no suitable method found for shaped(RecipeCategory,ItemSpellbook)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:155: no suitable method found for shaped(RecipeCategory,ItemArtifact)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:169: no suitable method found for shaped(RecipeCategory,ItemAbacus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:179: no suitable method found for shaped(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:191: no suitable method found for shaped(RecipeCategory,ItemDyePigment)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:229: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:236: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:244: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:259: no suitable method found for shaped(RecipeCategory,ItemJewelerHammer)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:269: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:275: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:281: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:288: no suitable method found for shaped(RecipeCategory,Block)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:304: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:315: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:326: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:396: no suitable method found for shapeless(RecipeCategory,ButtonBlock)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:401: no suitable method found for shaped(RecipeCategory,BlockEmptyImpetus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:411: no suitable method found for shaped(RecipeCategory,BlockEmptyDirectrix)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:421: no suitable method found for shaped(RecipeCategory,BlockAkashicBookshelf)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:452: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:457: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:462: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:467: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:476: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:482: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:488: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:494: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:500: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:506: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:512: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:519: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:558: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:568: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:575: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:582: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:590: no suitable method found for shaped(RecipeCategory,ItemStaff)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:603: no suitable method found for shaped(RecipeCategory,ItemPridePigment)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:648: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:715: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:715: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:728: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:735: no suitable method found for shaped(RecipeCategory,ItemLike)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:744: no suitable method found for shapeless(RecipeCategory,ItemLike,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:756: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:771: no suitable method found for shapeless(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:777: no suitable method found for shapeless(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:804: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:50: no suitable method found for of(ItemStack)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:47: no suitable method found for of(ItemStack)
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:278: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java:191: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:28: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:292: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:207: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java:5: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java:12: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:9: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:21: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:147: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java:35: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:308: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:325: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:329: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:81: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:86: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:90: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:91: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:153: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:154: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:121: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:16: <T>createCodec(Codec<T>) is not public in Bounds; cannot be accessed from outside package
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java:88: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:102: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:62: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:85: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:101: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:103: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:53: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:26: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:65: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java:41: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java:12: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java:15: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java:14: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java:22: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:74: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:139: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:71: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:72: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:86: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java:79: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:51: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:42: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java:42: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:138: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:287: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:289: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java:23: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:63: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:31: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:28: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:47: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:56: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:75: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:45: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:65: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:80: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:94: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:24: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:26: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:27: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:54: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:55: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:58: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:72: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:78: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:28: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:41: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:43: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:34: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:35: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:29: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:31: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:37: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:49: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:52: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:62: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:75: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:80: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:89: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:91: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:93: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:95: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:97: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:99: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:101: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:103: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:105: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:109: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:111: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:113: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:115: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:117: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:119: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:121: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:123: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:125: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:127: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:130: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:132: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:135: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:137: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:139: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:144: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java:13: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:71: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:81: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:109: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:49: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:50: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:51: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:52: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:53: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:54: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:55: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:56: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:57: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:58: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:59: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:60: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:62: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:63: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:64: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:65: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:68: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: HoverEvent is abstract; cannot be instantiated
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:48: ClickEvent is abstract; cannot be instantiated
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:59: HexplatRecipes is not abstract and does not override abstract method buildRecipes() in RecipeProvider
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:23: CreateCrushingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:19: FarmersDelightCuttingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:21: BrainsweepRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:93: incompatible types: CompoundTag cannot be converted to ValueOutput
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:41: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:74: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:71: incompatible types: CompoundTag cannot be converted to ValueOutput
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:25: incompatible types: int cannot be converted to Matrix3x2f
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:64: incompatible types: Style cannot be converted to InlineStyle
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:67: incompatible types: float cannot be converted to Matrix3x2f
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:70: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:97: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:80: incompatible types: PackOutput cannot be converted to Provider
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:252: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:333: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:344: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:351: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:358: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:364: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:371: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:378: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:386: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:391: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:430: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:479: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:485: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:491: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:497: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:503: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:509: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:619: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:623: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:677: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:703: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:763: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:783: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:792: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java:30: incompatible types: no instance(s) of type variable(s) T exist so that Stream<T> conforms to HolderSet<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:56: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:57: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:62: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:43: incompatible types: inference variable T has incompatible bounds
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:50: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:55: incompatible types: inference variable T has incompatible bounds
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:62: incompatible types: ItemCreativeUnlocker cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:123: incompatible types: ItemLoreFragment cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:18: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-18T15:23:51.0140631Z org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':Common:compileJava'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-18T15:23:51.0156141Z Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler output below.
+Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java:16: method set in class DimensionDataStorage cannot be applied to given types;
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:94: no suitable method found for create(Level)
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java:65: no suitable method found for create(Level)
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:73: no suitable method found for renderPattern(@org.jetbrains.annotations.NotNull HexPattern,Matrix3x2fStack,isFlat ? n[...], 1)),isGlowy ? [...]TINGS,isGlowy ? [...]olor),int,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:103: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:105: no suitable method found for shapeless(RecipeCategory,ItemThoughtKnot)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:110: no suitable method found for shaped(RecipeCategory,ItemFocus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:120: no suitable method found for shaped(RecipeCategory,ItemFocus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:131: no suitable method found for shaped(RecipeCategory,ItemSpellbook)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:155: no suitable method found for shaped(RecipeCategory,ItemArtifact)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:169: no suitable method found for shaped(RecipeCategory,ItemAbacus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:179: no suitable method found for shaped(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:191: no suitable method found for shaped(RecipeCategory,ItemDyePigment)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:229: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:236: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:244: no suitable method found for shaped(RecipeCategory,ItemScroll)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:259: no suitable method found for shaped(RecipeCategory,ItemJewelerHammer)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:269: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:275: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:281: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:288: no suitable method found for shaped(RecipeCategory,Block)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:304: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:315: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:326: no suitable method found for shapeless(RecipeCategory,Block,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:396: no suitable method found for shapeless(RecipeCategory,ButtonBlock)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:401: no suitable method found for shaped(RecipeCategory,BlockEmptyImpetus)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:411: no suitable method found for shaped(RecipeCategory,BlockEmptyDirectrix)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:421: no suitable method found for shaped(RecipeCategory,BlockAkashicBookshelf)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:452: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:457: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:462: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:467: no suitable method found for shapeless(RecipeCategory,Item,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:476: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:482: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:488: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:494: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:500: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:506: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:512: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:519: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:558: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:568: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:575: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:582: no suitable method found for save(RecipeOutput,Identifier)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:590: no suitable method found for shaped(RecipeCategory,ItemStaff)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:603: no suitable method found for shaped(RecipeCategory,ItemPridePigment)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:648: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:715: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:715: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:728: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:735: no suitable method found for shaped(RecipeCategory,ItemLike)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:744: no suitable method found for shapeless(RecipeCategory,ItemLike,int)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:756: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:771: no suitable method found for shapeless(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:777: no suitable method found for shapeless(RecipeCategory,Item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:804: no suitable method found for of(TagKey<Item>)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:50: no suitable method found for of(ItemStack)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:47: no suitable method found for of(ItemStack)
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:278: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java:191: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:28: invalid method reference
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:292: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:207: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java:5: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java:12: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:9: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:21: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:147: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java:35: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:308: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:325: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java:329: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:81: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:86: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:90: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:91: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:153: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:154: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:121: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:16: <T>createCodec(Codec<T>) is not public in Bounds; cannot be accessed from outside package
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java:88: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:102: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:62: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:85: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:101: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:103: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:53: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:26: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:65: method does not override or implement a method from a supertype
+Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java:41: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java:12: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java:15: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java:14: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java:22: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:74: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:139: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:71: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:72: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:86: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java:79: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:51: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:77: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:42: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java:42: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:138: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:287: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java:289: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java:23: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:63: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:31: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:28: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:47: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:56: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:75: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:45: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:65: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:80: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:94: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:24: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:26: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:27: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:54: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:55: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:58: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:72: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:73: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:78: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:28: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:41: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:43: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:46: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:34: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:35: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:29: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:31: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:33: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:37: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:49: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:52: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:62: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:75: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:80: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:85: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:89: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:91: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:93: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:95: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:97: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:99: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:101: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:103: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:105: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:109: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:111: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:113: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:115: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:117: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:119: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:121: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:123: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:125: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:127: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:130: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:132: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:135: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:137: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:139: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:144: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java:13: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java:30: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java:32: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:71: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:81: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:109: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:49: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:50: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:51: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:52: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:53: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:54: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:55: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:56: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:57: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:58: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:59: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:60: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:61: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:62: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:63: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:64: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:65: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:66: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:68: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:69: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:70: cannot find symbol
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: HoverEvent is abstract; cannot be instantiated
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:48: ClickEvent is abstract; cannot be instantiated
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:59: HexplatRecipes is not abstract and does not override abstract method buildRecipes() in RecipeProvider
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:23: CreateCrushingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:19: FarmersDelightCuttingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:21: BrainsweepRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:93: incompatible types: CompoundTag cannot be converted to ValueOutput
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:41: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:74: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:71: incompatible types: CompoundTag cannot be converted to ValueOutput
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:25: incompatible types: int cannot be converted to Matrix3x2f
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:64: incompatible types: Style cannot be converted to InlineStyle
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:67: incompatible types: float cannot be converted to Matrix3x2f
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:70: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:97: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:80: incompatible types: PackOutput cannot be converted to Provider
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:252: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:333: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:344: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:351: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:358: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:364: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:371: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:378: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:386: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:391: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:430: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:479: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:485: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:491: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:497: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:503: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:509: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:619: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:623: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:677: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:703: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:763: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:783: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:792: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java:30: incompatible types: no instance(s) of type variable(s) T exist so that Stream<T> conforms to HolderSet<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:56: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:57: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:62: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:43: incompatible types: inference variable T has incompatible bounds
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:50: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:55: incompatible types: inference variable T has incompatible bounds
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:62: incompatible types: ItemCreativeUnlocker cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:123: incompatible types: ItemLoreFragment cannot be converted to HolderGetter<Item>
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:18: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-18T15:23:51.4339203Z ##[error]Process completed with exit code 1.
