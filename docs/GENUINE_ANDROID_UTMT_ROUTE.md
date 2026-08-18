@@ -25,6 +25,8 @@ DemiForge must not be described as a full UndertaleModTool. Its in-house reader 
 
 The actual Hadrian APK available to the agent could not be located in the retained upload directory, even though the user previously supplied it in conversation. The next real-payload step should be performed on the user’s own device through QiuUTMTv4 and, if required, handed to DemiForge only for packaging. No game executable or game asset should be redistributed.
 
+No public QiuUTMTv4 issue surfaced for `Deltarune` or `.droid` during the current repository search. That absence is not proof of compatibility; it means the exact Hadrian payload must be opened and validated on-device before a modded build is promised.
+
 ## References
 
 [1]: https://github.com/QiumingOrg/QiuUTMTv4 "QiuUTMTv4 repository and Android project"
