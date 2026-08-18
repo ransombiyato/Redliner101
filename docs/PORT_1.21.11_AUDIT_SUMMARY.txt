@@ -1,0 +1,790 @@
+# Aggregated audit summary
+
+## Source-wide stale API hit counts
+    804 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java
+    346 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java
+    293 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java
+     91 Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java
+     88 Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java
+     82 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java
+     77 Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java
+     73 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java
+     70 Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java
+     67 Common/src/main/java/at/petrak/hexcasting/client/particles/ConjureParticle.java
+     58 Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java
+     55 Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java
+     51 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java
+     50 Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java
+     47 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java
+     47 Common/src/main/java/at/petrak/hexcasting/client/model/MyOwnArmorModelWithBlackjackAndHookers.java
+     46 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java
+     46 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java
+     46 Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java
+     43 Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java
+     39 Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java
+     37 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java
+     37 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java
+     35 Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java
+     35 Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java
+     34 Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java
+     34 Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java
+     32 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java
+     31 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java
+     30 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java
+     28 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java
+     28 Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java
+     28 Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java
+     27 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java
+     27 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java
+     26 Common/src/main/java/at/petrak/hexcasting/api/casting/circles/BlockEntityAbstractImpetus.java
+     22 Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java
+     21 Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java
+     21 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java
+     21 Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java
+     21 Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java
+     20 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java
+     20 Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java
+     19 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java
+     19 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java
+     19 Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java
+     19 Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java
+     19 Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java
+     17 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java
+     16 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java
+     15 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java
+     14 Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java
+     13 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java
+     13 Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityQuenchedAllayRenderer.java
+     13 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java
+     12 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java
+     12 Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java
+     12 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java
+     12 Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java
+     11 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemFocus.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt
+     10 Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java
+     10 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java
+      9 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java
+      9 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java
+      9 Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt
+      9 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java
+      9 Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java
+
+## CI diagnostic file counts
+    804 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java
+    346 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java
+    293 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java
+     91 Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java
+     88 Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java
+     82 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java
+     77 Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java
+     73 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java
+     70 Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java
+     67 Common/src/main/java/at/petrak/hexcasting/client/particles/ConjureParticle.java
+     58 Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java
+     55 Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java
+     51 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java
+     50 Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java
+     47 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java
+     47 Common/src/main/java/at/petrak/hexcasting/client/model/MyOwnArmorModelWithBlackjackAndHookers.java
+     46 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java
+     46 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java
+     46 Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java
+     43 Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java
+     39 Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java
+     37 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java
+     37 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java
+     35 Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java
+     35 Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java
+     34 Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java
+     34 Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java
+     32 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java
+     31 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java
+     30 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java
+     28 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java
+     28 Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java
+     28 Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java
+     27 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java
+     27 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java
+     26 Common/src/main/java/at/petrak/hexcasting/api/casting/circles/BlockEntityAbstractImpetus.java
+     22 Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java
+     21 Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java
+     21 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java
+     21 Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java
+     21 Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java
+     20 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java
+     20 Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java
+     19 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java
+     19 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java
+     19 Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java
+     19 Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java
+     19 Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java
+     17 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java
+     16 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java
+     15 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java
+     14 Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java
+     13 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java
+     13 Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityQuenchedAllayRenderer.java
+     13 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java
+     12 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java
+     12 Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java
+     12 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java
+     12 Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java
+     11 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java
+     11 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemFocus.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java
+     10 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt
+     10 Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java
+     10 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java
+      9 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java
+      9 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java
+      9 Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt
+      9 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java
+      9 Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java
+      8 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java
+      8 Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexShaders.java
+      7 Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySlateRenderer.java
+      7 Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityAkashicBookshelfRenderer.java
+      7 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/StaffCastEnv.java
+      7 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/CastingEnvironment.java
+      6 Fabric/src/main/java/at/petrak/hexcasting/fabric/loot/FabricHexLootModJankery.java
+      6 Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java
+      6 Common/src/main/java/at/petrak/hexcasting/xplat/IClientXplatAbstractions.java
+      6 Common/src/main/java/at/petrak/hexcasting/common/items/armor/ItemRobes.java
+      6 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/great/OpTeleport.kt
+      6 Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java
+      6 Common/src/main/java/at/petrak/hexcasting/client/render/ScryingLensOverlays.java
+      6 Common/src/main/java/at/petrak/hexcasting/client/render/PatternRenderer.java
+      6 Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockCircleComponent.java
+      5 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java
+      5 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSlate.java
+      5 Common/src/main/java/at/petrak/hexcasting/common/items/ItemJewelerHammer.java
+      5 Common/src/main/java/at/petrak/hexcasting/common/entities/HexEntities.java
+      5 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockEntitySlate.java
+      5 Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockEntityAkashicBookshelf.java
+      4 Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java
+      4 Fabric/src/main/java/at/petrak/hexcasting/fabric/network/FabricPacketHandler.java
+      4 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricParticleEngineMixin.java
+      4 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java
+      4 Common/src/main/java/at/petrak/hexcasting/mixin/client/MixinPlayerRenderer.java
+      4 Common/src/main/java/at/petrak/hexcasting/common/misc/RegisterMisc.java
+      4 Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemThoughtKnot.java
+      4 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/great/OpAltiora.kt
+      4 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityLookingImpetus.java
+      4 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockEmptyDirectrix.java
+      4 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockBooleanDirectrix.java
+      4 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockEmptyImpetus.java
+      4 Common/src/main/java/at/petrak/hexcasting/client/render/shader/FakeBufferSource.java
+      4 Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySubmitUtil.java
+      4 Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt
+      4 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/CircleCastEnv.java
+      4 Common/src/main/java/at/petrak/hexcasting/api/casting/ActionUtils.kt
+      3 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricLevelRendererMixin.java
+      3 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java
+      3 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java
+      3 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java
+      3 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java
+      3 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java
+      3 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java
+      3 Common/src/main/java/at/petrak/hexcasting/xplat/IXplatAbstractions.java
+      3 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/AccessorAbstractArrow.java
+      3 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexDamageTypeTagProvider.java
+      3 Common/src/main/java/at/petrak/hexcasting/datagen/IXplatConditionsBuilder.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgShiftScrollC2S.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternC2S.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/misc/PlayerPositionRecorder.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemMediaHolder.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/items/ItemStaff.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/items/ItemLens.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/impl/HexAPIImpl.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java
+      3 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpMakePackagedSpell.kt
+      3 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpBreakBlock.kt
+      3 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpBlink.kt
+      3 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpConcat.kt
+      3 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/eval/OpForEach.kt
+      3 Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityConjured.java
+      3 Common/src/main/java/at/petrak/hexcasting/api/client/ClientRenderHelper.kt
+      3 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapUnenlightened.kt
+      3 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/sideeffects/OperatorSideEffect.kt
+      3 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PackagedItemCastEnv.java
+      3 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/MishapEnvironment.java
+      3 Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java
+      2 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricVillagerTurnIntoWitchMixin.java
+      2 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricLivingEntityMixin.java
+      2 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCHexHolder.java
+      2 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/HexCardinalComponents.java
+      2 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java
+      2 Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexConfig.java
+      2 Common/src/main/java/at/petrak/hexcasting/xplat/IForgeLikeBlock.java
+      2 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderTypeFactory.java
+      2 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderType.java
+      2 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderStateShard.java
+      2 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorEmptyTextureStateShard.java
+      2 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorCompositeRenderType.java
+      2 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/BrainsweepeeIngredient.java
+      2 Common/src/main/java/at/petrak/hexcasting/common/loot/AddPerWorldPatternToScrollFunc.java
+      2 Common/src/main/java/at/petrak/hexcasting/common/lib/HexBrainsweepeeIngredients.java
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/sentinel/OpGetSentinelWayfind.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/sentinel/OpGetSentinelPos.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/sentinel/OpDestroySentinel.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/sentinel/OpCreateSentinel.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/great/OpBrainsweep.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpTheOnlyReasonAnyoneDownloadedPsi.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpPlaceBlock.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpIgnite.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpExtinguish.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpEdifySapling.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpDestroyFluid.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpCreateFluid.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpConjureBlock.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpWrite.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpXor.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpToSet.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpOr.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpAnd.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpUnCons.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpSplat.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpSlice.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpReverski.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpRemove.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpModifyInPlace.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpListSize.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpIndexOf.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpIndex.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpCons.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpAppend.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/akashic/OpAkashicWrite.kt
+      2 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAmethystDirectional.java
+      2 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRightClickImpetus.java
+      2 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockLookingImpetus.java
+      2 Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicRecord.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/utils/MediaHelper.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/utils/HexUtils.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/item/HexHolderItem.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/circle/MishapNoSpellCircle.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapOthersName.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/Mishap.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/IotaType.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/Iota.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/ContinuationIota.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameForEach.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameFinishEval.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameEvaluate.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/ContinuationFrame.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/CastingVM.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/CastingImage.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/CircleMishapEnv.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/circles/ICircleComponent.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/casting/ParticleSpray.kt
+      2 Common/src/main/java/at/petrak/hexcasting/api/advancements/SpendMediaTrigger.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/advancements/OvercastTrigger.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/advancements/FailToCastGreatSpellTrigger.java
+      2 Common/src/main/java/at/petrak/hexcasting/api/addldata/ADHexHolder.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/storage/FabricImpetusStorage.kt
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricMouseHandlerMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricModelManagerMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricAbstractTextureMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricMobMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricItemEntityMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricEnchantmentTableBlockMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricClipContextMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricBlockBehaviorMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/FabricAxeItemMixin.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/BrainsweepeeEmiStack.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/AccessoriesApiInterop.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/ModMenuInterop.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/event/VillagerConversionCallback.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/event/MouseScrollCallback.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/client/ExtendedTexture.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/package-info.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCVariantItem.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCPigment.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCIotaHolder.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCEntityIotaHolder.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFavoredPigment.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCClientCastingStack.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt
+      1 Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexClientInitializer.kt
+      1 Common/src/main/java/at/petrak/hexcasting/xplat/Platform.java
+      1 Common/src/main/java/at/petrak/hexcasting/xplat/IXplatTags.java
+      1 Common/src/main/java/at/petrak/hexcasting/xplat/IXplatRegister.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/client/MixinClientLevel.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderPipelines.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorMouseHandler.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorBlockEntityRenderDispatcher.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/AccessorVillager.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/AccessorUseOnContext.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/AccessorLootTable.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/AccessorLivingEntity.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/accessor/AccessorEntity.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/MixinWitch.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/MixinVillager.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/MixinRaider.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/MixinMob.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/MixinLivingEntity.java
+      1 Common/src/main/java/at/petrak/hexcasting/mixin/MixinAbstractVillager.java
+      1 Common/src/main/java/at/petrak/hexcasting/ktxt/AccessorWrappers.kt
+      1 Common/src/main/java/at/petrak/hexcasting/interop/utils/PhialRecipeStackBuilder.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternEntry.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/pehkui/PehkuiInterop.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/pehkui/OpSetScale.kt
+      1 Common/src/main/java/at/petrak/hexcasting/interop/pehkui/OpGetScale.kt
+      1 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatternProcessor.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/ManualPatternComponent.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/CustomComponentTooltip.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlineHexClient.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlineHex.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/inline/HexPatternMatcher.java
+      1 Common/src/main/java/at/petrak/hexcasting/interop/HexInterop.java
+      1 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/ProcessingOutput.java
+      1 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightToolIngredient.java
+      1 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatProcessingOutput.java
+      1 Common/src/main/java/at/petrak/hexcasting/datagen/IXplatIngredients.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientType.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientTagExcluding.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientTag.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientBlocks.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientBlockState.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientBlock.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredient.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/BrainsweepeeIngredientType.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/RecipeSerializerBase.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/recipe/HexRecipeStuffRegistry.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/particles/ConjureParticleOptions.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgRecalcWallScrollDisplayS2C.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgOpenSpellGuiS2C.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewWallScrollS2C.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpiralPatternsS2C.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgClearSpiralPatternsS2C.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgCastParticleS2C.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgBeepS2C.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/msgs/IMessage.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/misc/PatternTooltip.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/misc/HexMobEffect.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/misc/BrainsweepingEvents.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/loot/HexLootHandler.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/loot/AmethystReducerFunc.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/loot/AddHexToAncientCypherFunc.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/package-info.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexSpecialHandlers.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexIotaTypes.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexEvalSounds.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexContinuationTypes.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexStateIngredients.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexSounds.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexParticles.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexMobEffects.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexLootFunctions.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexItemComponents.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexDamageTypes.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexCreativeTabs.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexConfiguredFeatures.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexCommands.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlockSetTypes.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlockEntities.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/lib/HexAttributes.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/pigment/ItemUUIDPigment.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/pigment/ItemPridePigment.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/pigment/ItemDyePigment.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/pigment/ItemAmethystPigment.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/pigment/ItemAmethystAndCopperPigment.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemTrinket.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemMediaBattery.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCypher.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemArtifact.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/magic/DebugUnlockerHolder.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/items/HexBaubleItem.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/vec/OperatorVec3Delegating.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/vec/OperatorUnpack.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/vec/OperatorPack.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorUnique.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorUnappend.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorUnCons.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorSlice.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorReplace.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorRemove.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorIndexOf.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorIndex.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/list/OperatorAppend.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/OperatorUtils.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/operator/OperatorLog.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/Vec3Arithmetic.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/ListSetArithmetic.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/ListArithmetic.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/DoubleArithmetic.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/BoolArithmetic.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/arithmetic/BitwiseSetArithmetic.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/SpecialHandlerMask.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/OpTwiddling.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/OpStackSize.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/OpMask.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/OpFishermanButItCopies.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/OpFisherman.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/OpDuplicateN.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/OpAlwinfyHasAscendedToABeingOfPureMath.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/great/OpWeather.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/great/OpLightning.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpRecharge.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpPrint.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpPotionEffect.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpMakeBattery.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpExplode.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpErase.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpCycleVariant.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpColorize.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpBeep.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpAddMotion.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/selectors/OpGetEntityAt.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/selectors/OpGetEntitiesBy.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/selectors/OpGetCaster.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpWritable.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpTheCoolerWrite.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpTheCoolerWritable.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpTheCoolerReadable.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpTheCoolerRead.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpReadable.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpRead.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/raycast/OpEntityRaycast.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/raycast/OpBlockRaycast.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/raycast/OpBlockAxisRaycast.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/queryentity/OpEntityVelocity.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/queryentity/OpEntityPos.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/queryentity/OpEntityLook.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/queryentity/OpEntityHeight.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/queryentity/OpCanEntityHexFly.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/trig/OpTan.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/trig/OpSin.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/trig/OpCos.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/trig/OpArcTan2.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/trig/OpArcTan.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/trig/OpArcSin.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/trig/OpArcCos.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpEquality.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpCompare.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpCoerceToBool.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpBoolXor.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpBoolToNumber.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpBoolOr.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpBoolIf.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/logic/OpBoolAnd.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpNot.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/SpecialHandlerNumberLiteral.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpSub.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpRandom.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpPowProj.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpMulDot.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpModulo.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpLog.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpFloor.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpDivCross.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpDeconstructVec.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpConstructVec.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpCoerceToAxial.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpCeil.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpAdd.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/OpAbsLen.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/local/OpPushLocal.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/local/OpPeekLocal.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpSingleton.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpLastNToList.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpEmptyList.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/eval/OpThanos.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/eval/OpHalt.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/eval/OpEvalBreakable.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/eval/OpEval.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/circles/OpImpetusPos.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/circles/OpImpetusDir.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/circles/OpCircleBounds.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/casting/actions/akashic/OpAkashicRead.kt
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityQuenchedAllay.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexWoodButton.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexTrapdoor.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexStairs.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexSlab.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexPressurePlate.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexFenceGate.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexFence.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockHexDoor.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAxis.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLog.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRightClickImpetus.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/behavior/HexStrippables.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/behavior/HexComposting.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicLigature.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/AkashicFloodfiller.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockQuenchedAllay.java
+      1 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockFlammable.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/sound/GridSoundInstance.kt
+      1 Common/src/main/java/at/petrak/hexcasting/client/render/RenderLib.kt
+      1 Common/src/main/java/at/petrak/hexcasting/client/render/PatternSettings.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/render/PatternColors.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/render/HexPatternPoints.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/render/HexPatternLike.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/render/GaslightingTracker.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/model/HexRobesModels.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/model/HexModelLayers.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/ktxt/ClientAccessorWrappers.kt
+      1 Common/src/main/java/at/petrak/hexcasting/client/gui/GuiSpellcasting.kt
+      1 Common/src/main/java/at/petrak/hexcasting/client/ShiftScrollListener.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/PatternShapeMatcher.java
+      1 Common/src/main/java/at/petrak/hexcasting/client/ClientTickCounter.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/utils/NBTDsl.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/utils/MathUtils.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/player/Sentinel.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/player/FlightAbility.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/player/AltioraAbility.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/pigment/FrozenPigment.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/pigment/ColorProvider.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/mod/HexTags.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/mod/HexStatistics.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/mod/HexConfig.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/mod/HexApiMessages.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/misc/TriPredicate.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/misc/Result.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/misc/MediaConstants.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/misc/DiscoveryHandlers.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/item/VariantItem.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/item/PigmentItem.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/item/MediaHolderItem.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/item/IotaHolderItem.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/client/ScryingLensOverlayRegistry.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/client/HexPatternRenderHolder.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/client/ClientCastingStack.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/circle/MishapBoolDirectrixNotBool.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/circle/MishapBoolDirectrixEmptyStack.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapUnescapedValue.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapTooManyCloseParens.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapStackSize.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapNotEnoughMedia.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapNotEnoughArgs.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapNoAkashicRecord.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapLocationInWrongDimension.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInvalidSpellDatumType.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInvalidPattern.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInvalidOperatorArgs.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInvalidIota.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInternalException.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapImmuneEntity.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapEvalTooMuch.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapEntityTooFarAway.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapEntityNotFound.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapDivideByZero.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapDisallowedSpell.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadOffhandItem.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadLocation.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadItem.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadEntity.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadCaster.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadBrainsweep.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadBlock.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapAlreadyBrainswept.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/math/HexPattern.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/math/HexDir.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/math/HexCoord.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/math/HexAngle.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/math/EulerPathFinder.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/Vec3Iota.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/NullIota.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/ListIota.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/GarbageIota.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/iota/BooleanIota.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/SpellContinuation.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FunctionalData.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/sideeffects/EvalSound.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/package-info.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/SpellCircleContext.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/SpecialPatterns.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/ResolvedPatternType.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/ResolvedPattern.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/OperationResult.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/ExecutionClientView.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/CastingEnvironmentComponent.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/eval/CastResult.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/castables/SpellAction.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/castables/SpecialHandler.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/castables/OperationAction.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/castables/ConstMediaAction.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/castables/Action.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/predicates/IotaPredicate.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/predicates/IotaMultiPredicate.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/operator/OperatorUnary.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/operator/OperatorBinary.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/operator/OperatorBasic.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/operator/Operator.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/engine/NoOperatorCandidatesException.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/engine/InvalidOperatorException.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/engine/HashCons.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/engine/ArithmeticEngine.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/TripleIterable.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/IterPair.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/Arithmetic.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/SpellList.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/RenderedSpell.kt
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/casting/ActionRegistryEntry.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/advancements/HexAdvancementTriggers.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/addldata/package-info.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/addldata/ItemDelegatingEntityIotaHolder.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/addldata/ADVariantItem.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/addldata/ADPigment.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/addldata/ADMediaHolder.java
+      1 Common/src/main/java/at/petrak/hexcasting/api/addldata/ADIotaHolder.java
+      1 Common/src/main/java/at/petrak/hexcasting/annotations/SoftImplement.java
+
+## CI diagnostic messages
+   1842 cannot find symbol
+    226 method does not override or implement a method from a supertype
+    144 incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+    108 no suitable method found for save(RecipeOutput,Identifier)
+     63 no suitable method found for shapeless(RecipeCategory,Item,int)
+     54 incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+     45 no suitable method found for of(TagKey<Item>)
+     32 invalid method reference
+     30 incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+     27 no suitable method found for shapeless(RecipeCategory,Block,int)
+     27 no suitable method found for shaped(RecipeCategory,ItemScroll)
+     27 incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+     27 incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+     26 incompatible types: int cannot be converted to Matrix3x2f
+     20 incompatible types: inference variable T has incompatible bounds
+     18 no suitable method found for shapeless(RecipeCategory,Item)
+     18 no suitable method found for shaped(RecipeCategory,ItemFocus)
+     18 no suitable method found for of(ItemStack)
+     18 no suitable method found for create(Level)
+     18 method contains in class CompoundTag cannot be applied to given types;
+     18 incompatible types: CompoundTag cannot be converted to ValueOutput
+     16 no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+     13 isClientSide has private access in Level
+     12 method updateShape in class BlockBehaviour cannot be applied to given types;
+     10 wrong number of type arguments; required 2
+      9 no suitable method found for shapeless(RecipeCategory,ItemThoughtKnot)
+      9 no suitable method found for shapeless(RecipeCategory,ItemLike,int)
+      9 no suitable method found for shapeless(RecipeCategory,ButtonBlock)
+      9 no suitable method found for shaped(RecipeCategory,ItemStaff)
+      9 no suitable method found for shaped(RecipeCategory,ItemSpellbook)
+      9 no suitable method found for shaped(RecipeCategory,ItemPridePigment)
+      9 no suitable method found for shaped(RecipeCategory,ItemLike)
+      9 no suitable method found for shaped(RecipeCategory,ItemJewelerHammer)
+      9 no suitable method found for shaped(RecipeCategory,ItemDyePigment)
+      9 no suitable method found for shaped(RecipeCategory,ItemArtifact)
+      9 no suitable method found for shaped(RecipeCategory,ItemAbacus)
+      9 no suitable method found for shaped(RecipeCategory,Item)
+      9 no suitable method found for shaped(RecipeCategory,BlockEmptyImpetus)
+      9 no suitable method found for shaped(RecipeCategory,BlockEmptyDirectrix)
+      9 no suitable method found for shaped(RecipeCategory,BlockAkashicBookshelf)
+      9 no suitable method found for shaped(RecipeCategory,Block)
+      9 no suitable method found for renderPattern(@org.jetbrains.annotations.NotNull HexPattern,Matrix3x2fStack,isFlat ? n[...], 1)),isGlowy ? [...]TINGS,isGlowy ? [...]olor),int,int)
+      9 no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+      9 method set in class DimensionDataStorage cannot be applied to given types;
+      9 incompatible types: no instance(s) of type variable(s) T exist so that Stream<T> conforms to HolderSet<Item>
+      9 incompatible types: float cannot be converted to Matrix3x2f
+      9 incompatible types: Style cannot be converted to InlineStyle
+      9 incompatible types: PackOutput cannot be converted to Provider
+      9 incompatible types: ItemLoreFragment cannot be converted to HolderGetter<Item>
+      9 incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+      9 incompatible types: ItemCreativeUnlocker cannot be converted to HolderGetter<Item>
+      9 HoverEvent is abstract; cannot be instantiated
+      9 HexplatRecipes is not abstract and does not override abstract method buildRecipes() in RecipeProvider
+      9 FarmersDelightCuttingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+      9 CreateCrushingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+      9 ClickEvent is abstract; cannot be instantiated
+      9 BrainsweepRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+      8 method getList in class CompoundTag cannot be applied to given types;
+      8 incompatible types: Optional<Byte> cannot be converted to int
+      8 incompatible types: BlockPos cannot be converted to Orientation
+      8 getType() in BrainsweepRecipe cannot implement getType() in Recipe
+      8 getSerializer() in SealThingsRecipe cannot override getSerializer() in CustomRecipe
+      8 getSerializer() in SealSpellbookRecipe cannot implement getSerializer() in CraftingRecipe
+      8 getSerializer() in BrainsweepRecipe cannot implement getSerializer() in Recipe
+      8 SealThingsRecipe is not abstract and does not override abstract method getSerializer() in CustomRecipe
+      8 ResolvableProfile is abstract; cannot be instantiated
+      7 method getDescriptionId in class Item cannot be applied to given types;
+      7 BrainsweepRecipe is not abstract and does not override abstract method recipeBookCategory() in Recipe
+      6 package GlStateManager does not exist
+      6 MinMaxLongs is not abstract and does not override abstract method bounds() in MinMaxBounds
+      5 package Tiers does not exist
+      4 type argument AbstractClientPlayer is not within bounds of type-variable S
+      4 server has private access in ServerPlayer
+      4 no suitable constructor found for DynamicTexture(NativeImage)
+      4 method isInvulnerableTo in class ServerPlayer cannot be applied to given types;
+      4 method appendHoverText in class Item cannot be applied to given types;
+      4 incompatible types: String cannot be converted to ResourceKey<EntityType<?>>
+      4 incompatible types: DamageSource cannot be converted to ServerLevel
+      4 constructor LeavesBlock in class LeavesBlock cannot be applied to given types;
+      4 BlockAkashicLeaves is not abstract and does not override abstract method spawnFallingLeavesParticle(Level,BlockPos,RandomSource) in LeavesBlock
+      4    public void submit(State state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+      4        val list = args.getList(0, argc).toMutableList()
+      3 items has private access in Inventory
+      3 incompatible types: Identifier cannot be converted to RenderPipeline
+      3 PatternTooltipComponent is not abstract and does not override abstract method getHeight(Font) in ClientTooltipComponent
+      3 <T>createCodec(Codec<T>) is not public in Bounds; cannot be accessed from outside package
+      3    public EmiRecipeCategory getCategory() {
+      3        val list = args.getList(0, argc)
+      3        this.conditions.apply(new FarmersDelightCuttingRecipeBuilder()
+      3        this.conditions.apply(new CreateCrushingRecipeBuilder()
+      3        new BrainsweepRecipeBuilder(HexStateIngredients.of(HexBlocks.IMPETUS_EMPTY),
+      3                val list2 = args.getList(1, argc)
+      2 type argument LivingEntity is not within bounds of type-variable T
+      2 type argument AbstractClientPlayer is not within bounds of type-variable T
+      2 type ElytraModel does not take parameters
+      2 renderToBuffer(PoseStack,VertexConsumer,int,int,int) in MyOwnArmorModelWithBlackjackAndHookers cannot override renderToBuffer(PoseStack,VertexConsumer,int,int,int) in Model
+      2 package RenderStateShard does not exist
+      2 package ArmorItem does not exist
+      2 method setupAnim in class HumanoidModel<T> cannot be applied to given types;
+      2 method saveAdditional in class BlockEntity cannot be applied to given types;
+      2 method registerEntityRenderer in interface IClientXplatAbstractions cannot be applied to given types;
+      2 method loadAdditional in class BlockEntity cannot be applied to given types;
+      2 method getAnalogOutputSignal in class BlockStateBase cannot be applied to given types;
+      2 method appendHoverText in class ItemMediaHolder cannot be applied to given types;
+      2 interface expected here
+      2 incompatible types: String cannot be converted to Identifier
+      2 incompatible types: Optional<Long> cannot be converted to long
+      2 incompatible types: Optional<Integer> cannot be converted to int
+      2 incompatible types: Optional<CompoundTag> cannot be converted to @org.jetbrains.annotations.Nullable CompoundTag
+      2 incompatible types: Consumer<Component> cannot be converted to List<Component>
+      2 incompatible types: ConjureRenderType cannot be converted to @org.jetbrains.annotations.NotNull ParticleRenderType
+      2 incompatible types: ConjureParticle cannot be converted to @org.jetbrains.annotations.Nullable Particle
+      2 cannot infer type arguments for ElytraModel
+      2 Provider is not abstract and does not override abstract method createParticle(ConjureParticleOptions,ClientLevel,double,double,double,double,double,double,RandomSource) in ParticleProvider
+      2 BlockAkashicLeaves is not abstract and does not override abstract method codec() in LeavesBlock
+      2 AltioraLayer is not abstract and does not override abstract method submit(PoseStack,SubmitNodeCollector,int,AbstractClientPlayer,float,float) in RenderLayer
+      2    public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pBlock, Orientation pOrientation,
+      2    public BlockState updateShape(BlockState pState, LevelReader pLevel, ScheduledTickAccess pTickAccess,
+      2        super.neighborChanged(pState, pLevel, pPos, pBlock, pOrientation, pIsMoving);
+      2        ringCornerless(RecipeCategory.TOOLS,
