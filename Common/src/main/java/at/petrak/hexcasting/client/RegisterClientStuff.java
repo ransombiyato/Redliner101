@@ -27,6 +27,7 @@ import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.block.model.BlockStateModel;
+import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
