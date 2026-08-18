@@ -1,6 +1,7 @@
 package at.petrak.hexcasting.common.blocks.decoration;
 
 import at.petrak.hexcasting.annotations.SoftImplement;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -10,6 +11,13 @@ import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BlockAkashicLeaves extends LeavesBlock {
+    public static final MapCodec<BlockAkashicLeaves> CODEC = simpleCodec(BlockAkashicLeaves::new);
+
+    @Override
+    protected MapCodec<? extends LeavesBlock> codec() {
+        return CODEC;
+    }
+
     public BlockAkashicLeaves(Properties props) {
         super(0.02f, props);
     }

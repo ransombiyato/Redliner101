@@ -13,19 +13,12 @@ public record MinMaxLongs(
         Optional<Long> max
 ) implements MinMaxBounds<Long> {
     public static final Codec<MinMaxLongs> CODEC =
-            MinMaxBounds.<Long, MinMaxLongs>createCodec(Codec.LONG, MinMaxLongs::new);
+            MinMaxBounds.Bounds.createCodec(Codec.LONG)
+                    .xmap(bounds -> new MinMaxLongs(bounds.min(), bounds.max()), MinMaxLongs::bounds);
 
     public static final MinMaxLongs ANY =
             new MinMaxLongs(Optional.empty(), Optional.empty());
 
-    private static MinMaxLongs create(StringReader reader, Optional<Long> min, Optional<Long> max)
-            throws CommandSyntaxException {
-        if (min.isPresent() && max.isPresent() && min.get() > max.get()) {
-            throw ERROR_SWAPPED.createWithContext(reader);
-        } else {
-            return new MinMaxLongs(min, max);
-        }
-    }
 
     private static Optional<Long> squareOpt(Optional<Long> value) {
         return value.map(v -> v * v);
@@ -47,6 +40,11 @@ public record MinMaxLongs(
         return new MinMaxLongs(Optional.empty(), Optional.of(max));
     }
 
+    @Override
+    public MinMaxBounds.Bounds bounds() {
+        return new MinMaxBounds.Bounds(min, max);
+    }
+
     public boolean matches(long value) {
         return (this.min.isEmpty() || this.min.get() <= value)
                 && (this.max.isEmpty() || this.max.get() >= value);
@@ -58,13 +56,12 @@ public record MinMaxLongs(
 
     public static MinMaxLongs fromReader(StringReader reader, Function<Long, Long> formatter)
             throws CommandSyntaxException {
-        return MinMaxBounds.fromReader(
+        var bounds = MinMaxBounds.Bounds.fromReader(
                 reader,
-                MinMaxLongs::create,
-                Long::parseLong,
-                CommandSyntaxException.BUILT_IN_EXCEPTIONS::readerInvalidLong,
-                formatter
+                text -> formatter.apply(Long.parseLong(text)),
+                CommandSyntaxException.BUILT_IN_EXCEPTIONS::readerInvalidLong
         );
+        return new MinMaxLongs(bounds.min(), bounds.max());
     }
 }
 
