@@ -76,13 +76,12 @@ public abstract class BlockAbstractImpetus extends BlockCircleComponent implemen
     }
 
     @Override
-    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
-        if (!pNewState.is(pState.getBlock())
-            && pLevel.getBlockEntity(pPos) instanceof BlockEntityAbstractImpetus impetus) {
+    public void affectNeighborsAfterRemoval(BlockState pState, ServerLevel pLevel, BlockPos pPos, boolean pMovedByPiston) {
+        if (pLevel.getBlockEntity(pPos) instanceof BlockEntityAbstractImpetus impetus) {
             impetus.endExecution(); // TODO: Determine if this was important
             // TODO: Fix this, it should make all the glowy circle components stop glowing.
         }
-        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+        super.affectNeighborsAfterRemoval(pState, pLevel, pPos, pMovedByPiston);
     }
 
     @Override

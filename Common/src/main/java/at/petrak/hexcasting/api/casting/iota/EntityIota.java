@@ -79,7 +79,7 @@ public class EntityIota extends Iota {
         MutableComponent baseName = entity.getName().copy();
         Component inlineEnt;
         if(entity instanceof Player player){
-            inlineEnt = new PlayerHeadData(new ResolvableProfile(player.getGameProfile())).asText(false);
+            inlineEnt = new PlayerHeadData(ResolvableProfile.createResolved(player.getGameProfile())).asText(false);
             inlineEnt = inlineEnt.plainCopy().withStyle(InlineAPI.INSTANCE.withSizeModifier(inlineEnt.getStyle(), 1.5));
         } else {
             inlineEnt = EntityInlineData.fromType(entity.getType()).asText(false);

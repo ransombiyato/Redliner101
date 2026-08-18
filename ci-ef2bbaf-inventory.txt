@@ -1,0 +1,999 @@
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java: package Item does not exist
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java: method set in class DimensionDataStorage cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: BrainsweepRecipe is not abstract and does not override abstract method recipeBookCategory() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: getType() in BrainsweepRecipe cannot implement getType() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: getSerializer() in BrainsweepRecipe cannot implement getSerializer() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: getSerializer() in SealSpellbookRecipe cannot implement getSerializer() in CraftingRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: SealThingsRecipe is not abstract and does not override abstract method getSerializer() in CustomRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: getSerializer() in SealThingsRecipe cannot override getSerializer() in CustomRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java: no suitable method found for create(Level)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java: no suitable method found for create(Level)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: incompatible types: CompoundTag cannot be converted to ValueOutput
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java: ResolvableProfile is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java: BlockAkashicLeaves is not abstract and does not override abstract method spawnFallingLeavesParticle(Level,BlockPos,RandomSource) in LeavesBlock
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java: constructor LeavesBlock in class LeavesBlock cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockCircleComponent.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java: incompatible types: BlockPos cannot be converted to Orientation
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: incompatible types: Optional<Byte> cannot be converted to int
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method getList in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method getList in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: incompatible types: Optional<Byte> cannot be converted to int
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method contains in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java: incompatible types: BlockPos cannot be converted to Orientation
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: ResolvableProfile is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/entities/HexEntities.java: incompatible types: String cannot be converted to ResourceKey<EntityType<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: package Tiers does not exist
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java: server has private access in ServerPlayer
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java: incompatible types: CompoundTag cannot be converted to ValueOutput
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: incompatible types: int cannot be converted to Matrix3x2f
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: HoverEvent is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: ClickEvent is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: Style cannot be converted to InlineStyle
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: float cannot be converted to Matrix3x2f
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: no suitable method found for renderPattern(@org.jetbrains.annotations.NotNull HexPattern,Matrix3x2fStack,isFlat ? n[...], 1)),isGlowy ? [...]TINGS,isGlowy ? [...]olor),int,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: HexplatRecipes is not abstract and does not override abstract method buildRecipes() in RecipeProvider
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: PackOutput cannot be converted to Provider
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ItemThoughtKnot)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemFocus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemFocus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemSpellbook)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemArtifact)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemAbacus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemDyePigment)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemJewelerHammer)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,Block)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ButtonBlock)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockEmptyImpetus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockEmptyDirectrix)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockAkashicBookshelf)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemStaff)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemPridePigment)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemLike)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ItemLike,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: CreateCrushingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: no suitable method found for of(ItemStack)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: FarmersDelightCuttingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: no suitable method found for of(ItemStack)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java: incompatible types: no instance(s) of type variable(s) T exist so that Stream<T> conforms to HolderSet<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: BrainsweepRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: inference variable T has incompatible bounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: inference variable T has incompatible bounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: ItemCreativeUnlocker cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: ItemLoreFragment cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: MinMaxLongs is not abstract and does not override abstract method bounds() in MinMaxBounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java: method isInvulnerableTo in class ServerPlayer cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java: incompatible types: DamageSource cannot be converted to ServerLevel
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java: method set in class DimensionDataStorage cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java: constructor LeavesBlock in class LeavesBlock cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method getList in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method getList in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method contains in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java: method isInvulnerableTo in class ServerPlayer cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java: no suitable method found for create(Level)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java: no suitable method found for create(Level)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: no suitable method found for renderPattern(@org.jetbrains.annotations.NotNull HexPattern,Matrix3x2fStack,isFlat ? n[...], 1)),isGlowy ? [...]TINGS,isGlowy ? [...]olor),int,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ItemThoughtKnot)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemFocus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemFocus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemSpellbook)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemArtifact)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemAbacus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemDyePigment)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemJewelerHammer)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,Block)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ButtonBlock)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockEmptyImpetus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockEmptyDirectrix)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockAkashicBookshelf)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemStaff)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemPridePigment)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemLike)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ItemLike,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: no suitable method found for of(ItemStack)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: no suitable method found for of(ItemStack)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java: server has private access in ServerPlayer
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockCircleComponent.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java: ResolvableProfile is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: ResolvableProfile is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: HoverEvent is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: ClickEvent is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: getType() in BrainsweepRecipe cannot implement getType() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: getSerializer() in BrainsweepRecipe cannot implement getSerializer() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: getSerializer() in SealSpellbookRecipe cannot implement getSerializer() in CraftingRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: getSerializer() in SealThingsRecipe cannot override getSerializer() in CustomRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: incompatible types: CompoundTag cannot be converted to ValueOutput
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java: incompatible types: BlockPos cannot be converted to Orientation
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: incompatible types: Optional<Byte> cannot be converted to int
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: incompatible types: Optional<Byte> cannot be converted to int
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java: incompatible types: BlockPos cannot be converted to Orientation
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/entities/HexEntities.java: incompatible types: String cannot be converted to ResourceKey<EntityType<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java: incompatible types: CompoundTag cannot be converted to ValueOutput
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: incompatible types: int cannot be converted to Matrix3x2f
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: Style cannot be converted to InlineStyle
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: float cannot be converted to Matrix3x2f
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: PackOutput cannot be converted to Provider
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java: incompatible types: no instance(s) of type variable(s) T exist so that Stream<T> conforms to HolderSet<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: inference variable T has incompatible bounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: inference variable T has incompatible bounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: ItemCreativeUnlocker cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: ItemLoreFragment cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java: incompatible types: DamageSource cannot be converted to ServerLevel
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: BrainsweepRecipe is not abstract and does not override abstract method recipeBookCategory() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: SealThingsRecipe is not abstract and does not override abstract method getSerializer() in CustomRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java: BlockAkashicLeaves is not abstract and does not override abstract method spawnFallingLeavesParticle(Level,BlockPos,RandomSource) in LeavesBlock
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: HexplatRecipes is not abstract and does not override abstract method buildRecipes() in RecipeProvider
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: CreateCrushingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: FarmersDelightCuttingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: BrainsweepRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: MinMaxLongs is not abstract and does not override abstract method bounds() in MinMaxBounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java: package Item does not exist
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: package Tiers does not exist
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java: method set in class DimensionDataStorage cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java: constructor LeavesBlock in class LeavesBlock cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method getList in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method getList in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: method contains in class CompoundTag cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method updateShape in class BlockBehaviour cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java: method isInvulnerableTo in class ServerPlayer cannot be applied to given types;
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java: no suitable method found for create(Level)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java: no suitable method found for create(Level)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: no suitable method found for renderPattern(@org.jetbrains.annotations.NotNull HexPattern,Matrix3x2fStack,isFlat ? n[...], 1)),isGlowy ? [...]TINGS,isGlowy ? [...]olor),int,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ItemThoughtKnot)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemFocus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemFocus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemSpellbook)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemArtifact)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemAbacus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemDyePigment)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemScroll)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemJewelerHammer)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,Block)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Block,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ButtonBlock)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockEmptyImpetus)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockEmptyDirectrix)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,BlockAkashicBookshelf)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for save(RecipeOutput,Identifier)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemStaff)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemPridePigment)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shaped(RecipeCategory,ItemLike)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,ItemLike,int)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for shapeless(RecipeCategory,Item)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: no suitable method found for of(TagKey<Item>)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: no suitable method found for of(ItemStack)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: no suitable method found for of(ItemStack)
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: invalid method reference
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexFeatureConfigs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexActions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedMishapEnv.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java: server has private access in ServerPlayer
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockCircleComponent.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: method does not override or implement a method from a supertype
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgNewSpellPatternS2C.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/BrainsweepCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternTexturesCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexPotions.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexBlocks.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/hex/HexArithmetics.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/mixin/MixinWanderingTrader.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java: ResolvableProfile is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java: ResolvableProfile is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: HoverEvent is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java: ClickEvent is abstract; cannot be instantiated
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: getType() in BrainsweepRecipe cannot implement getType() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: getSerializer() in BrainsweepRecipe cannot implement getSerializer() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealSpellbookRecipe.java: getSerializer() in SealSpellbookRecipe cannot implement getSerializer() in CraftingRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: getSerializer() in SealThingsRecipe cannot override getSerializer() in CustomRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java: incompatible types: CompoundTag cannot be converted to ValueOutput
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java: incompatible types: BlockPos cannot be converted to Orientation
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: incompatible types: Optional<Byte> cannot be converted to int
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java: incompatible types: Optional<Byte> cannot be converted to int
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java: incompatible types: BlockPos cannot be converted to Orientation
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/entities/HexEntities.java: incompatible types: String cannot be converted to ResourceKey<EntityType<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java: incompatible types: CompoundTag cannot be converted to ValueOutput
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java: incompatible types: int cannot be converted to Matrix3x2f
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: Style cannot be converted to InlineStyle
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: float cannot be converted to Matrix3x2f
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: PackOutput cannot be converted to Provider
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ResourceKey<VillagerProfession> cannot be converted to @org.jetbrains.annotations.Nullable VillagerProfession
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: incompatible types: RecipeCategory cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java: incompatible types: no instance(s) of type variable(s) T exist so that Stream<T> conforms to HolderSet<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: incompatible types: Identifier cannot be converted to ResourceKey<Recipe<?>>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: inference variable T has incompatible bounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: inference variable T has incompatible bounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: ItemCreativeUnlocker cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java: incompatible types: ItemLoreFragment cannot be converted to HolderGetter<Item>
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java: incompatible types: DamageSource cannot be converted to ServerLevel
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java: BrainsweepRecipe is not abstract and does not override abstract method recipeBookCategory() in Recipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/SealThingsRecipe.java: SealThingsRecipe is not abstract and does not override abstract method getSerializer() in CustomRecipe
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java: BlockAkashicLeaves is not abstract and does not override abstract method spawnFallingLeavesParticle(Level,BlockPos,RandomSource) in LeavesBlock
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java: HexplatRecipes is not abstract and does not override abstract method buildRecipes() in RecipeProvider
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java: CreateCrushingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java: FarmersDelightCuttingRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java: BrainsweepRecipeBuilder is not abstract and does not override abstract method save(RecipeOutput,ResourceKey<Recipe<?>>) in RecipeBuilder
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: MinMaxLongs is not abstract and does not override abstract method bounds() in MinMaxBounds
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java: cannot find symbol
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java: package Item does not exist
+/home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java: package Tiers does not exist

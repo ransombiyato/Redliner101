@@ -11,6 +11,7 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.UUIDUtil;
 import net.minecraft.nbt.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -171,7 +172,7 @@ public class CircleExecutionState {
         out.put(TAG_IMAGE, CastingImage.getCODEC().encodeStart(NbtOps.INSTANCE, currentImage).getOrThrow());
 
         if (this.caster != null)
-            out.putUUID(TAG_CASTER, this.caster);
+            out.putIntArray(TAG_CASTER, UUIDUtil.uuidToIntArray(this.caster));
 
         if (this.casterPigment != null)
             out.put(TAG_PIGMENT, FrozenPigment.CODEC.encodeStart(NbtOps.INSTANCE, casterPigment).getOrThrow());
@@ -180,36 +181,41 @@ public class CircleExecutionState {
     }
 
     public static CircleExecutionState load(CompoundTag nbt, ServerLevel world) {
-        var startPos = NbtUtils.readBlockPos(nbt, TAG_IMPETUS_POS).orElseThrow();
-        var startDir = Direction.values()[nbt.getByte(TAG_IMPETUS_DIR)];
+        var startPos = readBlockPos(nbt, TAG_IMPETUS_POS).orElseThrow();
+        var startDir = Direction.values()[nbt.getByteOr(TAG_IMPETUS_DIR, (byte) 0)];
 
         var knownPositions = new HashSet<BlockPos>();
-        var knownTag = nbt.getList(TAG_KNOWN_POSITIONS, Tag.TAG_COMPOUND);
+        var knownTag = nbt.getListOrEmpty(TAG_KNOWN_POSITIONS);
         for (var tag : knownTag) {
             var pos = readBlockPos(HexUtils.downcast(tag, IntArrayTag.TYPE).getAsIntArray());
             pos.ifPresent(knownPositions::add);
         }
         var reachedPositions = new ArrayList<BlockPos>();
-        var reachedTag = nbt.getList(TAG_REACHED_POSITIONS, Tag.TAG_COMPOUND);
+        var reachedTag = nbt.getListOrEmpty(TAG_REACHED_POSITIONS);
         for (var tag : reachedTag) {
             var pos = readBlockPos(HexUtils.downcast(tag, IntArrayTag.TYPE).getAsIntArray());
             pos.ifPresent(reachedPositions::add);
         }
 
-        var currentPos = NbtUtils.readBlockPos(nbt, TAG_CURRENT_POS).orElseThrow();
-        var enteredFrom = Direction.values()[nbt.getByte(TAG_ENTERED_FROM)];
-        var image = CastingImage.getCODEC().parse(NbtOps.INSTANCE, nbt.getCompound(TAG_IMAGE)).getOrThrow();
+        var currentPos = readBlockPos(nbt, TAG_CURRENT_POS).orElseThrow();
+        var enteredFrom = Direction.values()[nbt.getByteOr(TAG_ENTERED_FROM, (byte) 0)];
+        var image = CastingImage.getCODEC().parse(NbtOps.INSTANCE, nbt.getCompoundOrEmpty(TAG_IMAGE)).getOrThrow();
 
         UUID caster = null;
-        if (nbt.hasUUID(TAG_CASTER))
-            caster = nbt.getUUID(TAG_CASTER);
+        var casterInts = nbt.getIntArray(TAG_CASTER).orElse(new int[0]);
+        if (casterInts.length == 4)
+            caster = UUIDUtil.uuidFromIntArray(casterInts);
 
         FrozenPigment pigment = null;
-        if (nbt.contains(TAG_PIGMENT, Tag.TAG_COMPOUND))
-            pigment = FrozenPigment.CODEC.parse(NbtOps.INSTANCE, nbt.getCompound(TAG_PIGMENT)).getOrThrow();
+        if (nbt.contains(TAG_PIGMENT))
+            pigment = FrozenPigment.CODEC.parse(NbtOps.INSTANCE, nbt.getCompoundOrEmpty(TAG_PIGMENT)).getOrThrow();
 
         return new CircleExecutionState(startPos, startDir, knownPositions, reachedPositions, currentPos,
             enteredFrom, image, caster, pigment);
+    }
+
+    private static Optional<BlockPos> readBlockPos(CompoundTag nbt, String key) {
+        return nbt.getIntArray(key).flatMap(CircleExecutionState::readBlockPos);
     }
 
     private static Optional<BlockPos> readBlockPos(int[] aint) {

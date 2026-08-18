@@ -105,12 +105,11 @@ public class BlockEntityRedstoneImpetus extends BlockEntityAbstractImpetus {
 
         var plProfile = this.getPlayerName();
         if (plProfile != null) {
-            var resolvableProfile = new ResolvableProfile(plProfile);
-            if (!plProfile.equals(resolvableProfile) || cachedDisplayStack == null) {
+            var resolvableProfile = ResolvableProfile.createResolved(plProfile);
+            if (!resolvableProfile.equals(cachedDisplayProfile) || cachedDisplayStack == null) {
                 cachedDisplayProfile = resolvableProfile;
                 var head = new ItemStack(Items.PLAYER_HEAD);
                 head.set(DataComponents.PROFILE, resolvableProfile);
-                head.getItem().verifyComponentsAfterLoad(head);
                 cachedDisplayStack = head;
             }
             lines.add(new Pair<>(cachedDisplayStack,
