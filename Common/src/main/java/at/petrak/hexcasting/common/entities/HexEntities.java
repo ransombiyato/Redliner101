@@ -26,7 +26,7 @@ public class HexEntities {
     public static final EntityType<EntityWallScroll> WALL_SCROLL = register("wall_scroll",
         EntityType.Builder.<EntityWallScroll>of(EntityWallScroll::new, MobCategory.MISC)
             .sized(0.5f, 0.5f).clientTrackingRange(10).updateInterval(Integer.MAX_VALUE)
-            .build(ResourceKey.create(Registries.ENTITY_TYPE, modLoc("wall_scroll")));
+            .build(ResourceKey.create(Registries.ENTITY_TYPE, modLoc("wall_scroll"))));
 
     private static <T extends Entity> EntityType<T> register(String id, EntityType<T> type) {
         var old = ENTITIES.put(modLoc(id), type);
