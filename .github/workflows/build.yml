@@ -1,0 +1,59 @@
+name: Build Hex Casting for Minecraft 1.21.11 Fabric
+
+on:
+  push:
+    branches:
+      - main
+      - port-1.21.11
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  JAVA_VERSION: '21'
+
+jobs:
+  fabric-build:
+    name: Fabric 1.21.11 build
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Verify target version
+        shell: bash
+        run: |
+          test "$(grep '^minecraftVersion=' gradle.properties | cut -d= -f2)" = '1.21.11'
+          test "$(grep '"minecraft"' Fabric/src/main/resources/fabric.mod.json | sed -E 's/.*=([0-9.]+).*/\1/')" = '1.21.11'
+
+      - name: Build Fabric artifact
+        run: ./gradlew --no-daemon --stacktrace :Fabric:build
+
+      - name: Upload Fabric jars
+        uses: actions/upload-artifact@v4
+        with:
+          name: hexcasting-fabric-1.21.11
+          path: |
+            Fabric/build/libs/*.jar
+            !Fabric/build/libs/*-sources.jar
+            !Fabric/build/libs/*-javadoc.jar
+          if-no-files-found: error
+          retention-days: 30

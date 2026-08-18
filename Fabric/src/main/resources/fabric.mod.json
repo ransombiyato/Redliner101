@@ -46,19 +46,19 @@
   ],
   "accessWidener": "fabricasting.accesswidener",
   "depends": {
-    "minecraft": "=1.21.1",
+    "minecraft": "=1.21.11",
     "java": ">=21",
     "fabricloader": ">=0.14",
     "fabric": ">=0.84",
     "fabric-language-kotlin": ">=1.9.4+kotlin.1.8.21",
-    "cardinal-components-base": "~6.1.3",
-    "cardinal-components-entity": "~6.1.3",
-    "cardinal-components-item": "~6.1.3",
-    "cardinal-components-block": "~6.1.3",
+    "cardinal-components-base": "~7.3.2",
+    "cardinal-components-entity": "~7.3.2",
+    "cardinal-components-item": "~7.3.2",
+    "cardinal-components-block": "~7.3.2",
     "paucal": ">0.7.0",
     "cloth-config": "15.0.*",
     "patchouli": ">=1.20.1-80",
-    "inline": ">=1.21.1-1.2.2"
+    "inline": ">=1.21.11-1.2.2"
   },
   "suggests": {
     "pehkui": ">=3.7.6",
