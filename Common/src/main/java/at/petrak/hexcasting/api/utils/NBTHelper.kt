@@ -49,14 +49,14 @@ fun CompoundTag?.hasList(key: String, objType: Byte): Boolean {
     if (!hasList(key)) return false
     val lt = get(key) as ListTag
     val elementType = if (lt.isEmpty()) 0 else lt.get(0).id.toInt()
-    return elementType == objType || elementType == 0
+    return elementType == objType.toInt() || elementType == 0
 }
 
 fun CompoundTag?.hasUUID(key: String) = this?.getIntArray(key)?.orElse(null)?.size == 4
 
-fun CompoundTag?.contains(key: String, id: Byte) = contains(key, id.toInt())
-fun CompoundTag?.contains(key: String, id: Int) = this != null && contains(key, id)
-fun CompoundTag?.contains(key: String) = this != null && contains(key)
+fun CompoundTag?.contains(key: String, id: Byte) = this?.contains(key, id.toInt()) ?: false
+fun CompoundTag?.contains(key: String, id: Int) = this?.contains(key, id) ?: false
+fun CompoundTag?.contains(key: String) = this?.contains(key) ?: false
 
 // Puts
 
@@ -70,10 +70,13 @@ fun CompoundTag?.putDouble(key: String, value: Double) = this?.putDouble(key, va
 fun CompoundTag?.putLongArray(key: String, value: LongArray) = this?.putLongArray(key, value)
 fun CompoundTag?.putIntArray(key: String, value: IntArray) = this?.putIntArray(key, value)
 fun CompoundTag?.putByteArray(key: String, value: ByteArray) = this?.putByteArray(key, value)
-fun CompoundTag?.putCompound(key: String, value: CompoundTag) = put(key, value)
+fun CompoundTag?.putCompound(key: String, value: CompoundTag) { this?.put(key, value) }
 fun CompoundTag?.putString(key: String, value: String) = this?.putString(key, value)
-fun CompoundTag?.putList(key: String, value: ListTag) = put(key, value)
-fun CompoundTag?.putUUID(key: String, value: UUID) = this?.putUUID(key, value)
+fun CompoundTag?.putList(key: String, value: ListTag) { this?.put(key, value) }
+fun CompoundTag?.putUUID(key: String, value: UUID) {
+    val ints = intArrayOf((value.mostSignificantBits shr 32).toInt(), value.mostSignificantBits.toInt(), (value.leastSignificantBits shr 32).toInt(), value.leastSignificantBits.toInt())
+    this?.putIntArray(key, ints)
+}
 fun CompoundTag?.put(key: String, value: Tag) = this?.put(key, value)
 
 // Remove
@@ -109,7 +112,7 @@ fun CompoundTag?.getByteArray(key: String) = this?.getByteArray(key)?.orElse(nul
 fun CompoundTag?.getCompound(key: String): CompoundTag? = this?.getCompound(key)?.orElse(null)
 
 fun CompoundTag?.getString(key: String) = this?.getString(key)?.orElse(null)
-fun CompoundTag?.getList(key: String, objType: Byte) = getList(key, objType.toInt())
+fun CompoundTag?.getList(key: String, objType: Byte): ListTag? = this?.getListOrEmpty(key)
 fun CompoundTag?.getList(key: String, objType: Int): ListTag? {
     val list = this?.getList(key)?.orElse(null) ?: return null
     return list.takeIf { this.hasList(key, objType) }
@@ -125,13 +128,13 @@ fun CompoundTag?.get(key: String) = this?.get(key)
 
 @JvmSynthetic
 @JvmName("getListByByte")
-fun CompoundTag.getList(key: String, objType: Byte): ListTag = getList(key, objType.toInt())
+fun CompoundTag.getList(key: String, objType: Byte): ListTag = getListOrEmpty(key)
 
 // Get-or-create
 
-fun CompoundTag.getOrCreateCompound(key: String): CompoundTag = getCompound(key).orElseGet { CompoundTag().also { putCompound(key, it) } }
+fun CompoundTag.getOrCreateCompound(key: String): CompoundTag = getCompoundOrEmpty(key).also { if (!hasCompound(key)) putCompound(key, it) }
 fun CompoundTag.getOrCreateList(key: String, objType: Byte) = getOrCreateList(key, objType.toInt())
-fun CompoundTag.getOrCreateList(key: String, objType: Int): ListTag = if (hasList(key, objType)) getList(key, objType) ?: ListTag() else ListTag().also { putList(key, it) }
+fun CompoundTag.getOrCreateList(key: String, objType: Int): ListTag = if (hasList(key, objType)) getListOrEmpty(key) else ListTag().also { putList(key, it) }
 
 // ================================================================================================================ Tag
 

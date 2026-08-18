@@ -22,6 +22,7 @@ import net.minecraft.world.level.levelgen.synth.SimplexNoise
 import net.minecraft.world.phys.Vec2
 import org.joml.Matrix4f
 import kotlin.math.abs
+import kotlin.math.cos
 import kotlin.math.min
 import kotlin.math.roundToInt
 import kotlin.math.sin
@@ -70,7 +71,7 @@ fun drawLineSeq(
     val b1 = ARGB.blue(tail).toFloat()
     val a = ARGB.alpha(tail)
     val a1 = a.toFloat()
-    val headSource = if (Minecraft.getInstance().keyboardHandler.hasControlDown() != HexConfig.client().ctrlTogglesOffStrokeOrder())
+    val headSource = if (Minecraft.getInstance().hasControlDown() != HexConfig.client().ctrlTogglesOffStrokeOrder())
         head
     else
         tail
@@ -414,7 +415,7 @@ fun renderEntity(
     renderScale: Float, offset: Float,
     bufferTransformer: (MultiBufferSource) -> MultiBufferSource = { it -> it }
 ) {
-    val rotation = if (Minecraft.getInstance().keyboardHandler.hasShiftDown()) 0.0f else rotation
+    val rotation = if (Minecraft.getInstance().hasShiftDown()) 0.0f else rotation
 
     // TODO: Figure out why this is here and whether removing it will break things
 //    entity.level = world

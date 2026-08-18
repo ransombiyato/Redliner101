@@ -67,10 +67,10 @@ data class CastingImage(
      * Returns this image's ravenmind in an Optional wrapper.
      */
     fun ravenmind() : Optional<CompoundTag> {
-        val tag = userData.getCompound(HexAPI.RAVENMIND_USERDATA)
+        val tag = userData.getCompound(HexAPI.RAVENMIND_USERDATA).orElse(null)
 
         var result: CompoundTag? = null
-        if (!tag.isEmpty) { result = tag }
+        if (tag != null && !tag.isEmpty) { result = tag }
         return Optional.ofNullable(result)
     }
 

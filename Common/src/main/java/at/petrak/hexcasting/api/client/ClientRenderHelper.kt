@@ -8,10 +8,8 @@ import at.petrak.hexcasting.client.render.makeZappy
 import at.petrak.hexcasting.client.render.screenCol
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions
 import at.petrak.hexcasting.xplat.IXplatAbstractions
-import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.math.Axis
-import net.minecraft.client.renderer.GameRenderer
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.phys.Vec2
 import kotlin.math.abs
@@ -36,10 +34,6 @@ fun renderCastingStack(ps: PoseStack, player: Player, pticks: Float) {
         ps.translate(0.0, floor((k / 8.0)), 0.0)
         ps.translate(0.0, sin((player.level().gameTime + pticks) / (7.0 + k / 8.0)), 0.0)
 
-        val oldShader = RenderSystem.getShader()
-        RenderSystem.setShader { GameRenderer.getPositionColorShader() }
-        RenderSystem.enableDepthTest()
-        RenderSystem.disableCull()
         val com1 = pattern.getCenter(1f)
         val lines1 = pattern.toLines(1f, Vec2.ZERO)
         var maxDx = -1f
@@ -80,7 +74,5 @@ fun renderCastingStack(ps: PoseStack, player: Player, pticks: Float) {
         drawLineSeq(ps.last().pose(), zappy, 0.35f, 0f, newARGB, newARGB)
         drawLineSeq(ps.last().pose(), zappy, 0.14f, 0.01f, inner, inner)
         ps.popPose()
-        RenderSystem.setShader { oldShader }
-        RenderSystem.enableCull()
     }
 }

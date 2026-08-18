@@ -30,11 +30,8 @@ data class ExecutionClientView(
                     ResolvedPatternType::ordinal
                 ), ExecutionClientView::resolutionType,
                 IotaType.TYPED_STREAM_CODEC.apply(ByteBufCodecs.list()), ExecutionClientView::stackDescs,
-                ByteBufCodecs.optional(ByteBufCodecs.COMPOUND_TAG).map(
-                    { it.getOrNull() },
-                    Optional<CompoundTag>::ofNullable
-                ), ExecutionClientView::ravenmind,
-                ::ExecutionClientView
+                ByteBufCodecs.optional(ByteBufCodecs.COMPOUND_TAG), { Optional.ofNullable(it.ravenmind) },
+                { clear, type, descs, ravenmind -> ExecutionClientView(clear, type, descs, ravenmind.orElse(null)) }
             )
     }
 }

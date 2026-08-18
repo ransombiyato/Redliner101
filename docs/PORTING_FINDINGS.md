@@ -19,3 +19,13 @@ The Architectury Loom discussion [#329](https://github.com/architectury/architec
 ## Dependency availability
 
 Patchouli has verified Maven artifacts `1.21.1-92-FABRIC` and common `1.21.1-92`. The bundled Paucal and Inline artifacts in the upstream 1.21 port are 1.21.1 builds. Fabric Language Kotlin, Cardinal Components, Cloth Config, Mod Menu, and Lithium have 1.21.11 builds; Paucal, Patchouli, Inline, and Accessories do not currently expose 1.21.11 artifacts through the checked public indexes. This is a known compatibility constraint to resolve through source porting or carefully isolated helper dependencies, not by relabeling 1.21.1 jars as 1.21.11 jars.
+
+## 1.21.11 rendering and mappings
+
+Minecraft 1.21.11’s official mappings rename `net.minecraft.resources.ResourceLocation` to `net.minecraft.resources.Identifier`; the new class exposes `CODEC`, `STREAM_CODEC`, `fromNamespaceAndPath`, `parse`, `tryParse`, and `withDefaultNamespace`. The former `FastColor.ARGB32` utility is replaced by `net.minecraft.util.ARGB`, with `alpha`, `red`, `green`, `blue`, and `color` methods. Villager classes move under `net.minecraft.world.entity.npc.villager`; `WaterAnimal` moves under `net.minecraft.world.entity.animal.fish`; and `EnderDragonPart` moves under `net.minecraft.world.entity.boss.enderdragon`.
+
+Minecraft 1.21.11’s `CompoundTag` typed getters return `Optional` values and provide `getIntOr`, `getDoubleOr`, `getStringOr`, `getCompoundOrEmpty`, `getListOrEmpty`, and `getBooleanOr` convenience methods. `ListTag.elementType` is removed; the element type can be derived from the first tag’s ID. `GuiGraphics.pose()` returns `Matrix3x2fStack`, not the legacy `PoseStack`. `Screen` mouse callbacks use `MouseButtonEvent`; `KeyboardHandler.hasControlDown()` and `hasShiftDown()` remain available through `Minecraft.getInstance().keyboardHandler`. `GuiGraphics` exposes pipeline-based fill and blit submission methods rather than the removed immediate `RenderSystem.setShader`/legacy GUI PoseStack path.
+
+Fabric’s official GUI documentation confirms that modern GUI rendering uses `GuiGraphics`/`GuiGraphicsExtractor` submission APIs, `fill`/`outline` for shapes, and `RenderPipelines.GUI_TEXTURED` for textures: https://docs.fabricmc.net/develop/rendering/gui-graphics.
+
+The latest official HexMod `1.21` branch head as of 2026-08-15 is commit `21dfcb90a2023995f08bccf282c9eaf563c13186`, still configured for Minecraft `1.21.1`; it does not provide a pre-existing 1.21.11 implementation.

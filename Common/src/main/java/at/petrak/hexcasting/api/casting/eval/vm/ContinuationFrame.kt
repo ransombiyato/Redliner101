@@ -89,16 +89,16 @@ interface ContinuationFrame {
          * @return `null` if it cannot get the type.
          */
         private fun getTypeFromTag(tag: CompoundTag): Type<*>? {
-            if (!tag.contains(HexContinuationTypes.KEY_TYPE, Tag.TAG_STRING.toInt())) {
+            if (!tag.contains(HexContinuationTypes.KEY_TYPE)) {
                 return null
             }
 
-            val typeKey = tag.getString(HexContinuationTypes.KEY_TYPE)
+            val typeKey = tag.getString(HexContinuationTypes.KEY_TYPE).orElse(null) ?: return null
 
             val typeLoc = Identifier.tryParse(typeKey)
                 ?: return null
 
-            return HexContinuationTypes.REGISTRY[typeLoc]
+            return HexContinuationTypes.REGISTRY.get(typeLoc).orElse(null)
         }
     }
 }

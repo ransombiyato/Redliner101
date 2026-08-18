@@ -52,7 +52,7 @@ fun vecFromNBT(tag: CompoundTag): Vec3 {
     return if (!tag.contains("x") || !tag.contains("y") || !tag.contains("z"))
         Vec3.ZERO
     else
-        Vec3(tag.getDouble("x"), tag.getDouble("y"), tag.getDouble("z"))
+        Vec3(tag.getDoubleOr("x", 0.0), tag.getDoubleOr("y", 0.0), tag.getDoubleOr("z", 0.0))
 }
 
 fun Vec2.serializeToNBT(): LongArrayTag =
@@ -279,9 +279,7 @@ fun <A> List<A>.zipWithDefault(array: ByteArray, default: (idx: Int) -> Byte): L
 }
 
 fun ItemStack.serializeToNBT(provider: HolderLookup.Provider): CompoundTag {
-    val out = CompoundTag()
-    save(provider, out)
-    return out
+    return ItemStack.CODEC.encodeStart(NbtOps.INSTANCE, this).result().orElseGet { CompoundTag() }
 }
 
 @Suppress("UNCHECKED_CAST")
@@ -297,13 +295,11 @@ fun <T : Tag> Tag.downcast(type: TagType<T>): T {
 }
 
 const val ERROR_COLOR = 0xff_f800f8.toInt()
-fun <T> isOfTag(registry: Registry<T>, key: ResourceKey<T>, tag: TagKey<T>): Boolean {
-    val maybeHolder = registry.getHolder(key)
-    val holder = if (maybeHolder.isPresent) maybeHolder.get() else return false
-    return holder.`is`(tag)
+fun <T : Any> isOfTag(registry: Registry<T>, key: ResourceKey<T>, tag: TagKey<T>): Boolean {
+    return registry.lookup().get(key).map { it.`is`(tag) }.orElse(false)
 }
 
-fun <T> isOfTag(registry: Registry<T>, loc: Identifier, tag: TagKey<T>): Boolean {
+fun <T : Any> isOfTag(registry: Registry<T>, loc: Identifier, tag: TagKey<T>): Boolean {
     val key = ResourceKey.create(registry.key(), loc);
     return isOfTag(registry, key, tag)
 }

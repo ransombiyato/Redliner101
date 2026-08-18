@@ -2,7 +2,6 @@ package at.petrak.hexcasting.client.render;
 
 
 import at.petrak.hexcasting.api.casting.math.HexPattern;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.VertexFormat;
@@ -41,7 +40,6 @@ public class PatternRenderer {
      * @param resPerUnit the texture resolution per pose unit space to be used *if* the texture renderer is used.
      */
     public static void renderPattern(HexPatternLike patternlike, PoseStack ps, @Nullable WorldlyBits worldlyBits, PatternSettings patSets, PatternColors patColors, double seed, int resPerUnit){
-        var oldShader = RenderSystem.getShader();
         HexPatternPoints staticPoints = HexPatternPoints.getStaticPoints(patternlike, patSets, seed);
 
         boolean shouldRenderDynamic = true;
@@ -97,7 +95,6 @@ public class PatternRenderer {
             }
         }
 
-        RenderSystem.setShader(() -> oldShader);
     }
 
     private static final float outerZ = 0.0005f;
@@ -149,7 +146,7 @@ public class PatternRenderer {
 
     // TODO did we want to un-hardcode this for accessibility reasons ?
     public static boolean shouldDoStrokeGradient(){
-        return Minecraft.getInstance().keyboardHandler.hasControlDown();
+        return Minecraft.getInstance().hasControlDown();
     }
 
     public record WorldlyBits(@Nullable MultiBufferSource provider, Integer light, Vec3 normal){}
