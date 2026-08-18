@@ -73,7 +73,7 @@ public class SealThingsRecipe extends CustomRecipe {
     }
 
     @Override
-    public @NotNull RecipeSerializer<?> getSerializer() {
+    public @NotNull RecipeSerializer getSerializer() {
         return switch (this.sealee) {
             case FOCUS -> FOCUS_SERIALIZER;
             case SPELLBOOK -> SPELLBOOK_SERIALIZER;
