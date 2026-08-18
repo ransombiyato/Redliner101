@@ -1,0 +1,11 @@
+49 ## Blocks :: neighborChanged|updateShape|onRemove|affectNeighborsAfterRemoval|getAnalogOutputSignal|codec\(
+136 ## Commands :: DimensionDataStorage|ResourceKey|location\(
+76 ## Interactions :: sidedSuccess|InteractionResult
+30 ## Interop :: Patchouli|EMI|HoverEvent|ClickEvent|InlineStyle
+33 ## Items :: appendHoverText|inventoryTick|Tiers|ArmorMaterial|UseAnim|Equippable
+59 ## NBT optionals :: getByte\(|getInt\(|getLong\(|getList\([^)]*,|getCompound\(|contains\([^)]*,
+42 ## Persistence :: loadAdditional\(|saveAdditional\(|ValueInput|ValueOutput|verifyComponentsAfterLoad
+138 ## Recipes :: SimpleCraftingRecipeSerializer|RecipeProvider|RecipeBuilder|recipeBookCategory|placementInfo|Ingredient\.Value|EntityPredicate\.create
+107 ## Rendering :: PoseStack|Matrix3x2fStack|RenderType|RenderPipeline|RenderStateShard|ParticleRenderType|PlayerRenderState|AvatarRenderState|submit\(
+19 ## Textures :: DynamicTexture|NativeImage|getPixelRGBA|setPixelRGBA|ClientTooltipComponent
+16 ## UUID :: hasUUID\(|getUUID\(|ResolvableProfile

@@ -71,3 +71,23 @@ For each item, record the exact source files changed, the mapping entry or autho
 - `docs/PORT_1.21.11_CHECKLIST.md`: this persistent checklist.
 - `/home/ubuntu/mc12111/client.txt`: official 1.21.11 mappings used for API verification.
 - `/home/ubuntu/HexMod-1.21`: upstream 1.21 guidance used only as migration reference, not as the target version.
+
+## Repository-wide search coverage
+
+The source-wide audit found the following hit counts in authored Common/Fabric source. These are **audit candidates**, not automatically errors; each hit must be reviewed against the 1.21.11 mappings and either migrated or explicitly classified as valid.
+
+| API family | Candidate hits | Persistent evidence |
+|---|---:|---|
+| Blocks and block lifecycle | 49 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Commands and resource-key/storage APIs | 136 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Interaction results | 76 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Patchouli/EMI/inline interop | 30 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Items and equipment | 33 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| NBT optional accessors | 59 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Persistence and ValueInput/ValueOutput | 42 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Recipes and ingredients | 138 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Rendering and submit APIs | 107 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| Textures and tooltip components | 19 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+| UUID/profile APIs | 16 | `docs/PORT_1.21.11_API_FAMILY_AUDIT.txt` |
+
+The counts are stored in `docs/PORT_1.21.11_API_FAMILY_SUMMARY.txt`. The next work phase is to review these candidates in related batches, update the checklist item status, and only then run consolidated compilation/CI validation.

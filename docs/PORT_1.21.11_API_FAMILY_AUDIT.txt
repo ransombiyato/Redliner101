@@ -1,0 +1,733 @@
+# Hex Casting 1.21.11 API-family audit
+# Generated from authored Common/Fabric source only
+
+## Identifiers :: ResourceLocation|ResourceKey\.location
+
+## NBT optionals :: getByte\(|getInt\(|getLong\(|getList\([^)]*,|getCompound\(|contains\([^)]*,
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/CastingImage.kt:70:        val tag = userData.getCompound(HexAPI.RAVENMIND_USERDATA).orElse(null)
+Common/src/main/java/at/petrak/hexcasting/api/casting/ActionUtils.kt:46:fun List<Iota>.getList(idx: Int, argc: Int = 0): SpellList {
+Common/src/main/java/at/petrak/hexcasting/api/casting/ActionUtils.kt:168:fun List<Iota>.getInt(idx: Int, argc: Int = 0): Int {
+Common/src/main/java/at/petrak/hexcasting/api/casting/ActionUtils.kt:180:fun List<Iota>.getLong(idx: Int, argc: Int = 0): Long {
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:35:fun CompoundTag?.hasByte(key: String) = contains(key, Tag.TAG_BYTE)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:36:fun CompoundTag?.hasShort(key: String) = contains(key, Tag.TAG_SHORT)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:37:fun CompoundTag?.hasInt(key: String) = contains(key, Tag.TAG_INT)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:38:fun CompoundTag?.hasLong(key: String) = contains(key, Tag.TAG_LONG)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:39:fun CompoundTag?.hasFloat(key: String) = contains(key, Tag.TAG_FLOAT)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:40:fun CompoundTag?.hasDouble(key: String) = contains(key, Tag.TAG_DOUBLE)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:41:fun CompoundTag?.hasLongArray(key: String) = contains(key, Tag.TAG_LONG_ARRAY)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:42:fun CompoundTag?.hasIntArray(key: String) = contains(key, Tag.TAG_INT_ARRAY)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:43:fun CompoundTag?.hasByteArray(key: String) = contains(key, Tag.TAG_BYTE_ARRAY)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:44:fun CompoundTag?.hasCompound(key: String) = contains(key, Tag.TAG_COMPOUND)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:45:fun CompoundTag?.hasString(key: String) = contains(key, Tag.TAG_STRING)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:46:fun CompoundTag?.hasList(key: String) = contains(key, Tag.TAG_LIST)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:57:fun CompoundTag?.contains(key: String, id: Byte) = this?.contains(key, id.toInt()) ?: false
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:58:fun CompoundTag?.contains(key: String, id: Int): Boolean = this?.contains(key, id) ?: false
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:92:fun CompoundTag?.getByte(key: String, defaultExpected: Byte = 0) = this?.getByteOr(key, defaultExpected) ?: defaultExpected
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:98:fun CompoundTag?.getInt(key: String, defaultExpected: Int = 0) = this?.getIntOr(key, defaultExpected) ?: defaultExpected
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:101:fun CompoundTag?.getLong(key: String, defaultExpected: Long = 0L) = this?.getLongOr(key, defaultExpected) ?: defaultExpected
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:112:fun CompoundTag?.getCompound(key: String): CompoundTag? = this?.getCompound(key)?.orElse(null)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:115:fun CompoundTag?.getList(key: String, objType: Byte): ListTag? = this?.getListOrEmpty(key)
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:116:fun CompoundTag?.getList(key: String, objType: Int): ListTag? {
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:131:fun CompoundTag.getList(key: String, objType: Byte): ListTag = getListOrEmpty(key)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/eval/OpForEach.kt:20:        val instrs = stack.getList(stack.lastIndex - 1, stack.size)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/eval/OpForEach.kt:21:        val datums = stack.getList(stack.lastIndex, stack.size)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpAppend.kt:12:        val list = args.getList(0, argc).toMutableList()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpConcat.kt:12:        val lhs = args.getList(0, argc).toMutableList()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpConcat.kt:13:        val rhs = args.getList(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpCons.kt:13:        val bottom = args.getList(0, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpIndex.kt:14:        val list = args.getList(0, argc).toMutableList()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpIndexOf.kt:14:        val list = args.getList(0, argc).toMutableList()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpListSize.kt:13:        return args.getList(0, argc).toList().size.asActionResult // mmm one-liner
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpModifyInPlace.kt:14:        val list = args.getList(0, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpRemove.kt:15:        val list = args.getList(0, argc).toMutableList()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpRemove.kt:16:        val index = args.getInt(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpReverski.kt:12:        return args.getList(0, argc).toList().asReversed().asActionResult // okay kotlin kinda pogged for this
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpSlice.kt:15:        val list = args.getList(0, argc).toList()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpSplat.kt:13:        args.getList(0, argc).toList()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/lists/OpUnCons.kt:13:        val list = args.getList(0, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpAnd.kt:19:                val num2 = args.getLong(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpAnd.kt:23:                val list2 = args.getList(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpNot.kt:13:        val num = args.getLong(0, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpOr.kt:19:                val num2 = args.getLong(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpOr.kt:23:                val list2 = args.getList(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpToSet.kt:13:        val list = args.getList(0, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpXor.kt:19:                val num2 = args.getLong(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/bit/OpXor.kt:23:                val list2 = args.getList(1, argc)
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpMakePackagedSpell.kt:34:        val patterns = args.getList(1, argc).toList()
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:82:            var inner = tag.getCompound(sig);
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:84:            var rawDir = inner.getByte(TAG_DIR);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:43:            var grace = tag.getInt(TAG_GRACE);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:46:            var timeLeft = tag.getInt(TAG_TIME_LEFT);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:49:            var origin = HexUtils.vecFromNBT(tag.getCompound(TAG_ORIGIN));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:39:        ListTag patternsTag = tag.getList(TAG_PATTERNS, Tag.TAG_COMPOUND);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:44:            patterns.add(ResolvedPattern.CODEC.parse(NbtOps.INSTANCE, patternsTag.getCompound(i)).getOrThrow());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:44:            var position = HexUtils.vecFromNBT(tag.getCompound(TAG_POSITION));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java:44:        this.lazyLoadedTag = tag.getCompound(TAG_VM);
+
+## UUID :: hasUUID\(|getUUID\(|ResolvableProfile
+Common/src/main/java/at/petrak/hexcasting/api/casting/circles/CircleExecutionState.java:145:            casterUUID = caster.getUUID();
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PackagedItemCastEnv.java:29:                    this.caster.getUUID(), List.of(patternIota.getPattern()), 140
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/StaffCastEnv.java:65:            this.caster.getUUID(), castPatterns.stream().toList(), Integer.MAX_VALUE
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/StaffCastEnv.java:139:            packet = new MsgClearSpiralPatternsS2C(sender.getUUID());
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/StaffCastEnv.java:141:            packet = new MsgNewSpiralPatternsS2C(sender.getUUID(), List.of(msg.pattern()), Integer.MAX_VALUE);
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java:20:import net.minecraft.world.item.component.ResolvableProfile;
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java:34:        this(e.getUUID(), getEntityNameWithInline(e));
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java:82:            inlineEnt = new PlayerHeadData(ResolvableProfile.createResolved(player.getGameProfile())).asText(false);
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:55:fun CompoundTag?.hasUUID(key: String) = this?.getIntArray(key)?.orElse(null)?.size == 4
+Common/src/main/java/at/petrak/hexcasting/api/utils/NBTHelper.kt:120:fun CompoundTag?.getUUID(key: String): UUID? {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java:21:import net.minecraft.world.item.component.ResolvableProfile;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java:36:    private ResolvableProfile cachedDisplayProfile = null;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java:108:            var resolvableProfile = ResolvableProfile.createResolved(plProfile);
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:77:                            tile.setPlayer(iotaPlayer.getGameProfile(), entity.getUUID());
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:115:        var packet = new MsgNewSpiralPatternsS2C(sPlayer.getUUID(), patterns, 140);
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemStaff.java:40:                var packet = new MsgClearSpiralPatternsS2C(player.getUUID());
+
+## Persistence :: loadAdditional\(|saveAdditional\(|ValueInput|ValueOutput|verifyComponentsAfterLoad
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:13:import net.minecraft.world.level.storage.TagValueOutput;
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:14:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:15:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:22:    protected abstract void saveModData(ValueOutput output);
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:24:    protected abstract void loadModData(ValueInput input);
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:27:    protected void saveAdditional(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:28:        super.saveAdditional(output);
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:33:    public void loadAdditional(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:34:        super.loadAdditional(input);
+Common/src/main/java/at/petrak/hexcasting/api/block/HexBlockEntity.java:40:        var output = TagValueOutput.createWithContext(ProblemReporter.DISCARDING, registries);
+Common/src/main/java/at/petrak/hexcasting/api/casting/circles/BlockEntityAbstractImpetus.java:15:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/api/casting/circles/BlockEntityAbstractImpetus.java:16:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/api/casting/circles/BlockEntityAbstractImpetus.java:291:    protected void saveModData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/api/casting/circles/BlockEntityAbstractImpetus.java:308:    protected void loadModData(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockEntityAkashicBookshelf.java:10:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockEntityAkashicBookshelf.java:11:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockEntityAkashicBookshelf.java:82:    protected void saveModData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockEntityAkashicBookshelf.java:92:    protected void loadModData(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityLookingImpetus.java:8:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityLookingImpetus.java:9:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityLookingImpetus.java:89:    protected void saveModData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityLookingImpetus.java:95:    protected void loadModData(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java:11:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java:12:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java:124:    protected void saveModData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockEntityRedstoneImpetus.java:135:    protected void loadModData(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockEntitySlate.java:8:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockEntitySlate.java:9:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockEntitySlate.java:43:    protected void saveModData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockEntitySlate.java:50:    protected void loadModData(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityConjured.java:10:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityConjured.java:11:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityConjured.java:93:    protected void saveModData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityConjured.java:98:    protected void loadModData(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityQuenchedAllay.java:7:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityQuenchedAllay.java:8:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityQuenchedAllay.java:26:    protected void saveModData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/entity/BlockEntityQuenchedAllay.java:31:    protected void loadModData(ValueInput input) {
+Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java:32:import net.minecraft.world.level.storage.ValueInput;
+Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java:33:import net.minecraft.world.level.storage.ValueOutput;
+Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java:160:    public void addAdditionalSaveData(ValueOutput output) {
+Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java:169:    public void readAdditionalSaveData(ValueInput input) {
+
+## Items :: appendHoverText|inventoryTick|Tiers|ArmorMaterial|UseAnim|Equippable
+Common/src/main/java/at/petrak/hexcasting/api/item/IotaHolderItem.java:73:    static void appendHoverText(IotaHolderItem self, ItemStack stack, List<Component> components,
+Common/src/main/java/at/petrak/hexcasting/api/mod/HexConfig.java:62:        int opBreakHarvestLevelBecauseForgeThoughtItWasAGoodIdeaToImplementHarvestTiersUsingAnHonestToGodTopoSort();
+Common/src/main/java/at/petrak/hexcasting/api/mod/HexConfig.java:97:            return switch (this.opBreakHarvestLevelBecauseForgeThoughtItWasAGoodIdeaToImplementHarvestTiersUsingAnHonestToGodTopoSort()) {
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:21:import net.minecraft.world.item.equipment.ArmorMaterial;
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:169:    ArmorMaterial DUMMY_ARMOR_MATERIAL = new ArmorMaterial(
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:186:    default ArmorMaterial robesMaterial() {
+Common/src/main/java/at/petrak/hexcasting/common/impl/HexAPIImpl.java:15:import net.minecraft.world.item.equipment.ArmorMaterial;
+Common/src/main/java/at/petrak/hexcasting/common/impl/HexAPIImpl.java:100:    ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(
+Common/src/main/java/at/petrak/hexcasting/common/impl/HexAPIImpl.java:118:    public ArmorMaterial robesMaterial() {
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java:39:    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java:43:        super.appendHoverText(stack, context, display, components::add, tooltipFlag);
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java:162:    public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, EquipmentSlot slot) {
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java:248:    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemMediaHolder.java:90:    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemMediaHolder.java:111:        super.appendHoverText(stack, context, tooltipDisplay, tooltipComponents, tooltipFlag);
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:24:import net.minecraft.world.item.ItemUseAnimation;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:155:    public ItemUseAnimation getUseAnimation(ItemStack pStack) {
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:156:        return ItemUseAnimation.BLOCK;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java:71:    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java:73:        IotaHolderItem.appendHoverText(this, stack, components, tooltipFlag);
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemFocus.java:60:    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemFocus.java:63:        IotaHolderItem.appendHoverText(this, stack, components, tooltipFlag);
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:152:    public void inventoryTick(ItemStack pStack, ServerLevel pLevel, Entity pEntity, net.minecraft.world.entity.EquipmentSlot pSlot) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:166:    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSlate.java:63:    public void inventoryTick(ItemStack pStack, ServerLevel pLevel, Entity pEntity, EquipmentSlot pSlot) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java:38:    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display,
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java:83:        IotaHolderItem.appendHoverText(this, stack, tooltip, isAdvanced);
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java:86:        super.appendHoverText(stack, context, display, tooltipComponents, isAdvanced);
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemSpellbook.java:90:    public void inventoryTick(ItemStack stack, ServerLevel level, Entity pEntity, EquipmentSlot pSlot) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemThoughtKnot.java:45:    public void appendHoverText(ItemStack pStack, Item.TooltipContext context, TooltipDisplay display,
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemThoughtKnot.java:48:        IotaHolderItem.appendHoverText(this, pStack, components, pIsAdvanced);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:353:            .opBreakHarvestLevelBecauseForgeThoughtItWasAGoodIdeaToImplementHarvestTiersUsingAnHonestToGodTopoSort();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexConfig.java:282:        public int opBreakHarvestLevelBecauseForgeThoughtItWasAGoodIdeaToImplementHarvestTiersUsingAnHonestToGodTopoSort() {
+
+## Interactions :: sidedSuccess|InteractionResult
+Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java:11:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java:68:    public abstract InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand,
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/AkashicFloodfiller.java:7:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/AkashicFloodfiller.java:76:    InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand,
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:12:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:13:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:44:    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:51:                return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:56:                ? InteractionResult.TRY_WITH_EMPTY_HAND
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:57:                : InteractionResult.PASS;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:61:    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:70:                return InteractionResult.sidedSuccess(level.isClientSide());
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:74:        return InteractionResult.PASS;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:122:    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicLigature.java:5:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicLigature.java:18:    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockLookingImpetus.java:8:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockLookingImpetus.java:30:    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:14:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:15:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:43:    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:60:    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:68:                return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:82:                            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:90:                ? InteractionResult.TRY_WITH_EMPTY_HAND
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:91:                : InteractionResult.PASS;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRightClickImpetus.java:9:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRightClickImpetus.java:29:    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRightClickImpetus.java:40:    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRightClickImpetus.java:47:                return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRightClickImpetus.java:50:        return InteractionResult.PASS;
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpPlaceBlock.kt:19:import net.minecraft.world.InteractionResult
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpPlaceBlock.kt:86:                            if (res != InteractionResult.FAIL) {
+Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java:24:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java:112:    public InteractionResult interactAt(Player pPlayer, Vec3 pVec, InteractionHand pHand) {
+Common/src/main/java/at/petrak/hexcasting/common/entities/EntityWallScroll.java:129:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java:24:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java:198:    public InteractionResult useOn(UseOnContext context) {
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java:204:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java:206:        return InteractionResult.PASS;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:20:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:92:    public InteractionResult use(Level world, Player player, InteractionHand usedHand) {
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:95:            return InteractionResult.FAIL;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:99:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:104:            return InteractionResult.FAIL;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:148:            return InteractionResult.CONSUME;
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemPackagedHex.java:150:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java:10:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java:50:    public InteractionResult use(Level world, Player player, InteractionHand hand) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java:64:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemAbacus.java:66:            return InteractionResult.PASS;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:20:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:93:    public InteractionResult useOn(UseOnContext ctx) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:100:            return InteractionResult.FAIL;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:121:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:123:            return InteractionResult.CONSUME;
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java:13:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java:44:    public InteractionResult use(Level level, Player player, InteractionHand usedHand) {
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java:50:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java:54:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java:86:        return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemStaff.java:14:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemStaff.java:31:    public InteractionResult use(Level world, Player player, InteractionHand hand) {
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemStaff.java:33:            return InteractionResult.FAIL;
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemStaff.java:61:        return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/misc/BrainsweepingEvents.java:5:import net.minecraft.world.InteractionResult;
+Common/src/main/java/at/petrak/hexcasting/common/misc/BrainsweepingEvents.java:15:    public static InteractionResult interactWithBrainswept(Player player, Level world, InteractionHand hand,
+Common/src/main/java/at/petrak/hexcasting/common/misc/BrainsweepingEvents.java:19:            return InteractionResult.SUCCESS;
+Common/src/main/java/at/petrak/hexcasting/common/misc/BrainsweepingEvents.java:22:        return InteractionResult.PASS;
+Common/src/main/java/at/petrak/hexcasting/common/misc/BrainsweepingEvents.java:25:    public static InteractionResult copyBrainsweepPostTransformation(LivingEntity original, LivingEntity outcome) {
+Common/src/main/java/at/petrak/hexcasting/common/misc/BrainsweepingEvents.java:30:        return InteractionResult.PASS;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:64:import net.minecraft.world.InteractionResult;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519:        return success.getResult() == InteractionResult.PASS; // No other mod tried to consume this
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:66:import net.minecraft.world.InteractionResult
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:123:                InteractionResult.SUCCESS // "success"
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:125:                InteractionResult.PASS
+
+## Blocks :: neighborChanged|updateShape|onRemove|affectNeighborsAfterRemoval|getAnalogOutputSignal|codec\(
+Common/src/main/java/at/petrak/hexcasting/api/advancements/FailToCastGreatSpellTrigger.java:17:    public Codec<Instance> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/advancements/OvercastTrigger.java:22:    public Codec<Instance> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/advancements/SpendMediaTrigger.java:17:    public Codec<Instance> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java:79:    public void affectNeighborsAfterRemoval(BlockState pState, ServerLevel pLevel, BlockPos pPos, boolean pMovedByPiston) {
+Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockAbstractImpetus.java:84:        super.affectNeighborsAfterRemoval(pState, pLevel, pPos, pMovedByPiston);
+Common/src/main/java/at/petrak/hexcasting/api/block/circle/BlockCircleComponent.java:84:    public int getAnalogOutputSignal(BlockState pState, Level pLevel, BlockPos pPos, Direction pDirection) {
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/ContinuationFrame.kt:55:        fun codec(): MapCodec<U>
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameEvaluate.kt:72:            override fun codec(): MapCodec<FrameEvaluate> =
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameFinishEval.kt:44:        override fun codec(): MapCodec<FrameFinishEval> =
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameForEach.kt:114:            override fun codec(): MapCodec<FrameForEach> =
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/BooleanIota.java:53:        public MapCodec<BooleanIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/ContinuationIota.java:86:        public MapCodec<ContinuationIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/DoubleIota.java:62:        public MapCodec<DoubleIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/EntityIota.java:112:        public MapCodec<EntityIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/GarbageIota.java:51:        public MapCodec<GarbageIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/IotaType.java:26:    public abstract MapCodec<T> codec();
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/ListIota.java:131:        public MapCodec<ListIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/NullIota.java:46:        public MapCodec<NullIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java:155:        public MapCodec<PatternIota> codec() {
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/Vec3Iota.java:68:        public MapCodec<Vec3Iota> codec() {
+Common/src/main/java/at/petrak/hexcasting/client/render/ScryingLensOverlays.java:74:                int comparatorValue = state.getAnalogOutputSignal(world, pos, direction);
+Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:103:    public int getAnalogOutputSignal(BlockState pState, Level pLevel, BlockPos pPos) {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java:78:    public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pBlock, Orientation pOrientation,
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/directrix/BlockRedstoneDirectrix.java:80:        super.neighborChanged(pState, pLevel, pPos, pBlock, pOrientation, pIsMoving);
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:103:    public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pBlock, Orientation pOrientation,
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/impetuses/BlockRedstoneImpetus.java:105:        super.neighborChanged(pState, pLevel, pPos, pBlock, pOrientation, pIsMoving);
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:206:    public BlockState updateShape(BlockState pState, LevelReader pLevel, ScheduledTickAccess pTickAccess,
+Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:215:            : super.updateShape(pState, pLevel, pTickAccess, pCurrentPos, pFacing, pFacingPos, pFacingState, pRandom);
+Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAkashicLeaves.java:17:    public MapCodec<? extends LeavesBlock> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockAmethystDirectional.java:24:    protected MapCodec<? extends DirectionalBlock> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java:78:    public BlockState updateShape(BlockState pState, LevelReader pLevel, ScheduledTickAccess pTickAccess,
+Common/src/main/java/at/petrak/hexcasting/common/blocks/decoration/BlockSconce.java:84:        return super.updateShape(pState, pLevel, pTickAccess, pCurrentPos, pFacing, pFacingPos, pFacingState, pRandom);
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:64:    public BlockState updateShape(BlockState state, @Nonnull LevelReader level, @Nonnull ScheduledTickAccess tickAccess,
+Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:71:        return super.updateShape(state, level, tickAccess, pos, facing, facingPos, facingState, random);
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBrainsweepeeIngredients.java:40:        public MapCodec<BrainsweepeeIngredient> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:39:                    .persistent(ResourceKey.codec(HexRegistries.ACTION))
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexStateIngredients.java:38:        public MapCodec<StateIngredient> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/particles/ConjureParticleOptions.java:38:        public MapCodec<ConjureParticleOptions> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/BrainsweepeeIngredientType.java:9:    MapCodec<T> codec();
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:124:        public MapCodec<EntityTagIngredient> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTypeIngredient.java:92:        public MapCodec<EntityTypeIngredient> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:227:        public MapCodec<VillagerIngredient> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientBlock.java:91:        public MapCodec<StateIngredientBlock> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientBlockState.java:110:        public MapCodec<StateIngredientBlockState> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientBlocks.java:96:        public MapCodec<StateIngredientBlocks> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientTag.java:113:		public MapCodec<StateIngredientTag> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientTagExcluding.java:110:        public MapCodec<StateIngredientTagExcluding> codec() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/state/StateIngredientType.java:9:    MapCodec<T> codec();
+Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java:113:		public @NotNull MapCodec<BrainsweepRecipe> codec() {
+
+## Recipes :: SimpleCraftingRecipeSerializer|RecipeProvider|RecipeBuilder|recipeBookCategory|placementInfo|Ingredient\.Value|EntityPredicate\.create
+Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java:46:    public PlacementInfo placementInfo() {
+Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java:51:    public net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory() {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:11:import net.minecraft.data.recipes.RecipeBuilder;
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:21:public class BrainsweepRecipeBuilder implements RecipeBuilder {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:29:	public BrainsweepRecipeBuilder(StateIngredient blockIn, BrainsweepeeIngredient entityIn, BlockState result,
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:38:	public RecipeBuilder unlockedBy(String pCriterionName, Criterion<?> pCriterionTrigger) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/BrainsweepRecipeBuilder.java:44:	public RecipeBuilder group(@Nullable String pGroupName) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CompatIngredientValue.java:12:public class CompatIngredientValue implements Ingredient.Value {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:4:import net.minecraft.data.recipes.RecipeBuilder;
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:21:// https://github.com/Creators-of-Create/Create/blob/82be76d8934af03b4e52cad6a9f74a4175ba7b05/src/main/java/com/simibubi/create/content/contraptions/processing/ProcessingRecipeBuilder.java
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:23:public class CreateCrushingRecipeBuilder implements RecipeBuilder {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:30:    public RecipeBuilder unlockedBy(String name, Criterion<?> criterion) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:35:    public @NotNull CreateCrushingRecipeBuilder group(@Nullable String name) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:40:    public CreateCrushingRecipeBuilder duration(int duration) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:45:    public CreateCrushingRecipeBuilder withInput(ItemLike item) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:49:    public CreateCrushingRecipeBuilder withInput(ItemStack stack) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:53:    public CreateCrushingRecipeBuilder withInput(Ingredient ingredient) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:58:    public CreateCrushingRecipeBuilder withOutput(ItemLike output) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:62:    public CreateCrushingRecipeBuilder withOutput(float chance, ItemLike output) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:66:    public CreateCrushingRecipeBuilder withOutput(ItemLike output, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:70:    public CreateCrushingRecipeBuilder withOutput(float chance, ItemLike output, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:74:    public CreateCrushingRecipeBuilder withOutput(ItemStack output, float chance) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:79:    public CreateCrushingRecipeBuilder withOutput(String name) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:83:    public CreateCrushingRecipeBuilder withOutput(String name, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:87:    public CreateCrushingRecipeBuilder withOutput(float chance, String name) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:91:    public CreateCrushingRecipeBuilder withOutput(float chance, String name, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:5:import net.minecraft.data.recipes.RecipeBuilder;
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:19:public class FarmersDelightCuttingRecipeBuilder implements RecipeBuilder {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:27:    public FarmersDelightCuttingRecipeBuilder unlockedBy(String s, Criterion<?> criterionTriggerInstance) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:32:    public @NotNull FarmersDelightCuttingRecipeBuilder group(@Nullable String name) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:42:    public FarmersDelightCuttingRecipeBuilder withInput(ItemLike item) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:46:    public FarmersDelightCuttingRecipeBuilder withInput(ItemStack stack) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:50:    public FarmersDelightCuttingRecipeBuilder withInput(Ingredient ingredient) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:55:    public FarmersDelightCuttingRecipeBuilder withOutput(ItemLike output) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:59:    public FarmersDelightCuttingRecipeBuilder withOutput(float chance, ItemLike output) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:63:    public FarmersDelightCuttingRecipeBuilder withOutput(ItemLike output, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:67:    public FarmersDelightCuttingRecipeBuilder withOutput(float chance, ItemLike output, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:71:    public FarmersDelightCuttingRecipeBuilder withOutput(ItemStack output, float chance) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:76:    public FarmersDelightCuttingRecipeBuilder withOutput(String name) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:80:    public FarmersDelightCuttingRecipeBuilder withOutput(String name, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:84:    public FarmersDelightCuttingRecipeBuilder withOutput(float chance, String name) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:88:    public FarmersDelightCuttingRecipeBuilder withOutput(float chance, String name, int count) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:93:    public FarmersDelightCuttingRecipeBuilder withTool(FarmersDelightToolIngredient ingredient) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:98:    public FarmersDelightCuttingRecipeBuilder withSound(SoundEvent sound) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:19:import at.petrak.hexcasting.datagen.recipe.builders.BrainsweepRecipeBuilder;
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:20:import at.petrak.hexcasting.datagen.recipe.builders.CreateCrushingRecipeBuilder;
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:21:import at.petrak.hexcasting.datagen.recipe.builders.FarmersDelightCuttingRecipeBuilder;
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:59:public class HexplatRecipes extends RecipeProvider {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:61:    private final Function<RecipeBuilder, IXplatConditionsBuilder> conditions;
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:79:                          Function<RecipeBuilder, IXplatConditionsBuilder> conditions) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:105:        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, HexItems.THOUGHT_KNOT)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:110:        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HexItems.FOCUS)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:120:        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HexItems.FOCUS)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:131:        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HexItems.SPELLBOOK)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:155:        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HexItems.ARTIFACT)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:169:        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HexItems.ABACUS)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:179:        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, HexItems.SUBMARINE_SANDWICH)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:191:            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, item)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:229:        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, HexItems.SCROLL_SMOL)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:236:        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, HexItems.SCROLL_MEDIUM)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:244:        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, HexItems.SCROLL_LARGE)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:252:        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, HexItems.SLATE, 6)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:259:        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, HexItems.JEWELER_HAMMER)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:269:        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HexItems.AMETHYST_DUST,
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:275:        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.AMETHYST_SHARD,
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:281:        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HexItems.CHARGED_AMETHYST,
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:288:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_BLOCK)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:304:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, HexBlocks.ANCIENT_SCROLL_PAPER, 8)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:315:        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, HexBlocks.ANCIENT_SCROLL_PAPER_LANTERN, 8)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:326:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_PLANKS, 4)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:333:            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, wood, 3)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:344:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_TILE, 6)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:351:        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, HexBlocks.EDIFIED_DOOR, 3)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:358:        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, HexBlocks.EDIFIED_TRAPDOOR, 2)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:364:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_STAIRS, 4)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:371:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE, 3)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:378:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE_GATE, 1)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:386:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_SLAB, 6)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:391:        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, HexBlocks.EDIFIED_PRESSURE_PLATE, 1)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:396:        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, HexBlocks.EDIFIED_BUTTON)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:401:        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, HexBlocks.IMPETUS_EMPTY)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:411:        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, HexBlocks.EMPTY_DIRECTRIX)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:421:        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, HexBlocks.AKASHIC_BOOKSHELF)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:430:        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, HexBlocks.AKASHIC_LIGATURE, 4)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:452:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS.asItem(), 2)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:457:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS_SMALL.asItem(), 2)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:462:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_TILES.asItem(), 2)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:467:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_PILLAR.asItem(), 2)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:472:        new BrainsweepRecipeBuilder(HexStateIngredients.of(Blocks.AMETHYST_BLOCK),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:478:        new BrainsweepRecipeBuilder(HexStateIngredients.of(HexBlocks.IMPETUS_EMPTY),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:484:        new BrainsweepRecipeBuilder(HexStateIngredients.of(HexBlocks.IMPETUS_EMPTY),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:490:        new BrainsweepRecipeBuilder(HexStateIngredients.of(HexBlocks.IMPETUS_EMPTY),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:496:        new BrainsweepRecipeBuilder(HexStateIngredients.of(HexBlocks.EMPTY_DIRECTRIX),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:502:        new BrainsweepRecipeBuilder(HexStateIngredients.of(HexBlocks.EMPTY_DIRECTRIX),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:508:        new BrainsweepRecipeBuilder(HexStateIngredients.of(HexBlocks.AKASHIC_LIGATURE),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:515:        new BrainsweepRecipeBuilder(HexStateIngredients.of(Blocks.AMETHYST_BLOCK),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:523:        this.conditions.apply(new CreateCrushingRecipeBuilder()
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:532:        this.conditions.apply(new CreateCrushingRecipeBuilder()
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:540:        this.conditions.apply(new CreateCrushingRecipeBuilder()
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:551:            this.conditions.apply(new FarmersDelightCuttingRecipeBuilder()
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:561:        this.conditions.apply(new FarmersDelightCuttingRecipeBuilder()
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:570:        this.conditions.apply(new FarmersDelightCuttingRecipeBuilder()
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:577:        this.conditions.apply(new FarmersDelightCuttingRecipeBuilder()
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:590:        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, staff)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:603:        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, colorizer)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:615:        SpecialRecipeBuilder.special(recipeFunc::apply).save(consumer, HexAPI.MOD_ID + ":dynamic" + name.getPath());
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:627:     * Prefixed with {@code paucal} to avoid collisions when Forge ATs {@link RecipeProvider#inventoryTrigger}.
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:639:    protected ShapedRecipeBuilder ring(RecipeCategory category, ItemLike out, int count, Ingredient outer, @Nullable Ingredient inner) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:643:    protected ShapedRecipeBuilder ring(RecipeCategory category, ItemLike out, int count, ItemLike outer, @Nullable ItemLike inner) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:647:    protected ShapedRecipeBuilder ring(RecipeCategory category, ItemLike out, int count, TagKey<Item> outer, @Nullable TagKey<Item> inner) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:651:    protected ShapedRecipeBuilder ringCornerless(RecipeCategory category, ItemLike out, int count, Ingredient outer,
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:656:    protected ShapedRecipeBuilder ringCornerless(RecipeCategory category, ItemLike out, int count, ItemLike outer, @Nullable ItemLike inner) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:660:    protected ShapedRecipeBuilder ringAll(RecipeCategory category, ItemLike out, int count, Ingredient outer, @Nullable Ingredient inner) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:664:    protected ShapedRecipeBuilder ringAll(RecipeCategory category, ItemLike out, int count, ItemLike outer, @Nullable ItemLike inner) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:668:    protected ShapedRecipeBuilder ringCornered(RecipeCategory category, ItemLike out, int count, @Nullable Ingredient cardinal,
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:677:        var builder = ShapedRecipeBuilder.shaped(category, out, count);
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:702:    protected ShapedRecipeBuilder stack(RecipeCategory category, ItemLike out, int count, Ingredient top, Ingredient bottom) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:703:        return ShapedRecipeBuilder.shaped(category, out, count)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:710:    protected ShapedRecipeBuilder stack(RecipeCategory category, ItemLike out, int count, ItemLike top, ItemLike bottom) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:714:    protected ShapedRecipeBuilder stack(RecipeCategory category, ItemLike out, int count, TagKey<Item> top, TagKey<Item> bottom) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:719:    protected ShapedRecipeBuilder stick(RecipeCategory category, ItemLike out, int count, Ingredient input) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:723:    protected ShapedRecipeBuilder stick(RecipeCategory category, ItemLike out, int count, ItemLike input) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:727:    protected ShapedRecipeBuilder stick(RecipeCategory category, ItemLike out, int count, TagKey<Item> input) {
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:735:        var pack = ShapedRecipeBuilder.shaped(category, compressed)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:744:        ShapelessRecipeBuilder.shapeless(category, free, largeSize ? 9 : 4)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:763:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, bricks, 4)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:771:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, bricks)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:777:        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, smallBricks)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:783:        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, tiles, 4)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:792:            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pillar, 2)
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:804:            SingleItemRecipeBuilder.stonecutting(Ingredient.of(tagKey), RecipeCategory.BUILDING_BLOCKS, result)
+Common/src/main/java/at/petrak/hexcasting/datagen/IXplatConditionsBuilder.java:3:import net.minecraft.data.recipes.RecipeBuilder;
+Common/src/main/java/at/petrak/hexcasting/datagen/IXplatConditionsBuilder.java:5:public interface IXplatConditionsBuilder extends RecipeBuilder {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:10:import net.minecraft.data.recipes.RecipeBuilder;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:23:    private final RecipeBuilder parent;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:25:    public HexFabricConditionsBuilder(RecipeBuilder parent) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:42:    public RecipeBuilder unlockedBy(@NotNull String string, @NotNull Criterion criterionTriggerInstance) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:47:    public RecipeBuilder group(@Nullable String string) {
+
+## Commands :: DimensionDataStorage|ResourceKey|location\(
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java:29:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/PatternIota.java:73:                ResourceKey<ActionRegistryEntry> key;
+Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java:4:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java:20:        public final ResourceKey<ActionRegistryEntry> key;
+Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java:22:        public Normal(ResourceKey<ActionRegistryEntry> key) {
+Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java:36:        public final ResourceKey<ActionRegistryEntry> key;
+Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java:39:        public PerWorld(ResourceKey<ActionRegistryEntry> key, boolean certain) {
+Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java:49:        public final ResourceKey<SpecialHandler.Factory<?>> key;
+Common/src/main/java/at/petrak/hexcasting/api/casting/PatternShapeMatch.java:52:        public Special(ResourceKey<SpecialHandler.Factory<?>> key, SpecialHandler handler) {
+Common/src/main/java/at/petrak/hexcasting/api/mod/HexConfig.java:5:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/api/mod/HexConfig.java:77:        boolean canTeleportInThisDimension(ResourceKey<Level> dimension);
+Common/src/main/java/at/petrak/hexcasting/api/player/FlightAbility.java:3:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/api/player/FlightAbility.java:11:public record FlightAbility(int timeLeft, ResourceKey<Level> dimension, Vec3 origin, double radius) {
+Common/src/main/java/at/petrak/hexcasting/api/player/Sentinel.java:8:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/api/player/Sentinel.java:15:public record Sentinel(boolean extendsRange, Vec3 position, ResourceKey<Level> dimension) {
+Common/src/main/java/at/petrak/hexcasting/api/player/Sentinel.java:20:            ResourceKey.streamCodec(Registries.DIMENSION), Sentinel::dimension,
+Common/src/main/java/at/petrak/hexcasting/api/utils/HexUtils.kt:18:import net.minecraft.resources.ResourceKey
+Common/src/main/java/at/petrak/hexcasting/api/utils/HexUtils.kt:299:fun <T : Any> isOfTag(registry: Registry<T>, key: ResourceKey<T>, tag: TagKey<T>): Boolean {
+Common/src/main/java/at/petrak/hexcasting/api/utils/HexUtils.kt:304:    val key = ResourceKey.create(registry.key(), loc);
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:13:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:58:    default String getActionI18nKey(ResourceKey<ActionRegistryEntry> action) {
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:62:    default String getSpecialHandlerI18nKey(ResourceKey<SpecialHandler.Factory<?>> action) {
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:73:    default Component getActionI18n(ResourceKey<ActionRegistryEntry> key, boolean isGreat) {
+Common/src/main/java/at/petrak/hexcasting/api/HexAPI.java:78:    default Component getSpecialHandlerI18n(ResourceKey<SpecialHandler.Factory<?>> key) {
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/math/SpecialHandlerNumberLiteral.kt:23:        val key = IXplatAbstractions.INSTANCE.specialHandlerRegistry.getResourceKey(HexSpecialHandlers.NUMBER).get()
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/stack/SpecialHandlerMask.kt:27:        val key = IXplatAbstractions.INSTANCE.specialHandlerRegistry.getResourceKey(HexSpecialHandlers.MASK).get()
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:15:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:26:    private static final ConcurrentMap<List<HexAngle>, ResourceKey<ActionRegistryEntry>> NORMAL_ACTION_LOOKUP =
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:71:    public static Pair<SpecialHandler, ResourceKey<SpecialHandler.Factory<?>>> matchPatternToSpecialHandler(HexPattern pat, CastingEnvironment environment) {
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:123:    public static HexPattern getCanonicalStrokesPerWorld(ResourceKey<ActionRegistryEntry> key, ServerLevel overworld) {
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:19:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:69:            .sorted((a, b) -> compareResLoc(a.location(), b.location()))
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:77:            source.sendSuccess(() -> Component.literal(key.location().toString())
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:129:                               ResourceKey<ActionRegistryEntry> actionKey, HexPattern pat) {
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:139:                        actionKey.location(),
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:17:import net.minecraft.commands.arguments.ResourceKeyArgument;
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:20:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:26:public class PatternResKeyArgument extends ResourceKeyArgument<ActionRegistryEntry> {
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:46:                suggestions.add(key.location().toString());
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:53:    public static <T> ResourceKey<T> getResourceKey(
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:56:            ResourceKey<Registry<T>> registryKey,
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:59:        ResourceKey<?> key = context.getArgument(argumentName, ResourceKey.class);
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:60:        Optional<ResourceKey<T>> optional = key.cast(registryKey);
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:61:        return optional.orElseThrow(() -> exceptionType.create(key.location()));
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:64:    public static ResourceKey<ActionRegistryEntry> getPatternKey(
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:66:        return getResourceKey(ctx, argumentName, HexRegistries.ACTION, ERROR_UNKNOWN_PATTERN);
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:74:            throw ERROR_UNKNOWN_PATTERN.create(targetKey.location());
+Common/src/main/java/at/petrak/hexcasting/common/entities/HexEntities.java:6:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/entities/HexEntities.java:29:            .build(ResourceKey.create(Registries.ENTITY_TYPE, modLoc("wall_scroll"))));
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:18:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:62:    public static ItemStack withPerWorldPattern(ItemStack stack, ResourceKey<ActionRegistryEntry> action) {
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexConfiguredFeatures.java:5:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexConfiguredFeatures.java:10:    public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST_EDIFIED_TREE = createKey("amethyst_edified_tree");
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexConfiguredFeatures.java:11:    public static final ResourceKey<ConfiguredFeature<?, ?>> AVENTURINE_EDIFIED_TREE = createKey("aventurine_edified_tree");
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexConfiguredFeatures.java:12:    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_EDIFIED_TREE = createKey("citrine_edified_tree");
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexConfiguredFeatures.java:14:    private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexConfiguredFeatures.java:15:        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(HexAPI.MOD_ID, name));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexCreativeTabs.java:5:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexCreativeTabs.java:28:    public static final ResourceKey<CreativeModeTab> HEX_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), modLoc("hexcasting"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexCreativeTabs.java:33:    public static final ResourceKey<CreativeModeTab> SCROLLS_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), modLoc("scrolls"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDamageTypes.java:5:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDamageTypes.java:12:    public static final ResourceKey<DamageType> OVERCAST = ResourceKey.create(Registries.DAMAGE_TYPE, modLoc("overcast"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:14:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:37:    public static final DataComponentType<ResourceKey<ActionRegistryEntry>> ACTION = register("op_id",
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:38:            DataComponentType.<ResourceKey<ActionRegistryEntry>>builder()
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:39:                    .persistent(ResourceKey.codec(HexRegistries.ACTION))
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:40:                    .networkSynchronized(ResourceKey.streamCodec(HexRegistries.ACTION))
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java:18:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java:186:        var keyList = new ArrayList<ResourceKey<ActionRegistryEntry>>();
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexItems.java:191:        keyList.sort(Comparator.comparing(ResourceKey::location));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:12:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:17:    public static final ResourceKey<Registry<ActionRegistryEntry>> ACTION = ResourceKey.createRegistryKey(modLoc("action"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:18:    public static final ResourceKey<Registry<SpecialHandler.Factory<?>>> SPECIAL_HANDLER = ResourceKey.createRegistryKey(modLoc("special_handler"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:19:    public static final ResourceKey<Registry<IotaType<?>>> IOTA_TYPE = ResourceKey.createRegistryKey(modLoc("iota_type"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:20:    public static final ResourceKey<Registry<Arithmetic>> ARITHMETIC = ResourceKey.createRegistryKey(modLoc("arithmetic"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:21:    public static final ResourceKey<Registry<ContinuationFrame.Type<?>>> CONTINUATION_TYPE = ResourceKey.createRegistryKey(modLoc("continuation_type"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:22:    public static final ResourceKey<Registry<EvalSound>> EVAL_SOUND = ResourceKey.createRegistryKey(modLoc("eval_sound"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:23:    public static final ResourceKey<Registry<StateIngredientType<?>>> STATE_INGREDIENT = ResourceKey.createRegistryKey(modLoc("state_ingredient"));
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexRegistries.java:24:    public static final ResourceKey<Registry<BrainsweepeeIngredientType<?>>> BRAINSWEEPEE_INGREDIENT = ResourceKey.createRegistryKey(modLoc("brainsweepee_ingredient"));
+Common/src/main/java/at/petrak/hexcasting/common/loot/AddPerWorldPatternToScrollFunc.java:13:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/loot/AddPerWorldPatternToScrollFunc.java:45:        var perWorldKeys = new ArrayList<ResourceKey<ActionRegistryEntry>>();
+Common/src/main/java/at/petrak/hexcasting/common/loot/HexLootHandler.java:5:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/loot/HexLootHandler.java:85:    public static final ResourceKey<LootTable> TABLE_INJECT_AMETHYST_CLUSTER = ResourceKey.create(Registries.LOOT_TABLE, modLoc("inject/amethyst_cluster"));
+Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:8:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:24:    public static final List<ResourceKey<ConfiguredFeature<?, ?>>> GROWERS = Lists.newArrayList();
+Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:32:    private ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pLargeHive) {
+Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:37:        ResourceKey<ConfiguredFeature<?, ?>> treeFeatureKey = getConfiguredFeature(random, hasFlowers(level, pos));
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:54:        String key = tagKey(this.entityTypeTag.location());
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:58:            : Component.literal("#" + this.entityTypeTag.location());
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:63:        Identifier loc = this.entityTypeTag.location();
+Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/EntityTagIngredient.java:83:        var resloc = this.entityTypeTag.location();
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:10:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:32:            var key = ResourceKey.create(IXplatAbstractions.INSTANCE.getActionRegistry().key(), loc);
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:45:            var fakeKey = ResourceKey.<ActionRegistryEntry>createRegistryKey(
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:47:            return TagKey.create(fakeKey, real.location());
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:149:            appender.add(BuiltInRegistries.BLOCK.getResourceKey(block).orElseThrow());
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexDamageTypeTagProvider.java:7:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexDamageTypeTagProvider.java:30:    private void add(ResourceKey<DamageType> damageType, TagKey<DamageType>... tags) {
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:75:            appender.add(BuiltInRegistries.ITEM.getResourceKey(item).orElseThrow());
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:13:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:47:        Map<ResourceKey<LootTable>, LootTable.Builder> lootTables) {
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:8:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:27:        var key = ResourceKey.create(IXplatAbstractions.INSTANCE.getActionRegistry().key(), this.opName);
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:12:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:42:    private final Map<ResourceKey<ActionRegistryEntry>, String> reverseLookup;
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:58:    public Pair<String, PerWorldEntry> lookupReverse(ResourceKey<ActionRegistryEntry> key) {
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:71:            inner.putString(TAG_KEY, entry.key().location().toString());
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:88:            var key = ResourceKey.create(registryKey, Identifier.parse(rawKey));
+Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:129:    public record PerWorldEntry(ResourceKey<ActionRegistryEntry> key, HexDir canonicalStartDir) {
+Common/src/main/java/at/petrak/hexcasting/xplat/IXplatAbstractions.java:31:import net.minecraft.resources.ResourceKey;
+Common/src/main/java/at/petrak/hexcasting/xplat/IXplatAbstractions.java:196:     * Takes a ResourceKey representing a Registry for type B, returns an IXplatRegister of type B
+Common/src/main/java/at/petrak/hexcasting/xplat/IXplatAbstractions.java:201:    <B> IXplatRegister<B> createRegistar(ResourceKey<Registry<B>> registryKey);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:8:import net.minecraft.resources.ResourceKey;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:47:            var dim = ResourceKey.create(Registries.DIMENSION,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:60:            tag.putString(TAG_DIMENSION, this.flight.dimension().location().toString());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:8:import net.minecraft.resources.ResourceKey;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:45:            var dim = ResourceKey.create(Registries.DIMENSION,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:59:            tag.putString(TAG_DIMENSION, this.sentinel.dimension().location().toString());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/loot/FabricHexLootModJankery.java:7:import net.minecraft.resources.ResourceKey;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/loot/FabricHexLootModJankery.java:31:    public static void lootLoad(ResourceKey<LootTable> id, Consumer<LootPool.Builder> addPool) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/loot/FabricHexLootModJankery.java:42:        int countRange = FabricHexInitializer.CONFIG.server.scrollRangeForLootTable(id.location());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/loot/FabricHexLootModJankery.java:47:        if (FabricHexInitializer.CONFIG.server.shouldInjectLore(id.location())) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/loot/FabricHexLootModJankery.java:51:        if (FabricHexInitializer.CONFIG.server.shouldInjectCyphers(id.location())) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:7:import net.minecraft.resources.ResourceKey;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:20:    public FabricRegister(ResourceKey<Registry<B>> registryKey) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21:        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.get(registryKey.location());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:26:    public FabricRegister(ResourceKey<Registry<B>> registryKey, Map<String, B> map) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27:        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.get(registryKey.location());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:58:import net.minecraft.resources.ResourceKey;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:523:    public <B> IXplatRegister<B> createRegistar(ResourceKey<Registry<B>> registryKey) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexConfig.java:19:import net.minecraft.resources.ResourceKey;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexConfig.java:315:        public boolean canTeleportInThisDimension(ResourceKey<Level> dimension) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexConfig.java:316:            return noneMatch(tpDimDenylist, dimension.location());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:64:import net.minecraft.resources.ResourceKey
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:153:            val keyList = ArrayList<ResourceKey<ActionRegistryEntry>>()
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:161:            keyList.sortWith(Comparator.comparing<ResourceKey<ActionRegistryEntry>, Identifier>(Function { obj: ResourceKey<ActionRegistryEntry> -> obj.location() }))
+
+## Rendering :: PoseStack|Matrix3x2fStack|RenderType|RenderPipeline|RenderStateShard|ParticleRenderType|PlayerRenderState|AvatarRenderState|submit\(
+Common/src/main/java/at/petrak/hexcasting/api/client/ClientRenderHelper.kt:11:import com.mojang.blaze3d.vertex.PoseStack
+Common/src/main/java/at/petrak/hexcasting/api/client/ClientRenderHelper.kt:21:fun renderCastingStack(ps: PoseStack, player: Player, pticks: Float) {
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:5:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:9:import net.minecraft.client.renderer.rendertype.RenderTypes;
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:52:    public void submit(State state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:54:        collector.submitCustomGeometry(poseStack, RenderTypes.entityCutout(getTextureLocation(wallScroll)),
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:56:                PoseStack copied = copyPose(pose);
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:66:    private static PoseStack copyPose(PoseStack.Pose pose) {
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:67:        PoseStack stack = new PoseStack();
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:73:    private static void emitScrollMesh(EntityWallScroll wallScroll, PoseStack.Pose basePose, VertexConsumer verts, int light) {
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:74:        PoseStack ps = new PoseStack();
+Common/src/main/java/at/petrak/hexcasting/client/entity/WallScrollRenderer.java:125:    private static void vertex(Matrix4f mat, PoseStack.Pose last, int light, VertexConsumer verts, float x, float y,
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:5:import com.mojang.blaze3d.pipeline.RenderPipeline;
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:9:import net.minecraft.client.renderer.RenderPipelines;
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:43:        graphics.blit(RenderPipelines.GUI_TEXTURED, this.background, 0, 0, 0f, 0f,
+Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java:11:import net.minecraft.client.renderer.entity.state.AvatarRenderState;
+Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java:16:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java:20:public class AltioraLayer<M extends EntityModel<AvatarRenderState>> extends RenderLayer<AvatarRenderState, M> {
+Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java:25:    public AltioraLayer(RenderLayerParent<AvatarRenderState, M> renderer, EntityModelSet ems) {
+Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java:31:    public void submit(PoseStack poseStack, SubmitNodeCollector collector, int packedLight,
+Common/src/main/java/at/petrak/hexcasting/client/model/AltioraLayer.java:32:        AvatarRenderState state, float limbSwing, float partialTick) {
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityAkashicBookshelfRenderer.java:6:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityAkashicBookshelfRenderer.java:36:    public void submit(State state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityAkashicBookshelfRenderer.java:41:        BlockEntitySubmitUtil.submit(poseStack, collector, (stack, buffer) ->
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityQuenchedAllayRenderer.java:8:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityQuenchedAllayRenderer.java:9:import net.minecraft.client.renderer.rendertype.RenderTypes;
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityQuenchedAllayRenderer.java:42:    public void submit(State state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntityQuenchedAllayRenderer.java:53:        collector.submitBlockModel(poseStack, RenderTypes.translucentMovingBlock(), model,
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySlateRenderer.java:5:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySlateRenderer.java:35:    public void submit(State state, PoseStack poseStack, SubmitNodeCollector collector, CameraRenderState camera) {
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySlateRenderer.java:39:        BlockEntitySubmitUtil.submit(poseStack, collector, (stack, buffer) ->
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySubmitUtil.java:3:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySubmitUtil.java:7:import net.minecraft.client.renderer.rendertype.RenderType;
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySubmitUtil.java:20:    static void submit(PoseStack poseStack, SubmitNodeCollector collector, BiConsumer<PoseStack, MultiBufferSource> renderer) {
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySubmitUtil.java:21:        RenderType layer = net.minecraft.client.renderer.rendertype.RenderTypes.entityTranslucent(WHITE_TEXTURE);
+Common/src/main/java/at/petrak/hexcasting/client/render/be/BlockEntitySubmitUtil.java:23:            PoseStack copied = new PoseStack();
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:4:import at.petrak.hexcasting.mixin.accessor.client.AccessorRenderTypeFactory;
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:6:import net.minecraft.client.renderer.rendertype.RenderType;
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:13:public final class HexRenderTypes {
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:14:    private HexRenderTypes() {
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:17:    private static final Function<Identifier, RenderType> GRAYSCALE_PROVIDER = Util.memoize(texture ->
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:18:        AccessorRenderTypeFactory.hex$create(
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:25:                .bufferSize(RenderType.SMALL_BUFFER_SIZE)
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexRenderTypes.java:30:    public static RenderType getGrayscaleLayer(Identifier texture) {
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexShaders.java:4:import at.petrak.hexcasting.mixin.accessor.client.AccessorRenderPipelines;
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexShaders.java:6:import com.mojang.blaze3d.pipeline.RenderPipeline;
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexShaders.java:9:import net.minecraft.client.renderer.RenderPipelines;
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexShaders.java:16:    public static final RenderPipeline GRAYSCALE = AccessorRenderPipelines.hex$register(
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexShaders.java:17:        RenderPipeline.builder(AccessorRenderPipelines.hex$entitySnippet())
+Common/src/main/java/at/petrak/hexcasting/client/render/shader/HexShaders.java:29:    public static RenderPipeline grayscale() {
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:19:import net.minecraft.client.renderer.rendertype.RenderTypes;
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:34:    public static void overlayLevel(PoseStack ps, float partialTick) {
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:49:        PoseStack ps, float partialTicks) {
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:118:        RenderTypes.lines().draw(buf.buildOrThrow());
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternRenderer.java:5:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternRenderer.java:24:    public static void renderPattern(HexPattern pattern, PoseStack ps, PatternSettings patSets, PatternColors patColors, double seed, int resPerUnit) {
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternRenderer.java:28:    public static void renderPattern(HexPattern pattern, PoseStack ps, @Nullable WorldlyBits worldlyBits, PatternSettings patSets, PatternColors patColors, double seed, int resPerUnit) {
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternRenderer.java:42:    public static void renderPattern(HexPatternLike patternlike, PoseStack ps, @Nullable WorldlyBits worldlyBits, PatternSettings patSets, PatternColors patColors, double seed, int resPerUnit){
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternRenderer.java:104:    private static boolean renderPatternTexture(HexPatternLike patternlike, PoseStack ps, @Nullable WorldlyBits worldlyBits, PatternSettings patSets, PatternColors patColors, double seed, int resPerUnit){
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:51:            executor.submit(() -> {
+Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt:9:import net.minecraft.client.renderer.rendertype.RenderTypes
+Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt:32:        fun getHelper(worldlyBits: WorldlyBits?, ps: PoseStack, z: Float, texture: Identifier): VCDrawHelper =
+Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt:36:        fun getHelper(worldlyBits: WorldlyBits?, ps: PoseStack, z: Float): VCDrawHelper =
+Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt:56:                RenderTypes.entityTranslucent(texture).draw(vc.buildOrThrow())
+Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt:63:        val ps: PoseStack,
+Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt:78:                provider.getBuffer(RenderTypes.entityTranslucent(texture))
+Common/src/main/java/at/petrak/hexcasting/client/render/VCDrawHelper.kt:94:                RenderTypes.entityTranslucent(texture).draw(vc.buildOrThrow())
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:9:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:49:    public static void renderPatternForScroll(HexPattern pattern, EntityWallScroll scroll, PoseStack ps, MultiBufferSource bufSource, int light, int blockSize, boolean showStrokeOrder)
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:64:    public static void renderPatternForSlate(BlockEntitySlate tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs)
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:102:    public static void renderPatternForAkashicBookshelf(BlockEntityAkashicBookshelf tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs)
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:125:        double seed, PoseStack ps, MultiBufferSource bufSource, Vec3 normal, @Nullable Float zOffset,
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:27:import net.minecraft.client.renderer.rendertype.RenderTypes;
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:118:        x.setRenderLayer(HexBlocks.CONJURED_LIGHT, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:119:        x.setRenderLayer(HexBlocks.CONJURED_BLOCK, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:120:        x.setRenderLayer(HexBlocks.EDIFIED_DOOR, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:121:        x.setRenderLayer(HexBlocks.EDIFIED_TRAPDOOR, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:122:        x.setRenderLayer(HexBlocks.AKASHIC_BOOKSHELF, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:123:        x.setRenderLayer(HexBlocks.SCONCE, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:125:        x.setRenderLayer(HexBlocks.AMETHYST_EDIFIED_LEAVES, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:126:        x.setRenderLayer(HexBlocks.AVENTURINE_EDIFIED_LEAVES, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:127:        x.setRenderLayer(HexBlocks.CITRINE_EDIFIED_LEAVES, RenderTypes.cutoutMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:129:        x.setRenderLayer(HexBlocks.AKASHIC_RECORD, RenderTypes.translucentMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/client/RegisterClientStuff.java:130:        x.setRenderLayer(HexBlocks.QUENCHED_ALLAY, RenderTypes.translucentMovingBlock());
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:7:import com.mojang.blaze3d.vertex.PoseStack;
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:41:        PoseStack ps = graphics.pose();
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderPipelines.java:3:import com.mojang.blaze3d.pipeline.RenderPipeline;
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderPipelines.java:4:import net.minecraft.client.renderer.RenderPipelines;
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderPipelines.java:9:@Mixin(RenderPipelines.class)
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderPipelines.java:10:public interface AccessorRenderPipelines {
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderPipelines.java:12:    static RenderPipeline hex$register(RenderPipeline pipeline) {
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderPipelines.java:17:    static RenderPipeline.Snippet hex$entitySnippet() {
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderTypeFactory.java:4:import net.minecraft.client.renderer.rendertype.RenderType;
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderTypeFactory.java:8:@Mixin(RenderType.class)
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderTypeFactory.java:9:public interface AccessorRenderTypeFactory {
+Common/src/main/java/at/petrak/hexcasting/mixin/accessor/client/AccessorRenderTypeFactory.java:11:    static RenderType hex$create(String name, RenderSetup setup) {
+Common/src/main/java/at/petrak/hexcasting/xplat/IClientXplatAbstractions.java:5:import net.minecraft.client.renderer.rendertype.RenderType;
+Common/src/main/java/at/petrak/hexcasting/xplat/IClientXplatAbstractions.java:27:    void setRenderLayer(Block block, RenderType type);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:4:import com.mojang.blaze3d.vertex.PoseStack;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:25:    public <M extends LivingEntity> void render(ItemStack stack, SlotReference slotReference, PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light, float v, float v1, float v2, float v3, float v4, float v5) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricLevelRendererMixin.java:4:import com.mojang.blaze3d.vertex.PoseStack;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricLevelRendererMixin.java:28:    private void snagFrustumFromLevelRenderer(PoseStack poseStack, float f, long arg2, boolean bl, Camera camera,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricParticleEngineMixin.java:6:import net.minecraft.client.particle.ParticleRenderType;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricParticleEngineMixin.java:22:    private static List<ParticleRenderType> RENDER_ORDER;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricParticleEngineMixin.java:26:        RENDER_ORDER = ImmutableList.<ParticleRenderType>builder().addAll(RENDER_ORDER)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:15:import net.minecraft.client.renderer.rendertype.RenderType;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:41:    public void setRenderLayer(Block block, RenderType type) {
+
+## Textures :: DynamicTexture|NativeImage|getPixelRGBA|setPixelRGBA|ClientTooltipComponent
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:8:import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:17:public class PatternTooltipComponent implements ClientTooltipComponent {
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:34:    public static ClientTooltipComponent tryConvert(TooltipComponent component) {
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:3:import com.mojang.blaze3d.platform.NativeImage;
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:5:import net.minecraft.client.renderer.texture.DynamicTexture;
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:63:    private static Map<String, DynamicTexture> createTextures(HexPatternLike patternlike, PatternSettings patSets, double seed, int resPerUnit) {
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:68:        Map<String, DynamicTexture> patTexts = new HashMap<>();
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:70:        NativeImage innerLines = drawLines(zappyRenderSpace, staticPoints, (float)patSets.getInnerWidth((staticPoints.finalScale)), resPerUnit);
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:71:        patTexts.put("inner", new DynamicTexture(() -> "hexcasting:inner_pattern", innerLines));
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:73:        NativeImage outerLines = drawLines(zappyRenderSpace, staticPoints, (float)patSets.getOuterWidth((staticPoints.finalScale)), resPerUnit);
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:74:        patTexts.put("outer", new DynamicTexture(() -> "hexcasting:outer_pattern", outerLines));
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:79:    private static Map<String, Identifier> registerTextures(String patTextureKeyBase, Map<String, DynamicTexture> dynamicTextures) {
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:81:        for(Map.Entry<String, DynamicTexture> textureEntry : dynamicTextures.entrySet()){
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:91:    private static NativeImage drawLines(List<Vec2> points, HexPatternPoints staticPoints, float unscaledLineWidth, int resPerUnit) {
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:92:        NativeImage nativeImage = new NativeImage((int)(staticPoints.fullWidth*resPerUnit), (int)(staticPoints.fullHeight*resPerUnit), true);
+Common/src/main/java/at/petrak/hexcasting/client/render/PatternTextureManager.java:101:    private static void drawLine(NativeImage image, int x0, int y0, int x1, int y1, float width) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/BrainsweepeeEmiStack.java:9:import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/BrainsweepeeEmiStack.java:70:    public List<ClientTooltipComponent> getTooltip() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/BrainsweepeeEmiStack.java:73:            .map(ClientTooltipComponent::create)
+
+## Interop :: Patchouli|EMI|HoverEvent|ClickEvent|InlineStyle
+Common/src/main/java/at/petrak/hexcasting/common/items/pigment/ItemPridePigment.java:20:        DEMIBOY(new int[]{0x9a9fa1, 0xa9ffff, 0xffffff}),
+Common/src/main/java/at/petrak/hexcasting/common/items/pigment/ItemPridePigment.java:21:        DEMIGIRL(new int[]{0x9a9fa1, 0xfcb1ff, 0xffffff}),
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:205:        gayRecipe(recipes, ItemPridePigment.Type.DEMIBOY, Ingredient.of(Items.RAW_IRON));
+Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:206:        gayRecipe(recipes, ItemPridePigment.Type.DEMIGIRL, Ingredient.of(Items.RAW_COPPER));
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:13:import net.minecraft.network.chat.ClickEvent;
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:15:import net.minecraft.network.chat.HoverEvent;
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47:        HoverEvent he = new HoverEvent(HoverEvent.Action.SHOW_ITEM, new HoverEvent.ItemStackInfo(scrollStack));
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:48:        ClickEvent ce = new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, pattern.toString());
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:49:        return Style.EMPTY.withHoverEvent(he).withClickEvent(ce);
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:6:import com.samsthenerd.inline.impl.InlineStyle;
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:64:        int glowyParentColor = ((InlineStyle) style).getComponent(InlineStyle.GLOWY_PARENT_COMP);
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:39:            CraftingRecipe recipe = PatchouliUtils.getRecipe(RecipeType.CRAFTING, Identifier.parse(name));
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:89:            return PatchouliUtils.interweaveIngredients(ingredients, longestIngredientSize, level.registryAccess());
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:21:public class PatchouliUtils {
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:43:     * @return Serialized Patchouli ingredient string
+Common/src/main/java/at/petrak/hexcasting/interop/HexInterop.java:9:import vazkii.patchouli.api.PatchouliAPI;
+Common/src/main/java/at/petrak/hexcasting/interop/HexInterop.java:27:        initPatchouli();
+Common/src/main/java/at/petrak/hexcasting/interop/HexInterop.java:44:    private static void initPatchouli() {
+Common/src/main/java/at/petrak/hexcasting/interop/HexInterop.java:76:            PatchouliAPI.get().setConfigFlag(PATCHOULI_ANY_INTEROP_FLAG, true);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:23:        return HexEMIPlugin.BRAINSWEEP;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:44:        return HexEMIPlugin.EDIFY;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:37:        return HexEMIPlugin.PHIAL;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:18:public class HexEMIPlugin implements EmiPlugin {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:28:		new PatternRendererEMI(BRAINSWEEP_ID, 16, 16),
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:32:		new PatternRendererEMI(PHIAL_ID, 12, 12).shift(2, 2),
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:36:		new PatternRendererEMI(EDIFY_ID, 16, 16).strokeOrder(false),
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:17:public class PatternRendererEMI implements EmiRenderable {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:30:    public PatternRendererEMI(Identifier pattern, int w, int h) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:44:    public PatternRendererEMI shift(int x, int y) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:50:    public PatternRendererEMI strokeOrder(boolean order) {
+
+## Imported classes that commonly moved or disappeared
