@@ -340,7 +340,7 @@ class GuiSpellcasting constructor(
         this.ambianceSoundInstance?.mousePosX = pMouseX / this.width.toDouble()
         this.ambianceSoundInstance?.mousePosY = pMouseX / this.width.toDouble()
 
-        val mat = Matrix4f().set(graphics.pose())
+        val mat = Matrix4f()
 
         // Draw guide dots around the cursor
         val mousePos = Vec2(pMouseX.toFloat(), pMouseY.toFloat())
