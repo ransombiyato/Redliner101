@@ -1,0 +1,48 @@
+CURRENT_EMI
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:3:import dev.emi.emi.api.recipe.EmiRecipe;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:4:import dev.emi.emi.api.recipe.EmiRecipeCategory;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:5:import dev.emi.emi.api.stack.EmiIngredient;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:15:public record EmiBrainsweepRecipe(EmiIngredient blockInput,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:16:                                  EmiIngredient villagerInput,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:18:                                  Identifier id) implements EmiRecipe {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:22:    public EmiRecipeCategory getCategory() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiBrainsweepRecipe.java:32:    public List<EmiIngredient> getInputs() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:4:import dev.emi.emi.api.recipe.EmiRecipe;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:5:import dev.emi.emi.api.recipe.EmiRecipeCategory;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:6:import dev.emi.emi.api.stack.EmiIngredient;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:19:public class EmiEdifyRecipe implements EmiRecipe {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:22:    private final EmiIngredient saplings;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:23:    private final EmiIngredient leaves;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:24:    private final EmiIngredient log;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:27:        this.saplings = EmiIngredient.of(ItemTags.SAPLINGS);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:28:        this.leaves = EmiIngredient.of(List.of(
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:33:        this.log = EmiIngredient.of(List.of(
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:43:    public EmiRecipeCategory getCategory() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiEdifyRecipe.java:53:    public List<EmiIngredient> getInputs() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:5:import dev.emi.emi.api.recipe.EmiRecipe;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:6:import dev.emi.emi.api.recipe.EmiRecipeCategory;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:7:import dev.emi.emi.api.stack.EmiIngredient;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:19:public class EmiPhialRecipe implements EmiRecipe {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:22:    private final EmiIngredient inputs;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:23:    private final EmiIngredient bottle;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:24:    private final EmiIngredient outputs;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:30:        this.inputs = EmiIngredient.of(stacks.getFirst().stream().map(EmiStack::of).collect(Collectors.toList()));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:31:        this.bottle = EmiIngredient.of(HexTags.Items.PHIAL_BASE);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:32:        this.outputs = EmiIngredient.of(stacks.getSecond().stream().map(EmiStack::of).collect(Collectors.toList()));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:36:    public EmiRecipeCategory getCategory() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:46:    public List<EmiIngredient> getInputs() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:9:import dev.emi.emi.api.recipe.EmiRecipeCategory;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:11:import dev.emi.emi.api.stack.EmiIngredient;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:27:	public static final EmiRecipeCategory BRAINSWEEP = new EmiRecipeCategory(BRAINSWEEP_ID,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:31:	public static final EmiRecipeCategory PHIAL = new EmiRecipeCategory(PHIAL_ID,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:35:	public static final EmiRecipeCategory EDIFY = new EmiRecipeCategory(EDIFY_ID,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:44:		registry.addWorkstation(BRAINSWEEP, EmiIngredient.of(HexTags.Items.STAVES));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:45:		registry.addWorkstation(PHIAL, EmiIngredient.of(HexTags.Items.STAVES));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:46:		registry.addWorkstation(EDIFY, EmiIngredient.of(HexTags.Items.STAVES));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:50:			var inputBlocks = EmiIngredient.of(recipe.value().blockIn().getDisplayedStacks().stream()
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:57:			registry.addRecipe(new EmiBrainsweepRecipe(inputBlocks, inputEntity, output, recipeId));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:61:			registry.addRecipe(new EmiPhialRecipe());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:64:		registry.addRecipe(new EmiEdifyRecipe());
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:6:import dev.emi.emi.api.stack.EmiIngredient;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:16:    public TheCoolerSlotWidget(EmiIngredient stack, int x, int y, float renderScale) {
+LATEST_EMI_ERRORS
