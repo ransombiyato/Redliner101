@@ -78,5 +78,6 @@
 ## Genuine Android UndertaleModTool Route
 
 - [x] Verify QiuUTMTv4’s current release and documented mobile editing capabilities; payload-specific compatibility remains to be checked on the user’s device.
+- [x] Document the verified QiuUTMTv4 `.droid` opening, editing, saving, and DemiForge packaging workflow without claiming untested Hadrian resource names.
 - [ ] Use the genuine editor for sprite, object, string, and code changes rather than presenting DemiForge’s limited editor foundation as UndertaleModTool.
 - [ ] Retain DemiForge only for private APK backup, packaging, signing, and install handoff if QiuUTMTv4 does not provide that step.

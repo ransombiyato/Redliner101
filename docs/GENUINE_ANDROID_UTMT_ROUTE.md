@@ -6,6 +6,8 @@ The user asked for an **Android UndertaleModTool**, not a replacement-file picke
 
 The project’s core source imports the UndertaleModTool data, compiler, decompiler, scripting, and project APIs. It exposes code decompilation and disassembly, code replacement, string dumping, save operations, and resource counts for sprites, game objects, rooms, code, strings, embedded textures, and audio.[2] Those are genuine editor capabilities beyond the limited fixed-offset operations implemented in DemiForge.
 
+The source also includes a texture-replacement operation that resolves an embedded texture by name and replaces its image from a PNG, plus file-based code replacement. This is the resource-level capability needed for a real Kris-to-Flowey visual mod; it is not just APK archive editing.[2]
+
 The public wiki endpoint did not expose a concrete Android file-opening or save tutorial during verification. The supported workflow should therefore be validated against the user’s own port payload in the actual mobile app rather than inferred from a screenshot or promised in advance.[1]
 
 ## Verified release route
