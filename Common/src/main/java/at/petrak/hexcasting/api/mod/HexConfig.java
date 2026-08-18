@@ -4,8 +4,7 @@ import at.petrak.hexcasting.api.HexAPI;
 import at.petrak.hexcasting.api.misc.MediaConstants;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -94,13 +93,13 @@ public class HexConfig {
 
         boolean DEFAULT_TRUE_NAME_HAS_AMBIT = true;
 
-        default Tier opBreakHarvestLevel() {
+        default ToolMaterial opBreakHarvestLevel() {
             return switch (this.opBreakHarvestLevelBecauseForgeThoughtItWasAGoodIdeaToImplementHarvestTiersUsingAnHonestToGodTopoSort()) {
-                case 0 -> Tiers.WOOD;
-                case 1 -> Tiers.STONE;
-                case 2 -> Tiers.IRON;
-                case 3 -> Tiers.DIAMOND;
-                case 4 -> Tiers.NETHERITE;
+                case 0 -> ToolMaterial.WOOD;
+                case 1 -> ToolMaterial.STONE;
+                case 2 -> ToolMaterial.IRON;
+                case 3 -> ToolMaterial.DIAMOND;
+                case 4 -> ToolMaterial.NETHERITE;
                 default -> throw new RuntimeException("please only return a value in 0<=x<=4");
             };
         }

@@ -8,6 +8,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
 import java.util.function.Function
+import java.util.function.Supplier
 
 /**
  * A continuation during the execution of a spell.
@@ -27,7 +28,7 @@ sealed interface SpellContinuation {
             SpellContinuation::class.java.simpleName
         ) { recursed: Codec<SpellContinuation> ->
             Codec.withAlternative<SpellContinuation>(
-                Codec.unit { Done },
+                Codec.unit<SpellContinuation>(Supplier { Done }),
                 RecordCodecBuilder.create<NotDone> { inst ->
                     inst.group(
                         ContinuationFrame.Type.TYPED_CODEC.fieldOf("frame").forGetter { it.frame },
@@ -39,7 +40,7 @@ sealed interface SpellContinuation {
         @JvmStatic
         val STREAM_CODEC = StreamCodec.recursive<RegistryFriendlyByteBuf, SpellContinuation> { recursed ->
             withAlternative(
-                StreamCodec.unit { Done },
+                StreamCodec.unit(Done),
                 StreamCodec.composite(
                     ContinuationFrame.Type.TYPED_STREAM_CODEC, NotDone::frame,
                     recursed, NotDone::next,

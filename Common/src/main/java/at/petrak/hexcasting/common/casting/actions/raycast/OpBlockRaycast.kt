@@ -20,6 +20,7 @@ object OpBlockRaycast : ConstMediaAction {
         val look = args.getVec3(1, argc)
 
         env.assertVecInRange(origin)
+        val castingEntity = env.castingEntity ?: return listOf(NullIota())
 
         val blockHitResult = env.world.clip(
             ClipContext(
@@ -27,8 +28,7 @@ object OpBlockRaycast : ConstMediaAction {
                 Action.raycastEnd(origin, look),
                 ClipContext.Block.COLLIDER,
                 ClipContext.Fluid.NONE,
-                @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
-                env.castingEntity
+                castingEntity
             )
         )
 

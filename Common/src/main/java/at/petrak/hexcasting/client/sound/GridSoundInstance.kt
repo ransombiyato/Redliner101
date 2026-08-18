@@ -37,8 +37,8 @@ class GridSoundInstance(val player: Player) :
         if (screen !is GuiSpellcasting)
             stop()
         else {
-            val horizontalPlanarVector = calculateVectorFromPitchAndYaw(player.xRot + 90, player.yRot)
-            val verticalPlanarVector = calculateVectorFromPitchAndYaw(player.xRot, player.yRot + 90)
+            val horizontalPlanarVector = calculateVectorFromPitchAndYaw(player.xRot + 90f, player.yRot)
+            val verticalPlanarVector = calculateVectorFromPitchAndYaw(player.xRot, player.yRot + 90f)
             val normalVector = calculateVectorFromPitchAndYaw(player.xRot, player.yRot)
             val newPos = player.eyePosition
                 .add(normalVector)
@@ -51,8 +51,8 @@ class GridSoundInstance(val player: Player) :
     }
 
     private fun calculateVectorFromPitchAndYaw(pitch: Float, yaw: Float): Vec3 {
-        val radiansPitch = pitch * Mth.DEG_TO_RAD
-        val radiansYaw = -yaw * Mth.DEG_TO_RAD
+        val radiansPitch = pitch.toDouble() * Mth.DEG_TO_RAD
+        val radiansYaw = -yaw.toDouble() * Mth.DEG_TO_RAD
         val xComponent = Mth.cos(radiansYaw).toDouble()
         val zComponent = Mth.sin(radiansYaw).toDouble()
         val azimuthHorizontal = Mth.cos(radiansPitch).toDouble()

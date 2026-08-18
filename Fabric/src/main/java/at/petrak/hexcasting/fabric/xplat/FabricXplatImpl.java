@@ -69,7 +69,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -344,7 +344,7 @@ public class FabricXplatImpl implements IXplatAbstractions {
     );
 
     @Override
-    public boolean isCorrectTierForDrops(Tier tier, BlockState bs) {
+    public boolean isCorrectTierForDrops(ToolMaterial tier, BlockState bs) {
         if (!bs.requiresCorrectToolForDrops()) {
             return true;
         }

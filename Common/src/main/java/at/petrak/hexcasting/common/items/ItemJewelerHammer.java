@@ -5,12 +5,12 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class ItemJewelerHammer extends PickaxeItem {
-    public ItemJewelerHammer(Tier tier, Properties props) {
+    public ItemJewelerHammer(ToolMaterial tier, Properties props) {
         super(tier, props);
     }
 
