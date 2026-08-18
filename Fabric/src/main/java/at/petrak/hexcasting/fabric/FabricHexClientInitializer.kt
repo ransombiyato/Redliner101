@@ -69,7 +69,7 @@ object FabricHexClientInitializer : ClientModInitializer {
 
         HexInterop.clientInit()
         RegisterClientStuff.registerColorProviders(
-            { colorizer, item -> ColorProviderRegistry.ITEM.register(colorizer, item) },
+            { colorizer, item -> ColorProviderRegistry.ITEM.register({ stack, tintIndex -> colorizer.getColor(stack, tintIndex) }, item) },
             { colorizer, block -> ColorProviderRegistry.BLOCK.register(colorizer, block) })
         ModelLoadingPlugin.register {
             context -> RegisterClientStuff.onModelRegister {

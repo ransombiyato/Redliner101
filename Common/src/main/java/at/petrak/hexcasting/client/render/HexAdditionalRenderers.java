@@ -7,7 +7,6 @@ import at.petrak.hexcasting.client.ClientTickCounter;
 import at.petrak.hexcasting.common.lib.HexAttributes;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import com.google.common.collect.Lists;
-import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.datafixers.util.Pair;
@@ -47,7 +46,7 @@ public class HexAdditionalRenderers {
 
     private static void renderSentinel(Sentinel sentinel, LocalPlayer owner,
         PoseStack ps, float partialTicks) {
-        ps.pushPose();
+        ps.pushMatrix();
 
         // zero vector is the player
         var mc = Minecraft.getInstance();
@@ -74,12 +73,8 @@ public class HexAdditionalRenderers {
 
         var tess = Tesselator.getInstance();
         var neo = ps.last().pose();
-        RenderSystem.enableBlend();
         RenderSystem.setShader(GameRenderer::getRendertypeLinesShader);
-        RenderSystem.disableDepthTest();
-        RenderSystem.disableCull();
-        RenderSystem.blendFunc(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA);
-        RenderSystem.lineWidth(5f);
+        RenderSystem.defaultBlendFunc();
 
         var pigment = IXplatAbstractions.INSTANCE.getPigment(owner);
         var colProvider = pigment.getColorProvider();
@@ -122,9 +117,7 @@ public class HexAdditionalRenderers {
         }
         //tess.end();
         BufferUploader.drawWithShader(buf.buildOrThrow());
-        RenderSystem.enableDepthTest();
-        RenderSystem.enableCull();
-        ps.popPose();
+        ps.popMatrix();
 
     }
 
@@ -189,8 +182,8 @@ public class HexAdditionalRenderers {
             if (!lines.isEmpty()) {
                 var x = window.getGuiScaledWidth() / 2f + 8f;
                 var y = window.getGuiScaledHeight() / 2f - totalHeight;
-                ps.pushPose();
-                ps.translate(x, y, 0);
+                ps.pushMatrix();
+                ps.translate(x, y);
 
                 for (var pair : actualLines) {
                     var stack = pair.getFirst();
@@ -206,15 +199,15 @@ public class HexAdditionalRenderers {
                     for (var line : text) {
                         var actualLine = Language.getInstance().getVisualOrder(line);
                         graphics.drawString(mc.font, actualLine, tx, ty, 0xffffffff);
-                        ps.translate(0, mc.font.lineHeight, 0);
+                        ps.translate(0, mc.font.lineHeight);
                     }
                     if (text.isEmpty()) {
-                        ps.translate(0, mc.font.lineHeight, 0);
+                        ps.translate(0, mc.font.lineHeight);
                     }
-                    ps.translate(0, 6, 0);
+                    ps.translate(0, 6);
                 }
 
-                ps.popPose();
+                ps.popMatrix();
             }
         }
     }

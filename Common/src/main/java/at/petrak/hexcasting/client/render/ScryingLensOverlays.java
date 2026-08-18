@@ -70,7 +70,7 @@ public class ScryingLensOverlays {
 
         ScryingLensOverlayRegistry.addDisplayer(Blocks.COMPARATOR,
             (lines, state, pos, observer, world, direction) -> {
-                int comparatorValue = state.getAnalogOutputSignal(world, pos);
+                int comparatorValue = state.getAnalogOutputSignal(world, pos, direction);
                 lines.add(new Pair<>(
                     new ItemStack(Items.REDSTONE),
                     Component.literal(comparatorValue == -1 ? "" : String.valueOf(comparatorValue))

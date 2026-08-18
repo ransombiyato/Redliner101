@@ -66,10 +66,10 @@ public class PatternTextureManager {
         Map<String, DynamicTexture> patTexts = new HashMap<>();
 
         NativeImage innerLines = drawLines(zappyRenderSpace, staticPoints, (float)patSets.getInnerWidth((staticPoints.finalScale)), resPerUnit);
-        patTexts.put("inner", new DynamicTexture(innerLines));
+        patTexts.put("inner", new DynamicTexture(() -> "hexcasting:inner_pattern", innerLines));
 
         NativeImage outerLines = drawLines(zappyRenderSpace, staticPoints, (float)patSets.getOuterWidth((staticPoints.finalScale)), resPerUnit);
-        patTexts.put("outer", new DynamicTexture(outerLines));
+        patTexts.put("outer", new DynamicTexture(() -> "hexcasting:outer_pattern", outerLines));
 
         return patTexts;
     }
@@ -77,8 +77,9 @@ public class PatternTextureManager {
     private static Map<String, Identifier> registerTextures(String patTextureKeyBase, Map<String, DynamicTexture> dynamicTextures) {
         Map<String, Identifier> resLocs = new HashMap<>();
         for(Map.Entry<String, DynamicTexture> textureEntry : dynamicTextures.entrySet()){
-            String name = "hex_pattern_texture_" + patTextureKeyBase + "_" + textureEntry.getKey() + "_" + repaintIndex + ".png";
-            Identifier resourceLocation = Minecraft.getInstance().getTextureManager().register(name, textureEntry.getValue());
+            String name = "hex_pattern_texture_" + patTextureKeyBase + "_" + textureEntry.getKey() + "_" + repaintIndex;
+            Identifier resourceLocation = modLoc("dynamic/" + name);
+            Minecraft.getInstance().getTextureManager().register(resourceLocation, textureEntry.getValue());
             resLocs.put(textureEntry.getKey(), resourceLocation);
         }
         patternTexturesToAdd.put(patTextureKeyBase, resLocs);

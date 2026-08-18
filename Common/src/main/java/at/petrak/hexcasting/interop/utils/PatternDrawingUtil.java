@@ -4,7 +4,6 @@ import at.petrak.hexcasting.api.casting.math.HexCoord;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.api.utils.HexUtils;
 import at.petrak.hexcasting.client.render.RenderLib;
-import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.gui.GuiGraphics;
@@ -28,8 +27,7 @@ public final class PatternDrawingUtil {
         var prevShader = RenderSystem.getShader();
         RenderSystem.setShader(GameRenderer::getPositionColorShader);
 //        RenderSystem.disableDepthTest();
-        RenderSystem.disableCull();
-        RenderSystem.blendFunc(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA);
+        RenderSystem.defaultBlendFunc();
 
         // mark center
 //        RenderLib.drawSpot(mat, Vec2.ZERO, 0f, 0f, 0f, 1f);
@@ -56,7 +54,6 @@ public final class PatternDrawingUtil {
         RenderSystem.defaultBlendFunc();
         RenderSystem.setShader(() -> prevShader);
 
-        RenderSystem.enableCull();
 
         poseStack.popPose();
     }

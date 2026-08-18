@@ -4,7 +4,10 @@ import at.petrak.hexcasting.api.HexAPI;
 import at.petrak.hexcasting.api.client.ClientCastingStack;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.item.ItemPropertyFunction;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.Identifier;
@@ -26,6 +29,11 @@ public interface IClientXplatAbstractions {
     void initPlatformSpecific();
 
     <T extends Entity> void registerEntityRenderer(EntityType<? extends T> type, EntityRendererProvider<T> renderer);
+
+    @FunctionalInterface
+    interface ItemPropertyFunction {
+        float call(ItemStack stack, @Nullable ClientLevel level, @Nullable LivingEntity entity, int seed);
+    }
 
     void registerItemProperty(Item item, Identifier id, ItemPropertyFunction func);
 

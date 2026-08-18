@@ -51,7 +51,7 @@ public class BlockEntityQuenchedAllayRenderer implements BlockEntityRenderer<Blo
         BlockStateModel model = RegisterClientStuff.QUENCHED_ALLAY_VARIANTS
             .get(BuiltInRegistries.BLOCK.getKey(block)).get(idx);
         collector.submitBlockModel(poseStack, RenderTypes.translucentMovingBlock(), model,
-            1f, 1f, 1f, state.lightCoords, 0, 0, state.breakProgress);
+            1f, 1f, 1f, state.lightCoords, 0, 0);
     }
 
     @Override

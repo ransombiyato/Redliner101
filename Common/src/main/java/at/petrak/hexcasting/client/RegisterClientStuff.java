@@ -24,12 +24,9 @@ import at.petrak.hexcasting.common.lib.HexDataComponents;
 import at.petrak.hexcasting.common.lib.HexItems;
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions;
 import net.minecraft.client.color.block.BlockColor;
-import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelIdentifier;
+import net.minecraft.client.renderer.block.model.BlockStateModel;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -47,7 +44,7 @@ import java.util.function.*;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class RegisterClientStuff {
-    public static Map<Identifier, List<BakedModel>> QUENCHED_ALLAY_VARIANTS = new HashMap<>();
+    public static Map<Identifier, List<BlockStateModel>> QUENCHED_ALLAY_VARIANTS = new HashMap<>();
     private static final Map<BlockQuenchedAllay, Boolean> QUENCHED_ALLAY_TYPES = Map.of(
             HexBlocks.QUENCHED_ALLAY, false,
             HexBlocks.QUENCHED_ALLAY_TILES, true,
@@ -149,6 +146,11 @@ public class RegisterClientStuff {
         IClientXplatAbstractions.INSTANCE.registerItemProperty(item,
             GaslightingTracker.GASLIGHTING_PRED, (stack, level, holder, holderID) ->
                 Math.abs(GaslightingTracker.getGaslightingAmount() % 4));
+    }
+
+    @FunctionalInterface
+    public interface ItemColor {
+        int getColor(ItemStack stack, int tintIndex);
     }
 
     public static void registerColorProviders(BiConsumer<ItemColor, Item> itemColorRegistry,
@@ -253,10 +255,10 @@ public class RegisterClientStuff {
     @FunctionalInterface
     public interface BlockEntityRendererRegisterererer {
         <T extends BlockEntity> void registerBlockEntityRenderer(BlockEntityType<T> type,
-            BlockEntityRendererProvider<? super T> berp);
+            BlockEntityRendererProvider berp);
     }
 
-    public static void onModelRegister(ResourceManager recMan, Consumer<ModelIdentifier> extraModels) {
+    public static void onModelRegister(ResourceManager recMan, Consumer<Identifier> extraModels) {
         for (var type : QUENCHED_ALLAY_TYPES.entrySet()) {
             var blockLoc = BuiltInRegistries.BLOCK.getKey(type.getKey());
             var locStart = "block/";
@@ -264,7 +266,7 @@ public class RegisterClientStuff {
                 locStart += "deco/";
 
             for (int i = 0; i < BlockQuenchedAllay.VARIANTS; i++) {
-                extraModels.accept(new ModelIdentifier(modLoc( locStart + blockLoc.getPath() + "_" + i), IClientXplatAbstractions.INSTANCE.getModelLocVariant()));
+                extraModels.accept(modLoc(locStart + blockLoc.getPath() + "_" + i));
             }
         }
     }
@@ -287,16 +289,16 @@ public class RegisterClientStuff {
         }
     }
 
-    public static void onModelBake(ModelBakery loader, Map<ModelIdentifier, BakedModel> map) {
+    public static void onModelBake(ModelBakery loader, Map<Identifier, BlockStateModel> map) {
         for (var type : QUENCHED_ALLAY_TYPES.entrySet()) {
             var blockLoc = BuiltInRegistries.BLOCK.getKey(type.getKey());
             var locStart = "block/";
             if (type.getValue())
                 locStart += "deco/";
 
-            var list = new ArrayList<BakedModel>();
+            var list = new ArrayList<BlockStateModel>();
             for (int i = 0; i < BlockQuenchedAllay.VARIANTS; i++) {
-                var variantLoc = new ModelIdentifier(modLoc(locStart + blockLoc.getPath() + "_" + i), IClientXplatAbstractions.INSTANCE.getModelLocVariant());
+                var variantLoc = modLoc(locStart + blockLoc.getPath() + "_" + i);
                 var model = map.get(variantLoc);
                 list.add(model);
             }
