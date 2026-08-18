@@ -107,7 +107,7 @@ public class ItemScroll extends Item implements IotaHolderItem {
         // i guess
         var customData = itemstack.get(DataComponents.CUSTOM_DATA);
         if (customData != null) {
-            EntityType.updateCustomEntityTag(level, player, scrollEntity, TypedEntityData.of(scrollEntity.getType(), customData.copyTagWithoutId()));
+            EntityType.updateCustomEntityTag(level, player, scrollEntity, TypedEntityData.of(scrollEntity.getType(), customData.copyTag()));
         }
 
         if (scrollEntity.survives()) {

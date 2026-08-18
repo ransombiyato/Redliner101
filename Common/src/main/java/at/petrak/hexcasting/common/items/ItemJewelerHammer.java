@@ -4,14 +4,14 @@ import at.petrak.hexcasting.common.lib.HexItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ItemJewelerHammer extends PickaxeItem {
+public class ItemJewelerHammer extends Item {
     public ItemJewelerHammer(ToolMaterial tier, Properties props) {
-        super(tier, props);
+        super(props.pickaxe(tier, 1.0f, -2.8f));
     }
 
     public static boolean shouldFailToBreak(Player player, BlockState state, BlockPos pos) {

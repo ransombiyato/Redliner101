@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.EnumSet;
@@ -26,7 +26,7 @@ import java.util.List;
 // Outputs FACING when powered; outputs backwards otherwise
 // The FACING face is the happy one, bc i guess it's happy to get the redstone power
 public class BlockRedstoneDirectrix extends BlockCircleComponent {
-    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final BooleanProperty REDSTONE_POWERED = BlockStateProperties.POWERED;
 
     public BlockRedstoneDirectrix(Properties p_49795_) {

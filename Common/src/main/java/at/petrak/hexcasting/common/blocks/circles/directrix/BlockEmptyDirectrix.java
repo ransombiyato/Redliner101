@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 
 import java.util.EnumSet;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
 public class BlockEmptyDirectrix extends BlockCircleComponent {
     // Technically the impetus only needs an axis, but all the datagen assumes it has a facing
     // so i might as well
-    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
 
     public BlockEmptyDirectrix(Properties p_49795_) {
         super(p_49795_);

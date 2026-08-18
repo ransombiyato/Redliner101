@@ -9,7 +9,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -40,13 +40,13 @@ public class ItemLoreFragment extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
+    public InteractionResult use(Level level, Player player, InteractionHand usedHand) {
         player.playSound(HexSounds.READ_LORE_FRAGMENT, 1f, 1f);
 
         var handStack = player.getItemInHand(usedHand);
         if (!(player instanceof ServerPlayer splayer)) {
             handStack.shrink(1);
-            return InteractionResultHolder.success(handStack);
+            return InteractionResult.SUCCESS;
         }
 
         AdvancementHolder unfoundLore = null;
@@ -78,6 +78,6 @@ public class ItemLoreFragment extends Item {
         splayer.awardStat(Stats.ITEM_USED.get(this));
         handStack.shrink(1);
 
-        return InteractionResultHolder.success(handStack);
+        return InteractionResult.SUCCESS;
     }
 }

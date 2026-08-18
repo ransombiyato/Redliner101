@@ -39,7 +39,7 @@ import java.util.EnumSet;
 // When on the wall FACING is the direction of the *front* of the block
 public class BlockSlate extends BlockCircleComponent implements EntityBlock, SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<AttachFace> ATTACH_FACE = BlockStateProperties.ATTACH_FACE;
 
     public static final double THICKNESS = 1;
