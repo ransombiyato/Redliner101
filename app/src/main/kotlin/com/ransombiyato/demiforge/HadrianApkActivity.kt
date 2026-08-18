@@ -38,6 +38,7 @@ class HadrianApkActivity : Activity() {
     private var pendingTarget: String? = null
     private var patched: HadrianPatchedApk? = null
     private var inspection: HadrianGameMakerInspection? = null
+    private var resourceSearch: HadrianResourceSearch? = null
     private val replacements = linkedMapOf<String, Path>()
     private val stringEdits = linkedMapOf<String, LinkedHashMap<Int, String>>()
 
@@ -62,6 +63,7 @@ class HadrianApkActivity : Activity() {
                     replacements.clear()
                     patched = null
                     inspection = null
+                    resourceSearch = null
                     stringEdits.clear()
                 }
                 PICK_REPLACEMENT -> {
@@ -161,6 +163,13 @@ class HadrianApkActivity : Activity() {
             if (result.resourcePreviewErrors.isNotEmpty()) {
                 content.addView(warningCard(result.resourcePreviewErrors.entries.joinToString("\n") { (chunk, error) -> "$chunk: $error" }))
             }
+            content.addView(secondaryButton("Search all named resources") { searchResources(result.targetPath) })
+            resourceSearch?.takeIf { it.targetPath == result.targetPath }?.let { search ->
+                content.addView(card().apply {
+                    addView(line("Search: ${search.query}", "${search.matches.size} match(es)"))
+                    addView(body(search.matches.joinToString("\n") { match -> "${match.chunkName} #${match.index}  ${match.name ?: "<unnamed>"}" }))
+                })
+            }
             val edits = stringEdits[result.targetPath].orEmpty()
             if (edits.isNotEmpty()) {
                 content.addView(primaryButton("Prepare ${edits.size} string edit(s) for APK") { prepareStringDraft(result.targetPath, edits) })
@@ -184,6 +193,7 @@ class HadrianApkActivity : Activity() {
             replacements.clear()
             patched = null
             inspection = null
+            resourceSearch = null
             stringEdits.clear()
             render()
         })
@@ -218,6 +228,7 @@ class HadrianApkActivity : Activity() {
     private fun inspectPayload(targetPath: String) {
         try {
             inspection = patcher.inspectGameMakerPayload(requireNotNull(selection), targetPath)
+            resourceSearch = null
             render()
         } catch (exception: Exception) {
             showError("Could not parse $targetPath as GameMaker data: ${exception.message}")
@@ -257,6 +268,24 @@ class HadrianApkActivity : Activity() {
         } catch (exception: Exception) {
             showError("The original APK was not changed. ${exception.message}")
         }
+    }
+
+    private fun searchResources(targetPath: String) {
+        val input = EditText(this).apply { hint = "kris, flowey, battle, act…"; maxLines = 1 }
+        AlertDialog.Builder(this)
+            .setTitle("Search named GameMaker resources")
+            .setMessage("Searches actual sprite, object, room, script, code, and related resource names in this payload.")
+            .setView(input)
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton("Search") { _, _ ->
+                try {
+                    resourceSearch = patcher.searchNamedResources(requireNotNull(selection), targetPath, input.text.toString())
+                    render()
+                } catch (exception: Exception) {
+                    showError(exception.message ?: "Could not search the GameMaker resources.")
+                }
+            }
+            .show()
     }
 
     private fun install(output: HadrianPatchedApk) {

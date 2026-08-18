@@ -71,3 +71,4 @@
 - [ ] Validate the edited payload in a rebuilt, signed user-supplied APK and deliver the true editor/modded build.
 - [x] Implement a bounds-checked FORM chunk indexer and read-only STRG resource preview as the editor foundation.
 - [x] Implement and test same-or-shorter UTF-8 STRG edits that preserve GameMaker offsets and reinject the edited payload into a rebuilt APK fixture.
+- [x] Add on-device named-resource search across actual sprite, object, room, script, and code chunks to locate Kris and Flowey entries after payload inspection.

@@ -48,6 +48,12 @@ data class HadrianGameMakerInspection(
     val resourcePreviewErrors: Map<String, String>,
 )
 
+data class HadrianResourceSearch(
+    val targetPath: String,
+    val query: String,
+    val matches: List<GameMakerNamedResource>,
+)
+
 /**
  * Rebuilds a user-owned APK in app-private storage. The result is re-signed with DemiForge's
  * Android Keystore key, which is why Android treats it as a separately signed install.
@@ -153,6 +159,18 @@ class HadrianApkPatchService(private val context: Context) {
         val draft = root.resolve("drafts/${selection.id}-${targetPath.substringAfterLast('/').removeSuffix(".droid")}-strings.droid")
         GameMakerStringEditor.applySameOrShorterEdits(source, draft, edits)
         return draft
+    }
+
+    fun searchNamedResources(selection: HadrianApkSelection, targetPath: String, query: String): HadrianResourceSearch {
+        require(query.trim().length >= 2) { "Enter at least two characters to search resources." }
+        require(targetPath.lowercase().endsWith(".droid")) { "Only GameMaker .droid payloads can be searched." }
+        val source = extractPayload(selection, targetPath, "inspection")
+        val index = GameMakerFormInspector.inspect(source)
+        val supportedChunks = setOf("SPRT", "OBJT", "ROOM", "SCPT", "CODE", "BGND", "FONT", "PATH", "SHDR", "TMLN")
+        val matches = index.chunks.map { it.name }.distinct().filter { it in supportedChunks }
+            .flatMap { chunk -> GameMakerFormInspector.readNamedResources(source, chunk, index).filter { it.name?.contains(query, ignoreCase = true) == true } }
+            .take(500)
+        return HadrianResourceSearch(targetPath, query.trim(), matches)
     }
 
     private fun extractPayload(selection: HadrianApkSelection, targetPath: String, folder: String): Path {
