@@ -21,13 +21,11 @@ import at.petrak.hexcasting.common.lib.HexAttributes
 import at.petrak.hexcasting.common.lib.HexSounds
 import at.petrak.hexcasting.common.msgs.MsgNewSpellPatternC2S
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions
-import com.mojang.blaze3d.systems.RenderSystem
-import com.mojang.blaze3d.vertex.PoseStack
+import org.joml.Matrix4f
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.input.MouseButtonEvent
-import net.minecraft.client.renderer.GameRenderer
 import net.minecraft.client.resources.sounds.SimpleSoundInstance
 import net.minecraft.client.resources.sounds.SoundInstance
 import net.minecraft.nbt.CompoundTag
@@ -342,13 +340,7 @@ class GuiSpellcasting constructor(
         this.ambianceSoundInstance?.mousePosX = pMouseX / this.width.toDouble()
         this.ambianceSoundInstance?.mousePosY = pMouseX / this.width.toDouble()
 
-        val ps = graphics.pose() // TODO: Determine if this is still necessary.
-
-        val mat = ps.last().pose()
-        val prevShader = RenderSystem.getShader()
-        RenderSystem.setShader(GameRenderer::getPositionColorShader)
-        RenderSystem.disableDepthTest()
-        RenderSystem.disableCull()
+        val mat = Matrix4f().set(graphics.pose())
 
         // Draw guide dots around the cursor
         val mousePos = Vec2(pMouseX.toFloat(), pMouseY.toFloat())
@@ -378,7 +370,6 @@ class GuiSpellcasting constructor(
                 )
             }
         }
-        RenderSystem.defaultBlendFunc()
 
         for ((idx, elts) in this.patterns.withIndex()) {
             val (pat, origin, valid) = elts
@@ -430,70 +421,32 @@ class GuiSpellcasting constructor(
                 this.patterns.size.toDouble())
         }
 
-        RenderSystem.enableDepthTest()
-
-        val mc = Minecraft.getInstance()
-        val font = mc.font
-        ps.pushPose()
-        ps.translate(10.0, 10.0, 0.0)
-
-//        if (this.parenCount > 0) {
-//            val boxHeight = (this.parenDescs.size + 1f) * 10f
-//            RenderSystem.setShader(GameRenderer::getPositionColorShader)
-//            RenderSystem.defaultBlendFunc()
-//            drawBox(ps, 0f, 0f, (this.width * LHS_IOTAS_ALLOCATION + 5).toFloat(), boxHeight, 7.5f)
-//            ps.translate(0.0, 0.0, 1.0)
-//
-//            val time = ClientTickCounter.getTotal() * 0.16f
-//            val opacity = (Mth.map(cos(time), -1f, 1f, 200f, 255f)).toInt()
-//            val color = 0x00_ffffff or (opacity shl 24)
-//            RenderSystem.setShader { prevShader }
-//            for (desc in this.parenDescs) {
-//                font.draw(ps, desc, 10f, 7f, color)
-//                ps.translate(0.0, 10.0, 0.0)
-//            }
-//            ps.translate(0.0, 15.0, 0.0)
-//        }
-
+        val font = Minecraft.getInstance().font
         if (this.stackDescs.isNotEmpty()) {
-            val boxHeight = (this.stackDescs.size + 1f) * 10f
-            RenderSystem.setShader(GameRenderer::getPositionColorShader)
-            RenderSystem.enableBlend()
-            drawBox(ps, 0f, 0f, (this.width * LHS_IOTAS_ALLOCATION + 5).toFloat(), boxHeight)
-            ps.translate(0.0, 0.0, 1.0)
-            RenderSystem.setShader { prevShader }
-            for (desc in this.stackDescs) {
-                graphics.drawString(font, desc, 5, 7, -1) // TODO: Confirm this works
-                ps.translate(0.0, 10.0, 0.0)
+            val boxX = 10
+            val boxY = 10
+            val boxWidth = (this.width * LHS_IOTAS_ALLOCATION + 5).toInt()
+            val boxHeight = ((this.stackDescs.size + 1f) * 10f).toInt()
+            graphics.fill(boxX, boxY, boxX + boxWidth, boxY + boxHeight, 0x50303030)
+            graphics.fill(boxX + 2, boxY + 3, boxX + boxWidth, boxY + boxHeight - 2, 0x50303030)
+            for ((index, desc) in this.stackDescs.withIndex()) {
+                graphics.drawString(font, desc, boxX + 5, boxY + 7 + index * 10, -1)
             }
         }
-
-        ps.popPose()
         if (this.ravenmind != null) {
             val kotlinBad = this.ravenmind!!
-            ps.pushPose()
-            val boxHeight = 15f
-            val addlScale = 1.5f
-            ps.translate(this.width * (1.0 - RHS_IOTAS_ALLOCATION * addlScale) - 10, 10.0, 0.0)
-            RenderSystem.setShader(GameRenderer::getPositionColorShader)
-            RenderSystem.enableBlend()
-            drawBox(
-                ps, 0f, 0f,
-                (this.width * RHS_IOTAS_ALLOCATION * addlScale).toFloat(), boxHeight * addlScale,
-            )
-            ps.translate(5.0, 5.0, 1.0)
-            ps.scale(addlScale, addlScale, 1f)
-
+            val addlScale = 1.5
+            val boxWidth = (this.width * RHS_IOTAS_ALLOCATION * addlScale).toInt()
+            val boxX = (this.width * (1.0 - RHS_IOTAS_ALLOCATION * addlScale) - 10).toInt()
+            val boxY = 10
+            val boxHeight = (15f * addlScale).toInt()
+            graphics.fill(boxX, boxY, boxX + boxWidth, boxY + boxHeight, 0x50303030)
+            graphics.fill(boxX + 4, boxY + 4, boxX + boxWidth, boxY + boxHeight - 3, 0x50303030)
             val time = ClientTickCounter.getTotal() * 0.2f
             val opacity = (Mth.map(sin(time), -1f, 1f, 150f, 255f)).toInt()
             val color = 0x00_ffffff or (opacity shl 24)
-
-            RenderSystem.setShader { prevShader }
-            graphics.drawString(font, kotlinBad, 0, 0, color) // TODO: Confirm this works
-            ps.popPose()
+            graphics.drawString(font, kotlinBad, boxX + 7, boxY + 7, color)
         }
-
-        RenderSystem.setShader { prevShader }
     }
 
     // why the hell is this default true
@@ -532,11 +485,5 @@ class GuiSpellcasting constructor(
         const val LHS_IOTAS_ALLOCATION = 0.7
         const val RHS_IOTAS_ALLOCATION = 0.15
 
-        fun drawBox(ps: PoseStack, x: Float, y: Float, w: Float, h: Float, leftMargin: Float = 2.5f) {
-            RenderSystem.setShader(GameRenderer::getPositionColorShader)
-            RenderSystem.enableBlend()
-            renderQuad(ps, x, y, w, h, 0x50_303030)
-            renderQuad(ps, x + leftMargin, y + 2.5f, w - leftMargin - 2.5f, h - 5f, 0x50_303030)
-        }
     }
 }

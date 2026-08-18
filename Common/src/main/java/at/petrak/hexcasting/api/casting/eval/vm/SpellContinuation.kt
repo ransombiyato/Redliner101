@@ -28,7 +28,7 @@ sealed interface SpellContinuation {
             SpellContinuation::class.java.simpleName
         ) { recursed: Codec<SpellContinuation> ->
             Codec.withAlternative<SpellContinuation>(
-                Codec.unit<SpellContinuation>(Supplier { Done }),
+                Codec.unit(Supplier<SpellContinuation> { Done }),
                 RecordCodecBuilder.create<NotDone> { inst ->
                     inst.group(
                         ContinuationFrame.Type.TYPED_CODEC.fieldOf("frame").forGetter { it.frame },

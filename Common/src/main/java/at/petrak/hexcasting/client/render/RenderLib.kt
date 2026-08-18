@@ -21,6 +21,7 @@ import net.minecraft.world.level.levelgen.SingleThreadedRandomSource
 import net.minecraft.world.level.levelgen.synth.SimplexNoise
 import net.minecraft.world.phys.Vec2
 import org.joml.Matrix4f
+import org.joml.Vector3f
 import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.min
@@ -415,43 +416,17 @@ fun renderEntity(
     renderScale: Float, offset: Float,
     bufferTransformer: (MultiBufferSource) -> MultiBufferSource = { it -> it }
 ) {
-    val rotation = if (Minecraft.getInstance().hasShiftDown()) 0.0f else rotation
-
-    // TODO: Figure out why this is here and whether removing it will break things
-//    entity.level = world
-    val ps = graphics.pose()
-
-    ps.pushPose()
-    ps.translate(x.toDouble(), y.toDouble(), 50.0)
-    ps.scale(renderScale, renderScale, renderScale)
-    ps.translate(0.0, offset.toDouble(), 0.0)
-    ps.mulPose(Axis.ZP.rotationDegrees(180.0f))
-    ps.mulPose(Axis.YP.rotationDegrees(rotation))
-    val erd = Minecraft.getInstance().entityRenderDispatcher
-    val immediate = Minecraft.getInstance().renderBuffers().bufferSource()
-    erd.setRenderShadow(false)
-    erd.render(entity, 0.0, 0.0, 0.0, 0.0f, 1.0f, ps, bufferTransformer(immediate), 0xf000f0)
-    erd.setRenderShadow(true)
-    immediate.endBatch()
-    ps.popPose()
-}
-
-/**
- * Make sure you have the `PositionColorShader` set
- */
-fun renderQuad(
-    ps: PoseStack, x: Float, y: Float, w: Float, h: Float, color: Int
-) {
-    val mat = ps.last().pose()
-    val tess = Tesselator.getInstance()
-    val buf = tess.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR)
-    buf.addVertex(mat, x, y, 0f)
-        .setColor(color)
-    buf.addVertex(mat, x, y + h, 0f)
-        .setColor(color)
-    buf.addVertex(mat, x + w, y + h, 0f)
-        .setColor(color)
-    buf.addVertex(mat, x + w, y, 0f)
-        .setColor(color)
-    BufferUploader.drawWithShader(buf.buildOrThrow())
+    val effectiveRotation = if (Minecraft.getInstance().hasShiftDown()) 0.0f else rotation
+    val state = Minecraft.getInstance().entityRenderDispatcher.extractEntity(entity, 0.0f)
+    graphics.submitEntityRenderState(
+        state,
+        renderScale,
+        Vector3f(x, y + offset, 50.0f),
+        Axis.ZP.rotationDegrees(180.0f),
+        Axis.YP.rotationDegrees(effectiveRotation),
+        0xf000f0,
+        0,
+        0,
+        0
+    )
 }
