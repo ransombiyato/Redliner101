@@ -38,7 +38,7 @@ public record BrainsweepRecipe(
 	}
 
 	@Override
-	public RecipeType<?> getType() {
+	public RecipeType getType() {
 		return HexRecipeStuffRegistry.BRAINSWEEP_TYPE;
 	}
 
@@ -53,7 +53,7 @@ public record BrainsweepRecipe(
     }
 
 	@Override
-	public RecipeSerializer<?> getSerializer() {
+	public RecipeSerializer getSerializer() {
 		return HexRecipeStuffRegistry.BRAINSWEEP;
 	}
 
@@ -69,12 +69,11 @@ public record BrainsweepRecipe(
 		return ItemStack.EMPTY;
 	}
 
-    @Override
-	public boolean canCraftInDimensions(int pWidth, int pHeight) {
+
+	    public boolean canCraftInDimensions(int pWidth, int pHeight) {
 		return false;
 	}
 
-	@Override
 	public ItemStack getResultItem(HolderLookup.Provider registries) {
 		return ItemStack.EMPTY.copy();
 	}
