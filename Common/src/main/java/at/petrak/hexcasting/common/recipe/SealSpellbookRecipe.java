@@ -14,8 +14,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Optional;
 
 public class SealSpellbookRecipe extends ShapelessRecipe {
-    public static final SimpleCraftingRecipeSerializer<SealSpellbookRecipe> SERIALIZER =
-        new SimpleCraftingRecipeSerializer<>(SealSpellbookRecipe::new);
+    public static final RecipeSerializer SERIALIZER =
+        new CustomRecipe.Serializer(SealSpellbookRecipe::new);
 
     private static ItemStack getSealedStack() {
         ItemStack output = new ItemStack(HexItems.SPELLBOOK);

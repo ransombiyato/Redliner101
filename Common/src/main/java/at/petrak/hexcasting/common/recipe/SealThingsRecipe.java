@@ -17,10 +17,10 @@ import java.util.Locale;
 public class SealThingsRecipe extends CustomRecipe {
     public final Sealee sealee;
 
-    public static final SimpleCraftingRecipeSerializer<SealThingsRecipe> FOCUS_SERIALIZER =
-        new SimpleCraftingRecipeSerializer<>(SealThingsRecipe::focus);
-    public static final SimpleCraftingRecipeSerializer<SealThingsRecipe> SPELLBOOK_SERIALIZER =
-        new SimpleCraftingRecipeSerializer<>(SealThingsRecipe::spellbook);
+    public static final RecipeSerializer FOCUS_SERIALIZER =
+        new CustomRecipe.Serializer(SealThingsRecipe::focus);
+    public static final RecipeSerializer SPELLBOOK_SERIALIZER =
+        new CustomRecipe.Serializer(SealThingsRecipe::spellbook);
 
     public SealThingsRecipe(CraftingBookCategory category, Sealee sealee) {
         super(category);
@@ -28,7 +28,6 @@ public class SealThingsRecipe extends CustomRecipe {
     }
 
 
-    @Override
     public boolean canCraftInDimensions(int width, int height) {
         return width * height >= 2;
     }
