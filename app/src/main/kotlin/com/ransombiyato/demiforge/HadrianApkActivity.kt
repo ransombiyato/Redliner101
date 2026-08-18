@@ -15,6 +15,7 @@ import android.widget.ScrollView
 import android.widget.TextView
 import androidx.core.content.FileProvider
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerResourceCategory
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectSpriteAlias
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEdit
 import java.nio.file.Files
 import java.nio.file.Path
@@ -41,6 +42,7 @@ class HadrianApkActivity : Activity() {
     private var resourceSearch: HadrianResourceSearch? = null
     private val replacements = linkedMapOf<String, Path>()
     private val stringEdits = linkedMapOf<String, LinkedHashMap<Int, String>>()
+    private val spriteAliases = linkedMapOf<String, LinkedHashMap<Int, Int>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +67,7 @@ class HadrianApkActivity : Activity() {
                     inspection = null
                     resourceSearch = null
                     stringEdits.clear()
+                    spriteAliases.clear()
                 }
                 PICK_REPLACEMENT -> {
                     val target = requireNotNull(pendingTarget) { "No APK target was selected." }
@@ -171,8 +174,16 @@ class HadrianApkActivity : Activity() {
                 })
             }
             val edits = stringEdits[result.targetPath].orEmpty()
-            if (edits.isNotEmpty()) {
-                content.addView(primaryButton("Prepare ${edits.size} string edit(s) for APK") { prepareStringDraft(result.targetPath, edits) })
+            val aliases = spriteAliases[result.targetPath].orEmpty()
+            content.addView(secondaryButton("Alias object to an existing sprite") { configureObjectSpriteAlias(result.targetPath) })
+            if (aliases.isNotEmpty()) {
+                content.addView(card().apply {
+                    addView(line("Visual aliases", "${aliases.size} draft(s)"))
+                    addView(body(aliases.entries.joinToString("\n") { (objectId, spriteId) -> "OBJT #$objectId → SPRT #$spriteId" }))
+                })
+            }
+            if (edits.isNotEmpty() || aliases.isNotEmpty()) {
+                content.addView(primaryButton("Prepare ${edits.size} text and ${aliases.size} visual edit(s) for APK") { prepareEditorDraft(result.targetPath, edits, aliases) })
                 content.addView(warningCard("String edits are deliberately limited to the original UTF-8 byte length. This preserves every existing GameMaker offset; longer text requires a complete version-aware serializer."))
             }
         }
@@ -195,6 +206,7 @@ class HadrianApkActivity : Activity() {
             inspection = null
             resourceSearch = null
             stringEdits.clear()
+            spriteAliases.clear()
             render()
         })
     }
@@ -255,12 +267,13 @@ class HadrianApkActivity : Activity() {
             .show()
     }
 
-    private fun prepareStringDraft(targetPath: String, edits: Map<Int, String>) {
+    private fun prepareEditorDraft(targetPath: String, edits: Map<Int, String>, aliases: Map<Int, Int>) {
         try {
-            val draft = patcher.createStringEditDraft(
+            val draft = patcher.createEditorDraft(
                 requireNotNull(selection),
                 targetPath,
                 edits.map { (index, replacement) -> GameMakerStringEdit(index, replacement) },
+                aliases.map { (objectIndex, spriteIndex) -> GameMakerObjectSpriteAlias(objectIndex, spriteIndex) },
             )
             replacements[targetPath] = draft
             patched = null
@@ -268,6 +281,35 @@ class HadrianApkActivity : Activity() {
         } catch (exception: Exception) {
             showError("The original APK was not changed. ${exception.message}")
         }
+    }
+
+    private fun configureObjectSpriteAlias(targetPath: String) {
+        val objectInput = EditText(this).apply { hint = "Object index (OBJT #)"; inputType = android.text.InputType.TYPE_CLASS_NUMBER }
+        val spriteInput = EditText(this).apply { hint = "Sprite index (SPRT #)"; inputType = android.text.InputType.TYPE_CLASS_NUMBER }
+        val form = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(18), 0, dp(18), 0)
+            addView(body("Use Search all named resources to find the actual `OBJT` and `SPRT` indices. This changes only the object’s existing 32-bit sprite reference; it does not touch texture pages or other party members."))
+            addView(objectInput)
+            addView(spriteInput)
+        }
+        AlertDialog.Builder(this)
+            .setTitle("Alias object to existing sprite")
+            .setView(form)
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton("Save visual draft") { _, _ ->
+                try {
+                    val objectIndex = objectInput.text.toString().toInt()
+                    val spriteIndex = spriteInput.text.toString().toInt()
+                    require(objectIndex >= 0 && spriteIndex >= 0) { "Resource indices cannot be negative." }
+                    spriteAliases.getOrPut(targetPath) { linkedMapOf() }[objectIndex] = spriteIndex
+                    patched = null
+                    render()
+                } catch (exception: Exception) {
+                    showError(exception.message ?: "Enter valid OBJT and SPRT indices.")
+                }
+            }
+            .show()
     }
 
     private fun searchResources(targetPath: String) {

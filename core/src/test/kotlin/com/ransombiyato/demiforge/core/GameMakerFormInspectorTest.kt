@@ -4,6 +4,8 @@ import com.ransombiyato.demiforge.core.gamemaker.GameMakerFormInspector
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerResourceCategory
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEdit
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEditor
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectSpriteAlias
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectSpriteEditor
 import com.ransombiyato.demiforge.core.storage.ApkArchive
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.io.TempDir
@@ -120,6 +122,22 @@ class GameMakerFormInspectorTest {
         assertEquals("spr_kris", sprites.single().name)
     }
 
+    @Test fun `aliases an object to an existing sprite without moving GameMaker resources`() {
+        val source = temp.resolve("objects.droid")
+        val destination = temp.resolve("flowey-kris.droid")
+        Files.write(source, formWithSpriteAndObject("spr_flowey", "obj_kris", 0))
+
+        val before = GameMakerObjectSpriteEditor.readObjects(source)
+        val after = GameMakerObjectSpriteEditor.applyAliases(source, destination, listOf(GameMakerObjectSpriteAlias(0, 0)))
+
+        assertEquals("obj_kris", before.single().name)
+        assertEquals(0, after.single().spriteIndex)
+        assertEquals(before.single().offset, after.single().offset)
+        assertFailsWith<IllegalArgumentException> {
+            GameMakerObjectSpriteEditor.applyAliases(source, temp.resolve("invalid-sprite.droid"), listOf(GameMakerObjectSpriteAlias(0, 9)))
+        }
+    }
+
     private fun form(vararg chunks: Pair<String, ByteArray>): ByteArray {
         val contentSize = chunks.sumOf { 8 + it.second.size }
         return ByteBuffer.allocate(8 + contentSize).order(ByteOrder.LITTLE_ENDIAN).apply {
@@ -166,6 +184,28 @@ class GameMakerFormInspectorTest {
             putInt(1); putInt(stringOffset); putInt(nameBytes.size); put(nameBytes); put(0)
             put("SPRT".toByteArray()); putInt(sprtPayloadSize)
             putInt(1); putInt(spriteOffset); putInt(stringOffset)
+        }.array()
+    }
+
+    private fun formWithSpriteAndObject(spriteName: String, objectName: String, spriteId: Int): ByteArray {
+        val spriteBytes = spriteName.toByteArray()
+        val objectBytes = objectName.toByteArray()
+        val strgPayload = 4 + 8 + 4 + spriteBytes.size + 1 + 4 + objectBytes.size + 1
+        val sprtPayload = 4 + 4 + 4
+        val objtPayload = 4 + 4 + 8
+        val contentSize = 8 + strgPayload + 8 + sprtPayload + 8 + objtPayload
+        val spriteNameOffset = 8 + 8 + 4 + 8
+        val objectNameOffset = spriteNameOffset + 4 + spriteBytes.size + 1
+        val spriteObjectOffset = 8 + 8 + strgPayload + 8 + 4 + 4
+        val gameObjectOffset = 8 + 8 + strgPayload + 8 + sprtPayload + 8 + 4 + 4
+        return ByteBuffer.allocate(8 + contentSize).order(ByteOrder.LITTLE_ENDIAN).apply {
+            put("FORM".toByteArray()); putInt(contentSize)
+            put("STRG".toByteArray()); putInt(strgPayload)
+            putInt(2); putInt(spriteNameOffset); putInt(objectNameOffset)
+            putInt(spriteBytes.size); put(spriteBytes); put(0)
+            putInt(objectBytes.size); put(objectBytes); put(0)
+            put("SPRT".toByteArray()); putInt(sprtPayload); putInt(1); putInt(spriteObjectOffset); putInt(spriteNameOffset)
+            put("OBJT".toByteArray()); putInt(objtPayload); putInt(1); putInt(gameObjectOffset); putInt(objectNameOffset); putInt(spriteId)
         }.array()
     }
 }

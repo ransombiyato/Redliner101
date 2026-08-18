@@ -9,6 +9,8 @@ import com.android.apksig.ApkVerifier
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerChunk
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerFormInspector
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerNamedResource
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectSpriteAlias
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerObjectSpriteEditor
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEdit
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEditor
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEntry
@@ -153,12 +155,39 @@ class HadrianApkPatchService(private val context: Context) {
     }
 
     fun createStringEditDraft(selection: HadrianApkSelection, targetPath: String, edits: List<GameMakerStringEdit>): Path {
+        return createEditorDraft(selection, targetPath, edits, emptyList())
+    }
+
+    fun createObjectSpriteAliasDraft(selection: HadrianApkSelection, targetPath: String, aliases: List<GameMakerObjectSpriteAlias>): Path {
+        return createEditorDraft(selection, targetPath, emptyList(), aliases)
+    }
+
+    fun createEditorDraft(
+        selection: HadrianApkSelection,
+        targetPath: String,
+        stringEdits: List<GameMakerStringEdit>,
+        aliases: List<GameMakerObjectSpriteAlias>,
+    ): Path {
         require(targetPath.lowercase().endsWith(".droid")) { "Only GameMaker .droid payloads can be string-edited." }
         require(selection.payloads.any { it.path == targetPath }) { "Payload is not part of the selected APK." }
+        require(stringEdits.isNotEmpty() || aliases.isNotEmpty()) { "Choose a string edit or object-to-sprite alias first." }
         val source = extractPayload(selection, targetPath, "source")
-        val draft = root.resolve("drafts/${selection.id}-${targetPath.substringAfterLast('/').removeSuffix(".droid")}-strings.droid")
-        GameMakerStringEditor.applySameOrShorterEdits(source, draft, edits)
-        return draft
+        val draftRoot = root.resolve("drafts")
+        val stem = "${selection.id}-${targetPath.substringAfterLast('/').removeSuffix(".droid")}-editor"
+        val stringDraft = draftRoot.resolve("$stem-strings.tmp.droid")
+        val finalDraft = draftRoot.resolve("$stem.droid")
+        Files.deleteIfExists(stringDraft)
+        Files.deleteIfExists(finalDraft)
+        val afterStrings = if (stringEdits.isEmpty()) source else stringDraft.also {
+            GameMakerStringEditor.applySameOrShorterEdits(source, it, stringEdits)
+        }
+        if (aliases.isEmpty()) {
+            Files.copy(afterStrings, finalDraft)
+        } else {
+            GameMakerObjectSpriteEditor.applyAliases(afterStrings, finalDraft, aliases)
+        }
+        Files.deleteIfExists(stringDraft)
+        return finalDraft
     }
 
     fun searchNamedResources(selection: HadrianApkSelection, targetPath: String, query: String): HadrianResourceSearch {
