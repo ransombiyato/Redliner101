@@ -145,7 +145,5 @@ allprojects {
 }
 
 tasks.register("runAllDatagen") {
-    dependsOn ":Neoforge:runXplatDatagen"
-    dependsOn ":Neoforge:runDatagen"
     dependsOn ":Fabric:runDatagen"
 }
