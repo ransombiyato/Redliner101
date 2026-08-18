@@ -197,11 +197,11 @@ public abstract class CastingEnvironment {
     protected Identifier actionKey(PatternShapeMatch match) {
         Identifier key;
         if (match instanceof PatternShapeMatch.Normal normal) {
-            key = normal.key.location();
+            key = normal.key.identifier();
         } else if (match instanceof PatternShapeMatch.PerWorld perWorld) {
-            key = perWorld.key.location();
+            key = perWorld.key.identifier();
         } else if (match instanceof PatternShapeMatch.Special special) {
-            key = special.key.location();
+            key = special.key.identifier();
         } else {
             key = null;
         }
@@ -406,7 +406,7 @@ public abstract class CastingEnvironment {
                 // If we're casting from the main hand, try to pick from the slot one to the right of the selected slot
                 // Otherwise, scan the hotbar left to right
                 var anchorSlot = castingHand != InteractionHand.OFF_HAND
-                    ? (caster.getInventory().selected + 1) % 9
+                    ? (caster.getInventory().getSelectedSlot() + 1) % 9
                     : 0;
 
 
@@ -428,15 +428,16 @@ public abstract class CastingEnvironment {
                 // First, the inventory backwards
                 // We use inv.items here to get the main inventory, but not offhand or armor
                 Inventory inv = caster.getInventory();
-                for (int i = inv.items.size() - 1; i >= 0; i--) {
-                    if (i != inv.selected) {
-                        out.add(inv.items.get(i));
+                var nonEquipmentItems = inv.getNonEquipmentItems();
+                for (int i = nonEquipmentItems.size() - 1; i >= 0; i--) {
+                    if (i != inv.getSelectedSlot()) {
+                        out.add(nonEquipmentItems.get(i));
                     }
                 }
 
                 // then the offhand, then the selected hand
-                out.addAll(inv.offhand);
-                out.add(inv.getSelected());
+                out.add(inv.getItem(40));
+                out.add(inv.getSelectedItem());
 
                 yield out;
             }
@@ -575,9 +576,10 @@ public abstract class CastingEnvironment {
         }
 
         Inventory inv = caster.getInventory();
-        for (int i = inv.items.size() - 1; i >= 0; i--) {
-            if (i != inv.selected) {
-                if (stackOk.test(inv.items.get(i))) {
+        var nonEquipmentItems = inv.getNonEquipmentItems();
+        for (int i = nonEquipmentItems.size() - 1; i >= 0; i--) {
+            if (i != inv.getSelectedSlot()) {
+                if (stackOk.test(nonEquipmentItems.get(i))) {
                     inv.setItem(i, replaceWith);
                     return true;
                 }

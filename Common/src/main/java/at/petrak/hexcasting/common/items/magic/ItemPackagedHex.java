@@ -17,11 +17,11 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stat;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
@@ -89,19 +89,19 @@ public abstract class ItemPackagedHex extends ItemMediaHolder implements HexHold
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand usedHand) {
+    public InteractionResult use(Level world, Player player, InteractionHand usedHand) {
         var stack = player.getItemInHand(usedHand);
         if (!hasHex(stack)) {
-            return InteractionResultHolder.fail(stack);
+            return InteractionResult.FAIL;
         }
 
         if (world.isClientSide) {
-            return InteractionResultHolder.success(stack);
+            return InteractionResult.SUCCESS;
         }
 
         List<Iota> instrs = getHex(stack, (ServerLevel) world);
         if (instrs == null) {
-            return InteractionResultHolder.fail(stack);
+            return InteractionResult.FAIL;
         }
         var sPlayer = (ServerPlayer) player;
         var ctx = new PackagedItemCastEnv(sPlayer, usedHand);
@@ -145,14 +145,14 @@ public abstract class ItemPackagedHex extends ItemMediaHolder implements HexHold
         if (broken) {
             stack.shrink(1);
             sPlayer.onEquippedItemBroken(stack.getItem(), usedHand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
-            return InteractionResultHolder.consume(stack);
+            return InteractionResult.CONSUME;
         } else {
-            return InteractionResultHolder.success(stack);
+            return InteractionResult.SUCCESS;
         }
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack pStack) {
-        return UseAnim.BLOCK;
+    public ItemUseAnimation getUseAnimation(ItemStack pStack) {
+        return ItemUseAnimation.BLOCK;
     }
 }

@@ -6,7 +6,7 @@ import at.petrak.hexcasting.mixin.accessor.client.AccessorRenderStateShard;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderStateShard;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.NotNull;
 

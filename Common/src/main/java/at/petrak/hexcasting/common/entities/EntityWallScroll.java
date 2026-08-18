@@ -27,8 +27,10 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.decoration.HangingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
@@ -93,8 +95,8 @@ public class EntityWallScroll extends HangingEntity {
     }
 
     @Override
-    public void dropItem(@Nullable Entity pBrokenEntity) {
-        if (this.level().getGameRules().getBoolean(GameRules.RULE_DOENTITYDROPS)) {
+    public void dropItem(ServerLevel serverLevel, @Nullable Entity pBrokenEntity) {
+        if (serverLevel.getGameRules().get(GameRules.ENTITY_DROPS)) {
             this.playSound(SoundEvents.PAINTING_BREAK, 1.0F, 1.0F);
             if (pBrokenEntity instanceof Player player) {
                 if (player.getAbilities().instabuild) {
@@ -102,7 +104,7 @@ public class EntityWallScroll extends HangingEntity {
                 }
             }
 
-            this.spawnAtLocation(this.scroll);
+            this.spawnAtLocation(serverLevel, this.scroll);
         }
     }
 
@@ -137,8 +139,8 @@ public class EntityWallScroll extends HangingEntity {
     @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket(ServerEntity entity) {
         return IXplatAbstractions.INSTANCE.toVanillaClientboundPacket(
-            new MsgNewWallScrollS2C(new ClientboundAddEntityPacket(this, this.direction.get3DDataValue(), this.getPos()),
-                pos, direction, scroll, getShowsStrokeOrder(), blockSize));
+            new MsgNewWallScrollS2C(new ClientboundAddEntityPacket(this, this.getDirection().get3DDataValue(), this.getPos()),
+                pos, getDirection(), scroll, getShowsStrokeOrder(), blockSize));
     }
 
     public void readSpawnData(BlockPos pos, Direction dir, ItemStack scrollItem,
@@ -155,35 +157,32 @@ public class EntityWallScroll extends HangingEntity {
     }
 
     @Override
-    public void addAdditionalSaveData(CompoundTag tag) {
-        tag.putByte("direction", (byte) this.direction.ordinal());
-        tag.put("scroll", this.scroll.save(registryAccess()));
-        tag.putBoolean("showsStrokeOrder", this.getShowsStrokeOrder());
-        tag.putInt("blockSize", this.blockSize);
-        super.addAdditionalSaveData(tag);
+    public void addAdditionalSaveData(ValueOutput output) {
+        output.putByte("direction", (byte) this.getDirection().ordinal());
+        output.store("scroll", ItemStack.CODEC, this.scroll);
+        output.putBoolean("showsStrokeOrder", this.getShowsStrokeOrder());
+        output.putInt("blockSize", this.blockSize);
+        super.addAdditionalSaveData(output);
     }
 
     @Override
-    public void readAdditionalSaveData(CompoundTag tag) {
-        this.direction = Direction.values()[tag.getByte("direction")];
-        this.scroll = ItemStack.parse(registryAccess(), tag.getCompound("scroll")).orElse(ItemStack.EMPTY);
-        this.blockSize = tag.getInt("blockSize");
-
-        this.setDirection(this.direction);
-        this.setShowsStrokeOrder(tag.getBoolean("showsStrokeOrder"));
+    public void readAdditionalSaveData(ValueInput input) {
+        var direction = Direction.values()[input.getByteOr("direction", (byte) Direction.DOWN.ordinal())];
+        this.setDirection(direction);
+        this.scroll = input.read("scroll", ItemStack.CODEC).orElse(ItemStack.EMPTY);
+        this.blockSize = input.getIntOr("blockSize", 1);
+        this.setShowsStrokeOrder(input.getBooleanOr("showsStrokeOrder", false));
 
         this.recalculateDisplay();
         this.recalculateBoundingBox();
 
-        super.readAdditionalSaveData(tag);
+        super.readAdditionalSaveData(input);
     }
 
-    @Override
     public void moveTo(double pX, double pY, double pZ, float pYaw, float pPitch) {
         this.setPos(pX, pY, pZ);
     }
 
-    @Override
     public void lerpTo(double x, double y, double z, float yRot, float xRot, int steps) {
         BlockPos blockpos = this.pos.offset((int) (x - this.getX()), (int) (y - this.getY()), (int) (z - this.getZ()));
         this.setPos(blockpos.getX(), blockpos.getY(), blockpos.getZ());

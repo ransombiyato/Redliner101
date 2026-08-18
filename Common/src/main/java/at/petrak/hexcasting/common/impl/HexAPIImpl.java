@@ -5,19 +5,24 @@ import at.petrak.hexcasting.api.addldata.ADMediaHolder;
 import at.petrak.hexcasting.api.pigment.FrozenPigment;
 import at.petrak.hexcasting.api.player.Sentinel;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
+import net.minecraft.core.Holder;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.function.Consumer;
@@ -94,13 +99,20 @@ public class HexAPIImpl implements HexAPI {
     }
 
     ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(
-            Collections.emptyMap(),
             0,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.EMPTY,
-            Collections.emptyList(), // TODO check textures. If not - use robes here from original code
+            Map.of(
+                    ArmorType.BOOTS, 0,
+                    ArmorType.LEGGINGS, 0,
+                    ArmorType.CHESTPLATE, 0,
+                    ArmorType.HELMET, 0,
+                    ArmorType.BODY, 0
+            ),
             0,
-            0
+            Holder.direct(SoundEvents.ARMOR_EQUIP_LEATHER),
+            0,
+            0,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
+            EquipmentAssets.LEATHER
     );
 
     @Override

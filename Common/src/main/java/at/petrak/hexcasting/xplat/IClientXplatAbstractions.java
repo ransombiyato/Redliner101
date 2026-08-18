@@ -2,7 +2,7 @@ package at.petrak.hexcasting.xplat;
 
 import at.petrak.hexcasting.api.HexAPI;
 import at.petrak.hexcasting.api.client.ClientCastingStack;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.item.ItemPropertyFunction;
 import net.minecraft.client.renderer.texture.AbstractTexture;
