@@ -11,6 +11,7 @@ import at.petrak.hexcasting.api.utils.lightPurple
 import at.petrak.hexcasting.common.lib.HexItems
 import at.petrak.hexcasting.ktxt.*
 import net.minecraft.util.Util
+import net.minecraft.server.level.ServerLevel
 import net.minecraft.core.BlockPos
 import net.minecraft.network.chat.Component
 import net.minecraft.world.damagesource.DamageSource
@@ -80,7 +81,8 @@ abstract class Mishap : RuntimeException() {
     companion object {
         @JvmStatic
         fun trulyHurt(entity: LivingEntity, source: DamageSource, amount: Float) {
-            entity.setHurtWithStamp(source, entity.level().gameTime)
+            val serverLevel = entity.level() as? ServerLevel ?: return
+            entity.setHurtWithStamp(source, serverLevel.gameTime)
 
             val targetHealth = entity.health - amount
             if (entity.invulnerableTime > 10) {
@@ -90,9 +92,9 @@ abstract class Mishap : RuntimeException() {
                 else
                     entity.lastHurt -= amount
             }
-            if (!entity.hurt(source, amount) &&
-                !entity.isInvulnerableTo(source) &&
-                !entity.level().isClientSide &&
+            if (!entity.hurtServer(serverLevel, source, amount) &&
+                !entity.isInvulnerableTo(serverLevel, source) &&
+                !serverLevel.isClientSide &&
                 !entity.isDeadOrDying
             ) {
 

@@ -16,12 +16,13 @@ class MishapNoSpellCircle : Mishap() {
         dyeColor(DyeColor.LIGHT_BLUE)
 
     // FIXME: make me work with any entity and not just players
-    private inline fun dropAll(player: Player, stacks: MutableList<ItemStack>, filter: (ItemStack) -> Boolean = { true }) {
-        for (index in stacks.indices) {
-            val item = stacks[index]
+    private inline fun dropAll(player: Player, start: Int, end: Int, filter: (ItemStack) -> Boolean = { true }) {
+        val inventory = player.inventory
+        for (index in start until end) {
+            val item = inventory.getItem(index)
             if (!item.isEmpty && filter(item)) {
                 player.drop(item, true, false)
-                stacks[index] = ItemStack.EMPTY
+                inventory.setItem(index, ItemStack.EMPTY)
             }
         }
     }
@@ -30,9 +31,9 @@ class MishapNoSpellCircle : Mishap() {
         val caster = env.castingEntity as? ServerPlayer
         if (caster != null) {
             // FIXME: handle null caster case
-            dropAll(caster, caster.inventory.items)
-            dropAll(caster, caster.inventory.offhand)
-            dropAll(caster, caster.inventory.armor) {
+            dropAll(caster, 0, 36)
+            dropAll(caster, 40, 41)
+            dropAll(caster, 36, 40) {
                 it.get(DataComponents.ENCHANTMENTS)?.keySet()?.any { e -> e.`is`(Enchantments.BINDING_CURSE) } != true
             }
         }

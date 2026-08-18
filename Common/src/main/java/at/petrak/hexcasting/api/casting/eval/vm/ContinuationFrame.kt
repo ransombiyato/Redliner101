@@ -98,7 +98,7 @@ interface ContinuationFrame {
             val typeLoc = Identifier.tryParse(typeKey)
                 ?: return null
 
-            return HexContinuationTypes.REGISTRY.get(typeLoc).orElse(null)
+            return HexContinuationTypes.REGISTRY.get(typeLoc).map { it.value() }.orElse(null)
         }
     }
 }

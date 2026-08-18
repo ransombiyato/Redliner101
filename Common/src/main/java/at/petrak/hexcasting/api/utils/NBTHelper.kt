@@ -55,24 +55,24 @@ fun CompoundTag?.hasList(key: String, objType: Byte): Boolean {
 fun CompoundTag?.hasUUID(key: String) = this?.getIntArray(key)?.orElse(null)?.size == 4
 
 fun CompoundTag?.contains(key: String, id: Byte) = this?.contains(key, id.toInt()) ?: false
-fun CompoundTag?.contains(key: String, id: Int) = this?.contains(key, id) ?: false
+fun CompoundTag?.contains(key: String, id: Int): Boolean = this?.contains(key, id) ?: false
 fun CompoundTag?.contains(key: String) = this?.contains(key) ?: false
 
 // Puts
 
-fun CompoundTag?.putBoolean(key: String, value: Boolean) = this?.putBoolean(key, value)
-fun CompoundTag?.putByte(key: String, value: Byte) = this?.putByte(key, value)
-fun CompoundTag?.putShort(key: String, value: Short) = this?.putShort(key, value)
-fun CompoundTag?.putInt(key: String, value: Int) = this?.putInt(key, value)
-fun CompoundTag?.putLong(key: String, value: Long) = this?.putLong(key, value)
-fun CompoundTag?.putFloat(key: String, value: Float) = this?.putFloat(key, value)
-fun CompoundTag?.putDouble(key: String, value: Double) = this?.putDouble(key, value)
-fun CompoundTag?.putLongArray(key: String, value: LongArray) = this?.putLongArray(key, value)
-fun CompoundTag?.putIntArray(key: String, value: IntArray) = this?.putIntArray(key, value)
-fun CompoundTag?.putByteArray(key: String, value: ByteArray) = this?.putByteArray(key, value)
-fun CompoundTag?.putCompound(key: String, value: CompoundTag) { this?.put(key, value) }
-fun CompoundTag?.putString(key: String, value: String) = this?.putString(key, value)
-fun CompoundTag?.putList(key: String, value: ListTag) { this?.put(key, value) }
+fun CompoundTag?.putBoolean(key: String, value: Boolean): Unit { this?.putBoolean(key, value) }
+fun CompoundTag?.putByte(key: String, value: Byte): Unit { this?.putByte(key, value) }
+fun CompoundTag?.putShort(key: String, value: Short): Unit { this?.putShort(key, value) }
+fun CompoundTag?.putInt(key: String, value: Int): Unit { this?.putInt(key, value) }
+fun CompoundTag?.putLong(key: String, value: Long): Unit { this?.putLong(key, value) }
+fun CompoundTag?.putFloat(key: String, value: Float): Unit { this?.putFloat(key, value) }
+fun CompoundTag?.putDouble(key: String, value: Double): Unit { this?.putDouble(key, value) }
+fun CompoundTag?.putLongArray(key: String, value: LongArray): Unit { this?.putLongArray(key, value) }
+fun CompoundTag?.putIntArray(key: String, value: IntArray): Unit { this?.putIntArray(key, value) }
+fun CompoundTag?.putByteArray(key: String, value: ByteArray): Unit { this?.putByteArray(key, value) }
+fun CompoundTag?.putCompound(key: String, value: CompoundTag): Unit { this?.put(key, value) }
+fun CompoundTag?.putString(key: String, value: String): Unit { this?.putString(key, value) }
+fun CompoundTag?.putList(key: String, value: ListTag): Unit { this?.put(key, value) }
 fun CompoundTag?.putUUID(key: String, value: UUID) {
     val ints = intArrayOf((value.mostSignificantBits shr 32).toInt(), value.mostSignificantBits.toInt(), (value.leastSignificantBits shr 32).toInt(), value.leastSignificantBits.toInt())
     this?.putIntArray(key, ints)
@@ -138,13 +138,13 @@ fun CompoundTag.getOrCreateList(key: String, objType: Int): ListTag = if (hasLis
 
 // ================================================================================================================ Tag
 
-val Tag.asBoolean get() = asByte == 0.toByte()
-val Tag.asByte get() = (this as? NumericTag)?.asByte ?: 0.toByte()
-val Tag.asShort get() = (this as? NumericTag)?.asShort ?: 0.toShort()
-val Tag.asInt get() = (this as? NumericTag)?.asInt ?: 0
-val Tag.asLong get() = (this as? NumericTag)?.asLong ?: 0L
-val Tag.asFloat get() = (this as? NumericTag)?.asFloat ?: 0F
-val Tag.asDouble get() = (this as? NumericTag)?.asDouble ?: 0.0
+val Tag.asBoolean: Boolean get() = asByte == 0.toByte()
+val Tag.asByte: Byte get() = (this as? NumericTag)?.asByte ?: 0.toByte()
+val Tag.asShort: Short get() = (this as? NumericTag)?.asShort ?: 0.toShort()
+val Tag.asInt: Int get() = (this as? NumericTag)?.asInt ?: 0
+val Tag.asLong: Long get() = (this as? NumericTag)?.asLong ?: 0L
+val Tag.asFloat: Float get() = (this as? NumericTag)?.asFloat ?: 0F
+val Tag.asDouble: Double get() = (this as? NumericTag)?.asDouble ?: 0.0
 
 val Tag.asLongArray: LongArray
     get() = when (this) {

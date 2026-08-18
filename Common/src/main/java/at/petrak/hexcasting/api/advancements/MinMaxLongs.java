@@ -3,7 +3,7 @@ package at.petrak.hexcasting.api.advancements;
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.serialization.Codec;
-import net.minecraft.advancements.critereon.MinMaxBounds;
+import net.minecraft.advancements.criterion.MinMaxBounds;
 
 import java.util.Optional;
 import java.util.function.Function;

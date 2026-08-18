@@ -22,7 +22,7 @@ sealed class OperatorSideEffect {
 
     data class RequiredEnlightenment(val awardStat: Boolean) : OperatorSideEffect() {
         override fun performEffect(harness: CastingVM) {
-            harness.env.castingEntity?.sendSystemMessage("hexcasting.message.cant_great_spell".asTranslatedComponent)
+            (harness.env.castingEntity as? ServerPlayer)?.sendSystemMessage("hexcasting.message.cant_great_spell".asTranslatedComponent)
         }
     }
 

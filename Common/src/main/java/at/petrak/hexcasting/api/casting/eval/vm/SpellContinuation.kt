@@ -27,7 +27,7 @@ sealed interface SpellContinuation {
             SpellContinuation::class.java.simpleName
         ) { recursed: Codec<SpellContinuation> ->
             Codec.withAlternative<SpellContinuation>(
-                Codec.unit(Done),
+                Codec.unit { Done },
                 RecordCodecBuilder.create<NotDone> { inst ->
                     inst.group(
                         ContinuationFrame.Type.TYPED_CODEC.fieldOf("frame").forGetter { it.frame },
@@ -39,7 +39,7 @@ sealed interface SpellContinuation {
         @JvmStatic
         val STREAM_CODEC = StreamCodec.recursive<RegistryFriendlyByteBuf, SpellContinuation> { recursed ->
             withAlternative(
-                StreamCodec.unit(Done),
+                StreamCodec.unit { Done },
                 StreamCodec.composite(
                     ContinuationFrame.Type.TYPED_STREAM_CODEC, NotDone::frame,
                     recursed, NotDone::next,
@@ -48,7 +48,7 @@ sealed interface SpellContinuation {
             )
         }
 
-        private fun <B: ByteBuf, T> withAlternative(primary: StreamCodec<B, T>, alternative: StreamCodec<B, T>): StreamCodec<B, T> {
+        private fun <B: ByteBuf, T : Any> withAlternative(primary: StreamCodec<B, T>, alternative: StreamCodec<B, T>): StreamCodec<B, T> {
             return ByteBufCodecs.either<B, T, T>(
                 primary,
                 alternative

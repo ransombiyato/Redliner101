@@ -19,6 +19,6 @@ class MishapLocationInWrongDimension(val properDimension: Identifier) : Mishap()
     override fun errorMessage(ctx: CastingEnvironment, errorCtx: Context): Component =
         error(
             "wrong_dimension", properDimension.toString(),
-            ctx.world.dimension().location().toString()
+            ctx.world.dimension().identifier().toString()
         )
 }

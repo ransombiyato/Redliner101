@@ -279,7 +279,8 @@ fun <A> List<A>.zipWithDefault(array: ByteArray, default: (idx: Int) -> Byte): L
 }
 
 fun ItemStack.serializeToNBT(provider: HolderLookup.Provider): CompoundTag {
-    return ItemStack.CODEC.encodeStart(NbtOps.INSTANCE, this).result().orElseGet { CompoundTag() }
+    val result = ItemStack.CODEC.encodeStart(NbtOps.INSTANCE, this).result().orElse(null)
+    return result as? CompoundTag ?: CompoundTag()
 }
 
 @Suppress("UNCHECKED_CAST")
@@ -296,7 +297,7 @@ fun <T : Tag> Tag.downcast(type: TagType<T>): T {
 
 const val ERROR_COLOR = 0xff_f800f8.toInt()
 fun <T : Any> isOfTag(registry: Registry<T>, key: ResourceKey<T>, tag: TagKey<T>): Boolean {
-    return registry.lookup().get(key).map { it.`is`(tag) }.orElse(false)
+    return registry.get(key.identifier()).map { it.`is`(tag) }.orElse(false)
 }
 
 fun <T : Any> isOfTag(registry: Registry<T>, loc: Identifier, tag: TagKey<T>): Boolean {
