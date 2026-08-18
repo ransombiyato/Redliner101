@@ -22,7 +22,7 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import org.jetbrains.annotations.Nullable;
 
@@ -88,9 +88,9 @@ public class HexItems {
     public static final ItemArtifact ARTIFACT = make("artifact", new ItemArtifact(unstackable().rarity(Rarity.RARE)));
 
     public static final ItemJewelerHammer JEWELER_HAMMER = make("jeweler_hammer",
-            new ItemJewelerHammer(Tiers.IRON, props()
+            new ItemJewelerHammer(ToolMaterial.IRON, props()
                     .stacksTo(1)
-                    .durability(Tiers.DIAMOND.getUses())
+                    .durability(ToolMaterial.DIAMOND.durability())
                     .attributes(ItemAttributeModifiers.builder()
                             .add(Attributes.ATTACK_SPEED, new AttributeModifier(
                                     modLoc("jeweler_hammer_speed"),
