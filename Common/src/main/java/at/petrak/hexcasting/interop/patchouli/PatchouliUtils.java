@@ -8,7 +8,6 @@ import net.minecraft.world.item.crafting.*;
 import vazkii.patchouli.api.IVariable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,7 +43,7 @@ public class PatchouliUtils {
      */
     public static IVariable interweaveIngredients(List<Ingredient> ingredients, int longestIngredientSize, HolderLookup.RegistryLookup.Provider registries) {
         if (ingredients.size() == 1) {
-            return IVariable.wrapList(Arrays.stream(ingredients.get(0).getItems())
+            return IVariable.wrapList(ingredients.get(0).items()
                     .map(v -> IVariable.from(v, registries))
                     .collect(Collectors.toList()), registries);
         }
@@ -53,7 +52,7 @@ public class PatchouliUtils {
         List<ItemStack[]> stacks = new ArrayList<>();
         for (Ingredient ingredient : ingredients) {
             if (ingredient != null && !ingredient.isEmpty()) {
-                stacks.add(ingredient.getItems());
+                stacks.add(ingredient.items().toArray(ItemStack[]::new));
             } else {
                 stacks.add(empty);
             }
@@ -72,7 +71,7 @@ public class PatchouliUtils {
      */
     public static IVariable interweaveIngredients(List<Ingredient> ingredients, HolderLookup.RegistryLookup.Provider registries) {
         return interweaveIngredients(ingredients,
-            ingredients.stream().mapToInt(ingr -> ingr.getItems().length).max().orElse(1), registries
+            ingredients.stream().mapToInt(ingr -> (int) ingr.items().count()).max().orElse(1), registries
         );
     }
 }

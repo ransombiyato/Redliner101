@@ -1,0 +1,9 @@
+PATCHOULI_REMOVED
+PATCHOULI_CURRENT
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:29:        var entry = registry.getHolderOrThrow(key);
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:47:                for (Ingredient ingredient : recipe.placementInfo().ingredients()) {
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:48:                    int size = ingredient.items().toArray(ItemStack[]::new).length;
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:61:        return recipe.display().getLast().result().resolveForFirstStack(new ContextMap(Map.of()));
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:86:                        List<Ingredient> list = recipe.placementInfo().ingredients();
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:91:                    List<Ingredient> list = recipe.placementInfo().ingredients();
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:55:                stacks.add(ingredient.items().toArray(ItemStack[]::new));

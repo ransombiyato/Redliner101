@@ -9,7 +9,8 @@
 package at.petrak.hexcasting.interop.patchouli;
 
 import at.petrak.hexcasting.api.HexAPI;
-import net.minecraft.core.NonNullList;
+import net.minecraft.util.context.ContextMap;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -23,6 +24,7 @@ import vazkii.patchouli.api.IVariableProvider;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MultiCraftingProcessor implements IComponentProcessor {
@@ -42,8 +44,8 @@ public class MultiCraftingProcessor implements IComponentProcessor {
                 if (shapeless) {
                     shapeless = !(recipe instanceof ShapedRecipe);
                 }
-                for (Ingredient ingredient : recipe.getIngredients()) {
-                    int size = ingredient.getItems().length;
+                for (Ingredient ingredient : recipe.placementInfo().ingredients()) {
+                    int size = ingredient.items().toArray(ItemStack[]::new).length;
                     if (longestIngredientSize < size) {
                         longestIngredientSize = size;
                     }
@@ -55,6 +57,10 @@ public class MultiCraftingProcessor implements IComponentProcessor {
         this.hasCustomHeading = vars.has("heading");
     }
 
+    private static ItemStack resultItem(CraftingRecipe recipe) {
+        return recipe.display().getLast().result().resolveForFirstStack(new ContextMap(Map.of()));
+    }
+
     @Override
     public @Nullable IVariable process(Level level, String key) {
         if (recipes.isEmpty()) {
@@ -62,7 +68,7 @@ public class MultiCraftingProcessor implements IComponentProcessor {
         }
         if (key.equals("heading")) {
             if (!hasCustomHeading) {
-                return IVariable.from(recipes.getFirst().getResultItem(level.registryAccess()).getHoverName(), level.registryAccess());
+                return IVariable.from(resultItem(recipes.getFirst()).getHoverName(), level.registryAccess());
             }
             return null;
         }
@@ -77,12 +83,12 @@ public class MultiCraftingProcessor implements IComponentProcessor {
                         ingredients.add(Ingredient.EMPTY);
                     } else {
                         int realIndex = index - (shapedY * (3 - shaped.getWidth()));
-                        NonNullList<Ingredient> list = recipe.getIngredients();
+                        List<Ingredient> list = recipe.placementInfo().ingredients();
                         ingredients.add(list.size() > realIndex ? list.get(realIndex) : Ingredient.EMPTY);
                     }
 
                 } else {
-                    NonNullList<Ingredient> list = recipe.getIngredients();
+                    List<Ingredient> list = recipe.placementInfo().ingredients();
                     ingredients.add(list.size() > index ? list.get(index) : Ingredient.EMPTY);
                 }
             }
@@ -91,7 +97,7 @@ public class MultiCraftingProcessor implements IComponentProcessor {
         if (key.equals("output")) {
             return IVariable.wrapList(
                 recipes.stream()
-                        .map(recipe -> recipe.getResultItem(level.registryAccess()))
+                        .map(MultiCraftingProcessor::resultItem)
                         .map(v -> IVariable.from(v, level.registryAccess()))
                         .collect(Collectors.toList()), level.registryAccess());
         }

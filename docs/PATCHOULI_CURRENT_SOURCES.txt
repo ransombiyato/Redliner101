@@ -1,0 +1,349 @@
+--- Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java
+/*
+ * This class is distributed as part of the Botania Mod.
+ * Get the Source Code in github:
+ * https://github.com/Vazkii/Botania
+ *
+ * Botania is Open Source and distributed under the
+ * Botania License: http://botaniamod.net/license.php
+ */
+package at.petrak.hexcasting.interop.patchouli;
+
+import at.petrak.hexcasting.api.HexAPI;
+import net.minecraft.core.NonNullList;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
+import vazkii.patchouli.api.IComponentProcessor;
+import vazkii.patchouli.api.IVariable;
+import vazkii.patchouli.api.IVariableProvider;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MultiCraftingProcessor implements IComponentProcessor {
+    private List<CraftingRecipe> recipes;
+    private boolean shapeless = true;
+    private int longestIngredientSize = 0;
+    private boolean hasCustomHeading;
+
+    @Override
+    public void setup(Level level, IVariableProvider vars) {
+        List<String> names = vars.get("recipes", level.registryAccess()).asStream(level.registryAccess()).map(IVariable::asString).toList();
+        this.recipes = new ArrayList<>();
+        for (String name : names) {
+            CraftingRecipe recipe = PatchouliUtils.getRecipe(RecipeType.CRAFTING, Identifier.parse(name));
+            if (recipe != null) {
+                recipes.add(recipe);
+                if (shapeless) {
+                    shapeless = !(recipe instanceof ShapedRecipe);
+                }
+                for (Ingredient ingredient : recipe.getIngredients()) {
+                    int size = ingredient.getItems().length;
+                    if (longestIngredientSize < size) {
+                        longestIngredientSize = size;
+                    }
+                }
+            } else {
+                HexAPI.LOGGER.warn("Missing crafting recipe " + name);
+            }
+        }
+        this.hasCustomHeading = vars.has("heading");
+    }
+
+    @Override
+    public @Nullable IVariable process(Level level, String key) {
+        if (recipes.isEmpty()) {
+            return null;
+        }
+        if (key.equals("heading")) {
+            if (!hasCustomHeading) {
+                return IVariable.from(recipes.getFirst().getResultItem(level.registryAccess()).getHoverName(), level.registryAccess());
+            }
+            return null;
+        }
+        if (key.startsWith("input")) {
+            int index = Integer.parseInt(key.substring(5)) - 1;
+            int shapedX = index % 3;
+            int shapedY = index / 3;
+            List<Ingredient> ingredients = new ArrayList<>();
+            for (CraftingRecipe recipe : recipes) {
+                if (recipe instanceof ShapedRecipe shaped) {
+                    if (shaped.getWidth() < shapedX + 1) {
+                        ingredients.add(Ingredient.EMPTY);
+                    } else {
+                        int realIndex = index - (shapedY * (3 - shaped.getWidth()));
+                        NonNullList<Ingredient> list = recipe.getIngredients();
+                        ingredients.add(list.size() > realIndex ? list.get(realIndex) : Ingredient.EMPTY);
+                    }
+
+                } else {
+                    NonNullList<Ingredient> list = recipe.getIngredients();
+                    ingredients.add(list.size() > index ? list.get(index) : Ingredient.EMPTY);
+                }
+            }
+            return PatchouliUtils.interweaveIngredients(ingredients, longestIngredientSize, level.registryAccess());
+        }
+        if (key.equals("output")) {
+            return IVariable.wrapList(
+                recipes.stream()
+                        .map(recipe -> recipe.getResultItem(level.registryAccess()))
+                        .map(v -> IVariable.from(v, level.registryAccess()))
+                        .collect(Collectors.toList()), level.registryAccess());
+        }
+        if (key.equals("shapeless")) {
+            return IVariable.wrap(shapeless, level.registryAccess());
+        }
+        return null;
+    }
+}
+--- Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java
+package at.petrak.hexcasting.interop.patchouli;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.*;
+import vazkii.patchouli.api.IVariable;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ * > no this is a "literally copy these files/parts of file into your mod"
+ * > we should put this in patchy but lol
+ * > lazy
+ * -- Hubry Vazcord
+ */
+public class PatchouliUtils {
+    @SuppressWarnings("unchecked")
+    public static <T extends Recipe<I>, I extends RecipeInput> T getRecipe(RecipeType<T> type, Identifier id) {
+        // PageDoubleRecipeRegistry
+        if (Minecraft.getInstance().level == null) {
+            return null;
+        } else {
+            var manager = Minecraft.getInstance().level.getRecipeManager();
+
+            return (T) manager.byKey(id)
+                .map(RecipeHolder::value)
+                .filter((recipe) -> recipe.getType() == type).orElse(null);
+        }
+    }
+
+    /**
+     * Combines the ingredients, returning the first matching stack of each, then the second stack of each, etc.
+     * looping back ingredients that run out of matched stacks, until the ingredients reach the length
+     * of the longest ingredient in the recipe set.
+     *
+     * @param ingredients           List of ingredients in the specific slot
+     * @param longestIngredientSize Longest ingredient in the entire recipe
+     * @return Serialized Patchouli ingredient string
+     */
+    public static IVariable interweaveIngredients(List<Ingredient> ingredients, int longestIngredientSize, HolderLookup.RegistryLookup.Provider registries) {
+        if (ingredients.size() == 1) {
+            return IVariable.wrapList(Arrays.stream(ingredients.get(0).getItems())
+                    .map(v -> IVariable.from(v, registries))
+                    .collect(Collectors.toList()), registries);
+        }
+
+        ItemStack[] empty = {ItemStack.EMPTY};
+        List<ItemStack[]> stacks = new ArrayList<>();
+        for (Ingredient ingredient : ingredients) {
+            if (ingredient != null && !ingredient.isEmpty()) {
+                stacks.add(ingredient.getItems());
+            } else {
+                stacks.add(empty);
+            }
+        }
+        List<IVariable> list = new ArrayList<>(stacks.size() * longestIngredientSize);
+        for (int i = 0; i < longestIngredientSize; i++) {
+            for (ItemStack[] stack : stacks) {
+                list.add(IVariable.from(stack[i % stack.length], registries));
+            }
+        }
+        return IVariable.wrapList(list, registries);
+    }
+
+    /**
+     * Overload of the method above that uses the provided list's longest ingredient size.
+     */
+    public static IVariable interweaveIngredients(List<Ingredient> ingredients, HolderLookup.RegistryLookup.Provider registries) {
+        return interweaveIngredients(ingredients,
+            ingredients.stream().mapToInt(ingr -> ingr.getItems().length).max().orElse(1), registries
+        );
+    }
+}
+--- Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java
+package at.petrak.hexcasting.interop.patchouli;
+
+import at.petrak.hexcasting.api.casting.math.HexPattern;
+import at.petrak.hexcasting.api.mod.HexTags;
+import at.petrak.hexcasting.xplat.IXplatAbstractions;
+import com.google.gson.annotations.SerializedName;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
+import vazkii.patchouli.api.IVariable;
+
+import java.util.List;
+import java.util.function.UnaryOperator;
+
+/**
+ * Grab the pattern from the registry
+ */
+public class LookupPatternComponent extends AbstractPatternComponent {
+    @SerializedName("op_id")
+    public String opNameRaw;
+
+    protected Identifier opName;
+    protected boolean strokeOrder;
+
+    @Override
+    public List<HexPattern> getPatterns(UnaryOperator<IVariable> lookup) {
+        var key = ResourceKey.create(IXplatAbstractions.INSTANCE.getActionRegistry().key(), this.opName);
+        var entry = IXplatAbstractions.INSTANCE.getActionRegistry().get(key);
+
+        this.strokeOrder =
+            !IXplatAbstractions.INSTANCE.getActionRegistry().getHolderOrThrow(key).is(HexTags.Actions.PER_WORLD_PATTERN);
+        return List.of(entry.prototype());
+    }
+
+    @Override
+    public boolean showStrokeOrder() {
+        return this.strokeOrder;
+    }
+
+    @Override
+    public void onVariablesAvailable(UnaryOperator<IVariable> lookup, HolderLookup.Provider registries) {
+        var opName = lookup.apply(IVariable.wrap(this.opNameRaw)).asString();
+        this.opName = Identifier.tryParse(opName);
+
+        super.onVariablesAvailable(lookup, registries);
+    }
+}
+--- Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java
+package at.petrak.hexcasting.interop.patchouli;
+
+import at.petrak.hexcasting.api.misc.MediaConstants;
+import at.petrak.hexcasting.common.lib.HexItems;
+import at.petrak.hexcasting.common.recipe.BrainsweepRecipe;
+import at.petrak.hexcasting.common.recipe.HexRecipeStuffRegistry;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.util.ProblemReporter;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.TagValueOutput;
+import org.jetbrains.annotations.Nullable;
+import vazkii.patchouli.api.IComponentProcessor;
+import vazkii.patchouli.api.IVariable;
+import vazkii.patchouli.api.IVariableProvider;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class BrainsweepProcessor implements IComponentProcessor {
+	private BrainsweepRecipe recipe;
+	@Nullable
+	private String exampleEntityString;
+
+	@Override
+	public void setup(Level level, IVariableProvider vars) {
+		var id = Identifier.parse(vars.get("recipe", level.registryAccess()).asString());
+
+		var recman = level.getRecipeManager();
+		var brainsweepings = recman.getAllRecipesFor(HexRecipeStuffRegistry.BRAINSWEEP_TYPE);
+		for (var poisonApples : brainsweepings) {
+			if (poisonApples.id().equals(id)) {
+				this.recipe = poisonApples.value();
+				break;
+			}
+		}
+	}
+
+	@Override
+	public IVariable process(Level level, String key) {
+		if (this.recipe == null) {
+			return null;
+		}
+
+		switch (key) {
+			case "header" -> {
+				return IVariable.from(this.recipe.result().getBlock().getName(), level.registryAccess());
+			}
+			case "input" -> {
+				var inputStacks = this.recipe.blockIn().getDisplayedStacks();
+				return IVariable.from(inputStacks.toArray(new ItemStack[0]), level.registryAccess());
+			}
+			case "result" -> {
+				return IVariable.from(new ItemStack(this.recipe.result().getBlock()), level.registryAccess());
+			}
+
+			case "entity" -> {
+				if (this.exampleEntityString == null) {
+					var entity = this.recipe.entityIn().exampleEntity(Minecraft.getInstance().level);
+					if (entity == null) {
+						// oh dear
+						return null;
+					}
+					var bob = new StringBuilder();
+					bob.append(BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()));
+
+						var output = TagValueOutput.createWithoutContext(ProblemReporter.DISCARDING);
+						entity.save(output);
+						bob.append(output.buildResult().toString());
+					this.exampleEntityString = bob.toString();
+				}
+
+				return IVariable.wrap(this.exampleEntityString);
+			}
+			case "entityTooltip" -> {
+				Minecraft mc = Minecraft.getInstance();
+				return IVariable.wrapList(this.recipe.entityIn()
+					.getTooltip(mc.options.advancedItemTooltips)
+					.stream()
+					.map(v -> IVariable.from(v, level.registryAccess()))
+					.toList(), level.registryAccess());
+			}
+			case "mediaCost" -> {
+				record ItemCost(Item item, int cost) {
+					public boolean dividesEvenly (int dividend) {
+                        return dividend % cost == 0;
+                    }
+				}
+				ItemCost[] costs  = {
+						new ItemCost(HexItems.AMETHYST_DUST, (int)MediaConstants.DUST_UNIT),
+						new ItemCost(Items.AMETHYST_SHARD, (int)MediaConstants.SHARD_UNIT),
+						new ItemCost(HexItems.CHARGED_AMETHYST, (int)MediaConstants.CRYSTAL_UNIT),
+				};
+
+				// get evenly divisible ItemStacks
+				List<IVariable> validItemStacks = Arrays.stream(costs)
+						.filter(itemCost -> itemCost.dividesEvenly((int)this.recipe.mediaCost()))
+						.map(validItemCost -> new ItemStack(validItemCost.item, (int) this.recipe.mediaCost() / validItemCost.cost))
+						.map(v -> IVariable.from(v, level.registryAccess()))
+						.toList();
+
+				if (!validItemStacks.isEmpty()) {
+					return IVariable.wrapList(validItemStacks, level.registryAccess());
+				}
+				// fallback: display in terms of dust
+				return IVariable.from(new ItemStack(HexItems.AMETHYST_DUST, (int) (this.recipe.mediaCost() / MediaConstants.DUST_UNIT)), level.registryAccess());
+			}
+			default -> {
+				return null;
+			}
+		}
+	}
+}
