@@ -56,7 +56,7 @@ public class SealSpellbookRecipe extends ShapelessRecipe {
     }
 
     @Override
-    public @NotNull RecipeSerializer<?> getSerializer() {
+    public @NotNull RecipeSerializer getSerializer() {
         return SERIALIZER;
     }
 }
