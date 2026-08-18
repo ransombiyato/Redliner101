@@ -9,6 +9,8 @@ import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import at.petrak.paucal.api.datagen.PaucalLootTableSubProvider;
 import net.minecraft.advancements.criterion.*;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.predicates.DataComponentPredicates;
+import net.minecraft.core.component.predicates.EnchantmentsPredicate;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
@@ -30,6 +32,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
 import java.util.List;
 import java.util.Map;
@@ -74,7 +77,7 @@ public class HexLootTables extends PaucalLootTableSubProvider {
         var slatePool = LootPool.lootPool()
             .setRolls(ConstantValue.exactly(1))
             .add(LootItem.lootTableItem(HexBlocks.SLATE)
-                .apply(CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
+                .apply(CopyComponentsFunction.copyComponentsFromBlockEntity(LootContextParams.BLOCK_ENTITY)
                         .include(HexDataComponents.PATTERN)
                 ));
         blockTables.put(HexBlocks.SLATE, LootTable.lootTable().withPool(slatePool));
@@ -86,11 +89,12 @@ public class HexLootTables extends PaucalLootTableSubProvider {
         blockTables.put(HexBlocks.EDIFIED_DOOR, LootTable.lootTable().withPool(doorPool));
 
         var silkTouchCond = MatchTool.toolMatches(
-            ItemPredicate.Builder.item().withSubPredicate(
-                    ItemSubPredicates.ENCHANTMENTS,
-                    ItemEnchantmentsPredicate.enchantments(
-                            List.of(new EnchantmentPredicate(enchRegistryLookup.getOrThrow(Enchantments.SILK_TOUCH), MinMaxBounds.Ints.atLeast(1)))
-                    )
+            ItemPredicate.Builder.item().withComponents(
+                    new DataComponentMatchers.Builder()
+                            .partial(DataComponentPredicates.ENCHANTMENTS,
+                                    EnchantmentsPredicate.enchantments(
+                                            List.of(new EnchantmentPredicate(enchRegistryLookup.getOrThrow(Enchantments.SILK_TOUCH), MinMaxBounds.Ints.atLeast(1)))))
+                            .build()
             ));
         var noSilkTouchCond = silkTouchCond.invert();
         var goodAtAmethystingCond = MatchTool.toolMatches(
@@ -148,13 +152,13 @@ public class HexLootTables extends PaucalLootTableSubProvider {
         var leafPool = dropThisPool(block, 1)
             .when(AnyOfCondition.anyOf(
                 IXplatAbstractions.INSTANCE.isShearsCondition(),
-                MatchTool.toolMatches(ItemPredicate.Builder.item()
-                        .withSubPredicate(
-                                ItemSubPredicates.ENCHANTMENTS,
-                                ItemEnchantmentsPredicate.enchantments(
-                                        List.of(new EnchantmentPredicate(enchRegistryLookup.getOrThrow(Enchantments.SILK_TOUCH), MinMaxBounds.Ints.atLeast(1)))
-                                )
-                        )
+                MatchTool.toolMatches(ItemPredicate.Builder.item().withComponents(
+                        new DataComponentMatchers.Builder()
+                                .partial(DataComponentPredicates.ENCHANTMENTS,
+                                        EnchantmentsPredicate.enchantments(
+                                                List.of(new EnchantmentPredicate(enchRegistryLookup.getOrThrow(Enchantments.SILK_TOUCH), MinMaxBounds.Ints.atLeast(1)))))
+                                .build()
+                )
             )));
         lootTables.put(block, LootTable.lootTable().withPool(leafPool));
     }

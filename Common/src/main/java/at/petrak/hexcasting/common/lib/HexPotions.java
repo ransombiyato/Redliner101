@@ -39,7 +39,7 @@ public class HexPotions {
     }
 
     public static void addRecipes(PotionBrewing.Builder builder, RegistryAccess registryAccess) {
-        var potionRegistry = registryAccess.registryOrThrow(Registries.POTION);
+        var potionRegistry = registryAccess.lookupOrThrow(Registries.POTION);
 
         builder.addMix(Potions.AWKWARD, HexItems.AMETHYST_DUST, potionRegistry.wrapAsHolder(ENLARGE_GRID));
         builder.addMix(potionRegistry.wrapAsHolder(ENLARGE_GRID), Items.REDSTONE, potionRegistry.wrapAsHolder(ENLARGE_GRID_LONG));

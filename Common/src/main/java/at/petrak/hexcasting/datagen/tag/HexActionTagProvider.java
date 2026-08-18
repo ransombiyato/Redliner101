@@ -6,6 +6,7 @@ import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import at.petrak.hexcasting.xplat.Platform;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.TagAppender;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
@@ -35,6 +36,10 @@ public class HexActionTagProvider extends TagsProvider<ActionRegistryEntry> {
             tag(ersatzActionTag(HexTags.Actions.PER_WORLD_PATTERN)).add(key);
         }
         // deciding that akashic write can be just a normal spell (as a treat)
+    }
+
+    private TagAppender tag(TagKey<?> key) {
+        return TagAppender.forBuilder(getOrCreateRawBuilder(key));
     }
 
     private static TagKey<ActionRegistryEntry> ersatzActionTag(TagKey<ActionRegistryEntry> real) {

@@ -2,7 +2,10 @@ package at.petrak.hexcasting.api.advancements;
 
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.datafixers.util.Either;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.criterion.MinMaxBounds;
 
 import java.util.Optional;
@@ -12,17 +15,27 @@ public record MinMaxLongs(
         Optional<Long> min,
         Optional<Long> max
 ) implements MinMaxBounds<Long> {
-    public static final Codec<MinMaxLongs> CODEC =
-            MinMaxBounds.Bounds.createCodec(Codec.LONG)
-                    .xmap(bounds -> new MinMaxLongs(bounds.min(), bounds.max()), MinMaxLongs::bounds);
+    private static final Codec<MinMaxBounds.Bounds<Long>> BOUNDS_CODEC = Codec.either(
+            Codec.LONG,
+            RecordCodecBuilder.create(instance -> instance.group(
+                    Codec.LONG.optionalFieldOf("min").forGetter(MinMaxBounds.Bounds::min),
+                    Codec.LONG.optionalFieldOf("max").forGetter(MinMaxBounds.Bounds::max)
+            ).apply(instance, MinMaxBounds.Bounds::new))
+    ).xmap(
+            either -> either.map(MinMaxBounds.Bounds::exactly, Function.identity()),
+            bounds -> bounds.min().isPresent() && bounds.max().isPresent()
+                    && bounds.min().get().equals(bounds.max().get())
+                    ? Either.left(bounds.min().get())
+                    : Either.right(bounds)
+    ).validate(bounds -> bounds.areSwapped()
+            ? DataResult.error(() -> "min must be less than or equal to max")
+            : DataResult.success(bounds));
+
+    public static final Codec<MinMaxLongs> CODEC = BOUNDS_CODEC
+            .xmap(bounds -> new MinMaxLongs(bounds.min(), bounds.max()), MinMaxLongs::bounds);
 
     public static final MinMaxLongs ANY =
             new MinMaxLongs(Optional.empty(), Optional.empty());
-
-
-    private static Optional<Long> squareOpt(Optional<Long> value) {
-        return value.map(v -> v * v);
-    }
 
     public static MinMaxLongs exactly(long value) {
         return new MinMaxLongs(Optional.of(value), Optional.of(value));
@@ -41,8 +54,8 @@ public record MinMaxLongs(
     }
 
     @Override
-    public MinMaxBounds.Bounds bounds() {
-        return new MinMaxBounds.Bounds(min, max);
+    public MinMaxBounds.Bounds<Long> bounds() {
+        return new MinMaxBounds.Bounds<>(min, max);
     }
 
     public boolean matches(long value) {
@@ -64,4 +77,3 @@ public record MinMaxLongs(
         return new MinMaxLongs(bounds.min(), bounds.max());
     }
 }
-

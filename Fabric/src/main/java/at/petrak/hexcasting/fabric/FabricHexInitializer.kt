@@ -158,7 +158,7 @@ object FabricHexInitializer : ModInitializer {
                     HexTags.Actions.PER_WORLD_PATTERN
                 )
             ) keyList.add(key)
-            keyList.sortWith(Comparator.comparing<ResourceKey<ActionRegistryEntry>, Identifier>(Function { obj: ResourceKey<ActionRegistryEntry> -> obj.location() }))
+            keyList.sortWith(Comparator.comparing<ResourceKey<ActionRegistryEntry>, Identifier>(Function { obj: ResourceKey<ActionRegistryEntry> -> obj.identifier() }))
             for (key in keyList) {
                 r.accept(
                     ItemScroll.withPerWorldPattern(

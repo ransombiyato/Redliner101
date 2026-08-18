@@ -4,10 +4,9 @@ import at.petrak.hexcasting.api.casting.math.HexCoord;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.api.utils.HexUtils;
 import at.petrak.hexcasting.client.render.RenderLib;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.renderer.GameRenderer;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec2;
@@ -20,14 +19,10 @@ public final class PatternDrawingUtil {
     public static void drawPattern(GuiGraphics graphics, int x, int y, List<PatternEntry> patterns, List<Vec2> dots,
                    boolean strokeOrder, int outer, int innerLight, int innerDark,
                    int dotColor) {
-        var poseStack = graphics.pose();
+        var poseStack = new PoseStack();
         poseStack.pushPose();
         poseStack.translate(x, y, 1);
         var mat = poseStack.last().pose();
-        var prevShader = RenderSystem.getShader();
-        RenderSystem.setShader(GameRenderer::getPositionColorShader);
-//        RenderSystem.disableDepthTest();
-        RenderSystem.defaultBlendFunc();
 
         // mark center
 //        RenderLib.drawSpot(mat, Vec2.ZERO, 0f, 0f, 0f, 1f);
@@ -50,10 +45,6 @@ public final class PatternDrawingUtil {
         for (var dot : dots) {
             RenderLib.drawSpot(mat, dot, 1.5f, dotR, dotG, dotB, dotA);
         }
-
-        RenderSystem.defaultBlendFunc();
-        RenderSystem.setShader(() -> prevShader);
-
 
         poseStack.popPose();
     }

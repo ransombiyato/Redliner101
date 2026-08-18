@@ -188,7 +188,7 @@ public class HexItems {
         for (var key : regi.registryKeySet())
             if (HexUtils.isOfTag(regi, key, HexTags.Actions.PER_WORLD_PATTERN))
                 keyList.add(key);
-        keyList.sort(Comparator.comparing(ResourceKey::location));
+        keyList.sort(Comparator.comparing(ResourceKey::identifier));
         for (var key : keyList) {
             r.accept(ItemScroll.withPerWorldPattern(
                     new ItemStack(HexItems.SCROLL_LARGE),

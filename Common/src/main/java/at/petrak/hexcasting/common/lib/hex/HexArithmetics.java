@@ -4,7 +4,6 @@ import at.petrak.hexcasting.api.casting.arithmetic.Arithmetic;
 import at.petrak.hexcasting.api.casting.arithmetic.engine.ArithmeticEngine;
 import at.petrak.hexcasting.common.casting.arithmetic.*;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
-import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
 
@@ -20,7 +19,7 @@ public class HexArithmetics {
 
     public static ArithmeticEngine getEngine() {
         if (ENGINE == null) {
-            ENGINE = new ArithmeticEngine(REGISTRY.holders().map(Holder.Reference::value).collect(Collectors.toList()));
+            ENGINE = new ArithmeticEngine(REGISTRY.stream().collect(Collectors.toList()));
         }
         return ENGINE;
     }

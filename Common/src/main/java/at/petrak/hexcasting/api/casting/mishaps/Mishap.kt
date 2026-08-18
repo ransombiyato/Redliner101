@@ -94,7 +94,7 @@ abstract class Mishap : RuntimeException() {
             }
             if (!entity.hurtServer(serverLevel, source, amount) &&
                 !entity.isInvulnerableTo(serverLevel, source) &&
-                !serverLevel.isClientSide &&
+                !serverLevel.isClientSide() &&
                 !entity.isDeadOrDying
             ) {
 

@@ -313,7 +313,7 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
 
         @Override
         public boolean canTeleportInThisDimension(ResourceKey<Level> dimension) {
-            return noneMatch(tpDimDenylist, dimension.location());
+            return noneMatch(tpDimDenylist, dimension.identifier());
         }
 
         @Override

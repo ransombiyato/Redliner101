@@ -12,6 +12,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -62,7 +63,7 @@ public class EntityTypeIngredient extends BrainsweepeeIngredient {
 
     @Override
     public Entity exampleEntity(Level level) {
-        return this.entityType.create(level);
+        return this.entityType.create(level, EntitySpawnReason.COMMAND);
     }
 
     @Override

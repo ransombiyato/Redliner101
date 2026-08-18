@@ -18,13 +18,13 @@ public class FabricRegister<B> implements IXplatRegister<B> {
 
     @SuppressWarnings("unchecked")
     public FabricRegister(ResourceKey<Registry<B>> registryKey) {
-        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.get(registryKey.location());
+        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.get(registryKey.identifier());
         this.map = new HashMap<>();
     }
 
     @SuppressWarnings("unchecked")
     public FabricRegister(ResourceKey<Registry<B>> registryKey, Map<String, B> map) {
-        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.get(registryKey.location());
+        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.get(registryKey.identifier());
         this.map = map;
     }
 

@@ -6,12 +6,13 @@ import at.petrak.hexcasting.common.recipe.BrainsweepRecipe;
 import at.petrak.hexcasting.common.recipe.HexRecipeStuffRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.TagValueOutput;
 import org.jetbrains.annotations.Nullable;
 import vazkii.patchouli.api.IComponentProcessor;
 import vazkii.patchouli.api.IVariable;
@@ -67,9 +68,9 @@ public class BrainsweepProcessor implements IComponentProcessor {
 					var bob = new StringBuilder();
 					bob.append(BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()));
 
-					var tag = new CompoundTag();
-					entity.save(tag);
-					bob.append(tag.toString());
+						var output = TagValueOutput.createWithoutContext(ProblemReporter.DISCARDING);
+						entity.save(output);
+						bob.append(output.buildResult().toString());
 					this.exampleEntityString = bob.toString();
 				}
 

@@ -10,7 +10,8 @@ import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.criterion.RecipeUnlockedTrigger;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
@@ -51,7 +52,7 @@ public class BrainsweepRecipeBuilder implements RecipeBuilder {
 	}
 
 	@Override
-	public void save(RecipeOutput recipeOutput, Identifier id) {
+	public void save(RecipeOutput recipeOutput, ResourceKey<Recipe<?>> id) {
 		Advancement.Builder advancement = recipeOutput.advancement()
 				.addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(id))
 				.rewards(AdvancementRewards.Builder.recipe(id))
@@ -59,6 +60,6 @@ public class BrainsweepRecipeBuilder implements RecipeBuilder {
 		this.criteria.forEach(advancement::addCriterion);
 
 		var recipe = new BrainsweepRecipe(blockIn, entityIn, mediaCost, result);
-		recipeOutput.accept(id.withPrefix("brainsweep/"), recipe, advancement.build(id.withPrefix("recipes/brainsweep/")));
+		recipeOutput.accept(id, recipe, advancement.build(id.identifier().withPrefix("recipes/brainsweep/")));
 	}
 }

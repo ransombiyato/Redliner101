@@ -1,0 +1,34 @@
+EFFECTS
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/env/PlayerBasedCastEnv.java:178:        var adv = this.world.getServer().getAdvancements().get(modLoc("y_u_no_cast_angy"));
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameFinishEval.kt:41:        val CODEC = MapCodec.unit(FrameFinishEval)
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/FrameFinishEval.kt:42:        val STREAM_CODEC = StreamCodec.unit<RegistryFriendlyByteBuf, FrameFinishEval>(FrameFinishEval)
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/SpellContinuation.kt:44:                StreamCodec.unit(Done),
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/CastingEnvironment.java:233:        var adv = this.world.getServer().getAdvancements().get(modLoc("enlightenment"));
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/GarbageIota.java:46:        public static final MapCodec<GarbageIota> CODEC = MapCodec.unit(new GarbageIota());
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/GarbageIota.java:48:                StreamCodec.unit(new GarbageIota());
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/NullIota.java:41:        public static final MapCodec<NullIota> CODEC = MapCodec.unit(new NullIota());
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/NullIota.java:43:                StreamCodec.unit(new NullIota());
+Common/src/main/java/at/petrak/hexcasting/api/utils/CodecHelper.java:14:        return MapCodec.unit(value.get()).codec();
+Common/src/main/java/at/petrak/hexcasting/common/casting/PatternRegistryManifest.java:104:        var perWorldPatterns = ScrungledPatternsSave.open(environment.getWorld().getServer().overworld());
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:72:        var ow = source.getLevel().getServer().overworld();
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:87:            var ow = source.getLevel().getServer().overworld();
+Common/src/main/java/at/petrak/hexcasting/common/command/PatternResKeyArgument.java:72:        var foundPat = PatternRegistryManifest.getCanonicalStrokesPerWorld(targetKey, ctx.getSource().getServer().overworld());
+Common/src/main/java/at/petrak/hexcasting/common/command/RecalcPatternsCommand.java:14:                var world = ctx.getSource().getServer().overworld();
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemCreativeUnlocker.java:215:                var rootAdv = slevel.getServer().getAdvancements().tree().get(name);
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:158:        if (pStack.has(HexDataComponents.ACTION) && !pStack.has(HexDataComponents.PATTERN) && pLevel.getServer() != null) {
+Common/src/main/java/at/petrak/hexcasting/common/items/storage/ItemScroll.java:160:            var pat = PatternRegistryManifest.getCanonicalStrokesPerWorld(action, pLevel.getServer().overworld());
+Common/src/main/java/at/petrak/hexcasting/common/items/ItemLoreFragment.java:61:            var adv = slevel.getServer().getAdvancements().get(advID);
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBrainsweepeeIngredients.java:41:            return MapCodec.unit(NONE);
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexBrainsweepeeIngredients.java:46:            return StreamCodec.unit(NONE);
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:45:                    .networkSynchronized(StreamCodec.unit(Unit.INSTANCE))
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:64:                    .persistent(MapCodec.unit(Unit.INSTANCE).codec())
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexDataComponents.java:65:                    .networkSynchronized(StreamCodec.unit(Unit.INSTANCE))
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexStateIngredients.java:39:            return MapCodec.unit(NONE);
+Common/src/main/java/at/petrak/hexcasting/common/lib/HexStateIngredients.java:44:            return StreamCodec.unit(NONE);
+Common/src/main/java/at/petrak/hexcasting/common/loot/AddPerWorldPatternToScrollFunc.java:61:        return doStatic(stack, ctx.getRandom(), ctx.getLevel().getServer().overworld());
+RECIPE
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/EmiPhialRecipe.java:31:        this.bottle = EmiIngredient.of(HexTags.Items.PHIAL_BASE);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:44:		registry.addWorkstation(BRAINSWEEP, EmiIngredient.of(HexTags.Items.STAVES));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:45:		registry.addWorkstation(PHIAL, EmiIngredient.of(HexTags.Items.STAVES));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:46:		registry.addWorkstation(EDIFY, EmiIngredient.of(HexTags.Items.STAVES));
+RESOURCEKEY

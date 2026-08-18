@@ -38,7 +38,7 @@ abstract public class AbstractPatternComponent implements ICustomComponent {
 
     @Override
     public void render(GuiGraphics graphics, IComponentRenderContext context, float pticks, int mouseX, int mouseY) {
-        PoseStack ps = graphics.pose();
+        PoseStack ps = new PoseStack();
         // want to position x: [0, 116], y: [16, 80]
         ps.pushPose();
 
@@ -71,7 +71,7 @@ abstract public class AbstractPatternComponent implements ICustomComponent {
             ps.pushPose();
             ps.translate(cellW * c, cellH * r + 16, 100);
 
-            PatternRenderer.renderPattern(pattern, graphics.pose(), patSets, patCols, 0, 4);
+            PatternRenderer.renderPattern(pattern, ps, patSets, patCols, 0, 4);
             ps.popPose();
         }
         ps.popPose();

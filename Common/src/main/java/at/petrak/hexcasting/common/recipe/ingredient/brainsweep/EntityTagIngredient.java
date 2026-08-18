@@ -15,6 +15,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.level.Level;
 
 import java.util.ArrayList;
@@ -91,7 +92,7 @@ public class EntityTagIngredient extends BrainsweepeeIngredient {
         var someEntityTys = BuiltInRegistries.ENTITY_TYPE.getTagOrEmpty(this.entityTypeTag).iterator();
         if (someEntityTys.hasNext()) {
             var someTy = someEntityTys.next();
-            return someTy.value().create(level);
+            return someTy.value().create(level, EntitySpawnReason.COMMAND);
         } else {
             return null;
         }

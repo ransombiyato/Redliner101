@@ -39,16 +39,16 @@ public class FabricHexLootModJankery {
             addPool.accept(makeCypherAddPool(1));
         }
 
-        int countRange = FabricHexInitializer.CONFIG.server.scrollRangeForLootTable(id.location());
+        int countRange = FabricHexInitializer.CONFIG.server.scrollRangeForLootTable(id.identifier());
         if (countRange != -1) {
             addPool.accept(makeScrollAddPool(countRange));
         }
 
-        if (FabricHexInitializer.CONFIG.server.shouldInjectLore(id.location())) {
+        if (FabricHexInitializer.CONFIG.server.shouldInjectLore(id.identifier())) {
             addPool.accept(makeLoreAddPool(FabricHexInitializer.CONFIG.server.loreChance()));
         }
 
-        if (FabricHexInitializer.CONFIG.server.shouldInjectCyphers(id.location())) {
+        if (FabricHexInitializer.CONFIG.server.shouldInjectCyphers(id.identifier())) {
             addPool.accept(makeCypherAddPool(FabricHexInitializer.CONFIG.server.cypherChance()));
         }
     }

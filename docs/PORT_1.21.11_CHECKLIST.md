@@ -15,7 +15,7 @@ Status values: `DONE` means implemented and checked; `IN PROGRESS` means partial
 | API-02 | NBT | Optional-based CompoundTag accessors (`getByteOr`, `getListOrEmpty`, `getCompoundOrEmpty`, `contains`) | Circle state, iota, BE, ingredient persistence | IN PROGRESS | Audit every call site |
 | API-03 | NBT | UUID persistence after removal of `hasUUID`/`getUUID` | Circle execution, entity iota, redstone impetus | IN PROGRESS | Verify serialized key compatibility |
 | API-04 | NBT | BlockPos persistence after removal/relocation of NbtUtils helpers | Circle execution and block entities | IN PROGRESS | Verify int-array/codec representation |
-| API-05 | Persistence | ValueInput/ValueOutput and typed-component load/save APIs | Block entities, VillagerIngredient, Patchouli processor | IN PROGRESS | Audit all loadAdditional/saveAdditional calls |
+| API-05 | Persistence | ValueInput/ValueOutput and typed-component load/save APIs | Block entities, VillagerIngredient, Patchouli processor | IN PROGRESS | VillagerIngredient and BrainsweepProcessor now use TagValueOutput; audit all remaining loadAdditional/saveAdditional calls |
 | API-06 | Profiles | ResolvableProfile factory and GameProfile accessors | EntityIota, redstone impetus | IN PROGRESS | Compile and behavior review |
 | API-07 | Entities | EntityType registration ResourceKey signatures | `HexEntities` | DONE | Prior CI syntax check passed; re-audit |
 | API-08 | Entities | ServerLevel/entity server access and messaging | PlayerBasedCastEnv, ItemLoreFragment, creative unlocker | IN PROGRESS | Search private-field and base-Entity calls |
@@ -29,31 +29,31 @@ Status values: `DONE` means implemented and checked; `IN PROGRESS` means partial
 | API-16 | Blocks | `updateShape` LevelReader/ScheduledTickAccess signature | waterlogged/support blocks | IN PROGRESS | Source-wide override audit |
 | API-17 | Blocks | Removed `onRemove`, analog output, and lifecycle hooks | abstract impetus/circle components | IN PROGRESS | Search stale overrides |
 | API-18 | Blocks | LeavesBlock constructor, codec, and falling-leaves hook | `BlockAkashicLeaves` | IN PROGRESS | Current CI still has/previously had codec diagnostics |
-| API-19 | Blocks | Block codec/map-codec requirements and block registration types | block classes and `HexBlocks` | OPEN | Current CI reports missing symbols |
-| API-20 | Worldgen | Tree grower, feature config, weighted list, and configured feature registry APIs | `AkashicTreeGrower`, `HexFeatureConfigs`, `HexBlocks` | OPEN | Current CI reports missing symbols |
-| API-21 | Potions | Potion/effect registry API changes | `HexPotions` | OPEN | Current CI reports missing symbols |
+| API-19 | Blocks | Block codec/map-codec requirements and block registration types | block classes and `HexBlocks` | IN PROGRESS | Replaced the verified `noCollission()` property spelling with `noCollision()`; compile-wide verification remains |
+| API-20 | Worldgen | Tree grower, feature config, weighted list, and configured feature registry APIs | `AkashicTreeGrower`, `HexFeatureConfigs`, `HexBlocks` | IN PROGRESS | `RegistryAccess.lookupOrThrow(Registries.CONFIGURED_FEATURE)` now replaces removed `registryOrThrow`; compile pending |
+| API-21 | Potions | Potion/effect registry API changes | `HexPotions` | IN PROGRESS | `RegistryAccess.lookupOrThrow(Registries.POTION)` now supplies the potion registry; compile pending |
 | API-22 | Recipes | Recipe serializer raw/generic signatures, recipe category, placement info | Brainsweep, Seal recipes | IN PROGRESS | Recent patches need consolidated verification |
 | API-23 | Recipes | CustomRecipe serializer replacement for removed SimpleCraftingRecipeSerializer | SealThings, SealSpellbook | IN PROGRESS | Recent patch needs compile verification |
-| API-24 | Recipes | RecipeProvider `buildRecipes` API | `HexplatRecipes` | OPEN | Current CI reports abstract-method failure |
-| API-25 | Recipes | RecipeBuilder save(ResourceKey) API | crushing, Farmers Delight, Brainsweep builders | OPEN | Current CI reports abstract-method/type failures |
-| API-26 | Recipes | Ingredient.Value removal and HolderSet/Ingredient codec model | `CompatIngredientValue` | OPEN | Current CI reports HolderSet mismatch |
-| API-27 | Recipes | EntityPredicate factory removal | EntityTagIngredient, EntityTypeIngredient | OPEN | Current CI reports `create(Level)` failure |
-| API-28 | Recipes | Villager data and profession API changes | `VillagerIngredient` | OPEN | Current CI reports symbols and ValueOutput mismatch |
-| API-29 | Advancements | MinMaxBounds codec/bounds/parser API | `MinMaxLongs` | IN PROGRESS | Recent patch needs compile verification |
-| API-30 | Advancements | HolderGetter-based item predicates and advancement builders | `HexAdvancements` | OPEN | Current CI reports TagKey/ItemLike/HolderGetter mismatches |
-| API-31 | Datagen | TagsProvider/ItemTagsProvider/BlockTagsProvider API | Hex item/block tag providers | OPEN | Current CI reports missing symbols |
-| API-32 | Commands | DimensionDataStorage.set and SavedData API | RecalcPatterns and pattern commands | OPEN | Current CI reports method/signature failures |
-| API-33 | Commands | Pattern resource-key/registry command APIs | PatternResKeyArgument and list/texture commands | OPEN | Current CI reports missing symbols |
-| API-34 | Iota | Codec/unit and Optional numeric accessors | DoubleIota, PatternIota | OPEN | Current CI reports missing symbols |
-| API-35 | Patterns | Pattern registry manifest and codec/registry lookup APIs | `PatternRegistryManifest` | OPEN | Current CI reports missing symbols |
-| API-36 | Hex logic | Arithmetic/action registration and method references | `HexArithmetics`, `HexActions` | OPEN | Current CI reports missing symbols/invalid references |
+| API-24 | Recipes | RecipeProvider `buildRecipes` API | `HexplatRecipes` | IN PROGRESS | `buildRecipes()` now uses parameterless override with `this.output`; source audit clean, compile pending |
+| API-25 | Recipes | RecipeBuilder save(ResourceKey) API | crushing, Farmers Delight, Brainsweep builders and `HexplatRecipes` | IN PROGRESS | Custom builders and 26 Hexplat save calls use `ResourceKey`; source audit clean, compile pending |
+| API-26 | Recipes | Ingredient.Value removal and HolderSet/Ingredient codec model | `CompatIngredientValue` | IN PROGRESS | Removed the deleted `Ingredient.Value` implementation and retained a registry-backed `CompatIngredientValue.of(String)` helper; compile pending |
+| API-27 | Recipes | EntityPredicate factory removal | EntityTagIngredient, EntityTypeIngredient | IN PROGRESS | Example entities now use `EntityType.create(Level, EntitySpawnReason.COMMAND)`; source audit clean, compile pending |
+| API-28 | Recipes | Villager data and profession API changes | `VillagerIngredient`, `HexplatRecipes` | IN PROGRESS | Uses VillagerData holder accessors/withers, registry lookup for profession keys, and TagValueOutput; source audit clean, compile pending |
+| API-29 | Advancements | MinMaxBounds codec/bounds/parser API | `MinMaxLongs` | IN PROGRESS | Replaced inaccessible Bounds.createCodec with an explicit public number/object codec and retained parser behavior; compile pending |
+| API-30 | Advancements | HolderGetter-based item predicates and advancement builders | `HexAdvancements` | IN PROGRESS | `provider.lookupOrThrow(Registries.ITEM)` is passed to every ItemPredicate.Builder.of call; compile pending |
+| API-31 | Datagen | TagsProvider/ItemTagsProvider/BlockTagsProvider API | Hex item/block/action tag providers | IN PROGRESS | Replaced removed tag() usage with standalone TagAppender adapters; source audit clean, compile and generated-tag verification pending |
+| API-32 | Commands | DimensionDataStorage.set and SavedData API | RecalcPatterns and pattern commands | IN PROGRESS | Rewrote ScrungledPatternsSave to SavedDataType/Codec and migrated computeIfAbsent/set call sites; compile pending |
+| API-33 | Commands | Pattern resource-key/registry command APIs | PatternResKeyArgument and list/texture commands | IN PROGRESS | Migrated ResourceKey.identifier diagnostics and PermissionCheck command predicates; compile pending |
+| API-34 | Iota | Codec/unit and Optional numeric accessors | DoubleIota, PatternIota | IN PROGRESS | DoubleTag now uses `doubleValue()`; action lookup maps Optional Reference to `value().action()`; compile pending |
+| API-35 | Patterns | Pattern registry manifest and codec/registry lookup APIs | `PatternRegistryManifest` | IN PROGRESS | Unwrapped Optional registry holder references before accessing ActionRegistryEntry/Factory values; compile pending |
+| API-36 | Hex logic | Arithmetic/action registration and method references | `HexArithmetics`, `HexActions` | IN PROGRESS | Replaced Registry.holders() with Registry.stream(), updated MobEffects holders, and corrected the ItemCypher description method reference; compile pending |
 | API-37 | Rendering | 1.21.11 render pipeline, RenderType, RenderStateShard, GlStateManager changes | client render helpers and shader/render types | IN PROGRESS | Source-wide render audit required |
 | API-38 | Rendering | Submit-based BlockEntityRenderer and RenderLayer APIs | renderers, layers, render states | IN PROGRESS | Source-wide submit/signature audit required |
-| API-39 | Rendering | GUI Matrix3x2fStack replacing PoseStack | GUI, Patchouli, inline rendering | OPEN | Current CI reports matrix incompatibilities |
+| API-39 | Rendering | GUI Matrix3x2fStack replacing PoseStack | GUI, Patchouli, inline rendering | IN PROGRESS | GUI host calls retain Matrix3x2fStack; Patchouli/inline/custom vertex paths use dedicated PoseStack adapters; source audit clean, compile and visual verification pending |
 | API-40 | Rendering | Particle provider/single-quad API | ConjureParticle and providers | IN PROGRESS | Re-audit particle classes |
 | API-41 | Rendering | Texture/DynamicTexture/NativeImage API | pattern texture manager and tooltip | IN PROGRESS | Re-audit texture calls |
-| API-42 | Patchouli | Patchouli processors/components and persistence APIs | Patchouli interop package | OPEN | Current CI reports many missing symbols |
-| API-43 | Inline | HoverEvent/ClickEvent factories and InlineStyle changes | inline pattern data/renderer | OPEN | Current CI reports abstract/factory/type failures |
+| API-42 | Patchouli | Patchouli processors/components and persistence APIs | Patchouli interop package | IN PROGRESS | Display-entity serialization now uses the ValueOutput bridge and GUI components use local PoseStack adapters; remaining Patchouli symbols require compile verification |
+| API-43 | Inline | HoverEvent/ClickEvent factories and InlineStyle changes | inline pattern data/renderer | IN PROGRESS | Inline renderer now uses the current InlineStyle component access and local PoseStack path; remaining text-event API verification pending |
 | API-44 | External | EMI/other integration API changes | integration packages and recipe categories | OPEN | Current CI reports category/type issues |
 | API-45 | Kotlin | Kotlin/Java generic boundaries, inaccessible mapped types, Optional interop | OpFlight and remaining Kotlin files | OPEN | Run Kotlin compiler after Java batches |
 | API-46 | Regression | Preserve all v0.11.3 features and registered IDs | registries, recipes, tags, resources, network IDs | OPEN | Compare against baseline after compile passes |

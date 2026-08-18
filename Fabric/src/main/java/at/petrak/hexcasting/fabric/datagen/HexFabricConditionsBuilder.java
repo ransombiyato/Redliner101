@@ -9,7 +9,7 @@ import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Recipe;
 import org.jetbrains.annotations.NotNull;
@@ -55,14 +55,14 @@ public class HexFabricConditionsBuilder implements IXplatConditionsBuilder {
 
     @Override
     @SuppressWarnings("UnstableApiUsage")
-    public void save(@NotNull RecipeOutput consumer, @NotNull Identifier resourceLocation) {
+    public void save(@NotNull RecipeOutput consumer, @NotNull ResourceKey<Recipe<?>> resourceKey) {
         ResourceCondition[] array = conditions.toArray(ResourceCondition[]::new);
 
         RecipeOutput withConditions = new RecipeOutput() {
             @Override
-            public void accept(Identifier resourceLocation, Recipe<?> recipe, @Nullable AdvancementHolder advancementHolder) {
+            public void accept(ResourceKey<Recipe<?>> resourceKey, Recipe<?> recipe, @Nullable AdvancementHolder advancementHolder) {
                 FabricDataGenHelper.addConditions(consumer, array);
-                consumer.accept(resourceLocation, recipe, advancementHolder);
+                consumer.accept(resourceKey, recipe, advancementHolder);
             }
 
             @Override
@@ -71,6 +71,6 @@ public class HexFabricConditionsBuilder implements IXplatConditionsBuilder {
             }
         };
 
-        parent.save(withConditions, resourceLocation);
+        parent.save(withConditions, resourceKey);
     }
 }

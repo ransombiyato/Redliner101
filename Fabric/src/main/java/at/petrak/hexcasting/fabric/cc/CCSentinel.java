@@ -56,7 +56,7 @@ public class CCSentinel implements Component, AutoSyncedComponent {
         if (this.sentinel != null) {
             tag.putBoolean(TAG_EXTENDS_RANGE, this.sentinel.extendsRange());
             tag.put(TAG_POSITION, HexUtils.serializeToNBT(this.sentinel.position()));
-            tag.putString(TAG_DIMENSION, this.sentinel.dimension().location().toString());
+            tag.putString(TAG_DIMENSION, this.sentinel.dimension().identifier().toString());
         }
     }
 }

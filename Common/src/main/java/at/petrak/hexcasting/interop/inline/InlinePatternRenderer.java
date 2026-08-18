@@ -1,6 +1,7 @@
 package at.petrak.hexcasting.interop.inline;
 
 import at.petrak.hexcasting.client.render.*;
+import com.mojang.blaze3d.vertex.PoseStack;
 import com.samsthenerd.inline.api.client.GlowHandling;
 import com.samsthenerd.inline.api.client.InlineRenderer;
 import com.samsthenerd.inline.impl.InlineStyle;
@@ -9,7 +10,6 @@ import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.phys.Vec3;
-import org.joml.Matrix3f;
 
 import java.util.Random;
 
@@ -63,19 +63,19 @@ public class InlinePatternRenderer implements InlineRenderer<InlinePatternData> 
         if(trContext.isGlowy()) return charWidth(data, style, codepoint);
         int glowyParentColor = ((InlineStyle) style).getComponent(InlineStyle.GLOWY_PARENT_COMP);
         boolean isGlowy = glowyParentColor != -1;
-        drawContext.pose().pushPose();
-        drawContext.pose().translate(isGlowy ? -1f : 0, isGlowy ? -1.5f : -0.5f, 0f);
+        var poseStack = new PoseStack();
+        poseStack.pushPose();
+        poseStack.translate(isGlowy ? -1f : 0, isGlowy ? -1.5f : -0.5f, 0f);
         int color = trContext.usableColor();
         // Why are patterns rendering either fullbright or too dark on signs, this is bullshit
         boolean isFlat = InlineRenderer.isFlat(drawContext.pose(), trContext.layerType());
 
-        Matrix3f normalMatrix = drawContext.pose().last().normal();
-        PatternRenderer.renderPattern(data.pattern, drawContext.pose(), isFlat ? null : new PatternRenderer.WorldlyBits(drawContext.bufferSource(), trContext.light(), new Vec3(0, 0, 1)),
+        PatternRenderer.renderPattern(data.pattern, poseStack, isFlat ? null : new PatternRenderer.WorldlyBits(null, trContext.light(), new Vec3(0, 0, 1)),
                 isGlowy ? INLINE_SETTINGS_GLOWY : INLINE_SETTINGS,
                 isGlowy ? new PatternColors(color, 0xFF_000000 | glowyParentColor) : PatternColors.singleStroke(color),
                 0, INLINE_TEXTURE_RES);
 
-        drawContext.pose().popPose();
+        poseStack.popPose();
         return charWidth(data, style, codepoint);
     }
 

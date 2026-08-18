@@ -135,7 +135,7 @@ public class HexBlocks {
                 .isValidSpawn(HexBlocks::never)
                 .instabreak()
                 .pushReaction(PushReaction.DESTROY)
-                .noCollission()
+                .noCollision()
                 .isSuffocating(HexBlocks::never)
                 .isViewBlocking(HexBlocks::never)),
         new Item.Properties());
@@ -284,9 +284,9 @@ public class HexBlocks {
     public static final SlabBlock EDIFIED_SLAB = blockItem("edified_slab",
         new BlockHexSlab(edifiedWoody().noOcclusion()));
     public static final ButtonBlock EDIFIED_BUTTON = blockItem("edified_button",
-        new BlockHexWoodButton(edifiedWoody().noOcclusion().noCollission()));
+        new BlockHexWoodButton(edifiedWoody().noOcclusion().noCollision()));
     public static final PressurePlateBlock EDIFIED_PRESSURE_PLATE = blockItem("edified_pressure_plate",
-        new BlockHexPressurePlate(edifiedWoody().noOcclusion().noCollission()));
+        new BlockHexPressurePlate(edifiedWoody().noOcclusion().noCollision()));
     public static final BlockAkashicLeaves AMETHYST_EDIFIED_LEAVES = blockItem("amethyst_edified_leaves",
         new BlockAkashicLeaves(leaves(MapColor.COLOR_PURPLE)));
     public static final BlockAkashicLeaves AVENTURINE_EDIFIED_LEAVES = blockItem("aventurine_edified_leaves",

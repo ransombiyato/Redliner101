@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagAppender;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
@@ -70,7 +71,11 @@ public class HexItemTagProvider extends ItemTagsProvider {
         this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
     }
 
-    void add(TagAppender<Item> appender, Item... items) {
+    private TagAppender tag(net.minecraft.tags.TagKey<?> key) {
+        return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+    }
+
+    void add(TagAppender appender, Item... items) {
         for (Item item : items) {
             appender.add(BuiltInRegistries.ITEM.getResourceKey(item).orElseThrow());
         }

@@ -1,6 +1,7 @@
 package at.petrak.hexcasting.api.utils;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 
 import java.util.function.Supplier;
 
@@ -10,6 +11,6 @@ public final class CodecHelper {
     }
 
     public static <T> Codec<T> unit(Supplier<T> value) {
-        return Codec.unit(value);
+        return MapCodec.unit(value.get()).codec();
     }
 }

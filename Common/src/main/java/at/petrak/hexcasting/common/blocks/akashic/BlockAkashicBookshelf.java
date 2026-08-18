@@ -67,7 +67,7 @@ public class BlockAkashicBookshelf extends Block implements AkashicFloodfiller, 
 
                 level.playSound(player, pos, HexSounds.SCROLL_SCRIBBLE, SoundSource.BLOCKS,
                         1f, 0.8f);
-                return InteractionResult.sidedSuccess(level.isClientSide());
+                return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.SUCCESS_SERVER;
             }
         }
 

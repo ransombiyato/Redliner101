@@ -58,6 +58,6 @@ public class PlayerBasedMishapEnv extends MishapEnvironment {
 
     @Override
     public void nauseate(int ticks) {
-        this.caster.addEffect(new MobEffectInstance(MobEffects.CONFUSION, ticks));
+        this.caster.addEffect(new MobEffectInstance(MobEffects.NAUSEA, ticks));
     }
 }

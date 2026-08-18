@@ -1,0 +1,20 @@
+# 1.21.11 grouped-batch notes
+
+These notes record API facts verified against `/home/ubuntu/mc12111/client.txt` during the current grouped migration pass.
+
+- `ResourceKey.identifier()` replaces `ResourceKey.location()`; `TagKey.location()` remains valid.
+- `Registry.get(ResourceKey)` returns an Optional holder reference; unwrap with `ref.value()` before accessing registry-entry methods.
+- `Registry.stream()` replaces the removed `Registry.holders()` iteration in the arithmetic engine path.
+- `RegistryAccess.lookupOrThrow(ResourceKey)` replaces `registryOrThrow`.
+- `SavedData` no longer exposes the old CompoundTag save/load override; 1.21.11 uses `SavedDataType(id, supplier, codec, dataFixType)` with `DimensionDataStorage.computeIfAbsent(type)` and `set(type, data)`.
+- `VillagerProfession` constants are `ResourceKey<VillagerProfession>`; registered values are obtained with `BuiltInRegistries.VILLAGER_PROFESSION.getValueOrThrow(key)`. `VillagerData` exposes holder-based record accessors/withers.
+- `TagValueOutput.createWithoutContext(ProblemReporter.DISCARDING)` bridges display-only entity serialization to `Entity.save(ValueOutput)`.
+- `DoubleTag.doubleValue()` replaces `getAsDouble()`.
+- `PermissionCheck.check(CommandSourceStack.permissions())` replaces `CommandSourceStack.hasPermission(...)` for command predicates.
+- `SoundEvent.location()` replaces `getLocation()`.
+- `BlockBehaviour.Properties.noCollision()` replaces the legacy misspelled `noCollission()`.
+- `MobEffects.SLOWNESS`, `HASTE`, and `STRENGTH` are the 1.21.11 holder names replacing the old movement/dig/damage constants.
+- `ItemPredicate.Builder.of(HolderGetter<Item>, ItemLike...)` and `.of(HolderGetter<Item>, TagKey<Item>)` are required by advancement datagen.
+- `RecipeBuilder.save(RecipeOutput, ResourceKey<Recipe<?>>)`, parameterless `RecipeProvider.buildRecipes()`, `this.output`, and `this.items` are required by recipe datagen.
+
+The checklist remains authoritative; these notes are supporting evidence only.

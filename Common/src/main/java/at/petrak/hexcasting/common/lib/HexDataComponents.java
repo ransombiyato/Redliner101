@@ -6,6 +6,7 @@ import at.petrak.hexcasting.api.casting.iota.IotaType;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.api.pigment.FrozenPigment;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ComponentSerialization;
@@ -60,7 +61,7 @@ public class HexDataComponents {
                     .build());
     public static final DataComponentType<Unit> SEALED_IOTA_HOLDER = register("sealed",
             DataComponentType.<Unit>builder()
-                    .persistent(Codec.unit(Unit.INSTANCE))
+                    .persistent(MapCodec.unit(Unit.INSTANCE).codec())
                     .networkSynchronized(StreamCodec.unit(Unit.INSTANCE))
                     .build());
     // TODO port: Data components must implement equals and hashCode. Keep in mind they must also be immutable

@@ -7,7 +7,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -20,6 +20,7 @@ import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.npc.villager.VillagerProfession;
 import net.minecraft.world.entity.npc.villager.VillagerType;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.TagValueOutput;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -68,29 +69,30 @@ public class VillagerIngredient extends BrainsweepeeIngredient {
 
         var data = villager.getVillagerData();
 
-        return (this.profession == null || this.profession.equals(data.getProfession()))
-            && (this.biome == null || this.biome.equals(data.getType()))
-            && this.minLevel <= data.getLevel();
+        return (this.profession == null || this.profession.equals(data.profession().value()))
+            && (this.biome == null || this.biome.equals(data.type().value()))
+            && this.minLevel <= data.level();
     }
 
     @Override
     public Entity exampleEntity(Level level) {
         var biome = Objects.requireNonNullElse(this.biome, VillagerType.PLAINS);
-        var profession = Objects.requireNonNullElse(this.profession, VillagerProfession.TOOLSMITH);
+        var profession = Objects.requireNonNullElse(
+            this.profession,
+            BuiltInRegistries.VILLAGER_PROFESSION.getValueOrThrow(VillagerProfession.TOOLSMITH));
         var tradeLevel = Math.min(this.minLevel, 1);
 
         var out = new Villager(EntityType.VILLAGER, level);
 
-        var data = out.getVillagerData();
-        data
-            .setProfession(profession)
-            .setType(biome)
-            .setLevel(tradeLevel);
+        var data = out.getVillagerData()
+            .withProfession(BuiltInRegistries.VILLAGER_PROFESSION.wrapAsHolder(profession))
+            .withType(BuiltInRegistries.VILLAGER_TYPE.wrapAsHolder(biome))
+            .withLevel(tradeLevel);
         out.setVillagerData(data);
 
         // just random bullshit go to try and get it to update for god's sake
-        var tag = new CompoundTag();
-        out.save(tag);
+        var output = TagValueOutput.createWithoutContext(ProblemReporter.DISCARDING);
+        out.save(output);
 
         return out;
     }

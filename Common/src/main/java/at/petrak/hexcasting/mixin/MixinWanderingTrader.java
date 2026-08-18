@@ -6,6 +6,7 @@ import at.petrak.hexcasting.common.lib.HexItems;
 import at.petrak.hexcasting.common.loot.AddPerWorldPatternToScrollFunc;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Unit;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.npc.wanderingtrader.WanderingTrader;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -27,9 +28,10 @@ public class MixinWanderingTrader {
         if (offerList == null)
             return;
         RandomSource rand = self.getRandom();
-        if (rand.nextFloat() < HexConfig.server().traderScrollChance() && self.getServer() != null) {
+        if (rand.nextFloat() < HexConfig.server().traderScrollChance()
+                && self.level() instanceof ServerLevel serverLevel) {
             ItemStack scroll = new ItemStack(HexItems.SCROLL_LARGE);
-            AddPerWorldPatternToScrollFunc.doStatic(scroll, rand, self.getServer().overworld());
+            AddPerWorldPatternToScrollFunc.doStatic(scroll, rand, serverLevel);
             scroll.set(HexDataComponents.NEEDS_PURCHASE, Unit.INSTANCE);
             offerList.set(5, new MerchantOffer(new ItemCost(Items.EMERALD, 12), scroll, 1, 1, 1));
         }

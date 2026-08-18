@@ -27,7 +27,7 @@ import java.util.List;
 public class ListPerWorldPatternsCommand {
     public static void add(LiteralArgumentBuilder<CommandSourceStack> cmd) {
         cmd.then(Commands.literal("perWorldPatterns")
-            .requires(dp -> dp.hasPermission(Commands.LEVEL_GAMEMASTERS))
+            .requires(dp -> Commands.LEVEL_GAMEMASTERS.check(dp.permissions()))
             .then(Commands.literal("list")
                 .executes(ctx -> list(ctx.getSource())))
             .then(Commands.literal("give")
@@ -66,7 +66,7 @@ public class ListPerWorldPatternsCommand {
         var keys = IXplatAbstractions.INSTANCE.getActionRegistry().registryKeySet();
         var listing = keys
             .stream()
-            .sorted((a, b) -> compareResLoc(a.location(), b.location()))
+            .sorted((a, b) -> compareResLoc(a.identifier(), b.identifier()))
             .toList();
 
         var ow = source.getLevel().getServer().overworld();
@@ -74,7 +74,7 @@ public class ListPerWorldPatternsCommand {
         for (var key : listing) {
             var pat = PatternRegistryManifest.getCanonicalStrokesPerWorld(key, ow);
 
-            source.sendSuccess(() -> Component.literal(key.location().toString())
+            source.sendSuccess(() -> Component.literal(key.identifier().toString())
                 .append(": ")
                 .append(new PatternIota(pat).display()), false);
         }
@@ -136,7 +136,7 @@ public class ListPerWorldPatternsCommand {
                 Component.translatable(
                     "command.hexcasting.pats.specific.success",
                     stack.getDisplayName(),
-                        actionKey.location(),
+                        actionKey.identifier(),
                     targets.size() == 1 ? targets.iterator().next().getDisplayName() : targets.size()),
                 true);
 

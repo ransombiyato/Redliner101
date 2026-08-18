@@ -57,7 +57,7 @@ public class CCFlight implements Component {
         tag.putBoolean(TAG_ALLOWED, this.flight != null);
         if (this.flight != null) {
             tag.putInt(TAG_TIME_LEFT, this.flight.timeLeft());
-            tag.putString(TAG_DIMENSION, this.flight.dimension().location().toString());
+            tag.putString(TAG_DIMENSION, this.flight.dimension().identifier().toString());
             tag.put(TAG_ORIGIN, HexUtils.serializeToNBT(this.flight.origin()));
             tag.putDouble(TAG_RADIUS, this.flight.radius());
         }

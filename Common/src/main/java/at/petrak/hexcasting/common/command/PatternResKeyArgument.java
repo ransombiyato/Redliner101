@@ -43,7 +43,7 @@ public class PatternResKeyArgument extends ResourceKeyArgument<ActionRegistryEnt
         var registry = IXplatAbstractions.INSTANCE.getActionRegistry();
         for (var key : registry.registryKeySet()) {
             if (HexUtils.isOfTag(registry, key, HexTags.Actions.PER_WORLD_PATTERN)) {
-                suggestions.add(key.location().toString());
+                suggestions.add(key.identifier().toString());
             }
         }
 
@@ -58,7 +58,7 @@ public class PatternResKeyArgument extends ResourceKeyArgument<ActionRegistryEnt
     ) throws CommandSyntaxException {
         ResourceKey<?> key = context.getArgument(argumentName, ResourceKey.class);
         Optional<ResourceKey<T>> optional = key.cast(registryKey);
-        return optional.orElseThrow(() -> exceptionType.create(key.location()));
+        return optional.orElseThrow(() -> exceptionType.create(key.identifier()));
     }
 
     public static ResourceKey<ActionRegistryEntry> getPatternKey(
@@ -71,7 +71,7 @@ public class PatternResKeyArgument extends ResourceKeyArgument<ActionRegistryEnt
         var targetKey = getPatternKey(ctx, argumentName);
         var foundPat = PatternRegistryManifest.getCanonicalStrokesPerWorld(targetKey, ctx.getSource().getServer().overworld());
         if (foundPat == null) {
-            throw ERROR_UNKNOWN_PATTERN.create(targetKey.location());
+            throw ERROR_UNKNOWN_PATTERN.create(targetKey.identifier());
         } else {
             return foundPat;
         }
