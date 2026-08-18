@@ -14,6 +14,14 @@ A truthful Android counterpart must begin with a **read-only structured inspecti
 
 The existing direct APK patcher remains useful only as the final packaging layer. It must receive an edited, validated GameMaker payload from the editor layer; it is not itself an UndertaleModTool replacement.
 
+## Implemented editor foundation
+
+DemiForge now includes a Kotlin implementation that validates the `FORM` container, indexes bounded chunks, previews `STRG` values, and enumerates the named entries in standard sprite, object, room, script, and code pointer-list chunks. The app performs this inspection against a copy of the selected APK asset and displays its actual chunk and resource names.
+
+The first write operation is intentionally narrow: a user can replace a `STRG` value only when its UTF-8 encoding is no longer than the original. The tool then writes the changed length and value in the existing byte region, clears remaining bytes, re-parses the draft, and reinserts that draft into a rebuilt APK fixture. Because no pointer or offset moves, this operation is structurally safer than a speculative serializer.
+
+This is **not yet sprite painting, code decompilation, or arbitrary GameMaker serialization**. Those require the real target payload and additional version-specific parsing before they can be claimed as supported.
+
 ## Current blockers
 
 The user has not uploaded the original Hadrian APK, so the actual Chapter 5 `game.droid` payload and its resource identifiers cannot yet be inspected. This must be obtained before claiming support for Kris sprites, Flowey assets, battle actions, or any particular GameMaker resource layout.

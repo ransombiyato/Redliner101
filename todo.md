@@ -55,6 +55,8 @@
 ## User-Requested Playable Mod
 
 - [x] Confirm the Chapter 5 scope: replace only Kris with Flowey-themed visuals and Kris-owned battle actions; leave the rest of the party unchanged.
+- [x] Confirm the requested mod concept, target chapter, and party scope without requiring further clarification.
+- [ ] Locate and inspect the Hadrian APK already supplied in this session; do not request it again.
 - [ ] Obtain the requested mod concept, target chapter, gameplay requirements, and original Hadrian APK.
 - [ ] Create the requested game content and Android-compatible replacement payload.
 - [ ] Build, sign, verify, and deliver the finished modded APK with save-safe installation steps.
@@ -68,3 +70,4 @@
 - [ ] Build a phone-usable editor interface that exposes actual game resources rather than arbitrary file replacement.
 - [ ] Validate the edited payload in a rebuilt, signed user-supplied APK and deliver the true editor/modded build.
 - [x] Implement a bounds-checked FORM chunk indexer and read-only STRG resource preview as the editor foundation.
+- [x] Implement and test same-or-shorter UTF-8 STRG edits that preserve GameMaker offsets and reinject the edited payload into a rebuilt APK fixture.

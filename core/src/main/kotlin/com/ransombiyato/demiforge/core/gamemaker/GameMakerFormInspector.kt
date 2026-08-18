@@ -57,7 +57,16 @@ data class GameMakerFormIndex(
 data class GameMakerStringEntry(
     val index: Int,
     val offset: Long,
+    val originalByteLength: Int,
     val content: String,
+)
+
+data class GameMakerNamedResource(
+    val chunkName: String,
+    val index: Int,
+    val offset: Long,
+    val nameStringOffset: Long,
+    val name: String?,
 )
 
 /**
@@ -133,14 +142,42 @@ object GameMakerFormInspector {
                 repeat(minOf(count.toInt(), maxEntries)) { entryIndex ->
                     val offset = unsignedLittleEndianInt(pointerTable, entryIndex * 4)
                     if (offset == 0L) return@repeat
-                    require(offset + 5 <= index.fileSize) { "STRG entry $entryIndex points outside the payload." }
-                    val length = unsignedLittleEndianInt(read(channel, offset, 4), 0)
-                    require(length <= MAX_STRING_BYTES) { "STRG entry $entryIndex is too large." }
-                    require(offset + 4 + length + 1 <= index.fileSize) { "STRG entry $entryIndex exceeds the payload." }
-                    val bytes = read(channel, offset + 4, length.toInt())
-                    val terminator = read(channel, offset + 4 + length, 1).get(0)
-                    require(terminator == 0.toByte()) { "STRG entry $entryIndex is not null terminated." }
-                    add(GameMakerStringEntry(entryIndex, offset, bytesToUtf8(bytes)))
+                    val value = readStringAt(channel, offset, index.fileSize, "STRG entry $entryIndex")
+                    add(GameMakerStringEntry(entryIndex, offset, value.byteLength, value.content))
+                }
+            }
+        }
+    }
+
+    /**
+     * Enumerates pointer-list resource names without assuming a particular Deltarune naming scheme.
+     * Supported chunks use the standard GameMaker named-resource layout with a string pointer first.
+     */
+    fun readNamedResources(
+        file: Path,
+        chunkName: String,
+        index: GameMakerFormIndex = inspect(file),
+        maxEntries: Int = 10_000,
+    ): List<GameMakerNamedResource> {
+        require(chunkName in setOf("SPRT", "OBJT", "ROOM", "SCPT", "CODE", "BGND", "FONT", "PATH", "SHDR", "TMLN")) {
+            "$chunkName is not a supported named-resource chunk."
+        }
+        require(maxEntries in 1..MAX_STRINGS) { "Resource preview limit is out of bounds." }
+        val chunk = index.requireChunk(chunkName)
+        require(chunk.payloadSize >= 4) { "$chunkName chunk is too short for a resource count." }
+        FileChannel.open(file, StandardOpenOption.READ).use { channel ->
+            val count = unsignedLittleEndianInt(read(channel, chunk.payloadOffset, 4), 0)
+            require(count <= MAX_STRINGS) { "$chunkName claims too many resources: $count." }
+            require(4L + count * 4L <= chunk.payloadSize) { "$chunkName pointer table exceeds its chunk boundary." }
+            val table = read(channel, chunk.payloadOffset + 4, (count * 4L).toInt())
+            return buildList {
+                repeat(minOf(count.toInt(), maxEntries)) { entryIndex ->
+                    val offset = unsignedLittleEndianInt(table, entryIndex * 4)
+                    if (offset == 0L) return@repeat
+                    require(offset + 4 <= index.fileSize) { "$chunkName resource #$entryIndex points outside the payload." }
+                    val nameOffset = unsignedLittleEndianInt(read(channel, offset, 4), 0)
+                    val name = if (nameOffset == 0L) null else readStringAt(channel, nameOffset, index.fileSize, "$chunkName resource #$entryIndex name").content
+                    add(GameMakerNamedResource(chunkName, entryIndex, offset, nameOffset, name))
                 }
             }
         }
@@ -158,6 +195,19 @@ object GameMakerFormInspector {
         buffer.get(bytes)
         return bytes.toString(Charsets.UTF_8)
     }
+
+    private fun readStringAt(channel: FileChannel, offset: Long, fileSize: Long, label: String): DecodedString {
+        require(offset + 5 <= fileSize) { "$label points outside the payload." }
+        val length = unsignedLittleEndianInt(read(channel, offset, 4), 0)
+        require(length <= MAX_STRING_BYTES) { "$label is too large." }
+        require(offset + 4 + length + 1 <= fileSize) { "$label exceeds the payload." }
+        val bytes = read(channel, offset + 4, length.toInt())
+        val terminator = read(channel, offset + 4 + length, 1).get(0)
+        require(terminator == 0.toByte()) { "$label is not null terminated." }
+        return DecodedString(length.toInt(), bytesToUtf8(bytes))
+    }
+
+    private data class DecodedString(val byteLength: Int, val content: String)
 
     private fun ascii(buffer: ByteBuffer, offset: Int): String = CharArray(4) { index -> buffer.get(offset + index).toInt().toChar() }.concatToString()
 

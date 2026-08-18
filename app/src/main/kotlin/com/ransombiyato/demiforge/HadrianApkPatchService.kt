@@ -8,6 +8,9 @@ import com.android.apksig.ApkSigner
 import com.android.apksig.ApkVerifier
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerChunk
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerFormInspector
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerNamedResource
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEdit
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEditor
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEntry
 import com.ransombiyato.demiforge.core.storage.ApkArchive
 import com.ransombiyato.demiforge.core.storage.ApkPayloadEntry
@@ -41,6 +44,8 @@ data class HadrianGameMakerInspection(
     val chunks: List<GameMakerChunk>,
     val stringCount: Int,
     val stringPreview: List<GameMakerStringEntry>,
+    val namedResources: Map<String, List<GameMakerNamedResource>>,
+    val resourcePreviewErrors: Map<String, String>,
 )
 
 /**
@@ -123,12 +128,44 @@ class HadrianApkPatchService(private val context: Context) {
         }
         val index = GameMakerFormInspector.inspect(extracted)
         val hasStrings = index.chunks.any { it.name == "STRG" }
+        val supportedNamedChunks = setOf("SPRT", "OBJT", "ROOM", "SCPT", "CODE", "BGND", "FONT", "PATH", "SHDR", "TMLN")
+        val namedResources = linkedMapOf<String, List<GameMakerNamedResource>>()
+        val resourcePreviewErrors = linkedMapOf<String, String>()
+        index.chunks.map { it.name }.distinct().filter { it in supportedNamedChunks }.forEach { chunkName ->
+            runCatching { GameMakerFormInspector.readNamedResources(extracted, chunkName, index, 40) }
+                .onSuccess { namedResources[chunkName] = it }
+                .onFailure { resourcePreviewErrors[chunkName] = it.message ?: "Could not index this resource chunk." }
+        }
         return HadrianGameMakerInspection(
             targetPath = targetPath,
             chunks = index.chunks,
             stringCount = if (hasStrings) GameMakerFormInspector.stringCount(extracted, index) else 0,
             stringPreview = if (hasStrings) GameMakerFormInspector.readStrings(extracted, index, previewLimit) else emptyList(),
+            namedResources = namedResources,
+            resourcePreviewErrors = resourcePreviewErrors,
         )
+    }
+
+    fun createStringEditDraft(selection: HadrianApkSelection, targetPath: String, edits: List<GameMakerStringEdit>): Path {
+        require(targetPath.lowercase().endsWith(".droid")) { "Only GameMaker .droid payloads can be string-edited." }
+        require(selection.payloads.any { it.path == targetPath }) { "Payload is not part of the selected APK." }
+        val source = extractPayload(selection, targetPath, "source")
+        val draft = root.resolve("drafts/${selection.id}-${targetPath.substringAfterLast('/').removeSuffix(".droid")}-strings.droid")
+        GameMakerStringEditor.applySameOrShorterEdits(source, draft, edits)
+        return draft
+    }
+
+    private fun extractPayload(selection: HadrianApkSelection, targetPath: String, folder: String): Path {
+        val extracted = root.resolve("$folder/${selection.id}-${targetPath.substringAfterLast('/')}")
+        Files.createDirectories(extracted.parent)
+        ZipFile(selection.originalBackup.toFile()).use { archive ->
+            val entry = requireNotNull(archive.getEntry(targetPath)) { "APK no longer contains $targetPath." }
+            require(!entry.isDirectory) { "Selected payload is a directory." }
+            archive.getInputStream(entry).use { input ->
+                Files.newOutputStream(extracted).use { output -> input.copyTo(output) }
+            }
+        }
+        return extracted
     }
 
     private fun signingKey(): PrivateKey = (keyStore().getKey(KEY_ALIAS, null) as? PrivateKey)

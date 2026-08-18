@@ -1,6 +1,7 @@
 package com.ransombiyato.demiforge
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
@@ -8,11 +9,13 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.core.content.FileProvider
 import com.ransombiyato.demiforge.core.gamemaker.GameMakerResourceCategory
+import com.ransombiyato.demiforge.core.gamemaker.GameMakerStringEdit
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -36,6 +39,7 @@ class HadrianApkActivity : Activity() {
     private var patched: HadrianPatchedApk? = null
     private var inspection: HadrianGameMakerInspection? = null
     private val replacements = linkedMapOf<String, Path>()
+    private val stringEdits = linkedMapOf<String, LinkedHashMap<Int, String>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +62,7 @@ class HadrianApkActivity : Activity() {
                     replacements.clear()
                     patched = null
                     inspection = null
+                    stringEdits.clear()
                 }
                 PICK_REPLACEMENT -> {
                     val target = requireNotNull(pendingTarget) { "No APK target was selected." }
@@ -77,7 +82,7 @@ class HadrianApkActivity : Activity() {
         setBackgroundColor(backgroundColor)
         setPadding(dp(16), dp(12), dp(16), dp(12))
         addView(TextView(this@HadrianApkActivity).apply {
-            this.text = "DEMI FORGE · APK PATCHER"
+            this.text = "DEMI FORGE · GAME DATA EDITOR"
             setTextColor(primary)
             textSize = 19f
             setTypeface(null, 1)
@@ -136,9 +141,30 @@ class HadrianApkActivity : Activity() {
                 result.stringPreview.forEach { string ->
                     content.addView(card().apply {
                         addView(line("#${string.index}", "byte ${string.offset}"))
-                        addView(body(string.content.take(600)))
+                        val draft = stringEdits[result.targetPath]?.get(string.index)
+                        addView(body((draft ?: string.content).take(600)))
+                        addView(secondaryButton(if (draft == null) "Edit this string" else "Edit draft string") {
+                            editString(result, string.index, draft ?: string.content)
+                        })
                     })
                 }
+            }
+            if (result.namedResources.isNotEmpty()) {
+                content.addView(body("Named GameMaker resources (first 40 per chunk)"))
+                result.namedResources.forEach { (chunk, resources) ->
+                    content.addView(card().apply {
+                        addView(line(chunk, "${resources.size} indexed"))
+                        addView(body(resources.joinToString("\n") { resource -> "#${resource.index}  ${resource.name ?: "<unnamed>"}" }))
+                    })
+                }
+            }
+            if (result.resourcePreviewErrors.isNotEmpty()) {
+                content.addView(warningCard(result.resourcePreviewErrors.entries.joinToString("\n") { (chunk, error) -> "$chunk: $error" }))
+            }
+            val edits = stringEdits[result.targetPath].orEmpty()
+            if (edits.isNotEmpty()) {
+                content.addView(primaryButton("Prepare ${edits.size} string edit(s) for APK") { prepareStringDraft(result.targetPath, edits) })
+                content.addView(warningCard("String edits are deliberately limited to the original UTF-8 byte length. This preserves every existing GameMaker offset; longer text requires a complete version-aware serializer."))
             }
         }
         if (replacements.isNotEmpty()) {
@@ -158,6 +184,7 @@ class HadrianApkActivity : Activity() {
             replacements.clear()
             patched = null
             inspection = null
+            stringEdits.clear()
             render()
         })
     }
@@ -194,6 +221,41 @@ class HadrianApkActivity : Activity() {
             render()
         } catch (exception: Exception) {
             showError("Could not parse $targetPath as GameMaker data: ${exception.message}")
+        }
+    }
+
+    private fun editString(result: HadrianGameMakerInspection, index: Int, original: String) {
+        val input = EditText(this).apply {
+            setText(original)
+            setSelectAllOnFocus(false)
+            minLines = 3
+            maxLines = 10
+        }
+        AlertDialog.Builder(this)
+            .setTitle("Edit GameMaker string #$index")
+            .setMessage("The replacement must not use more UTF-8 bytes than the original. This keeps the payload’s internal offsets unchanged.")
+            .setView(input)
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton("Save draft") { _, _ ->
+                stringEdits.getOrPut(result.targetPath) { linkedMapOf() }[index] = input.text.toString()
+                patched = null
+                render()
+            }
+            .show()
+    }
+
+    private fun prepareStringDraft(targetPath: String, edits: Map<Int, String>) {
+        try {
+            val draft = patcher.createStringEditDraft(
+                requireNotNull(selection),
+                targetPath,
+                edits.map { (index, replacement) -> GameMakerStringEdit(index, replacement) },
+            )
+            replacements[targetPath] = draft
+            patched = null
+            render()
+        } catch (exception: Exception) {
+            showError("The original APK was not changed. ${exception.message}")
         }
     }
 
