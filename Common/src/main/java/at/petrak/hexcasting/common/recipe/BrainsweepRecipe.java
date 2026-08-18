@@ -16,6 +16,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeInput;
+import net.minecraft.world.item.crafting.PlacementInfo;
 import net.minecraft.world.item.crafting.RecipeBookCategories;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -40,6 +41,11 @@ public record BrainsweepRecipe(
 	public RecipeType<?> getType() {
 		return HexRecipeStuffRegistry.BRAINSWEEP_TYPE;
 	}
+
+    @Override
+    public PlacementInfo placementInfo() {
+        return PlacementInfo.NOT_PLACEABLE;
+    }
 
     @Override
     public net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory() {
