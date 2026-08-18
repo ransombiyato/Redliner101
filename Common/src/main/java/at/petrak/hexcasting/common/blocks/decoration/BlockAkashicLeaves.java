@@ -14,7 +14,7 @@ public class BlockAkashicLeaves extends LeavesBlock {
     public static final MapCodec<BlockAkashicLeaves> CODEC = simpleCodec(BlockAkashicLeaves::new);
 
     @Override
-    protected MapCodec<? extends LeavesBlock> codec() {
+    public MapCodec<? extends LeavesBlock> codec() {
         return CODEC;
     }
 

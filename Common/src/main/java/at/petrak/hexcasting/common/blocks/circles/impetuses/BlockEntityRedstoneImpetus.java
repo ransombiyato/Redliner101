@@ -113,7 +113,7 @@ public class BlockEntityRedstoneImpetus extends BlockEntityAbstractImpetus {
                 cachedDisplayStack = head;
             }
             lines.add(new Pair<>(cachedDisplayStack,
-                Component.translatable("hexcasting.tooltip.lens.impetus.redstone.bound", plProfile.getName())));
+                Component.translatable("hexcasting.tooltip.lens.impetus.redstone.bound", plProfile.name())));
         } else {
             lines.add(new Pair<>(new ItemStack(Items.BARRIER),
                 Component.translatable("hexcasting.tooltip.lens.impetus.redstone.bound.none")));

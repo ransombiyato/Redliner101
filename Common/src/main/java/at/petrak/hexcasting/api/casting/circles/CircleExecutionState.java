@@ -152,22 +152,22 @@ public class CircleExecutionState {
     public CompoundTag save() {
         var out = new CompoundTag();
 
-        out.put(TAG_IMPETUS_POS, NbtUtils.writeBlockPos(this.impetusPos));
+        out.put(TAG_IMPETUS_POS, writeBlockPos(this.impetusPos));
         out.putByte(TAG_IMPETUS_DIR, (byte) this.impetusDir.ordinal());
 
         var knownTag = new ListTag();
         for (var bp : this.knownPositions) {
-            knownTag.add(NbtUtils.writeBlockPos(bp));
+            knownTag.add(writeBlockPos(bp));
         }
         out.put(TAG_KNOWN_POSITIONS, knownTag);
 
         var reachedTag = new ListTag();
         for (var bp : this.reachedPositions) {
-            reachedTag.add(NbtUtils.writeBlockPos(bp));
+            reachedTag.add(writeBlockPos(bp));
         }
         out.put(TAG_REACHED_POSITIONS, reachedTag);
 
-        out.put(TAG_CURRENT_POS, NbtUtils.writeBlockPos(this.currentPos));
+        out.put(TAG_CURRENT_POS, writeBlockPos(this.currentPos));
         out.putByte(TAG_ENTERED_FROM, (byte) this.enteredFrom.ordinal());
         out.put(TAG_IMAGE, CastingImage.getCODEC().encodeStart(NbtOps.INSTANCE, currentImage).getOrThrow());
 
@@ -212,6 +212,10 @@ public class CircleExecutionState {
 
         return new CircleExecutionState(startPos, startDir, knownPositions, reachedPositions, currentPos,
             enteredFrom, image, caster, pigment);
+    }
+
+    private static IntArrayTag writeBlockPos(BlockPos pos) {
+        return new IntArrayTag(new int[]{pos.getX(), pos.getY(), pos.getZ()});
     }
 
     private static Optional<BlockPos> readBlockPos(CompoundTag nbt, String key) {
