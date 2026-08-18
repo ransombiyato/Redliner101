@@ -7,7 +7,7 @@ import net.minecraft.advancements.critereon.ContextAwarePredicate;
 import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Optional;
@@ -16,7 +16,7 @@ import java.util.Optional;
 // https://github.com/VazkiiMods/Botania/blob/b8706e2e0bba20f67f1e103559a4ce39d63d48f9/src/main/java/vazkii/botania/common/advancements/CorporeaRequestTrigger.java
 
 public class OvercastTrigger extends SimpleCriterionTrigger<OvercastTrigger.Instance> {
-    private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath("hexcasting", "overcast");
+    private static final Identifier ID = Identifier.fromNamespaceAndPath("hexcasting", "overcast");
 
     @Override
     public Codec<Instance> codec() {

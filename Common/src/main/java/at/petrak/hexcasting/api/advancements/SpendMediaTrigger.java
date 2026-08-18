@@ -5,13 +5,13 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.critereon.ContextAwarePredicate;
 import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Optional;
 
 public class SpendMediaTrigger extends SimpleCriterionTrigger<SpendMediaTrigger.Instance> {
-    private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath("hexcasting", "spend_media");
+    private static final Identifier ID = Identifier.fromNamespaceAndPath("hexcasting", "spend_media");
 
     @Override
     public Codec<Instance> codec() {

@@ -62,7 +62,7 @@ import net.minecraft.commands.synchronization.SingletonArgumentInfo
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceKey
-import net.minecraft.resources.ResourceLocation
+import net.minecraft.resources.Identifier
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.player.Player
@@ -82,7 +82,7 @@ object FabricHexInitializer : ModInitializer {
     override fun onInitialize() {
         this.CONFIG = FabricHexConfig.setup()
         // workaround for Inline EntTypeCradles not being available on server, related to https://github.com/SamsTheNerd/inline/issues/34
-        EntTypeCradle.fromTypeId(ResourceLocation.fromNamespaceAndPath("minecraft", "pig")).get().getType();
+        EntTypeCradle.fromTypeId(Identifier.fromNamespaceAndPath("minecraft", "pig")).get().getType();
         FabricPacketHandler.initPackets()
         FabricPacketHandler.init()
 
@@ -158,7 +158,7 @@ object FabricHexInitializer : ModInitializer {
                     HexTags.Actions.PER_WORLD_PATTERN
                 )
             ) keyList.add(key)
-            keyList.sortWith(Comparator.comparing<ResourceKey<ActionRegistryEntry>, ResourceLocation>(Function { obj: ResourceKey<ActionRegistryEntry> -> obj.location() }))
+            keyList.sortWith(Comparator.comparing<ResourceKey<ActionRegistryEntry>, Identifier>(Function { obj: ResourceKey<ActionRegistryEntry> -> obj.location() }))
             for (key in keyList) {
                 r.accept(
                     ItemScroll.withPerWorldPattern(
@@ -295,7 +295,7 @@ object FabricHexInitializer : ModInitializer {
 
     private val itemsToAddToCreativeTab : MutableSet<Item> = mutableSetOf()
 
-	private val boundForItem : BiConsumer<Item, ResourceLocation> = BiConsumer {
+	private val boundForItem : BiConsumer<Item, Identifier> = BiConsumer {
         t, id -> this.itemsToAddToCreativeTab.add(t)
         Registry.register(BuiltInRegistries.ITEM, id, t)
     }
@@ -349,6 +349,6 @@ object FabricHexInitializer : ModInitializer {
         }
     }
 
-    private fun <T> bind(registry: Registry<in T>): BiConsumer<T, ResourceLocation> =
-        BiConsumer<T, ResourceLocation> { t, id -> Registry.register(registry, id, t) }
+    private fun <T> bind(registry: Registry<in T>): BiConsumer<T, Identifier> =
+        BiConsumer<T, Identifier> { t, id -> Registry.register(registry, id, t) }
 }

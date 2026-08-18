@@ -5,13 +5,13 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.critereon.ContextAwarePredicate;
 import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Optional;
 
 public class FailToCastGreatSpellTrigger extends SimpleCriterionTrigger<FailToCastGreatSpellTrigger.Instance> {
-    private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath("hexcasting", "fail_to_cast_great_spell");
+    private static final Identifier ID = Identifier.fromNamespaceAndPath("hexcasting", "fail_to_cast_great_spell");
 
     @Override
     public Codec<Instance> codec() {

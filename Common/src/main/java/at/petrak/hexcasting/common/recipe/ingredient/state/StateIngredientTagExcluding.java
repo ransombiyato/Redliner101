@@ -7,7 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -101,7 +101,7 @@ public class StateIngredientTagExcluding extends StateIngredientTag {
                 HexStateIngredients.TYPED_CODEC.listOf().fieldOf("excludes").forGetter(StateIngredientTagExcluding::getExcludes)
         ).apply(instance, StateIngredientTagExcluding::new));
         public static final StreamCodec<RegistryFriendlyByteBuf, StateIngredientTagExcluding> STREAM_CODEC = StreamCodec.composite(
-                ResourceLocation.STREAM_CODEC.map(id -> TagKey.create(Registries.BLOCK, id), TagKey::location), StateIngredientTagExcluding::getTag,
+                Identifier.STREAM_CODEC.map(id -> TagKey.create(Registries.BLOCK, id), TagKey::location), StateIngredientTagExcluding::getTag,
                 HexStateIngredients.TYPED_STREAM_CODEC.apply(ByteBufCodecs.list()), StateIngredientTagExcluding::getExcludes,
                 StateIngredientTagExcluding::new
         );

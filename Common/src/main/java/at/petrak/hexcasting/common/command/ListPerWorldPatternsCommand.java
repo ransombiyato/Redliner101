@@ -17,7 +17,7 @@ import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 
@@ -154,7 +154,7 @@ public class ListPerWorldPatternsCommand {
         }
     }
 
-    private static int compareResLoc(ResourceLocation a, ResourceLocation b) {
+    private static int compareResLoc(Identifier a, Identifier b) {
         var ns = a.getNamespace().compareTo(b.getNamespace());
         if (ns != 0) {
             return ns;

@@ -14,7 +14,7 @@ import at.petrak.hexcasting.common.lib.HexAttributes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -186,7 +186,7 @@ public abstract class CastingEnvironment {
     public void precheckAction(PatternShapeMatch match) throws Mishap {
         // TODO: this doesn't let you select special handlers.
         // Might be worth making a "no casting" tag on each thing
-        ResourceLocation key = actionKey(match);
+        Identifier key = actionKey(match);
 
         if (!HexConfig.server().isActionAllowed(key)) {
             throw new MishapDisallowedSpell("disallowed", key);
@@ -194,8 +194,8 @@ public abstract class CastingEnvironment {
     }
 
     @Nullable
-    protected ResourceLocation actionKey(PatternShapeMatch match) {
-        ResourceLocation key;
+    protected Identifier actionKey(PatternShapeMatch match) {
+        Identifier key;
         if (match instanceof PatternShapeMatch.Normal normal) {
             key = normal.key.location();
         } else if (match instanceof PatternShapeMatch.PerWorld perWorld) {

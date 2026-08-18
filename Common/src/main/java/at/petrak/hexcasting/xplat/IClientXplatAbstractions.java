@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.item.ItemPropertyFunction;
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
@@ -27,7 +27,7 @@ public interface IClientXplatAbstractions {
 
     <T extends Entity> void registerEntityRenderer(EntityType<? extends T> type, EntityRendererProvider<T> renderer);
 
-    void registerItemProperty(Item item, ResourceLocation id, ItemPropertyFunction func);
+    void registerItemProperty(Item item, Identifier id, ItemPropertyFunction func);
 
     ClientCastingStack getClientCastingStack(Player player);
 
@@ -41,7 +41,7 @@ public interface IClientXplatAbstractions {
     IClientXplatAbstractions INSTANCE = find();
     /**
      * Returns a block model variant string, either INVENTORY_VARIANT or STANDALONE_VARIANT depending on the mod loader.
-     * Used for ModelResourceLocations.
+     * Used for ModelIdentifiers.
      * On Fabric, the STANDALONE_VARIANT does not exist, so we grab the INVENTORY_VARIANT instead.
      */
     String getModelLocVariant();

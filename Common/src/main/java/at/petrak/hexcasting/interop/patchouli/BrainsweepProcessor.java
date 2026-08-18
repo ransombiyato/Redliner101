@@ -7,7 +7,7 @@ import at.petrak.hexcasting.common.recipe.HexRecipeStuffRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -27,7 +27,7 @@ public class BrainsweepProcessor implements IComponentProcessor {
 
 	@Override
 	public void setup(Level level, IVariableProvider vars) {
-		var id = ResourceLocation.parse(vars.get("recipe", level.registryAccess()).asString());
+		var id = Identifier.parse(vars.get("recipe", level.registryAccess()).asString());
 
 		var recman = level.getRecipeManager();
 		var brainsweepings = recman.getAllRecipesFor(HexRecipeStuffRegistry.BRAINSWEEP_TYPE);

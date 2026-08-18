@@ -16,7 +16,7 @@ import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
 import net.minecraft.network.chat.Style
 import net.minecraft.resources.ResourceKey
-import net.minecraft.resources.ResourceLocation
+import net.minecraft.resources.Identifier
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.tags.TagKey
 import net.minecraft.world.InteractionHand
@@ -303,7 +303,7 @@ fun <T> isOfTag(registry: Registry<T>, key: ResourceKey<T>, tag: TagKey<T>): Boo
     return holder.`is`(tag)
 }
 
-fun <T> isOfTag(registry: Registry<T>, loc: ResourceLocation, tag: TagKey<T>): Boolean {
+fun <T> isOfTag(registry: Registry<T>, loc: Identifier, tag: TagKey<T>): Boolean {
     val key = ResourceKey.create(registry.key(), loc);
     return isOfTag(registry, key, tag)
 }

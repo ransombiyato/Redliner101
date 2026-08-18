@@ -16,7 +16,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -45,7 +45,7 @@ import static at.petrak.hexcasting.api.HexAPI.modLoc;
  * (none): "Empty Scroll"
  */
 public class ItemScroll extends Item implements IotaHolderItem {
-    public static final ResourceLocation ANCIENT_PREDICATE = modLoc("ancient");
+    public static final Identifier ANCIENT_PREDICATE = modLoc("ancient");
 
     public final int blockSize;
 

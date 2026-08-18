@@ -12,7 +12,7 @@ import net.minecraft.nbt.Tag
 import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.network.codec.StreamCodec
-import net.minecraft.resources.ResourceLocation
+import net.minecraft.resources.Identifier
 import net.minecraft.server.level.ServerLevel
 
 /**
@@ -95,7 +95,7 @@ interface ContinuationFrame {
 
             val typeKey = tag.getString(HexContinuationTypes.KEY_TYPE)
 
-            val typeLoc = ResourceLocation.tryParse(typeKey)
+            val typeLoc = Identifier.tryParse(typeKey)
                 ?: return null
 
             return HexContinuationTypes.REGISTRY[typeLoc]

@@ -3,7 +3,7 @@ package at.petrak.hexcasting.common.lib;
 import at.petrak.hexcasting.common.loot.AddHexToAncientCypherFunc;
 import at.petrak.hexcasting.common.loot.AddPerWorldPatternToScrollFunc;
 import at.petrak.hexcasting.common.loot.AmethystReducerFunc;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.storage.loot.functions.LootItemConditionalFunction;
 import net.minecraft.world.level.storage.loot.functions.LootItemFunctionType;
 
@@ -14,13 +14,13 @@ import java.util.function.BiConsumer;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class HexLootFunctions {
-    public static void registerSerializers(BiConsumer<LootItemFunctionType<?>, ResourceLocation> r) {
+    public static void registerSerializers(BiConsumer<LootItemFunctionType<?>, Identifier> r) {
         for (var e : LOOT_FUNCS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
     }
 
-    private static final Map<ResourceLocation, LootItemFunctionType<?>> LOOT_FUNCS = new LinkedHashMap<>();
+    private static final Map<Identifier, LootItemFunctionType<?>> LOOT_FUNCS = new LinkedHashMap<>();
 
     public static final LootItemFunctionType<? extends LootItemConditionalFunction> PATTERN_SCROLL = register("pattern_scroll",
         new LootItemFunctionType<>(AddPerWorldPatternToScrollFunc.CODEC));

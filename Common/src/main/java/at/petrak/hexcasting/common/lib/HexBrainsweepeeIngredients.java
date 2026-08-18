@@ -9,7 +9,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
@@ -80,7 +80,7 @@ public class HexBrainsweepeeIngredients {
         }
     };
 
-    public static void register(BiConsumer<BrainsweepeeIngredientType<?>, ResourceLocation> r) {
+    public static void register(BiConsumer<BrainsweepeeIngredientType<?>, Identifier> r) {
         r.accept(NONE_TYPE, HexAPI.modLoc("none"));
         r.accept(ENTITY_TYPE, HexAPI.modLoc("entity_type"));
         r.accept(TAG, HexAPI.modLoc("entity_tag"));

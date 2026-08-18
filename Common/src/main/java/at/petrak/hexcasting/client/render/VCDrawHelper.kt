@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.LightTexture
 import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.client.renderer.texture.OverlayTexture
-import net.minecraft.resources.ResourceLocation
+import net.minecraft.resources.Identifier
 import net.minecraft.world.phys.Vec2
 import net.minecraft.world.phys.Vec3
 import org.joml.Matrix4f
@@ -30,10 +30,10 @@ interface VCDrawHelper {
     companion object {
 
         @JvmStatic
-        val WHITE: ResourceLocation = HexAPI.modLoc("textures/entity/white.png")
+        val WHITE: Identifier = HexAPI.modLoc("textures/entity/white.png")
 
         @JvmStatic
-        fun getHelper(worldlyBits: WorldlyBits?, ps: PoseStack, z: Float, texture: ResourceLocation) : VCDrawHelper {
+        fun getHelper(worldlyBits: WorldlyBits?, ps: PoseStack, z: Float, texture: Identifier) : VCDrawHelper {
             if(worldlyBits != null){
                 return Worldly(worldlyBits, ps, z * -1, texture)
             }
@@ -46,7 +46,7 @@ interface VCDrawHelper {
         }
     }
 
-    class Basic(val z: Float, val texture: ResourceLocation = WHITE) : VCDrawHelper {
+    class Basic(val z: Float, val texture: Identifier = WHITE) : VCDrawHelper {
 
         override fun vcSetupAndSupply(vertMode: VertexFormat.Mode): VertexConsumer {
             val tess = Tesselator.getInstance()
@@ -69,7 +69,7 @@ interface VCDrawHelper {
         }
     }
 
-    class Worldly(val worldlyBits: WorldlyBits, val ps: PoseStack, val z: Float, val texture: ResourceLocation) : VCDrawHelper {
+    class Worldly(val worldlyBits: WorldlyBits, val ps: PoseStack, val z: Float, val texture: Identifier) : VCDrawHelper {
 
         var lastVertMode: VertexFormat.Mode ?= null // i guess this assumes that the vcHelper is only used once at a time? maybe reconsider that
 

@@ -9,7 +9,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -21,7 +21,7 @@ import java.util.List;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class FabricUnsealedIngredient extends Ingredient implements CustomIngredient {
-    public static final ResourceLocation ID = modLoc("unsealed");
+    public static final Identifier ID = modLoc("unsealed");
 
     private final ItemStack stack;
 
@@ -30,7 +30,7 @@ public class FabricUnsealedIngredient extends Ingredient implements CustomIngred
     ).apply(instance, FabricUnsealedIngredient::new));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, FabricUnsealedIngredient> STREAM_CODEC = StreamCodec.composite(
-            ResourceLocation.STREAM_CODEC, FabricUnsealedIngredient::getId,
+            Identifier.STREAM_CODEC, FabricUnsealedIngredient::getId,
             ItemStack.STREAM_CODEC, FabricUnsealedIngredient::getStack,
             (a, b) -> new FabricUnsealedIngredient(b)
     );
@@ -52,7 +52,7 @@ public class FabricUnsealedIngredient extends Ingredient implements CustomIngred
         return stack;
     }
 
-    public ResourceLocation getId() {
+    public Identifier getId() {
         return ID;
     }
 
@@ -91,7 +91,7 @@ public class FabricUnsealedIngredient extends Ingredient implements CustomIngred
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
-        public ResourceLocation getIdentifier() {
+        public Identifier getIdentifier() {
             return FabricUnsealedIngredient.ID;
         }
 

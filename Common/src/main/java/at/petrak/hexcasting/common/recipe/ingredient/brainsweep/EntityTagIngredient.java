@@ -10,7 +10,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
@@ -42,7 +42,7 @@ public class EntityTagIngredient extends BrainsweepeeIngredient {
         return entity.getType().is(this.entityTypeTag);
     }
 
-    private static String tagKey(ResourceLocation tagLoc) {
+    private static String tagKey(Identifier tagLoc) {
         return "tag."
             + tagLoc.getNamespace()
             + "."
@@ -60,7 +60,7 @@ public class EntityTagIngredient extends BrainsweepeeIngredient {
 
     @Override
     public List<Component> getTooltip(boolean advanced) {
-        ResourceLocation loc = this.entityTypeTag.location();
+        Identifier loc = this.entityTypeTag.location();
         String key = tagKey(loc);
         boolean moddersDidAGoodJob = I18n.exists(key);
 
@@ -116,7 +116,7 @@ public class EntityTagIngredient extends BrainsweepeeIngredient {
                 TagKey.hashedCodec(Registries.ENTITY_TYPE).fieldOf("tag").forGetter(EntityTagIngredient::getTag)
         ).apply(instance, EntityTagIngredient::new));
         public static final StreamCodec<RegistryFriendlyByteBuf, EntityTagIngredient> STREAM_CODEC = StreamCodec.composite(
-                ResourceLocation.STREAM_CODEC.map(id -> TagKey.create(Registries.ENTITY_TYPE, id), TagKey::location), EntityTagIngredient::getTag,
+                Identifier.STREAM_CODEC.map(id -> TagKey.create(Registries.ENTITY_TYPE, id), TagKey::location), EntityTagIngredient::getTag,
                 EntityTagIngredient::new
         );
 

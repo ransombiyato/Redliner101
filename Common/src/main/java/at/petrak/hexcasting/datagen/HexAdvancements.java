@@ -12,7 +12,7 @@ import net.minecraft.advancements.*;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
@@ -43,7 +43,7 @@ public class HexAdvancements extends PaucalAdvancementSubProvider {
             .display(new DisplayInfo(new ItemStack(Items.BUDDING_AMETHYST),
                 Component.translatable("advancement.hexcasting:root"),
                 Component.translatable("advancement.hexcasting:root.desc"),
-                Optional.of(ResourceLocation.withDefaultNamespace("textures/block/calcite.png")),
+                Optional.of(Identifier.withDefaultNamespace("textures/block/calcite.png")),
                 AdvancementType.TASK, true, true, true))
             // the only thing making this vaguely tolerable is the knowledge the json files are worse somehow
             .addCriterion("has_charged_amethyst", InventoryChangeTrigger.TriggerInstance.hasItems(
@@ -55,7 +55,7 @@ public class HexAdvancements extends PaucalAdvancementSubProvider {
             .display(new DisplayInfo(new ItemStack(HexItems.CREATIVE_UNLOCKER),
                 Component.translatable("advancement.hexcasting:creative_unlocker"),
                 Component.translatable("advancement.hexcasting:creative_unlocker.desc"),
-                Optional.of(ResourceLocation.withDefaultNamespace("textures/block/calcite.png")),
+                Optional.of(Identifier.withDefaultNamespace("textures/block/calcite.png")),
                     AdvancementType.TASK, true, false, true))
             .parent(root)
             .addCriterion("has_creative_unlocker", InventoryChangeTrigger.TriggerInstance.hasItems(

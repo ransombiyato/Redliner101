@@ -18,7 +18,7 @@ import at.petrak.hexcasting.common.blocks.circles.impetuses.BlockRedstoneImpetus
 import at.petrak.hexcasting.common.blocks.circles.impetuses.BlockRightClickImpetus;
 import at.petrak.hexcasting.common.blocks.decoration.*;
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
@@ -41,13 +41,13 @@ import java.util.function.Consumer;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class HexBlocks {
-    public static void registerBlocks(BiConsumer<Block, ResourceLocation> r) {
+    public static void registerBlocks(BiConsumer<Block, Identifier> r) {
         for (var e : BLOCKS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
     }
 
-    public static void registerBlockItems(BiConsumer<Item, ResourceLocation> r) {
+    public static void registerBlockItems(BiConsumer<Item, Identifier> r) {
         for (var e : BLOCK_ITEMS.entrySet()) {
             r.accept(new BlockItem(e.getValue().getFirst(), e.getValue().getSecond()), e.getKey());
         }
@@ -59,8 +59,8 @@ public class HexBlocks {
         }
     }
 
-    private static final Map<ResourceLocation, Block> BLOCKS = new LinkedHashMap<>();
-    private static final Map<ResourceLocation, Pair<Block, Item.Properties>> BLOCK_ITEMS = new LinkedHashMap<>();
+    private static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
+    private static final Map<Identifier, Pair<Block, Item.Properties>> BLOCK_ITEMS = new LinkedHashMap<>();
     private static final Map<CreativeModeTab, List<Block>> BLOCK_TABS = new LinkedHashMap<>();
 
 

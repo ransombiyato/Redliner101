@@ -4,9 +4,9 @@ import at.petrak.hexcasting.api.casting.castables.ConstMediaAction
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.iota.Iota
 import it.unimi.dsi.fastutil.booleans.BooleanList
-import net.minecraft.resources.ResourceLocation
+import net.minecraft.resources.Identifier
 
-class OpMask(val mask: BooleanList, val key: ResourceLocation) : ConstMediaAction {
+class OpMask(val mask: BooleanList, val key: Identifier) : ConstMediaAction {
     override val argc: Int
         get() = mask.size
 

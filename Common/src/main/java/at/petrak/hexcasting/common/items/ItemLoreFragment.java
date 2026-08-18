@@ -4,7 +4,7 @@ import at.petrak.hexcasting.common.lib.HexSounds;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -22,7 +22,7 @@ import java.util.List;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class ItemLoreFragment extends Item {
-    public static final List<ResourceLocation> NAMES = List.of(new ResourceLocation[]{
+    public static final List<Identifier> NAMES = List.of(new Identifier[]{
         modLoc("lore/cardamom1"),
         modLoc("lore/cardamom2"),
         modLoc("lore/cardamom3"),

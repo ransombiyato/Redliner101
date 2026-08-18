@@ -56,7 +56,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
@@ -368,12 +368,12 @@ public class FabricXplatImpl implements IXplatAbstractions {
     private static final IXplatTags TAGS = new IXplatTags() {
         @Override
         public TagKey<Item> amethystDust() {
-            return HexTags.Items.create(ResourceLocation.fromNamespaceAndPath("c", "amethyst_dusts"));
+            return HexTags.Items.create(Identifier.fromNamespaceAndPath("c", "amethyst_dusts"));
         }
 
         @Override
         public TagKey<Item> gems() {
-            return HexTags.Items.create(ResourceLocation.fromNamespaceAndPath("c", "gems"));
+            return HexTags.Items.create(Identifier.fromNamespaceAndPath("c", "gems"));
         }
     };
 
@@ -387,7 +387,7 @@ public class FabricXplatImpl implements IXplatAbstractions {
         return AnyOfCondition.anyOf(
             MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS)),
             MatchTool.toolMatches(ItemPredicate.Builder.item().of(
-                HexTags.Items.create(ResourceLocation.fromNamespaceAndPath("c", "shears"))))
+                HexTags.Items.create(Identifier.fromNamespaceAndPath("c", "shears"))))
         );
     }
 

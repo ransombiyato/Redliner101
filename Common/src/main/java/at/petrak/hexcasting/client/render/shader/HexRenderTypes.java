@@ -6,7 +6,7 @@ import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.function.Function;
 
@@ -24,7 +24,7 @@ public final class HexRenderTypes extends RenderType {
         return AccessorRenderType.hex$create(name, format, mode, bufSize, hasCrumbling, sortOnUpload, glState);
     }
 
-    private static final Function<ResourceLocation, RenderType> GRAYSCALE_PROVIDER = Util.memoize(texture -> {
+    private static final Function<Identifier, RenderType> GRAYSCALE_PROVIDER = Util.memoize(texture -> {
         CompositeState glState = RenderType.CompositeState.builder()
             .setShaderState(new ShaderStateShard(HexShaders::grayscale))
             .setTextureState(new TextureStateShard(texture, false, false))
@@ -38,7 +38,7 @@ public final class HexRenderTypes extends RenderType {
             true, false, glState);
     });
 
-    public static RenderType getGrayscaleLayer(ResourceLocation texture) {
+    public static RenderType getGrayscaleLayer(Identifier texture) {
         return GRAYSCALE_PROVIDER.apply(texture);
     }
 

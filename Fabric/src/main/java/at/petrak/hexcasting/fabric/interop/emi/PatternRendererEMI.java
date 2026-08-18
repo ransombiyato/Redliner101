@@ -12,7 +12,7 @@ import at.petrak.hexcasting.client.render.PatternSettings.ZappySettings;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import dev.emi.emi.api.render.EmiRenderable;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class PatternRendererEMI implements EmiRenderable {
 
@@ -27,7 +27,7 @@ public class PatternRendererEMI implements EmiRenderable {
     private final HexPattern pat;
     private PatternSettings patSets;
 
-    public PatternRendererEMI(ResourceLocation pattern, int w, int h) {
+    public PatternRendererEMI(Identifier pattern, int w, int h) {
         var regi = IXplatAbstractions.INSTANCE.getActionRegistry();
         var entry = regi.get(pattern);
         this.strokeOrder = HexUtils.isOfTag(regi, pattern, HexTags.Actions.PER_WORLD_PATTERN);

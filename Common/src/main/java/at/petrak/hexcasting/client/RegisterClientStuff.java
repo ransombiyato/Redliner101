@@ -29,10 +29,10 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.resources.model.ModelIdentifier;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -47,7 +47,7 @@ import java.util.function.*;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class RegisterClientStuff {
-    public static Map<ResourceLocation, List<BakedModel>> QUENCHED_ALLAY_VARIANTS = new HashMap<>();
+    public static Map<Identifier, List<BakedModel>> QUENCHED_ALLAY_VARIANTS = new HashMap<>();
     private static final Map<BlockQuenchedAllay, Boolean> QUENCHED_ALLAY_TYPES = Map.of(
             HexBlocks.QUENCHED_ALLAY, false,
             HexBlocks.QUENCHED_ALLAY_TILES, true,
@@ -134,7 +134,7 @@ public class RegisterClientStuff {
 
         x.registerEntityRenderer(HexEntities.WALL_SCROLL, WallScrollRenderer::new);
 
-//        for (var tex : ResourceLocation.fromNamespaceAndPath[]{
+//        for (var tex : Identifier.fromNamespaceAndPath[]{
 //                PatternTooltipComponent.PRISTINE_BG,
 //                PatternTooltipComponent.ANCIENT_BG,
 //                PatternTooltipComponent.SLATE_BG
@@ -256,7 +256,7 @@ public class RegisterClientStuff {
             BlockEntityRendererProvider<? super T> berp);
     }
 
-    public static void onModelRegister(ResourceManager recMan, Consumer<ModelResourceLocation> extraModels) {
+    public static void onModelRegister(ResourceManager recMan, Consumer<ModelIdentifier> extraModels) {
         for (var type : QUENCHED_ALLAY_TYPES.entrySet()) {
             var blockLoc = BuiltInRegistries.BLOCK.getKey(type.getKey());
             var locStart = "block/";
@@ -264,14 +264,14 @@ public class RegisterClientStuff {
                 locStart += "deco/";
 
             for (int i = 0; i < BlockQuenchedAllay.VARIANTS; i++) {
-                extraModels.accept(new ModelResourceLocation(modLoc( locStart + blockLoc.getPath() + "_" + i), IClientXplatAbstractions.INSTANCE.getModelLocVariant()));
+                extraModels.accept(new ModelIdentifier(modLoc( locStart + blockLoc.getPath() + "_" + i), IClientXplatAbstractions.INSTANCE.getModelLocVariant()));
             }
         }
     }
 
     @FunctionalInterface
     public interface FabricModelContext {
-        void add(ResourceLocation id);
+        void add(Identifier id);
     }
 
     public static void onModelRegister(FabricModelContext context) {
@@ -287,7 +287,7 @@ public class RegisterClientStuff {
         }
     }
 
-    public static void onModelBake(ModelBakery loader, Map<ModelResourceLocation, BakedModel> map) {
+    public static void onModelBake(ModelBakery loader, Map<ModelIdentifier, BakedModel> map) {
         for (var type : QUENCHED_ALLAY_TYPES.entrySet()) {
             var blockLoc = BuiltInRegistries.BLOCK.getKey(type.getKey());
             var locStart = "block/";
@@ -296,7 +296,7 @@ public class RegisterClientStuff {
 
             var list = new ArrayList<BakedModel>();
             for (int i = 0; i < BlockQuenchedAllay.VARIANTS; i++) {
-                var variantLoc = new ModelResourceLocation(modLoc(locStart + blockLoc.getPath() + "_" + i), IClientXplatAbstractions.INSTANCE.getModelLocVariant());
+                var variantLoc = new ModelIdentifier(modLoc(locStart + blockLoc.getPath() + "_" + i), IClientXplatAbstractions.INSTANCE.getModelLocVariant());
                 var model = map.get(variantLoc);
                 list.add(model);
             }

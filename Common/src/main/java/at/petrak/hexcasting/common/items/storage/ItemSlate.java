@@ -11,7 +11,7 @@ import at.petrak.hexcasting.common.lib.HexDataComponents;
 import at.petrak.hexcasting.common.misc.PatternTooltip;
 import at.petrak.hexcasting.interop.inline.InlinePatternData;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
@@ -26,7 +26,7 @@ import java.util.Optional;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class ItemSlate extends BlockItem implements IotaHolderItem {
-    public static final ResourceLocation WRITTEN_PRED = modLoc("written");
+    public static final Identifier WRITTEN_PRED = modLoc("written");
 
     public ItemSlate(Block pBlock, Properties pProperties) {
         super(pBlock, pProperties);

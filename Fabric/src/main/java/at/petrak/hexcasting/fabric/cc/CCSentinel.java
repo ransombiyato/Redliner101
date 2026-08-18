@@ -6,7 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Player;
 import org.ladysnake.cca.api.v3.component.Component;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
@@ -43,7 +43,7 @@ public class CCSentinel implements Component, AutoSyncedComponent {
             var extendsRange = tag.getBoolean(TAG_EXTENDS_RANGE);
             var position = HexUtils.vecFromNBT(tag.getCompound(TAG_POSITION));
             var dim = ResourceKey.create(Registries.DIMENSION,
-                ResourceLocation.parse(tag.getString(TAG_DIMENSION)));
+                Identifier.parse(tag.getString(TAG_DIMENSION)));
             this.sentinel = new Sentinel(extendsRange, position, dim);
         } else {
             this.sentinel = null;

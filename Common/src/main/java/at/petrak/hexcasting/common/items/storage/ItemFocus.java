@@ -5,7 +5,7 @@ import at.petrak.hexcasting.api.item.IotaHolderItem;
 import at.petrak.hexcasting.api.item.VariantItem;
 import at.petrak.hexcasting.common.lib.HexDataComponents;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Unit;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -19,8 +19,8 @@ public class ItemFocus extends Item implements IotaHolderItem, VariantItem {
     // 0 = no overlay
     // 1 = unsealed
     // 2 = sealed
-    public static final ResourceLocation OVERLAY_PRED = modLoc("overlay_layer");
-    public static final ResourceLocation VARIANT_PRED = modLoc("variant");
+    public static final Identifier OVERLAY_PRED = modLoc("overlay_layer");
+    public static final Identifier VARIANT_PRED = modLoc("variant");
     public static final int NUM_VARIANTS = 8;
 
     public ItemFocus(Properties pProperties) {

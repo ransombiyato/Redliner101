@@ -10,19 +10,19 @@ import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.render.EmiTexture;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.RecipeHolder;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class HexEMIPlugin implements EmiPlugin {
-	private static final ResourceLocation BRAINSWEEP_ID = modLoc("brainsweep");
-	public static final ResourceLocation PHIAL_ID = modLoc("craft/battery");
-	public static final ResourceLocation EDIFY_ID = modLoc("edify");
+	private static final Identifier BRAINSWEEP_ID = modLoc("brainsweep");
+	public static final Identifier PHIAL_ID = modLoc("craft/battery");
+	public static final Identifier EDIFY_ID = modLoc("edify");
 
-	private static final ResourceLocation SIMPLIFIED_ICON_BRAINSWEEP = modLoc("textures/gui/brainsweep_emi.png");
-	private static final ResourceLocation SIMPLIFIED_ICON_PHIAL = modLoc("textures/gui/phial_emi.png");
-	private static final ResourceLocation SIMPLIFIED_ICON_EDIFY = modLoc("textures/gui/edify_emi.png");
+	private static final Identifier SIMPLIFIED_ICON_BRAINSWEEP = modLoc("textures/gui/brainsweep_emi.png");
+	private static final Identifier SIMPLIFIED_ICON_PHIAL = modLoc("textures/gui/phial_emi.png");
+	private static final Identifier SIMPLIFIED_ICON_EDIFY = modLoc("textures/gui/edify_emi.png");
 
 	public static final EmiRecipeCategory BRAINSWEEP = new EmiRecipeCategory(BRAINSWEEP_ID,
 		new PatternRendererEMI(BRAINSWEEP_ID, 16, 16),

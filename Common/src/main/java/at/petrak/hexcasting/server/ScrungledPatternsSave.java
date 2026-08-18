@@ -10,7 +10,7 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.datafix.DataFixTypes;
 import net.minecraft.world.level.saveddata.SavedData;
@@ -85,7 +85,7 @@ public class ScrungledPatternsSave extends SavedData {
             var rawKey = inner.getString(TAG_KEY);
 
             var dir = HexDir.values()[rawDir];
-            var key = ResourceKey.create(registryKey, ResourceLocation.parse(rawKey));
+            var key = ResourceKey.create(registryKey, Identifier.parse(rawKey));
 
             map.put(sig, new PerWorldEntry(key, dir));
         }

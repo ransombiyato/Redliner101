@@ -14,13 +14,13 @@ import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.Style;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 public class InlinePatternData implements InlineData<InlinePatternData>{
 
-    public static final ResourceLocation rendererId = HexAPI.modLoc("pattern");
+    public static final Identifier rendererId = HexAPI.modLoc("pattern");
 
     @NotNull
     public final HexPattern pattern;
@@ -35,7 +35,7 @@ public class InlinePatternData implements InlineData<InlinePatternData>{
     }
 
     @Override
-    public ResourceLocation getRendererId(){
+    public Identifier getRendererId(){
         return rendererId;
     }
 
@@ -71,11 +71,11 @@ public class InlinePatternData implements InlineData<InlinePatternData>{
     }
 
     public static class InlinePatternDataType implements InlineDataType<InlinePatternData> {
-        private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(HexAPI.MOD_ID, "pattern");
+        private static final Identifier ID = Identifier.fromNamespaceAndPath(HexAPI.MOD_ID, "pattern");
         public static final InlinePatternDataType INSTANCE = new InlinePatternDataType();
 
         @Override
-        public ResourceLocation getId(){
+        public Identifier getId(){
             return ID;
         }
 

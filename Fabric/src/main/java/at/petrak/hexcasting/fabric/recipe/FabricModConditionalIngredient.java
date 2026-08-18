@@ -9,7 +9,7 @@ import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -21,7 +21,7 @@ import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 
 public class FabricModConditionalIngredient extends Ingredient implements CustomIngredient {
-    public static final ResourceLocation ID = modLoc("mod_conditional");
+    public static final Identifier ID = modLoc("mod_conditional");
 
     private final Ingredient main;
     private final String modid;
@@ -96,7 +96,7 @@ public class FabricModConditionalIngredient extends Ingredient implements Custom
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
-        public ResourceLocation getIdentifier() {
+        public Identifier getIdentifier() {
             return FabricModConditionalIngredient.ID;
         }
 

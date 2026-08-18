@@ -1,7 +1,7 @@
 package at.petrak.hexcasting.common.recipe;
 
 import at.petrak.hexcasting.api.HexAPI;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -13,20 +13,20 @@ import java.util.function.BiConsumer;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class HexRecipeStuffRegistry {
-    public static void registerSerializers(BiConsumer<RecipeSerializer<?>, ResourceLocation> r) {
+    public static void registerSerializers(BiConsumer<RecipeSerializer<?>, Identifier> r) {
         for (var e : SERIALIZERS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
     }
 
-    public static void registerTypes(BiConsumer<RecipeType<?>, ResourceLocation> r) {
+    public static void registerTypes(BiConsumer<RecipeType<?>, Identifier> r) {
         for (var e : TYPES.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
     }
 
-    private static final Map<ResourceLocation, RecipeSerializer<?>> SERIALIZERS = new LinkedHashMap<>();
-    private static final Map<ResourceLocation, RecipeType<?>> TYPES = new LinkedHashMap<>();
+    private static final Map<Identifier, RecipeSerializer<?>> SERIALIZERS = new LinkedHashMap<>();
+    private static final Map<Identifier, RecipeType<?>> TYPES = new LinkedHashMap<>();
 
     public static final RecipeSerializer<?> BRAINSWEEP = registerSerializer("brainsweep",
         new BrainsweepRecipe.Serializer());

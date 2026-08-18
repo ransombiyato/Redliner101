@@ -6,7 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.Nullable;
 import org.ladysnake.cca.api.v3.component.Component;
@@ -45,7 +45,7 @@ public class CCFlight implements Component {
         } else {
             var timeLeft = tag.getInt(TAG_TIME_LEFT);
             var dim = ResourceKey.create(Registries.DIMENSION,
-                ResourceLocation.parse(tag.getString(TAG_DIMENSION)));
+                Identifier.parse(tag.getString(TAG_DIMENSION)));
             var origin = HexUtils.vecFromNBT(tag.getCompound(TAG_ORIGIN));
             var radius = tag.getDouble(TAG_RADIUS);
             this.flight = new FlightAbility(timeLeft, dim, origin, radius);

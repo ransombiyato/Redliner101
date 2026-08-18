@@ -3,7 +3,7 @@ package at.petrak.hexcasting.common.lib.hex;
 import at.petrak.hexcasting.api.casting.iota.*;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.LinkedHashMap;
@@ -21,7 +21,7 @@ public class HexIotaTypes {
     public static final int MAX_SERIALIZATION_DEPTH = 256;
     public static final int MAX_SERIALIZATION_TOTAL = 1024;
 
-    private static final Map<ResourceLocation, IotaType<?>> TYPES = new LinkedHashMap<>();
+    private static final Map<Identifier, IotaType<?>> TYPES = new LinkedHashMap<>();
 
     public static final IotaType<NullIota> NULL = type("null", NullIota.TYPE);
     public static final IotaType<DoubleIota> DOUBLE = type("double", DoubleIota.TYPE);
@@ -33,7 +33,7 @@ public class HexIotaTypes {
     public static final IotaType<Vec3Iota> VEC3 = type("vec3", Vec3Iota.TYPE);
     public static final IotaType<ContinuationIota> CONTINUATION = type("continuation", ContinuationIota.TYPE);
 
-    public static void registerTypes(BiConsumer<IotaType<?>, ResourceLocation> r) {
+    public static void registerTypes(BiConsumer<IotaType<?>, Identifier> r) {
         for (var e : TYPES.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }

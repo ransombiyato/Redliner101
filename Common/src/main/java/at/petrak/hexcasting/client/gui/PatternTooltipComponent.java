@@ -9,7 +9,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import org.jetbrains.annotations.Nullable;
 
@@ -22,15 +22,15 @@ import static at.petrak.hexcasting.api.HexAPI.modLoc;
  * @see PatternTooltip the associated data for this
  */
 public class PatternTooltipComponent implements ClientTooltipComponent {
-    public static final ResourceLocation PRISTINE_BG = modLoc("textures/gui/scroll.png");
-    public static final ResourceLocation ANCIENT_BG = modLoc("textures/gui/scroll_ancient.png");
-    public static final ResourceLocation SLATE_BG = modLoc("textures/gui/slate.png");
+    public static final Identifier PRISTINE_BG = modLoc("textures/gui/scroll.png");
+    public static final Identifier ANCIENT_BG = modLoc("textures/gui/scroll_ancient.png");
+    public static final Identifier SLATE_BG = modLoc("textures/gui/slate.png");
 
     private static final float RENDER_SIZE = 128f;
     private static final int TEXTURE_SIZE = 48;
 
     private final HexPattern pattern;
-    private final ResourceLocation background;
+    private final Identifier background;
 
     public PatternTooltipComponent(PatternTooltip tt) {
         this.pattern = tt.pattern();
@@ -67,7 +67,7 @@ public class PatternTooltipComponent implements ClientTooltipComponent {
         ps.popPose();
     }
 
-    private static void renderBG(GuiGraphics graphics, ResourceLocation background) {
+    private static void renderBG(GuiGraphics graphics, Identifier background) {
         graphics.blit(
             background, // texture
             0, 0, // x, y

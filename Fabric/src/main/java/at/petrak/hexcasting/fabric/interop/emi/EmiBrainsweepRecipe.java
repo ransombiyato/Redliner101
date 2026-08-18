@@ -5,7 +5,7 @@ import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -15,8 +15,8 @@ import static at.petrak.hexcasting.api.HexAPI.modLoc;
 public record EmiBrainsweepRecipe(EmiIngredient blockInput,
                                   EmiIngredient villagerInput,
                                   EmiStack output,
-                                  ResourceLocation id) implements EmiRecipe {
-    private static final ResourceLocation OVERLAY = modLoc("textures/gui/brainsweep_jei.png");
+                                  Identifier id) implements EmiRecipe {
+    private static final Identifier OVERLAY = modLoc("textures/gui/brainsweep_jei.png");
 
     @Override
     public EmiRecipeCategory getCategory() {
@@ -24,7 +24,7 @@ public record EmiBrainsweepRecipe(EmiIngredient blockInput,
     }
 
     @Override
-    public @Nullable ResourceLocation getId() {
+    public @Nullable Identifier getId() {
         return id;
     }
 

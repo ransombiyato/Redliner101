@@ -26,6 +26,7 @@ import com.mojang.blaze3d.vertex.PoseStack
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.gui.screens.Screen
+import net.minecraft.client.input.MouseButtonEvent
 import net.minecraft.client.renderer.GameRenderer
 import net.minecraft.client.resources.sounds.SimpleSoundInstance
 import net.minecraft.client.resources.sounds.SoundInstance
@@ -129,8 +130,10 @@ class GuiSpellcasting constructor(
         }
     }
 
-    override fun mouseClicked(mxOut: Double, myOut: Double, pButton: Int): Boolean {
-        if (super.mouseClicked(mxOut, myOut, pButton)) {
+    override fun mouseClicked(mouseButtonEvent: MouseButtonEvent, bl: Boolean): Boolean {
+        val mxOut = mouseButtonEvent.x()
+        val myOut = mouseButtonEvent.y()
+        if (super.mouseClicked(mouseButtonEvent, bl)) {
             return true
         }
         if (HexConfig.client().clickingTogglesDrawing()) {
@@ -174,8 +177,10 @@ class GuiSpellcasting constructor(
             drawMove(mxOut, myOut)
     }
 
-    override fun mouseDragged(mxOut: Double, myOut: Double, pButton: Int, pDragX: Double, pDragY: Double): Boolean {
-        if (super.mouseDragged(mxOut, myOut, pButton, pDragX, pDragY)) {
+    override fun mouseDragged(mouseButtonEvent: MouseButtonEvent, pDragX: Double, pDragY: Double): Boolean {
+        val mxOut = mouseButtonEvent.x()
+        val myOut = mouseButtonEvent.y()
+        if (super.mouseDragged(mouseButtonEvent, pDragX, pDragY)) {
             return true
         }
         if (HexConfig.client().clickingTogglesDrawing())
@@ -256,8 +261,10 @@ class GuiSpellcasting constructor(
         return false
     }
 
-    override fun mouseReleased(mx: Double, my: Double, pButton: Int): Boolean {
-        if (super.mouseReleased(mx, my, pButton)) {
+    override fun mouseReleased(mouseButtonEvent: MouseButtonEvent): Boolean {
+        val mx = mouseButtonEvent.x()
+        val my = mouseButtonEvent.y()
+        if (super.mouseReleased(mouseButtonEvent)) {
             return true
         }
         if (HexConfig.client().clickingTogglesDrawing())

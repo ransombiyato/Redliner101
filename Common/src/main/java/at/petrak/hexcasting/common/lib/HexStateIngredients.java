@@ -8,7 +8,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -72,7 +72,7 @@ public class HexStateIngredients {
         }
     };
 
-    public static void register(BiConsumer<StateIngredientType<?>, ResourceLocation> r) {
+    public static void register(BiConsumer<StateIngredientType<?>, Identifier> r) {
         r.accept(NONE_TYPE, HexAPI.modLoc("none"));
         r.accept(BLOCK_TYPE, HexAPI.modLoc("block"));
         r.accept(BLOCK_STATE, HexAPI.modLoc("state"));

@@ -3,7 +3,7 @@ package at.petrak.hexcasting.common.lib;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
@@ -14,13 +14,13 @@ import java.util.function.BiConsumer;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class HexCreativeTabs {
-    public static void registerCreativeTabs(BiConsumer<CreativeModeTab, ResourceLocation> r) {
+    public static void registerCreativeTabs(BiConsumer<CreativeModeTab, Identifier> r) {
         for (var e : TABS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
     }
 
-    private static final Map<ResourceLocation, CreativeModeTab> TABS = new LinkedHashMap<>();
+    private static final Map<Identifier, CreativeModeTab> TABS = new LinkedHashMap<>();
 
     public static final CreativeModeTab HEX = register("hexcasting", CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .icon(() -> new ItemStack(HexItems.SPELLBOOK)));

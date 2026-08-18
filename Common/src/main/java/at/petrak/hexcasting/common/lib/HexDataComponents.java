@@ -12,7 +12,7 @@ import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Unit;
 
 import java.util.*;
@@ -21,13 +21,13 @@ import java.util.function.BiConsumer;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class HexDataComponents {
-    public static void registerDataComponents(BiConsumer<DataComponentType<?>, ResourceLocation> r) {
+    public static void registerDataComponents(BiConsumer<DataComponentType<?>, Identifier> r) {
         for (var e : DATA_COMPONENTS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
     }
 
-    private static final Map<ResourceLocation, DataComponentType<?>> DATA_COMPONENTS = new LinkedHashMap<>();
+    private static final Map<Identifier, DataComponentType<?>> DATA_COMPONENTS = new LinkedHashMap<>();
 
     public static final DataComponentType<HexPattern> PATTERN = register("pattern",
             DataComponentType.<HexPattern>builder()

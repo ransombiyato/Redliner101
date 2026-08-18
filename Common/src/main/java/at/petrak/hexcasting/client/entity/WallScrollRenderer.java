@@ -13,18 +13,18 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import org.joml.Matrix4f;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class WallScrollRenderer extends EntityRenderer<EntityWallScroll> {
-    private static final ResourceLocation PRISTINE_BG_LARGE = modLoc("textures/entity/scroll_large.png");
-    private static final ResourceLocation PRISTINE_BG_MEDIUM = modLoc("textures/entity/scroll_medium.png");
-    private static final ResourceLocation PRISTINE_BG_SMOL = modLoc("textures/block/scroll_paper.png");
-    private static final ResourceLocation ANCIENT_BG_LARGE = modLoc("textures/entity/scroll_ancient_large.png");
-    private static final ResourceLocation ANCIENT_BG_MEDIUM = modLoc("textures/entity/scroll_ancient_medium.png");
-    private static final ResourceLocation ANCIENT_BG_SMOL = modLoc("textures/block/ancient_scroll_paper.png");
+    private static final Identifier PRISTINE_BG_LARGE = modLoc("textures/entity/scroll_large.png");
+    private static final Identifier PRISTINE_BG_MEDIUM = modLoc("textures/entity/scroll_medium.png");
+    private static final Identifier PRISTINE_BG_SMOL = modLoc("textures/block/scroll_paper.png");
+    private static final Identifier ANCIENT_BG_LARGE = modLoc("textures/entity/scroll_ancient_large.png");
+    private static final Identifier ANCIENT_BG_MEDIUM = modLoc("textures/entity/scroll_ancient_medium.png");
+    private static final Identifier ANCIENT_BG_SMOL = modLoc("textures/block/ancient_scroll_paper.png");
 
     public WallScrollRenderer(EntityRendererProvider.Context p_174008_) {
         super(p_174008_);
@@ -102,7 +102,7 @@ public class WallScrollRenderer extends EntityRenderer<EntityWallScroll> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(EntityWallScroll wallScroll) {
+    public Identifier getTextureLocation(EntityWallScroll wallScroll) {
         if (wallScroll.isAncient) {
             if (wallScroll.blockSize <= 1) {
                 return ANCIENT_BG_SMOL;

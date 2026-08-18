@@ -8,7 +8,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.FastColor;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
@@ -105,12 +105,12 @@ public class PatternRenderer {
 
     private static boolean renderPatternTexture(HexPatternLike patternlike, PoseStack ps, @Nullable WorldlyBits worldlyBits, PatternSettings patSets, PatternColors patColors, double seed, int resPerUnit){
 
-        Optional<Map<String, ResourceLocation>> maybeTextures = PatternTextureManager.getTextures(patternlike, patSets, seed, resPerUnit);
+        Optional<Map<String, Identifier>> maybeTextures = PatternTextureManager.getTextures(patternlike, patSets, seed, resPerUnit);
         if(maybeTextures.isEmpty()){
             return false;
         }
 
-        Map<String, ResourceLocation> textures = maybeTextures.get();
+        Map<String, Identifier> textures = maybeTextures.get();
         HexPatternPoints staticPoints = HexPatternPoints.getStaticPoints(patternlike, patSets, seed);
 
         VertexConsumer vc;

@@ -9,7 +9,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -105,7 +105,7 @@ public class StateIngredientTag extends StateIngredientBlocks {
 				TagKey.hashedCodec(Registries.BLOCK).fieldOf("tag").forGetter(StateIngredientTag::getTag)
 		).apply(instance, StateIngredientTag::new));
 		public static final StreamCodec<RegistryFriendlyByteBuf, StateIngredientTag> STREAM_CODEC = StreamCodec.composite(
-				ResourceLocation.STREAM_CODEC.map(id -> TagKey.create(Registries.BLOCK, id), TagKey::location), StateIngredientTag::getTag,
+				Identifier.STREAM_CODEC.map(id -> TagKey.create(Registries.BLOCK, id), TagKey::location), StateIngredientTag::getTag,
 				StateIngredientTag::new
 		);
 

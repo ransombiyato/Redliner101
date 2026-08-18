@@ -3,7 +3,7 @@ package at.petrak.hexcasting.client.render;
 import com.mojang.blaze3d.platform.NativeImage;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.DynamicTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.FastColor;
 import net.minecraft.util.Mth;
 import net.minecraft.util.Tuple;
@@ -19,14 +19,14 @@ public class PatternTextureManager {
     public static boolean useTextures = true;
     public static int repaintIndex = 0;
 
-    private static final ConcurrentMap<String, Map<String, ResourceLocation>> patternTexturesToAdd = new ConcurrentHashMap<>();
+    private static final ConcurrentMap<String, Map<String, Identifier>> patternTexturesToAdd = new ConcurrentHashMap<>();
     private static final Set<String> inProgressPatterns = new HashSet<>();
     // basically newCachedThreadPool, but with a max pool size
     private static final ExecutorService executor = new ThreadPoolExecutor(0, 16, 60L, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
 
-    private static final HashMap<String, Map<String, ResourceLocation>> patternTextures = new HashMap<>();
+    private static final HashMap<String, Map<String, Identifier>> patternTextures = new HashMap<>();
 
-    public static Optional<Map<String, ResourceLocation>> getTextures(HexPatternLike patternlike, PatternSettings patSets, double seed, int resPerUnit) {
+    public static Optional<Map<String, Identifier>> getTextures(HexPatternLike patternlike, PatternSettings patSets, double seed, int resPerUnit) {
         String patCacheKey = patSets.getCacheKey(patternlike, seed) + "_" + resPerUnit;
 
         // move textures from concurrent map to normal hashmap as needed
@@ -35,7 +35,7 @@ public class PatternTextureManager {
             var oldPatternTexture = patternTextures.put(patCacheKey, patternTexture);
             inProgressPatterns.remove(patCacheKey);
             if (oldPatternTexture != null) // TODO: is this needed? when does this ever happen?
-                for(ResourceLocation oldPatternTextureSingle : oldPatternTexture.values())
+                for(Identifier oldPatternTextureSingle : oldPatternTexture.values())
                     Minecraft.getInstance().getTextureManager().getTexture(oldPatternTextureSingle).close();
 
             return Optional.empty(); // try not giving it immediately to avoid flickering?
@@ -74,11 +74,11 @@ public class PatternTextureManager {
         return patTexts;
     }
 
-    private static Map<String, ResourceLocation> registerTextures(String patTextureKeyBase, Map<String, DynamicTexture> dynamicTextures) {
-        Map<String, ResourceLocation> resLocs = new HashMap<>();
+    private static Map<String, Identifier> registerTextures(String patTextureKeyBase, Map<String, DynamicTexture> dynamicTextures) {
+        Map<String, Identifier> resLocs = new HashMap<>();
         for(Map.Entry<String, DynamicTexture> textureEntry : dynamicTextures.entrySet()){
             String name = "hex_pattern_texture_" + patTextureKeyBase + "_" + textureEntry.getKey() + "_" + repaintIndex + ".png";
-            ResourceLocation resourceLocation = Minecraft.getInstance().getTextureManager().register(name, textureEntry.getValue());
+            Identifier resourceLocation = Minecraft.getInstance().getTextureManager().register(name, textureEntry.getValue());
             resLocs.put(textureEntry.getKey(), resourceLocation);
         }
         patternTexturesToAdd.put(patTextureKeyBase, resLocs);

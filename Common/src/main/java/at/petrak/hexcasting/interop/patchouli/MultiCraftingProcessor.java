@@ -10,7 +10,7 @@ package at.petrak.hexcasting.interop.patchouli;
 
 import at.petrak.hexcasting.api.HexAPI;
 import net.minecraft.core.NonNullList;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -36,7 +36,7 @@ public class MultiCraftingProcessor implements IComponentProcessor {
         List<String> names = vars.get("recipes", level.registryAccess()).asStream(level.registryAccess()).map(IVariable::asString).toList();
         this.recipes = new ArrayList<>();
         for (String name : names) {
-            CraftingRecipe recipe = PatchouliUtils.getRecipe(RecipeType.CRAFTING, ResourceLocation.parse(name));
+            CraftingRecipe recipe = PatchouliUtils.getRecipe(RecipeType.CRAFTING, Identifier.parse(name));
             if (recipe != null) {
                 recipes.add(recipe);
                 if (shapeless) {

@@ -16,7 +16,7 @@ import com.google.common.base.Suppliers;
 import net.minecraft.Util;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -34,7 +34,7 @@ import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 // https://github.com/VazkiiMods/Botania/blob/2c4f7fdf9ebf0c0afa1406dfe1322841133d75fa/Common/src/main/java/vazkii/botania/common/item/ModItems.java
 public class HexItems {
-    public static void registerItems(BiConsumer<Item, ResourceLocation> r) {
+    public static void registerItems(BiConsumer<Item, Identifier> r) {
         for (var e : ITEMS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
@@ -48,7 +48,7 @@ public class HexItems {
         }
     }
 
-    private static final Map<ResourceLocation, Item> ITEMS = new LinkedHashMap<>(); // preserve insertion order
+    private static final Map<Identifier, Item> ITEMS = new LinkedHashMap<>(); // preserve insertion order
     private static final Map<CreativeModeTab, List<TabEntry>> ITEM_TABS = new LinkedHashMap<>();
 
 
@@ -192,7 +192,7 @@ public class HexItems {
         }
     }
 
-    private static <T extends Item> T make(ResourceLocation id, T item, @Nullable CreativeModeTab tab) {
+    private static <T extends Item> T make(Identifier id, T item, @Nullable CreativeModeTab tab) {
         var old = ITEMS.put(id, item);
         if (old != null) {
             throw new IllegalArgumentException("Typo? Duplicate id " + id);

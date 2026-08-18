@@ -2,7 +2,7 @@ package at.petrak.hexcasting.common.lib;
 
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potion;
@@ -16,7 +16,7 @@ import java.util.function.BiConsumer;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class HexPotions {
-    private static final Map<ResourceLocation, Potion> POTIONS = new LinkedHashMap<>();
+    private static final Map<Identifier, Potion> POTIONS = new LinkedHashMap<>();
 
     public static final Potion ENLARGE_GRID = make("enlarge_grid",
         new Potion("enlarge_grid", new MobEffectInstance(HexMobEffects.ENLARGE_GRID, 3600)));
@@ -32,7 +32,7 @@ public class HexPotions {
     public static final Potion SHRINK_GRID_STRONG = make("shrink_grid_strong",
         new Potion("shrink_grid_strong", new MobEffectInstance(HexMobEffects.SHRINK_GRID, 1800, 1)));
 
-    public static void registerPotions(BiConsumer<Potion, ResourceLocation> r) {
+    public static void registerPotions(BiConsumer<Potion, Identifier> r) {
         for (var e : POTIONS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }

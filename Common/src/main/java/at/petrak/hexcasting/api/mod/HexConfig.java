@@ -3,7 +3,7 @@ package at.petrak.hexcasting.api.mod;
 import at.petrak.hexcasting.api.HexAPI;
 import at.petrak.hexcasting.api.misc.MediaConstants;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.Level;
@@ -66,9 +66,9 @@ public class HexConfig {
 
         int maxSpellCircleLength();
 
-        boolean isActionAllowed(ResourceLocation actionID);
+        boolean isActionAllowed(Identifier actionID);
 
-        boolean isActionAllowedInCircles(ResourceLocation actionID);
+        boolean isActionAllowedInCircles(Identifier actionID);
 
         boolean doesGreaterTeleportSplatItems();
 
@@ -107,9 +107,9 @@ public class HexConfig {
     }
 
     // Simple extensions for resource location configs
-    public static boolean anyMatch(List<? extends String> keys, ResourceLocation key) {
+    public static boolean anyMatch(List<? extends String> keys, Identifier key) {
         for (String s : keys) {
-            var rl = ResourceLocation.tryParse(s);
+            var rl = Identifier.tryParse(s);
             if (rl != null && rl.equals(key)) {
                 return true;
             }
@@ -117,11 +117,11 @@ public class HexConfig {
         return false;
     }
 
-    public static boolean noneMatch(List<? extends String> keys, ResourceLocation key) {
+    public static boolean noneMatch(List<? extends String> keys, Identifier key) {
         return !anyMatch(keys, key);
     }
 
-    public static boolean anyMatchResLoc(List<? extends ResourceLocation> keys, ResourceLocation key) {
+    public static boolean anyMatchResLoc(List<? extends Identifier> keys, Identifier key) {
         return keys.stream().anyMatch(key::equals);
     }
 

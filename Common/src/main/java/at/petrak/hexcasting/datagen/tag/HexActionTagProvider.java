@@ -8,7 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 
 import java.util.concurrent.CompletableFuture;
@@ -43,7 +43,7 @@ public class HexActionTagProvider extends TagsProvider<ActionRegistryEntry> {
             // instead of `.../tags/hexcasting/action`.
             // So we pull this bullshit
             var fakeKey = ResourceKey.<ActionRegistryEntry>createRegistryKey(
-                ResourceLocation.fromNamespaceAndPath("foobar", "hexcasting/tags/action"));
+                Identifier.fromNamespaceAndPath("foobar", "hexcasting/tags/action"));
             return TagKey.create(fakeKey, real.location());
         } else {
             return real;

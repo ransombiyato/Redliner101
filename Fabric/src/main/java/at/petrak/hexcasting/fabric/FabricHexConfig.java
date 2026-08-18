@@ -5,6 +5,9 @@ import at.petrak.hexcasting.api.mod.HexConfig;
 import at.petrak.hexcasting.common.loot.HexLootHandler;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSerializer;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -14,7 +17,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 
@@ -42,7 +45,8 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
     public static FabricHexConfig setup() {
         var gson = new GsonBuilder()
             .setPrettyPrinting()
-            .registerTypeAdapter(ResourceLocation.class, new ResourceLocation.Serializer())
+            .registerTypeAdapter(Identifier.class, (JsonSerializer<Identifier>) (src, type, context) -> new JsonPrimitive(src.toString()))
+            .registerTypeAdapter(Identifier.class, (JsonDeserializer<Identifier>) (json, type, context) -> Identifier.parse(json.getAsString()))
             .create();
         AutoConfig.register(FabricHexConfig.class, PartitioningSerializer.wrap((cfg, clazz) ->
             new GsonConfigSerializer<>(cfg, clazz, gson)));
@@ -206,26 +210,26 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
             .map(si -> si.injectee() + " " + si.countRange())
             .toList();
         @ConfigEntry.Gui.Excluded
-        private transient Object2IntMap<ResourceLocation> scrollInjections;
+        private transient Object2IntMap<Identifier> scrollInjections;
 
         // TODO: hook this up to the config, change Jankery, test, also test scroll injects on fabric
         @ConfigEntry.Gui.Tooltip
         private List<String> loreInjectionsRaw = HexLootHandler.DEFAULT_LORE_INJECTS
                 .stream()
-                .map(ResourceLocation::toString)
+                .map(Identifier::toString)
                 .toList();
         @ConfigEntry.Gui.Excluded
-        private transient List<ResourceLocation> loreInjections;
+        private transient List<Identifier> loreInjections;
         @ConfigEntry.Gui.Tooltip
         private double loreChance = HexLootHandler.DEFAULT_LORE_CHANCE;
 
         @ConfigEntry.Gui.Tooltip
         private List<String> cypherInjectionsRaw = HexLootHandler.DEFAULT_CYPHER_INJECTS
                 .stream()
-                .map(ResourceLocation::toString)
+                .map(Identifier::toString)
                 .toList();
         @ConfigEntry.Gui.Excluded
-        private transient List<ResourceLocation> cypherInjections;
+        private transient List<Identifier> cypherInjections;
         @ConfigEntry.Gui.Tooltip
         private double cypherChance = HexLootHandler.DEFAULT_CYPHER_CHANCE;
 
@@ -240,7 +244,7 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
             try {
                 for (var auugh : this.scrollInjectionsRaw) {
                     String[] split = auugh.split(" ");
-                    ResourceLocation loc = ResourceLocation.parse(split[0]);
+                    Identifier loc = Identifier.parse(split[0]);
                     int count = Integer.parseInt(split[1]);
                     this.scrollInjections.put(loc, count);
                 }
@@ -252,7 +256,7 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
             this.loreInjections = new ArrayList<>();
             try {
                 for (var table : this.loreInjectionsRaw) {
-                    ResourceLocation loc = ResourceLocation.parse(table);
+                    Identifier loc = Identifier.parse(table);
                     this.loreInjections.add(loc);
                 }
             } catch (Exception e) {
@@ -264,7 +268,7 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
             this.cypherInjections = new ArrayList<>();
             try {
                 for (var table : this.cypherInjectionsRaw) {
-                    ResourceLocation loc = ResourceLocation.parse(table);
+                    Identifier loc = Identifier.parse(table);
                     this.cypherInjections.add(loc);
                 }
             } catch (Exception e) {
@@ -290,12 +294,12 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
         }
 
         @Override
-        public boolean isActionAllowed(ResourceLocation actionID) {
+        public boolean isActionAllowed(Identifier actionID) {
             return noneMatch(actionDenyList, actionID);
         }
 
         @Override
-        public boolean isActionAllowedInCircles(ResourceLocation actionID) {
+        public boolean isActionAllowedInCircles(Identifier actionID) {
             return noneMatch(circleActionDenyList, actionID);
         }
 
@@ -324,11 +328,11 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
         /**
          * Returns -1 if none is found
          */
-        public int scrollRangeForLootTable(ResourceLocation lootTable) {
+        public int scrollRangeForLootTable(Identifier lootTable) {
             return this.scrollInjections.getOrDefault(lootTable, -1);
         }
 
-        public boolean shouldInjectLore(ResourceLocation lootTable) {
+        public boolean shouldInjectLore(Identifier lootTable) {
             return anyMatchResLoc(this.loreInjections, lootTable);
         }
 
@@ -336,7 +340,7 @@ public class FabricHexConfig extends PartitioningSerializer.GlobalData {
             return loreChance;
         }
 
-        public boolean shouldInjectCyphers(ResourceLocation lootTable) {
+        public boolean shouldInjectCyphers(Identifier lootTable) {
             return anyMatchResLoc(this.cypherInjections, lootTable);
         }
 

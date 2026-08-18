@@ -7,7 +7,7 @@ import com.samsthenerd.inline.impl.InlineStyle;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.network.chat.Style;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix3f;
 
@@ -17,7 +17,7 @@ public class InlinePatternRenderer implements InlineRenderer<InlinePatternData> 
 
     public static final InlinePatternRenderer INSTANCE = new InlinePatternRenderer();
 
-    public ResourceLocation getId(){
+    public Identifier getId(){
         return InlinePatternData.rendererId;
     }
 

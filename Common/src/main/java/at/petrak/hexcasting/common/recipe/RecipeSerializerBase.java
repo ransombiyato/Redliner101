@@ -1,7 +1,7 @@
 package at.petrak.hexcasting.common.recipe;
 
 import at.petrak.hexcasting.annotations.SoftImplement;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 
@@ -11,17 +11,17 @@ import javax.annotation.Nullable;
 // TL;DR Forge bad, so we have to cursed self-mixin
 public abstract class RecipeSerializerBase<T extends Recipe<?>> implements RecipeSerializer<T> {
     @Nullable
-    private ResourceLocation registryName;
+    private Identifier registryName;
 
     @SoftImplement("IForgeRegistryEntry")
-    public RecipeSerializerBase<T> setRegistryName(ResourceLocation name) {
+    public RecipeSerializerBase<T> setRegistryName(Identifier name) {
         registryName = name;
         return this;
     }
 
     @SoftImplement("IForgeRegistryEntry")
     @Nullable
-    public ResourceLocation getRegistryName() {
+    public Identifier getRegistryName() {
         return registryName;
     }
 

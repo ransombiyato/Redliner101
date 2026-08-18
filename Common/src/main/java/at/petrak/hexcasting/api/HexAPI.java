@@ -10,7 +10,7 @@ import com.google.common.base.Suppliers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
@@ -62,7 +62,7 @@ public interface HexAPI {
     /**
      * Currently introspection/retrospection/consideration are hardcoded, but at least their names won't be
      */
-    default String getRawHookI18nKey(ResourceLocation name) {
+    default String getRawHookI18nKey(Identifier name) {
         return "hexcasting.rawhook.%s".formatted(name);
     }
 
@@ -76,7 +76,7 @@ public interface HexAPI {
             .withStyle(ChatFormatting.LIGHT_PURPLE);
     }
 
-    default Component getRawHookI18n(ResourceLocation name) {
+    default Component getRawHookI18n(Identifier name) {
         return Component.translatable(getRawHookI18nKey(name)).withStyle(ChatFormatting.LIGHT_PURPLE);
     }
 
@@ -187,7 +187,7 @@ public interface HexAPI {
         return INSTANCE.get();
     }
 
-    static ResourceLocation modLoc(String s) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, s);
+    static Identifier modLoc(String s) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, s);
     }
 }

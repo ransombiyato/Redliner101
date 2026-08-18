@@ -13,14 +13,14 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Items;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
 public class AltioraLayer<M extends EntityModel<AbstractClientPlayer>> extends RenderLayer<AbstractClientPlayer, M> {
-    private static final ResourceLocation TEX_LOC = modLoc("textures/misc/altiora.png");
+    private static final Identifier TEX_LOC = modLoc("textures/misc/altiora.png");
 
     private final ElytraModel<AbstractClientPlayer> elytraModel;
 

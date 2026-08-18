@@ -18,9 +18,9 @@ import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.item.ItemPropertyFunction;
 import net.minecraft.client.renderer.texture.AbstractTexture;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.resources.model.ModelIdentifier;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -70,7 +70,7 @@ public class FabricClientXplatImpl implements IClientXplatAbstractions {
     }
 
     @Override
-    public void registerItemProperty(Item item, ResourceLocation id, ItemPropertyFunction func) {
+    public void registerItemProperty(Item item, Identifier id, ItemPropertyFunction func) {
         ItemProperties.register(item, id, new UnclampedClampedItemPropFunc(func));
     }
 
@@ -102,6 +102,6 @@ public class FabricClientXplatImpl implements IClientXplatAbstractions {
 
     @Override
     public String getModelLocVariant() {
-        return ModelResourceLocation.INVENTORY_VARIANT;
+        return ModelIdentifier.INVENTORY_VARIANT;
     }
 }

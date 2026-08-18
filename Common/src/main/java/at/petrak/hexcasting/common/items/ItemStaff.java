@@ -7,7 +7,7 @@ import at.petrak.hexcasting.common.msgs.MsgClearSpiralPatternsS2C;
 import at.petrak.hexcasting.common.msgs.MsgOpenSpellGuiS2C;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 public class ItemStaff extends Item {
     // 0 = normal. 1 = old. 2 = cherry preview
-    public static final ResourceLocation FUNNY_LEVEL_PREDICATE = ResourceLocation.fromNamespaceAndPath(HexAPI.MOD_ID, "funny_level");
+    public static final Identifier FUNNY_LEVEL_PREDICATE = Identifier.fromNamespaceAndPath(HexAPI.MOD_ID, "funny_level");
 
     public ItemStaff(Properties pProperties) {
         super(pProperties);

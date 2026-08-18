@@ -6,7 +6,7 @@ import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import com.google.gson.annotations.SerializedName;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import vazkii.patchouli.api.IVariable;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class LookupPatternComponent extends AbstractPatternComponent {
     @SerializedName("op_id")
     public String opNameRaw;
 
-    protected ResourceLocation opName;
+    protected Identifier opName;
     protected boolean strokeOrder;
 
     @Override
@@ -40,7 +40,7 @@ public class LookupPatternComponent extends AbstractPatternComponent {
     @Override
     public void onVariablesAvailable(UnaryOperator<IVariable> lookup, HolderLookup.Provider registries) {
         var opName = lookup.apply(IVariable.wrap(this.opNameRaw)).asString();
-        this.opName = ResourceLocation.tryParse(opName);
+        this.opName = Identifier.tryParse(opName);
 
         super.onVariablesAvailable(lookup, registries);
     }

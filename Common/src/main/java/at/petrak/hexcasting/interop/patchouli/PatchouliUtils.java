@@ -2,7 +2,7 @@ package at.petrak.hexcasting.interop.patchouli;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import vazkii.patchouli.api.IVariable;
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  */
 public class PatchouliUtils {
     @SuppressWarnings("unchecked")
-    public static <T extends Recipe<I>, I extends RecipeInput> T getRecipe(RecipeType<T> type, ResourceLocation id) {
+    public static <T extends Recipe<I>, I extends RecipeInput> T getRecipe(RecipeType<T> type, Identifier id) {
         // PageDoubleRecipeRegistry
         if (Minecraft.getInstance().level == null) {
             return null;

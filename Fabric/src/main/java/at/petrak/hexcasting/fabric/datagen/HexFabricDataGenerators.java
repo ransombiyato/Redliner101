@@ -16,7 +16,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -119,10 +119,10 @@ public class HexFabricDataGenerators implements DataGeneratorEntrypoint {
                     new Ingredient.ItemValue(new ItemStack(DyeItem.byColor(col))),
                     new Ingredient.TagValue(
                         TagKey.create(Registries.ITEM,
-                            ResourceLocation.fromNamespaceAndPath("c", col.getSerializedName() + "_dye"))),
+                            Identifier.fromNamespaceAndPath("c", col.getSerializedName() + "_dye"))),
                     new Ingredient.TagValue(
                         TagKey.create(Registries.ITEM,
-                            ResourceLocation.fromNamespaceAndPath("c", col.getSerializedName() + "_dyes"))
+                            Identifier.fromNamespaceAndPath("c", col.getSerializedName() + "_dyes"))
                     ))));
             }
             return out;
@@ -164,7 +164,7 @@ public class HexFabricDataGenerators implements DataGeneratorEntrypoint {
     }
 
     private static TagKey<Item> tag(String namespace, String s) {
-        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(namespace, s));
+        return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(namespace, s));
     }
 
     @Override

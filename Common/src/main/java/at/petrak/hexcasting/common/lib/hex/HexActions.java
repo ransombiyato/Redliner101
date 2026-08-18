@@ -49,7 +49,7 @@ import at.petrak.hexcasting.interop.pehkui.OpSetScale;
 import at.petrak.hexcasting.interop.pehkui.PehkuiInterop;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -67,7 +67,7 @@ import static at.petrak.hexcasting.api.HexAPI.modLoc;
 public class HexActions {
     public static final Registry<ActionRegistryEntry> REGISTRY = IXplatAbstractions.INSTANCE.getActionRegistry();
 
-    private static final Map<ResourceLocation, ActionRegistryEntry> ACTIONS = new LinkedHashMap<>();
+    private static final Map<Identifier, ActionRegistryEntry> ACTIONS = new LinkedHashMap<>();
 
     // In general:
     // - CCW is the normal or construction version
@@ -590,7 +590,7 @@ public class HexActions {
         return are;
     }
 
-    public static void register(BiConsumer<ActionRegistryEntry, ResourceLocation> r) {
+    public static void register(BiConsumer<ActionRegistryEntry, Identifier> r) {
         for (var e : ACTIONS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }

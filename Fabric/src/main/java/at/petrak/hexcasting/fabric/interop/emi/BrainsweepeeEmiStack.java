@@ -10,7 +10,7 @@ import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,7 +20,7 @@ import static at.petrak.hexcasting.client.render.RenderLib.renderEntity;
 
 public class BrainsweepeeEmiStack extends EmiStack {
     public final BrainsweepeeIngredient ingredient;
-    private final ResourceLocation id;
+    private final Identifier id;
     private final DataComponentPatch componentChanges;
 
     public BrainsweepeeEmiStack(BrainsweepeeIngredient ingr) {
@@ -54,7 +54,7 @@ public class BrainsweepeeEmiStack extends EmiStack {
     }
 
     @Override
-    public ResourceLocation getId() {
+    public Identifier getId() {
         return id;
     }
 

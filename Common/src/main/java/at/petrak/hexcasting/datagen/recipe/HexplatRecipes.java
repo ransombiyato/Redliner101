@@ -29,7 +29,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -527,7 +527,7 @@ public class HexplatRecipes extends RecipeProvider {
                 .withOutput(HexItems.AMETHYST_DUST, 5)
                 .withOutput(0.25f, HexItems.CHARGED_AMETHYST))
             .whenModLoaded("create")
-            .save(recipes, ResourceLocation.fromNamespaceAndPath("create", "crushing/amethyst_cluster"));
+            .save(recipes, Identifier.fromNamespaceAndPath("create", "crushing/amethyst_cluster"));
 
         this.conditions.apply(new CreateCrushingRecipeBuilder()
                 .withInput(Blocks.AMETHYST_BLOCK)
@@ -535,7 +535,7 @@ public class HexplatRecipes extends RecipeProvider {
                 .withOutput(Items.AMETHYST_SHARD, 3)
                 .withOutput(0.5f, HexItems.AMETHYST_DUST, 4))
             .whenModLoaded("create")
-            .save(recipes, ResourceLocation.fromNamespaceAndPath("create", "crushing/amethyst_block"));
+            .save(recipes, Identifier.fromNamespaceAndPath("create", "crushing/amethyst_block"));
 
         this.conditions.apply(new CreateCrushingRecipeBuilder()
                 .withInput(Items.AMETHYST_SHARD)
