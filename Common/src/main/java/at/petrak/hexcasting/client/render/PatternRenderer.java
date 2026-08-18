@@ -6,6 +6,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.VertexFormat;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.resources.Identifier;
@@ -148,7 +149,7 @@ public class PatternRenderer {
 
     // TODO did we want to un-hardcode this for accessibility reasons ?
     public static boolean shouldDoStrokeGradient(){
-        return Screen.hasControlDown();
+        return Minecraft.getInstance().keyboardHandler.hasControlDown();
     }
 
     public record WorldlyBits(@Nullable MultiBufferSource provider, Integer light, Vec3 normal){}

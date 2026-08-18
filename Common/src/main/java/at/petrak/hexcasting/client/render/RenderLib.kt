@@ -70,7 +70,7 @@ fun drawLineSeq(
     val b1 = ARGB.blue(tail).toFloat()
     val a = ARGB.alpha(tail)
     val a1 = a.toFloat()
-    val headSource = if (Screen.hasControlDown() != HexConfig.client().ctrlTogglesOffStrokeOrder())
+    val headSource = if (Minecraft.getInstance().keyboardHandler.hasControlDown() != HexConfig.client().ctrlTogglesOffStrokeOrder())
         head
     else
         tail
@@ -95,7 +95,7 @@ fun drawLineSeq(
                 .toFloat()
         joinAngles[i - 1] = angle
         val clamp = prev.length().coerceAtMost(next.length()) / (width * 0.5f)
-        joinOffsets[i - 1] = Mth.clamp(Mth.sin(angle) / (1 + Mth.cos(angle)), -clamp, clamp)
+        joinOffsets[i - 1] = Mth.clamp(sin(angle.toDouble()).toFloat() / (1 + cos(angle.toDouble()).toFloat()), -clamp, clamp)
     }
 
     for (i in 0 until points.size - 1) {
@@ -189,14 +189,14 @@ fun drawLineSeq(
         }
         vcHelper.vcEndDrawer(vc)
     }
-    drawCaps(ARGB32.color(a1.toInt(), r1.toInt(), g1.toInt(), b1.toInt()), points[0], points[1])
-    drawCaps(ARGB32.color(a2.toInt(), r2.toInt(), g2.toInt(), b2.toInt()), points[n - 1], points[n - 2])
+    drawCaps(ARGB.color(a1.toInt(), r1.toInt(), g1.toInt(), b1.toInt()), points[0], points[1])
+    drawCaps(ARGB.color(a2.toInt(), r2.toInt(), g2.toInt(), b2.toInt()), points[n - 1], points[n - 2])
 }
 
 
 fun rotate(vec: Vec2, theta: Float): Vec2 {
-    val cos = Mth.cos(theta)
-    val sin = Mth.sin(theta)
+    val cos = cos(theta.toDouble()).toFloat()
+    val sin = sin(theta.toDouble()).toFloat()
     return Vec2(vec.x * cos - vec.y * sin, vec.y * cos + vec.x * sin)
 }
 
@@ -289,7 +289,7 @@ fun makeZappy(
                     69420.0,
                     seed
                 ) * maxVariance * scaleVariance(progress)).toFloat()
-                val randomHop = Vec2(r * Mth.cos(theta), r * Mth.sin(theta))
+                val randomHop = Vec2(r * cos(theta.toDouble()).toFloat(), r * sin(theta.toDouble()).toFloat())
                 // Then record the new location.
                 zappyPts.add(pos.add(randomHop))
 
@@ -349,7 +349,7 @@ fun <T> findDupIndices(pts: Iterable<T>): Set<Int> {
  * include primitive drawing code...
  */
 fun drawSpot(mat: Matrix4f, point: Vec2, radius: Float, r: Float, g: Float, b: Float, a: Float) {
-    drawSpot(mat, point, radius, ARGB32.color((a*255).toInt(), (r*255).toInt(), (g*255).toInt(), (b*255).toInt()), VCDrawHelper.Basic(1f))
+    drawSpot(mat, point, radius, ARGB.color((a*255).toInt(), (r*255).toInt(), (g*255).toInt(), (b*255).toInt()), VCDrawHelper.Basic(1f))
 }
 
 fun drawSpot(mat: Matrix4f, point: Vec2, radius: Float, color: Int, vcHelper: VCDrawHelper) {
@@ -362,8 +362,8 @@ fun drawSpot(mat: Matrix4f, point: Vec2, radius: Float, color: Int, vcHelper: VC
     // run 0 AND last; this way the circle closes
     for (i in 0..fracOfCircle) {
         val theta = i.toFloat() / fracOfCircle * TAU.toFloat()
-        val rx = Mth.cos(theta) * radius + point.x
-        val ry = Mth.sin(theta) * radius + point.y
+        val rx = cos(theta.toDouble()).toFloat() * radius + point.x
+        val ry = sin(theta.toDouble()).toFloat() * radius + point.y
         vcHelper.vertex(vc, color, Vec2(rx, ry), mat)
     }
 
@@ -414,7 +414,7 @@ fun renderEntity(
     renderScale: Float, offset: Float,
     bufferTransformer: (MultiBufferSource) -> MultiBufferSource = { it -> it }
 ) {
-    val rotation = if (Screen.hasShiftDown()) 0.0f else rotation
+    val rotation = if (Minecraft.getInstance().keyboardHandler.hasShiftDown()) 0.0f else rotation
 
     // TODO: Figure out why this is here and whether removing it will break things
 //    entity.level = world

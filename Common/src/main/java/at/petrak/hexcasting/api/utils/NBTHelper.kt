@@ -31,7 +31,7 @@ fun AdvancementHolder.isChildOf(root: AdvancementHolder, serverAdvancementManage
 
 // Checks for containment
 
-fun CompoundTag?.hasNumber(key: String) = contains(key, Tag.TAG_ANY_NUMERIC)
+fun CompoundTag?.hasNumber(key: String) = this?.get(key) is NumericTag
 fun CompoundTag?.hasByte(key: String) = contains(key, Tag.TAG_BYTE)
 fun CompoundTag?.hasShort(key: String) = contains(key, Tag.TAG_SHORT)
 fun CompoundTag?.hasInt(key: String) = contains(key, Tag.TAG_INT)
@@ -48,10 +48,11 @@ fun CompoundTag?.hasList(key: String, objType: Int) = hasList(key, objType.toByt
 fun CompoundTag?.hasList(key: String, objType: Byte): Boolean {
     if (!hasList(key)) return false
     val lt = get(key) as ListTag
-    return lt.elementType == objType || lt.elementType == 0.toByte()
+    val elementType = if (lt.isEmpty()) 0 else lt.get(0).id.toInt()
+    return elementType == objType || elementType == 0
 }
 
-fun CompoundTag?.hasUUID(key: String) = this != null && hasUUID(key)
+fun CompoundTag?.hasUUID(key: String) = this?.getIntArray(key)?.orElse(null)?.size == 4
 
 fun CompoundTag?.contains(key: String, id: Byte) = contains(key, id.toInt())
 fun CompoundTag?.contains(key: String, id: Int) = this != null && contains(key, id)
@@ -82,44 +83,45 @@ fun CompoundTag?.remove(key: String) = this?.remove(key)
 // Gets
 
 @JvmOverloads
-fun CompoundTag?.getBoolean(key: String, defaultExpected: Boolean = false) =
-    getIf(key, CompoundTag?::hasNumber, CompoundTag::getBoolean, defaultExpected)
+fun CompoundTag?.getBoolean(key: String, defaultExpected: Boolean = false) = this?.getBooleanOr(key, defaultExpected) ?: defaultExpected
 
 @JvmOverloads
-fun CompoundTag?.getByte(key: String, defaultExpected: Byte = 0) =
-    getIf(key, CompoundTag?::hasNumber, CompoundTag::getByte, defaultExpected)
+fun CompoundTag?.getByte(key: String, defaultExpected: Byte = 0) = this?.getByteOr(key, defaultExpected) ?: defaultExpected
 
 @JvmOverloads
-fun CompoundTag?.getShort(key: String, defaultExpected: Short = 0) =
-    getIf(key, CompoundTag?::hasNumber, CompoundTag::getShort, defaultExpected)
+fun CompoundTag?.getShort(key: String, defaultExpected: Short = 0) = this?.getShortOr(key, defaultExpected) ?: defaultExpected
 
 @JvmOverloads
-fun CompoundTag?.getInt(key: String, defaultExpected: Int = 0) =
-    getIf(key, CompoundTag?::hasNumber, CompoundTag::getInt, defaultExpected)
+fun CompoundTag?.getInt(key: String, defaultExpected: Int = 0) = this?.getIntOr(key, defaultExpected) ?: defaultExpected
 
 @JvmOverloads
-fun CompoundTag?.getLong(key: String, defaultExpected: Long = 0) =
-    getIf(key, CompoundTag?::hasNumber, CompoundTag::getLong, defaultExpected)
+fun CompoundTag?.getLong(key: String, defaultExpected: Long = 0L) = this?.getLongOr(key, defaultExpected) ?: defaultExpected
 
 @JvmOverloads
-fun CompoundTag?.getFloat(key: String, defaultExpected: Float = 0f) =
-    getIf(key, CompoundTag?::hasNumber, CompoundTag::getFloat, defaultExpected)
+fun CompoundTag?.getFloat(key: String, defaultExpected: Float = 0f) = this?.getFloatOr(key, defaultExpected) ?: defaultExpected
 
 @JvmOverloads
-fun CompoundTag?.getDouble(key: String, defaultExpected: Double = 0.0) =
-    getIf(key, CompoundTag?::hasNumber, CompoundTag::getDouble, defaultExpected)
+fun CompoundTag?.getDouble(key: String, defaultExpected: Double = 0.0) = this?.getDoubleOr(key, defaultExpected) ?: defaultExpected
 
-fun CompoundTag?.getLongArray(key: String) = getIf(key, CompoundTag?::hasLongArray, CompoundTag::getLongArray)
-fun CompoundTag?.getIntArray(key: String) = getIf(key, CompoundTag?::hasIntArray, CompoundTag::getIntArray)
-fun CompoundTag?.getByteArray(key: String) = getIf(key, CompoundTag?::hasByteArray, CompoundTag::getByteArray)
-fun CompoundTag?.getCompound(key: String): CompoundTag? =
-    getIf(key, CompoundTag?::hasCompound, CompoundTag::getCompound)
+fun CompoundTag?.getLongArray(key: String) = this?.getLongArray(key)?.orElse(null)
+fun CompoundTag?.getIntArray(key: String) = this?.getIntArray(key)?.orElse(null)
+fun CompoundTag?.getByteArray(key: String) = this?.getByteArray(key)?.orElse(null)
+fun CompoundTag?.getCompound(key: String): CompoundTag? = this?.getCompound(key)?.orElse(null)
 
-fun CompoundTag?.getString(key: String) = getIf(key, CompoundTag?::hasString, CompoundTag::getString)
+fun CompoundTag?.getString(key: String) = this?.getString(key)?.orElse(null)
 fun CompoundTag?.getList(key: String, objType: Byte) = getList(key, objType.toInt())
-fun CompoundTag?.getList(key: String, objType: Int) = getIf(key, { hasList(key, objType) }) { getList(it, objType) }
-fun CompoundTag?.getUUID(key: String) = getIf(key, CompoundTag?::hasUUID, CompoundTag::getUUID)
-fun CompoundTag?.get(key: String) = getIf(key, CompoundTag?::contains, CompoundTag::get)
+fun CompoundTag?.getList(key: String, objType: Int): ListTag? {
+    val list = this?.getList(key)?.orElse(null) ?: return null
+    return list.takeIf { this.hasList(key, objType) }
+}
+fun CompoundTag?.getUUID(key: String): UUID? {
+    val ints = this?.getIntArray(key)?.orElse(null) ?: return null
+    if (ints.size != 4) return null
+    val most = (ints[0].toLong() shl 32) or (ints[1].toLong() and 0xffffffffL)
+    val least = (ints[2].toLong() shl 32) or (ints[3].toLong() and 0xffffffffL)
+    return UUID(most, least)
+}
+fun CompoundTag?.get(key: String) = this?.get(key)
 
 @JvmSynthetic
 @JvmName("getListByByte")
@@ -127,9 +129,9 @@ fun CompoundTag.getList(key: String, objType: Byte): ListTag = getList(key, objT
 
 // Get-or-create
 
-fun CompoundTag.getOrCreateCompound(key: String): CompoundTag = getCompound(key) ?: CompoundTag().also { putCompound(key, it) }
+fun CompoundTag.getOrCreateCompound(key: String): CompoundTag = getCompound(key).orElseGet { CompoundTag().also { putCompound(key, it) } }
 fun CompoundTag.getOrCreateList(key: String, objType: Byte) = getOrCreateList(key, objType.toInt())
-fun CompoundTag.getOrCreateList(key: String, objType: Int): ListTag = if (hasList(key, objType)) getList(key, objType) else ListTag().also { putList(key, it) }
+fun CompoundTag.getOrCreateList(key: String, objType: Int): ListTag = if (hasList(key, objType)) getList(key, objType) ?: ListTag() else ListTag().also { putList(key, it) }
 
 // ================================================================================================================ Tag
 
@@ -187,4 +189,7 @@ val Tag.asCompound get() = this as? CompoundTag ?: CompoundTag()
 
 // asString is defined in Tag
 val Tag.asList get() = this as? ListTag ?: ListTag()
-val Tag.asUUID: UUID get() = if (this is IntArrayTag && this.size == 4) NbtUtils.loadUUID(this) else UUID(0, 0)
+val Tag.asUUID: UUID get() = if (this is IntArrayTag && this.size() == 4) {
+    val ints = this.asIntArray
+    UUID((ints[0].toLong() shl 32) or (ints[1].toLong() and 0xffffffffL), (ints[2].toLong() shl 32) or (ints[3].toLong() and 0xffffffffL))
+} else UUID(0, 0)

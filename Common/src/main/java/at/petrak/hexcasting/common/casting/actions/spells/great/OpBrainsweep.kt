@@ -22,7 +22,7 @@ import net.minecraft.core.BlockPos
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.sounds.SoundSource
 import net.minecraft.world.entity.Mob
-import net.minecraft.world.entity.npc.Villager
+import net.minecraft.world.entity.npc.villager.Villager
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.phys.Vec3
 
