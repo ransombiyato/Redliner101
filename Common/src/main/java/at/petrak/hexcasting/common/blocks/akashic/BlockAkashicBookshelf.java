@@ -48,7 +48,7 @@ public class BlockAkashicBookshelf extends Block implements AkashicFloodfiller, 
                     scroll.writeDatum(stack, new PatternIota(shelf.getPattern()));
                 }
                 level.playSound(player, pos, HexSounds.SCROLL_SCRIBBLE, SoundSource.BLOCKS, 1f, 1f);
-                return ItemInteractionResult.sidedSuccess(level.isClientSide);
+                return ItemInteractionResult.sidedSuccess(level.isClientSide());
             }
         }
 
@@ -67,7 +67,7 @@ public class BlockAkashicBookshelf extends Block implements AkashicFloodfiller, 
 
                 level.playSound(player, pos, HexSounds.SCROLL_SCRIBBLE, SoundSource.BLOCKS,
                         1f, 0.8f);
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return InteractionResult.sidedSuccess(level.isClientSide());
             }
         }
 

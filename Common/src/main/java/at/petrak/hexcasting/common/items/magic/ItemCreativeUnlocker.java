@@ -161,7 +161,7 @@ public class ItemCreativeUnlocker extends Item implements MediaHolderItem {
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-        if (isDebug(stack, DISPLAY_MEDIA) && !level.isClientSide) {
+        if (isDebug(stack, DISPLAY_MEDIA) && !level.isClientSide()) {
             debugDisplay(stack, HexDataComponents.MEDIA_EXTRACTIONS, "withdrawn", "all_media", entity);
             debugDisplay(stack, HexDataComponents.MEDIA_INSERTIONS, "inserted", "infinite_media", entity);
         }

@@ -5,7 +5,6 @@ import at.petrak.hexcasting.api.addldata.ADMediaHolder;
 import at.petrak.hexcasting.api.pigment.FrozenPigment;
 import at.petrak.hexcasting.api.player.Sentinel;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
-import net.minecraft.core.Holder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -108,7 +107,7 @@ public class HexAPIImpl implements HexAPI {
                     ArmorType.BODY, 0
             ),
             0,
-            Holder.direct(SoundEvents.ARMOR_EQUIP_LEATHER),
+            SoundEvents.ARMOR_EQUIP_LEATHER,
             0,
             0,
             ItemTags.REPAIRS_LEATHER_ARMOR,

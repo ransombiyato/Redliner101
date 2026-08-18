@@ -95,7 +95,7 @@ public abstract class ItemPackagedHex extends ItemMediaHolder implements HexHold
             return InteractionResult.FAIL;
         }
 
-        if (world.isClientSide) {
+        if (world.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
 
@@ -126,7 +126,7 @@ public abstract class ItemPackagedHex extends ItemMediaHolder implements HexHold
         }
         player.awardStat(stat);
 
-        sPlayer.getCooldowns().addCooldown(this, this.cooldown());
+        sPlayer.getCooldowns().addCooldown(stack, this.cooldown());
 
         if (clientView.getResolutionType().getSuccess()) {
             // Somehow we lost spraying particles on each new pattern, so do it here

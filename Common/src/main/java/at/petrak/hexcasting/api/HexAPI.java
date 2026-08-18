@@ -8,7 +8,6 @@ import at.petrak.hexcasting.api.player.Sentinel;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import com.google.common.base.Suppliers;
 import net.minecraft.ChatFormatting;
-import net.minecraft.core.Holder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -177,7 +176,7 @@ public interface HexAPI {
                     ArmorType.BODY, 0
             ),
             0,
-            Holder.direct(SoundEvents.ARMOR_EQUIP_LEATHER),
+            SoundEvents.ARMOR_EQUIP_LEATHER,
             0,
             0,
             ItemTags.REPAIRS_LEATHER_ARMOR,

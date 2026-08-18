@@ -1,26 +1,31 @@
 package at.petrak.hexcasting.client.render.shader;
 
+import at.petrak.hexcasting.api.HexAPI;
+import com.mojang.blaze3d.pipeline.BlendFunction;
+import com.mojang.blaze3d.pipeline.RenderPipeline;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
-import com.mojang.datafixers.util.Pair;
-import net.minecraft.client.renderer.ShaderInstance;
-import net.minecraft.server.packs.resources.ResourceProvider;
+import com.mojang.blaze3d.vertex.VertexFormat;
+import net.minecraft.client.renderer.RenderPipelines;
 
-import java.io.IOException;
-import java.util.function.Consumer;
-
-// https://github.com/VazkiiMods/Botania/blob/3a43accc2fbc439c9f2f00a698f8f8ad017503db/Common/src/main/java/vazkii/botania/client/core/helper/CoreShaders.java
-public class HexShaders {
-    private static ShaderInstance grayscale;
-
-    public static void init(ResourceProvider resourceProvider,
-                            Consumer<Pair<ShaderInstance, Consumer<ShaderInstance>>> registrations) throws IOException {
-        registrations.accept(Pair.of(
-            new ShaderInstance(resourceProvider, "hexcasting__grayscale", DefaultVertexFormat.NEW_ENTITY),
-            inst -> grayscale = inst)
-        );
+/** Custom render pipelines used by Hex Casting's client renderers. */
+public final class HexShaders {
+    private HexShaders() {
     }
 
-    public static ShaderInstance grayscale() {
-        return grayscale;
+    public static final RenderPipeline GRAYSCALE = RenderPipelines.register(
+        RenderPipeline.builder(RenderPipelines.ENTITY_SNIPPET)
+            .withLocation(HexAPI.modLoc("pipeline/grayscale"))
+            .withFragmentShader(HexAPI.modLoc("hexcasting__grayscale"))
+            .withSampler("Sampler0")
+            .withSampler("Sampler1")
+            .withSampler("Sampler2")
+            .withVertexFormat(DefaultVertexFormat.NEW_ENTITY, VertexFormat.Mode.QUADS)
+            .withCull(false)
+            .withBlend(BlendFunction.TRANSLUCENT)
+            .build()
+    );
+
+    public static RenderPipeline grayscale() {
+        return GRAYSCALE;
     }
 }

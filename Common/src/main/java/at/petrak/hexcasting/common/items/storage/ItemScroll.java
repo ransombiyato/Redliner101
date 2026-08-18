@@ -23,14 +23,18 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.TypedEntityData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.Optional;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
@@ -103,18 +107,18 @@ public class ItemScroll extends Item implements IotaHolderItem {
         // i guess
         var customData = itemstack.get(DataComponents.CUSTOM_DATA);
         if (customData != null) {
-            EntityType.updateCustomEntityTag(level, player, scrollEntity, customData);
+            EntityType.updateCustomEntityTag(level, player, scrollEntity, TypedEntityData.of(scrollEntity.getType(), customData.copyTagWithoutId()));
         }
 
         if (scrollEntity.survives()) {
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 scrollEntity.playPlacementSound();
                 level.gameEvent(player, GameEvent.ENTITY_PLACE, posClicked);
                 level.addFreshEntity(scrollEntity);
             }
 
             itemstack.shrink(1);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         } else {
             return InteractionResult.CONSUME;
         }
@@ -127,11 +131,11 @@ public class ItemScroll extends Item implements IotaHolderItem {
 
     @Override
     public Component getName(ItemStack pStack) {
-        var descID = this.getDescriptionId(pStack);
+        var descID = this.getDescriptionId();
         var ancientAction = pStack.get(HexDataComponents.ACTION);
         if (ancientAction != null) {
             return Component.translatable(descID + ".of",
-                Component.translatable("hexcasting.action." + ancientAction.location()));
+                Component.translatable("hexcasting.action." + ancientAction.identifier()));
         } else if (pStack.has(HexDataComponents.PATTERN)) {
             var pattern = pStack.get(HexDataComponents.PATTERN);
             var patternLabel = Component.literal("");
@@ -145,27 +149,27 @@ public class ItemScroll extends Item implements IotaHolderItem {
     }
 
     @Override
-    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+    public void inventoryTick(ItemStack pStack, ServerLevel pLevel, Entity pEntity, net.minecraft.world.entity.EquipmentSlot pSlot) {
         // the needs_purchase tag is used so you can't see the pattern on scrolls sold by a wandering trader
         // once you put the scroll into your inventory, this removes the tag to reveal the pattern
         if(pStack.has(HexDataComponents.NEEDS_PURCHASE))
             pStack.remove(HexDataComponents.NEEDS_PURCHASE);
         // if op_id is set but there's no stored pattern, attempt to load the pattern on inv tick
-        if (pStack.has(HexDataComponents.ACTION) && !pStack.has(HexDataComponents.PATTERN) && pEntity.getServer() != null) {
+        if (pStack.has(HexDataComponents.ACTION) && !pStack.has(HexDataComponents.PATTERN) && pLevel.getServer() != null) {
             var action = pStack.get(HexDataComponents.ACTION);
-            var pat = PatternRegistryManifest.getCanonicalStrokesPerWorld(action, pEntity.getServer().overworld());
+            var pat = PatternRegistryManifest.getCanonicalStrokesPerWorld(action, pLevel.getServer().overworld());
             pStack.set(HexDataComponents.PATTERN, pat);
         }
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if (stack.has(HexDataComponents.NEEDS_PURCHASE)) {
             var needsPurchase = Component.translatable("hexcasting.tooltip.scroll.needs_purchase");
-            tooltipComponents.add(needsPurchase.withStyle(ChatFormatting.GRAY));
+            tooltipComponents.accept(needsPurchase.withStyle(ChatFormatting.GRAY));
         } else if (stack.has(HexDataComponents.ACTION) && !stack.has(HexDataComponents.PATTERN)) {
             var notLoaded = Component.translatable("hexcasting.tooltip.scroll.pattern_not_loaded");
-            tooltipComponents.add(notLoaded.withStyle(ChatFormatting.GRAY));
+            tooltipComponents.accept(notLoaded.withStyle(ChatFormatting.GRAY));
         }
     }
 

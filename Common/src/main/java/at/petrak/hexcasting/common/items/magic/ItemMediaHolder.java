@@ -9,11 +9,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
-import java.util.List;
+import java.util.function.Consumer;
 
 public abstract class ItemMediaHolder extends Item implements MediaHolderItem {
     public static final String TAG_MEDIA = "hexcasting:media";
@@ -86,7 +87,7 @@ public abstract class ItemMediaHolder extends Item implements MediaHolderItem {
     }*/
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         var maxMedia = getMaxMedia(stack);
         if (maxMedia > 0) {
             var media = getMedia(stack);
@@ -102,11 +103,11 @@ public abstract class ItemMediaHolder extends Item implements MediaHolderItem {
             maxCapacity.withStyle(style -> style.withColor(HEX_COLOR));
             percentFull.withStyle(style -> style.withColor(color));
 
-            tooltipComponents.add(
+            tooltipComponents.accept(
                 Component.translatable("hexcasting.tooltip.media_amount.advanced",
                     mediamount, maxCapacity, percentFull));
         }
 
-        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        super.appendHoverText(stack, context, tooltipDisplay, tooltipComponents, tooltipFlag);
     }
 }
