@@ -1,0 +1,168 @@
+PORT 1.21.11 REPOSITORY-WIDE COMPATIBILITY AUDIT
+Generated: 2026-08-19
+Scope: Common/src/main and Fabric/src/main authored Java/Kotlin source
+
+=== stale/legacy candidate search ===
+Common/src/main/java/at/petrak/hexcasting/api/client/ClientRenderHelper.kt:30:        ps.pushPose()
+Common/src/main/java/at/petrak/hexcasting/api/client/ClientRenderHelper.kt:76:        ps.popPose()
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:50:        ps.pushPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:119:        ps.popPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:51:        ps.pushPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:56:        ps.popPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:73:        ps.pushPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:97:        ps.popPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:107:        ps.pushPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:118:        ps.popPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:129:        ps.pushPose();
+Common/src/main/java/at/petrak/hexcasting/client/render/WorldlyPatternRenderHelpers.java:142:        ps.popPose();
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:12:import net.minecraft.data.tags.BlockItemTagsProvider;
+Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:83:    private class StandardBlockItemTags extends BlockItemTagsProvider {
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:67:        poseStack.pushPose();
+Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:78:        poseStack.popPose();
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:43:        ps.pushPose();
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:71:            ps.pushPose();
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:75:            ps.popPose();
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/AbstractPatternComponent.java:77:        ps.popPose();
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:23:        poseStack.pushPose();
+Common/src/main/java/at/petrak/hexcasting/interop/utils/PatternDrawingUtil.java:49:        poseStack.popPose();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:39:            matrices.pushPose();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:59:                matrices.pushPose();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:64:                matrices.popPose();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:66:            matrices.popPose();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/HexEMIPlugin.java:48:		            for (var holder : registry.getRecipeManager().getRecipes()) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:66:        ps.pushPose();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:72:        ps.popPose();
+
+=== legacy API hit counts ===
+readFromNbt                      0
+writeToNbt                       0
+getMatchingStacks                0
+getCodec\(boolean                0
+extends Ingredient               0
+renderStatic                     0
+CONJURE_RENDER_TYPE              0
+getResult\(                      5
+PlayerRenderer                   3
+ResourceKey\.location\(          0
+getRecipeManager\(               1
+getAllRecipesFor\(               0
+registryOrThrow\(                0
+Ingredient\.EMPTY                0
+
+=== exact 1.21.11 positive-family checks ===
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:41:        pose.pushMatrix();
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:43:        graphics.blit(RenderPipelines.GUI_TEXTURED, this.background, 0, 0, 0f, 0f,
+Common/src/main/java/at/petrak/hexcasting/client/gui/PatternTooltipComponent.java:45:        pose.popMatrix();
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:184:                ps.pushMatrix();
+Common/src/main/java/at/petrak/hexcasting/client/render/HexAdditionalRenderers.java:209:                ps.popMatrix();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCEntityIotaHolder.java:11:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCEntityIotaHolder.java:16:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCHexHolder.java:66:        public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCHexHolder.java:71:        public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:53:        public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:58:        public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:87:        public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:92:        public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:75:        public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:80:        public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:145:        public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:150:        public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCVariantItem.java:44:        public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCVariantItem.java:49:        public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:38:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:49:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java:39:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java:44:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCClientCastingStack.java:27:    public void readData(ValueInput input) { }
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCClientCastingStack.java:30:    public void writeData(ValueOutput output) { }
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFavoredPigment.java:37:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFavoredPigment.java:42:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:41:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:56:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:35:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:40:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:40:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:54:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java:44:    public void readData(ValueInput input) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java:49:    public void writeData(ValueOutput output) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:74:            public void includeRootAdvancement() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:75:                consumer.includeRootAdvancement();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:6:import at.petrak.hexcasting.fabric.mixin.client.FabricItemStackRenderStateAccessor;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:16:import net.minecraft.client.renderer.item.ItemStackRenderState;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:47:            var renderState = new ItemStackRenderState();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:48:            instance.getItemModelResolver().updateForLiving(renderState, stack, ItemDisplayContext.HEAD,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:51:            var stateAccessor = (FabricItemStackRenderStateAccessor) (Object) renderState;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:43:                graphics.blit(RenderPipelines.GUI_TEXTURED, this.textureId, bounds.x(), bounds.y(),
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:56:        poseStack.pushMatrix();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:62:        poseStack.popMatrix();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemRendererInvoker.java:6:import net.minecraft.client.renderer.item.ItemStackRenderState;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemRendererInvoker.java:19:        List<BakedQuad> quads, RenderType renderType, ItemStackRenderState.FoilType foilType) {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:8:import net.minecraft.client.renderer.entity.player.AvatarRenderer;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:16:@Mixin(AvatarRenderer.class)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:28:        this.addLayer(new AltioraLayer<>((AvatarRenderer) (Object) this, ctx.getModelSet()));
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemStackRenderStateAccessor.java:3:import net.minecraft.client.renderer.item.ItemStackRenderState;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemStackRenderStateAccessor.java:7:@Mixin(ItemStackRenderState.class)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemStackRenderStateAccessor.java:8:public interface FabricItemStackRenderStateAccessor {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemStackRenderStateAccessor.java:13:    ItemStackRenderState.LayerRenderState[] hex$getLayers();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemLayerRenderStateAccessor.java:5:import net.minecraft.client.renderer.item.ItemStackRenderState;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemLayerRenderStateAccessor.java:11:@Mixin(ItemStackRenderState.LayerRenderState.class)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemLayerRenderStateAccessor.java:23:    ItemStackRenderState.FoilType hex$getFoilType();
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:8:import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:61:    public Stream<Holder<Item>> getMatchingItems() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:87:    public CustomIngredientSerializer<FabricModConditionalIngredient> getSerializer() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:91:    public static class Serializer implements CustomIngredientSerializer<FabricModConditionalIngredient> {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:7:import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:68:    public Stream<Holder<Item>> getMatchingItems() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:78:    public CustomIngredientSerializer<FabricUnsealedIngredient> getSerializer() {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:82:    public static class Serializer implements CustomIngredientSerializer<FabricUnsealedIngredient> {
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:11:import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42:        BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21:        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27:        this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388:            MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389:            MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519:        return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:59:import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:197:        CustomIngredientSerializer.register(FabricUnsealedIngredient.Serializer.INSTANCE);
+Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexInitializer.kt:198:        CustomIngredientSerializer.register(FabricModConditionalIngredient.Serializer.INSTANCE);
+Fabric/src/main/resources/fabricasting.mixins.json:21:    "client.FabricItemStackRenderStateAccessor",
+
+=== git hygiene ===
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCClientCastingStack.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFavoredPigment.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCEntityIotaHolder.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCHexHolder.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCIotaHolder.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCPigment.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCVariantItem.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/BrainsweepeeEmiStack.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java
+ [31mD[m Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricParticleEngineMixin.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java
+ [31mM[m Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java
+ [31mM[m Fabric/src/main/resources/fabricasting.mixins.json
+ [31mM[m docs/PORT_1.21.11_B324_SOURCE_AUDIT.txt
+ [31mM[m docs/PORT_1.21.11_CHECKLIST.md
+[31m??[m Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemLayerRenderStateAccessor.java
+[31m??[m Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemRendererInvoker.java
+[31m??[m Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricItemStackRenderStateAccessor.java
+[31m??[m docs/CI_32216180195_ERROR_INDEX.txt
+[31m??[m docs/CI_32216180195_KOTLIN_ERROR_INDEX.txt
+[31m??[m docs/CI_32216180195_UNIQUE_ERRORS.txt
+[31m??[m docs/PORT_1.21.11_B325_WORKTREE_AUDIT.txt
+[31m??[m docs/PORT_1.21.11_REPOSITORY_WIDE_AUDIT_B325.txt

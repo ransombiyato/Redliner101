@@ -1,0 +1,104 @@
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:11: error: CCAltiora is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:37: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:40: error: bad operand type Optional<Boolean> for unary operator '!'
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:44: error: incompatible types: Optional<Integer> cannot be converted to int
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCAltiora.java:48: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java:11: error: CCBrainswept is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java:38: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java:40: error: incompatible types: Optional<Boolean> cannot be converted to boolean
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCBrainswept.java:43: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCClientCastingStack.java:10: error: CCClientCastingStack is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCClientCastingStack.java:26: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCClientCastingStack.java:29: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFavoredPigment.java:14: error: CCFavoredPigment is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFavoredPigment.java:36: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFavoredPigment.java:41: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:14: error: CCFlight is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:40: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:43: error: bad operand type Optional<Boolean> for unary operator '!'
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:48: error: incompatible types: Optional<String> cannot be converted to String
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:49: error: no suitable method found for vecFromNBT(Optional<CompoundTag>)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCFlight.java:55: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:17: error: CCPatterns is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:37: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:39: error: method getList in class CompoundTag cannot be applied to given types;
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:44: error: no suitable method found for parse(NbtOps,Optional<CompoundTag>)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCPatterns.java:49: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:16: error: CCSentinel is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:39: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:42: error: incompatible types: Optional<Boolean> cannot be converted to boolean
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:44: error: no suitable method found for vecFromNBT(Optional<CompoundTag>)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:46: error: incompatible types: Optional<String> cannot be converted to String
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCSentinel.java:53: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java:14: error: CCStaffcastImage is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java:42: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java:44: error: incompatible types: Optional<CompoundTag> cannot be converted to CompoundTag
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CCStaffcastImage.java:47: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCEntityIotaHolder.java:11: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCEntityIotaHolder.java:16: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCEntityIotaHolder.java:21: error: Wrapper is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCHexHolder.java:22: error: ItemBased is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCHexHolder.java:65: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCHexHolder.java:70: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:19: error: ItemBased is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:52: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:57: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:63: error: Static is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:86: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCItemIotaHolder.java:91: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:144: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:149: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:18: error: ItemBased is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:74: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:79: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCMediaHolder.java:85: error: Static is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCVariantItem.java:16: error: ItemBased is not abstract and does not override abstract method writeData(ValueOutput) in Component
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCVariantItem.java:43: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/adimpl/CCVariantItem.java:48: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricConditionsBuilder.java:61: error: <anonymous at.petrak.hexcasting.fabric.datagen.HexFabricConditionsBuilder$1> is not abstract and does not override abstract method includeRootAdvancement() in RecipeOutput
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:10: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:25: error: type argument M is not within bounds of type-variable T
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:41: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/BrainsweepeeEmiStack.java:90: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/BrainsweepeeEmiStack.java:91: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:34: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:65: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:66: error: incompatible types: int cannot be converted to Matrix3x2f
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:67: error: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/PatternRendererEMI.java:71: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:40: error: invalid method reference
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:41: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:46: error: incompatible types: Identifier cannot be converted to RenderPipeline
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:58: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:59: error: incompatible types: int cannot be converted to Matrix3x2f
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:60: error: incompatible types: int cannot be converted to Matrix3x2f
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/emi/TheCoolerSlotWidget.java:64: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricParticleEngineMixin.java:27: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:14: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:15: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:15: error: wrong number of type arguments; required 3
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:16: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:4: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:8: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:103: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:23: error: FabricModConditionalIngredient is not abstract and does not override abstract method getMatchingItems() in CustomIngredient
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:23: error: cannot inherit from final Ingredient
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:46: error: no suitable method found for stream(HolderSet<Item>)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:46: error: values has private access in Ingredient
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:64: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:95: error: Serializer is not abstract and does not override abstract method getCodec() in CustomIngredientSerializer
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:23: error: FabricUnsealedIngredient is not abstract and does not override abstract method getMatchingItems() in CustomIngredient
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:23: error: cannot inherit from final Ingredient
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:47: error: no suitable method found for of(ItemStack)
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:75: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:90: error: Serializer is not abstract and does not override abstract method getCodec() in CustomIngredientSerializer
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricUnsealedIngredient.java:98: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:11: error: package net.fabricmc.fabric.api.blockrenderlayer.v1 does not exist
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: package BlockRenderLayerMap does not exist
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: Optional<Reference<CAP#1>> cannot be converted to Registry<B>
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: Optional<Reference<CAP#1>> cannot be converted to Registry<B>
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: incompatible types: Item cannot be converted to HolderGetter<Item>
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:390: error: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol

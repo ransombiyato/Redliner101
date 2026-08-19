@@ -8,7 +8,7 @@ import at.petrak.hexcasting.interop.HexInterop;
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions;
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions.ItemPropertyFunction;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.multiplayer.ClientLevel;

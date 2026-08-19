@@ -16,10 +16,12 @@
   ],
   "client": [
     "client.FabricAbstractTextureMixin",
+    "client.FabricItemLayerRenderStateAccessor",
+    "client.FabricItemRendererInvoker",
+    "client.FabricItemStackRenderStateAccessor",
     "client.FabricLevelRendererMixin",
     "client.FabricModelManagerMixin",
     "client.FabricMouseHandlerMixin",
-    "client.FabricParticleEngineMixin",
     "client.FabricPlayerRendererMixin"
   ]
 }

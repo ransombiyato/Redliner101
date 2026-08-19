@@ -1,7 +1,7 @@
 package at.petrak.hexcasting.fabric.cc;
 
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -36,12 +36,12 @@ public class CCBrainswept implements Component, AutoSyncedComponent {
     }
 
     @Override
-    public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
-        this.brainswept = tag.getBoolean(TAG_BRAINSWEPT);
+    public void readData(ValueInput input) {
+        this.brainswept = input.getBooleanOr(TAG_BRAINSWEPT, false);
     }
 
     @Override
-    public void writeToNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
-        tag.putBoolean(TAG_BRAINSWEPT, this.brainswept);
+    public void writeData(ValueOutput output) {
+        output.putBoolean(TAG_BRAINSWEPT, this.brainswept);
     }
 }

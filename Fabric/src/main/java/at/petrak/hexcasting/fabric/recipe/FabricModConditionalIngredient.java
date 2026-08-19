@@ -6,64 +6,60 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredient;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 
-import javax.annotation.Nullable;
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.Stream;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
-
-public class FabricModConditionalIngredient extends Ingredient implements CustomIngredient {
+public class FabricModConditionalIngredient implements CustomIngredient {
     public static final Identifier ID = modLoc("mod_conditional");
 
     private final Ingredient main;
     private final String modid;
     private final Ingredient ifModLoaded;
-
     private final Ingredient toUse;
 
     public static final MapCodec<FabricModConditionalIngredient> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-            Ingredient.CODEC.fieldOf("main").forGetter(FabricModConditionalIngredient::getMain),
-            Codec.STRING.fieldOf("modid").forGetter(FabricModConditionalIngredient::getModid),
-            Ingredient.CODEC.fieldOf("ifModLoaded").forGetter(FabricModConditionalIngredient::getIfModLoaded)
+        Ingredient.CODEC.fieldOf("main").forGetter(FabricModConditionalIngredient::getMain),
+        Codec.STRING.fieldOf("modid").forGetter(FabricModConditionalIngredient::getModid),
+        Ingredient.CODEC.fieldOf("ifModLoaded").forGetter(FabricModConditionalIngredient::getIfModLoaded)
     ).apply(instance, FabricModConditionalIngredient::new));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, FabricModConditionalIngredient> STREAM_CODEC = StreamCodec.composite(
-            Ingredient.CONTENTS_STREAM_CODEC, FabricModConditionalIngredient::getMain,
-            ByteBufCodecs.STRING_UTF8, FabricModConditionalIngredient::getModid,
-            Ingredient.CONTENTS_STREAM_CODEC, FabricModConditionalIngredient::getIfModLoaded,
-            FabricModConditionalIngredient::new
+        Ingredient.CONTENTS_STREAM_CODEC, FabricModConditionalIngredient::getMain,
+        ByteBufCodecs.STRING_UTF8, FabricModConditionalIngredient::getModid,
+        Ingredient.CONTENTS_STREAM_CODEC, FabricModConditionalIngredient::getIfModLoaded,
+        FabricModConditionalIngredient::new
     );
 
     protected FabricModConditionalIngredient(Ingredient main, String modid, Ingredient ifModLoaded) {
-        super(Arrays.stream((IXplatAbstractions.INSTANCE.isModPresent(modid) ? ifModLoaded : main).values));
         this.main = main;
         this.modid = modid;
         this.ifModLoaded = ifModLoaded;
-
         this.toUse = IXplatAbstractions.INSTANCE.isModPresent(modid) ? ifModLoaded : main;
     }
-
 
     public static FabricModConditionalIngredient of(Ingredient main, String modid, Ingredient ifModLoaded) {
         return new FabricModConditionalIngredient(main, modid, ifModLoaded);
     }
 
     @Override
-    public boolean test(@Nullable ItemStack input) {
+    public boolean test(ItemStack input) {
         return toUse.test(input);
     }
 
     @Override
-    public List<ItemStack> getMatchingStacks() {
-        return List.of();
+    public Stream<Holder<Item>> getMatchingItems() {
+        return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
     }
 
     @Override
@@ -88,11 +84,11 @@ public class FabricModConditionalIngredient extends Ingredient implements Custom
     }
 
     @Override
-    public CustomIngredientSerializer<?> getSerializer() {
+    public CustomIngredientSerializer<FabricModConditionalIngredient> getSerializer() {
         return Serializer.INSTANCE;
     }
 
-    public static class Serializer implements CustomIngredientSerializer {
+    public static class Serializer implements CustomIngredientSerializer<FabricModConditionalIngredient> {
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
@@ -101,12 +97,12 @@ public class FabricModConditionalIngredient extends Ingredient implements Custom
         }
 
         @Override
-        public MapCodec<?> getCodec(boolean b) {
+        public MapCodec<FabricModConditionalIngredient> getCodec() {
             return CODEC;
         }
 
         @Override
-        public StreamCodec<RegistryFriendlyByteBuf, ?> getPacketCodec() {
+        public StreamCodec<RegistryFriendlyByteBuf, FabricModConditionalIngredient> getPacketCodec() {
             return STREAM_CODEC;
         }
     }

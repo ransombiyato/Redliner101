@@ -1,9 +1,9 @@
 package at.petrak.hexcasting.fabric.cc.adimpl;
 
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import at.petrak.hexcasting.api.addldata.ADVariantItem;
 import at.petrak.hexcasting.api.item.VariantItem;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import org.ladysnake.cca.api.v3.component.Component;
 
@@ -41,12 +41,12 @@ public abstract class CCVariantItem implements ADVariantItem, Component {
         }
 
         @Override
-        public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void readData(ValueInput input) {
 
         }
 
         @Override
-        public void writeToNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void writeData(ValueOutput output) {
 
         }
     }

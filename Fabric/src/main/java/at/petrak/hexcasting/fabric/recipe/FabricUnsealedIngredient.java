@@ -5,34 +5,34 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredient;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
-import net.minecraft.world.item.crafting.Ingredient;
 
-import javax.annotation.Nullable;
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.Stream;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 
-public class FabricUnsealedIngredient extends Ingredient implements CustomIngredient {
+public class FabricUnsealedIngredient implements CustomIngredient {
     public static final Identifier ID = modLoc("unsealed");
 
     private final ItemStack stack;
 
     public static final MapCodec<FabricUnsealedIngredient> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-            ItemStack.CODEC.fieldOf("item").forGetter(FabricUnsealedIngredient::getStack)
+        ItemStack.CODEC.fieldOf("item").forGetter(FabricUnsealedIngredient::getStack)
     ).apply(instance, FabricUnsealedIngredient::new));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, FabricUnsealedIngredient> STREAM_CODEC = StreamCodec.composite(
-            Identifier.STREAM_CODEC, FabricUnsealedIngredient::getId,
-            ItemStack.STREAM_CODEC, FabricUnsealedIngredient::getStack,
-            (a, b) -> new FabricUnsealedIngredient(b)
+        Identifier.STREAM_CODEC, FabricUnsealedIngredient::getId,
+        ItemStack.STREAM_CODEC, FabricUnsealedIngredient::getStack,
+        (a, b) -> new FabricUnsealedIngredient(b)
     );
 
     private static ItemStack createStack(ItemStack base) {
@@ -44,7 +44,6 @@ public class FabricUnsealedIngredient extends Ingredient implements CustomIngred
     }
 
     protected FabricUnsealedIngredient(ItemStack stack) {
-        super(Arrays.stream(Ingredient.of(stack).values));
         this.stack = stack;
     }
 
@@ -56,25 +55,18 @@ public class FabricUnsealedIngredient extends Ingredient implements CustomIngred
         return ID;
     }
 
-    /**
-     * Creates a new ingredient matching the given stack
-     */
     public static FabricUnsealedIngredient of(ItemStack stack) {
         return new FabricUnsealedIngredient(stack);
     }
 
     @Override
-    public boolean test(@Nullable ItemStack input) {
-        if (input == null) {
-            return false;
-        }
-
+    public boolean test(ItemStack input) {
         return false;
     }
 
     @Override
-    public List<ItemStack> getMatchingStacks() {
-        return List.of(stack);
+    public Stream<Holder<Item>> getMatchingItems() {
+        return Stream.of(BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
     }
 
     @Override
@@ -83,11 +75,11 @@ public class FabricUnsealedIngredient extends Ingredient implements CustomIngred
     }
 
     @Override
-    public CustomIngredientSerializer getSerializer() {
+    public CustomIngredientSerializer<FabricUnsealedIngredient> getSerializer() {
         return Serializer.INSTANCE;
     }
 
-    public static class Serializer implements CustomIngredientSerializer {
+    public static class Serializer implements CustomIngredientSerializer<FabricUnsealedIngredient> {
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
@@ -96,12 +88,12 @@ public class FabricUnsealedIngredient extends Ingredient implements CustomIngred
         }
 
         @Override
-        public MapCodec getCodec(boolean b) {
+        public MapCodec<FabricUnsealedIngredient> getCodec() {
             return CODEC;
         }
 
         @Override
-        public StreamCodec getPacketCodec() {
+        public StreamCodec<RegistryFriendlyByteBuf, FabricUnsealedIngredient> getPacketCodec() {
             return STREAM_CODEC;
         }
     }

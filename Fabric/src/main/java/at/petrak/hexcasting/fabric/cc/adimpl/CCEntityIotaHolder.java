@@ -1,20 +1,19 @@
 package at.petrak.hexcasting.fabric.cc.adimpl;
 
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import at.petrak.hexcasting.api.addldata.ItemDelegatingEntityIotaHolder;
 import at.petrak.hexcasting.api.casting.iota.Iota;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class CCEntityIotaHolder implements CCIotaHolder {
     @Override
-    public void writeToNbt(@NotNull CompoundTag tag, HolderLookup.Provider registryLookup) {
+    public void writeData(ValueOutput output) {
         // NO-OP
     }
 
     @Override
-    public void readFromNbt(@NotNull CompoundTag tag, HolderLookup.Provider registryLookup) {
+    public void readData(ValueInput input) {
         // NO-OP
     }
 

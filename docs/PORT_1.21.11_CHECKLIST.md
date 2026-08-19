@@ -173,7 +173,39 @@ Run 32215235905 passed Java compilation and exposed the next Kotlin client/API f
 | B324-06 | `FabricHexInitializer.kt` | Constrain the generic `bind` helper to `T : Any` and resolve the remaining Kotlin overload/type-bound diagnostic. | IN PROGRESS |
 | B324-07 | Cross-cutting Kotlin validation | Re-run the full Fabric Kotlin compiler after the grouped client/API fixes and record any new diagnostics before further edits. | IN PROGRESS |
 
+## Current consolidated diagnostic inventory: CI run 32216180195
+
+Run 32216180195 passed the Fabric Kotlin compilation and exposed the next Java families. The complete workflow output is stored in `docs/CI_32216180195_FAILED.log`, Java diagnostics are indexed in `docs/CI_32216180195_ERROR_INDEX.txt`, and unique file/error summaries are stored in `docs/CI_32216180195_UNIQUE_ERRORS.txt`.
+
+| Batch ID | Affected file(s) | Complete fix scope recorded from run 32216180195 | Status |
+|---|---|---|---|
+| B325-01 | `Fabric/src/main/java/at/petrak/hexcasting/fabric/cc/CC*.java`, including `CCAltiora`, `CCBrainswept`, `CCClientCastingStack`, `CCFavoredPigment`, `CCFlight`, `CCPatterns`, `CCSentinel`, `CCStaffcastImage`, and `cc/adimpl/*` | ComputerCraft component interfaces now require `writeData(ValueOutput)` and changed read/write method contracts. Migrate all CC component serialization methods as one persistence family, preserving keys and codec behavior; resolve Optional NBT accessors and removed overrides. | IN PROGRESS |
+| B325-02 | `FabricModConditionalIngredient.java`, `FabricUnsealedIngredient.java` | Fabric 1.21.11 `Ingredient` is final and custom ingredients must implement the current `CustomIngredient`/`CustomIngredientSerializer` contracts, including `getMatchingItems()` and `getCodec()`. Replace inheritance/private-field access and preserve conditional/unsealed matching semantics. | IN PROGRESS |
+| B325-03 | `FabricHexConditionsBuilder.java` | Add the new `RecipeOutput.includeRootAdvancement()` implementation required by the 1.21.11 interface while preserving conditional recipe output behavior. | IN PROGRESS |
+| B325-04 | `LensAccessoryRenderer.java` | Resolve Accessories API renderer/package and generic-bound changes; preserve lens rendering and model registration. | IN PROGRESS |
+| B325-05 | `BrainsweepeeEmiStack.java`, `PatternRendererEMI.java`, `TheCoolerSlotWidget.java` | Migrate EMI rendering/UI APIs: missing stack methods, Matrix3x2fStack/PoseStack boundaries, RenderPipeline-based GUI rendering, and changed widget/texture methods. Preserve existing EMI visuals and interactions. | IN PROGRESS |
+| B325-06 | `FabricParticleEngineMixin.java`, `FabricPlayerRendererMixin.java` | Resolve removed or renamed Fabric/Minecraft client mixin target classes and changed generic renderer signatures against exact 1.21.11 mappings. | IN PROGRESS |
+| B325-07 | `FabricClientXplatImpl.java`, `FabricRegister.java`, `FabricXplatImpl.java` | Migrate removed BlockRenderLayerMap package, Optional registry lookup typing, HolderGetter-aware item predicates, and remaining missing symbols in Fabric platform abstractions. | IN PROGRESS |
+| B325-08 | Cross-cutting validation | Re-run source-wide Fabric Java/Kotlin compilation after these grouped families, record every new diagnostic before editing, and do not push an unreviewed partial batch. | IN PROGRESS |
+
 
 ### Local validation constraint
 
 The local Gradle `:Common:compileJava` attempt reached the compile task but could not acquire a Java 21 compiler because `/usr/lib/jvm/java-21-openjdk-amd64` is a JRE (`java` exists, `javac` is absent). The full source batch therefore remains uncompiled locally and must be validated by the planned GitHub Actions run after the checklist/source review. This is recorded as an environment limitation, not a source resolution.
+
+### B325 verification notes recorded before source edits
+
+The exact 1.21.11 mappings and installed API sources establish the following batch boundaries:
+
+| Batch | Verified finding | Evidence used | Required implementation direction |
+|---|---|---|---|
+| B325-04 | Accessories beta.16 still declares `AccessoryRenderer.render` with `EntityModel<M>`, but Minecraft 1.21.11 changes `EntityModel` to `EntityModel<T extends EntityRenderState>`. The old `LivingEntity` bound is therefore invalid. `PlayerModel` is now `net.minecraft.client.model.player.PlayerModel` and is based on `AvatarRenderState`. `ItemRenderer.renderStatic` is removed; 1.21.11 resolves item models through `ItemModelManager`/`ItemRenderState` and submits them through the render-command queue. | `/home/ubuntu/mc12111/client.txt`; Accessories beta.16 source; Yarn 1.21.11 ItemModelManager, ItemRenderState, and ItemRenderer documentation | Update the renderer’s generic bridge and item-render path as one compatibility change, preserving the lens’s HEAD transform and visual output. |
+| B325-05 | EMI 1.1.18 uses `GuiGraphics` backed by `Matrix3x2fStack`; old `PoseStack` operations and direct `RenderSystem.enableBlend`/`setShaderColor` calls are invalid. EMI’s current widget path provides `EmiDrawContext`/GUI helpers, and custom renderables must use the current GUI matrix API. | EMI 1.1.18 source jar; CI 32216180195 diagnostics | Migrate `BrainsweepeeEmiStack`, `PatternRendererEMI`, and `TheCoolerSlotWidget` together to the current GUI/render-pipeline APIs, retaining icon rendering, pattern positioning, slot backgrounds, catalyst icons, and tooltips. |
+| B325-06 | The custom particle class now returns the built-in `ParticleRenderType` layer `TRANSLUCENT`; the old `CONJURE_RENDER_TYPE` field no longer exists. Minecraft 1.21.11 replaces `PlayerRenderer` with `AvatarRenderer`, whose constructor is `(EntityRendererProvider.Context, boolean)` and whose render-state/model family uses `AvatarRenderState`. | `/home/ubuntu/mc12111/client.txt`; current `ConjureParticle`; upstream HexMod 1.21 guidance | Remove only the obsolete custom particle-order hook or convert it to the built-in layer without changing particle behavior, and retarget the Altiora mixin to `AvatarRenderer` with the exact three-parameter renderer hierarchy. |
+| B325-07 | `BlockRenderLayerMap` is in `net.fabricmc.fabric.api.client.rendering.v1`; registry lookup requires `getValueOrThrow(ResourceKey)`; item predicates require `HolderGetter<Item>` as the first `of` argument; `InteractionResult` exposes `result()` rather than the removed `getResult()`. | Fabric API 1.21.11 sources; `/home/ubuntu/mc12111/client.txt`; current source audit | Complete the platform batch and re-run broad stale-symbol searches before committing. |
+
+No B325 row is marked `DONE` from source edits alone. These findings are recorded so the remaining work is implemented by family before the next CI build.
+
+### B325 repository-wide audit result
+
+The pre-commit authored-source audit is persisted in `docs/PORT_1.21.11_REPOSITORY_WIDE_AUDIT_B325.txt`. It found zero remaining hits for `readFromNbt`, `writeToNbt`, `getMatchingStacks`, `getCodec(boolean)`, custom-ingredient inheritance from final `Ingredient`, `renderStatic`, `CONJURE_RENDER_TYPE`, `InteractionResult.getResult()`, the removed `PlayerRenderer` class, the old `PlayerModel` package, the removed BlockRenderLayerMap package, `ResourceKey.location()`, `getAllRecipesFor`, `registryOrThrow`, and `Ingredient.EMPTY`. The single `getRecipeManager()` reference is the current EMI registry API used by `HexEMIPlugin`; the two `ItemTagsProvider` hits are the valid `BlockItemTagsProvider` compatibility implementation and are not stale direct inheritance. `git diff --check` passes. The full uncommitted source batch remains pending CI compilation and is therefore not marked `DONE`.

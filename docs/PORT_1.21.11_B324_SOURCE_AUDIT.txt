@@ -13,3 +13,7 @@ B324 source audit for CI run 32215235905
 6. FabricHexInitializer.bind now uses T : Any and Registry<T>, matching the 1.21.11 Registry<T : Any> bound and Registry.register overload.
 
 7. Full CI diagnostics are stored in docs/CI_32215235905_FAILED.log and docs/CI_32215235905_KOTLIN_ERROR_INDEX.txt. The B324 source batch remains pending GitHub Actions validation.
+
+External corroboration:
+- Fabric Color Providers guide: https://wiki.fabricmc.net/tutorial:colorprovider
+- Fabric discussion confirming ColorProviderRegistry.ITEM removal in the post-1.21.3 pipeline: https://github.com/orgs/FabricMC/discussions/5031

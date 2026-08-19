@@ -2,7 +2,6 @@ package at.petrak.hexcasting.fabric.interop.emi;
 
 import at.petrak.hexcasting.client.ClientTickCounter;
 import at.petrak.hexcasting.common.recipe.ingredient.brainsweep.BrainsweepeeIngredient;
-import com.mojang.blaze3d.systems.RenderSystem;
 import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -87,8 +86,6 @@ public class BrainsweepeeEmiStack extends EmiStack {
             if (level != null) {
                 var example = this.ingredient.exampleEntity(level);
 
-                RenderSystem.enableBlend();
-                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
                 renderEntity(graphics, example, level, x + 8, y + 16, ClientTickCounter.getTotal(), 8, 0, it -> it);
             }
         }

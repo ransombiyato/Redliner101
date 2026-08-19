@@ -1,9 +1,9 @@
 package at.petrak.hexcasting.fabric.cc.adimpl;
 
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import at.petrak.hexcasting.api.addldata.ADMediaHolder;
 import at.petrak.hexcasting.api.item.MediaHolderItem;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import org.ladysnake.cca.api.v3.component.Component;
 
@@ -72,12 +72,12 @@ public abstract class CCMediaHolder implements ADMediaHolder, Component {
         }
 
         @Override
-        public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void readData(ValueInput input) {
 
         }
 
         @Override
-        public void writeToNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void writeData(ValueOutput output) {
 
         }
     }
@@ -142,12 +142,12 @@ public abstract class CCMediaHolder implements ADMediaHolder, Component {
         }
 
         @Override
-        public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void readData(ValueInput input) {
 
         }
 
         @Override
-        public void writeToNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void writeData(ValueOutput output) {
 
         }
     }

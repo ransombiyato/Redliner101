@@ -11,6 +11,7 @@ import at.petrak.hexcasting.client.render.PatternSettings.StrokeSettings;
 import at.petrak.hexcasting.client.render.PatternSettings.ZappySettings;
 import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import dev.emi.emi.api.render.EmiRenderable;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.Identifier;
 
@@ -29,9 +30,9 @@ public class PatternRendererEMI implements EmiRenderable {
 
     public PatternRendererEMI(Identifier pattern, int w, int h) {
         var regi = IXplatAbstractions.INSTANCE.getActionRegistry();
-        var entry = regi.get(pattern);
+        var entry = regi.get(pattern).orElseThrow();
         this.strokeOrder = HexUtils.isOfTag(regi, pattern, HexTags.Actions.PER_WORLD_PATTERN);
-        this.pat = entry.prototype();
+        this.pat = entry.value().prototype();
         this.width = w;
         this.height = h;
         this.patSets = new PatternSettings("pattern_drawable_" + w + "_" + h,
@@ -61,10 +62,10 @@ public class PatternRendererEMI implements EmiRenderable {
 
     @Override
     public void render(GuiGraphics graphics, int x, int y, float delta) {
-        var ps = graphics.pose();
+        var ps = new PoseStack();
         ps.pushPose();
         ps.translate(xOffset + x, yOffset + y + 1, 0);
-        PatternRenderer.renderPattern(pat, graphics.pose(), patSets,
+        PatternRenderer.renderPattern(pat, ps, patSets,
                 new PatternColors(0xc8_0c0a0c, 0xff_333030).withDotColors(0x80_666363, 0),
                 0, 10
         );

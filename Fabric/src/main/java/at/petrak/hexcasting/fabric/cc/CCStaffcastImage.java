@@ -1,11 +1,12 @@
 package at.petrak.hexcasting.fabric.cc;
 
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtOps;
 import at.petrak.hexcasting.api.casting.eval.env.StaffCastEnv;
 import at.petrak.hexcasting.api.casting.eval.vm.CastingImage;
 import at.petrak.hexcasting.api.casting.eval.vm.CastingVM;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtOps;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import org.jetbrains.annotations.Nullable;
@@ -40,12 +41,12 @@ public class CCStaffcastImage implements Component {
     }
 
     @Override
-    public void readFromNbt(CompoundTag tag, HolderLookup.Provider provider) {
-        this.lazyLoadedTag = tag.getCompound(TAG_VM);
+    public void readData(ValueInput input) {
+        this.lazyLoadedTag = input.read(TAG_VM, net.minecraft.nbt.CompoundTag.CODEC).orElseGet(net.minecraft.nbt.CompoundTag::new);
     }
 
     @Override
-    public void writeToNbt(CompoundTag tag, HolderLookup.Provider provider) {
-        tag.put(TAG_VM, this.lazyLoadedTag);
+    public void writeData(ValueOutput output) {
+        output.store(TAG_VM, net.minecraft.nbt.CompoundTag.CODEC, this.lazyLoadedTag);
     }
 }

@@ -1,8 +1,8 @@
 package at.petrak.hexcasting.fabric.cc;
 
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import at.petrak.hexcasting.api.client.ClientCastingStack;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Player;
 import org.ladysnake.cca.api.v3.component.Component;
 import org.ladysnake.cca.api.v3.component.tick.ClientTickingComponent;
@@ -24,8 +24,8 @@ public class CCClientCastingStack implements Component, ClientTickingComponent {
     }
 
     @Override
-    public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) { }
+    public void readData(ValueInput input) { }
 
     @Override
-    public void writeToNbt(CompoundTag tag, HolderLookup.Provider registryLookup) { }
+    public void writeData(ValueOutput output) { }
 }

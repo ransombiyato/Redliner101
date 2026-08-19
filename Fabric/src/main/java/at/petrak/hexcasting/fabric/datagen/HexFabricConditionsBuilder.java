@@ -69,6 +69,11 @@ public class HexFabricConditionsBuilder implements IXplatConditionsBuilder {
             public Advancement.Builder advancement() {
                 return consumer.advancement();
             }
+
+            @Override
+            public void includeRootAdvancement() {
+                consumer.includeRootAdvancement();
+            }
         };
 
         parent.save(withConditions, resourceKey);

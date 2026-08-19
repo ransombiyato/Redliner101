@@ -327,7 +327,7 @@ public class FabricXplatImpl implements IXplatAbstractions {
 
     @Override
     public Ingredient getUnsealedIngredient(ItemStack stack) {
-        return FabricUnsealedIngredient.of(stack);
+        return FabricUnsealedIngredient.of(stack).toVanilla();
     }
 
     // do a stupid hack from botania
@@ -385,8 +385,8 @@ public class FabricXplatImpl implements IXplatAbstractions {
     @Override
     public LootItemCondition.Builder isShearsCondition() {
         return AnyOfCondition.anyOf(
-            MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS)),
-            MatchTool.toolMatches(ItemPredicate.Builder.item().of(
+            MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+            MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
                 HexTags.Items.create(Identifier.fromNamespaceAndPath("c", "shears"))))
         );
     }
@@ -516,7 +516,7 @@ public class FabricXplatImpl implements IXplatAbstractions {
         player.setItemInHand(InteractionHand.MAIN_HAND, blockStack.copy());
         var success = UseItemCallback.EVENT.invoker().interact(player, world, InteractionHand.MAIN_HAND);
         player.setItemInHand(InteractionHand.MAIN_HAND, cached);
-        return success.getResult() == InteractionResult.PASS; // No other mod tried to consume this
+        return success.result() == InteractionResult.PASS; // No other mod tried to consume this
     }
 
     @Override

@@ -1,5 +1,7 @@
 package at.petrak.hexcasting.fabric.cc.adimpl;
 
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import at.petrak.hexcasting.api.addldata.ADPigment;
 import at.petrak.hexcasting.api.item.PigmentItem;
 import at.petrak.hexcasting.api.pigment.ColorProvider;

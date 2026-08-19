@@ -1,11 +1,11 @@
 package at.petrak.hexcasting.fabric.cc.adimpl;
 
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import at.petrak.hexcasting.api.addldata.ADHexHolder;
 import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.item.HexHolderItem;
 import at.petrak.hexcasting.api.pigment.FrozenPigment;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
@@ -63,12 +63,12 @@ public abstract class CCHexHolder implements ADHexHolder, Component {
         }
 
         @Override
-        public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void readData(ValueInput input) {
 
         }
 
         @Override
-        public void writeToNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
+        public void writeData(ValueOutput output) {
 
         }
     }
