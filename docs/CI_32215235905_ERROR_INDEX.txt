@@ -1,0 +1,2 @@
+423:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:23:08.7194177Z Execution failed for task ':Fabric:compileKotlin'.
+438:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:23:08.7204150Z org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':Fabric:compileKotlin'.

@@ -255,8 +255,9 @@ public class RegisterClientStuff {
 
     @FunctionalInterface
     public interface BlockEntityRendererRegisterererer {
-        <T extends BlockEntity> void registerBlockEntityRenderer(BlockEntityType<T> type,
-            BlockEntityRendererProvider berp);
+        <T extends BlockEntity, S extends net.minecraft.client.renderer.blockentity.state.BlockEntityRenderState>
+        void registerBlockEntityRenderer(BlockEntityType<T> type,
+            BlockEntityRendererProvider<? super T, ? super S> berp);
     }
 
     public static void onModelRegister(ResourceManager recMan, Consumer<Identifier> extraModels) {

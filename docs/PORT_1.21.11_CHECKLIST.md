@@ -159,6 +159,20 @@ Run 32214152007 compiled the pushed B322 commit and reduced the prior hundreds o
 | B323-05 | `HexItemTagProvider.java` | CI 32214641759 shows `IntrinsicHolderTagsProvider<Item>.tag(...)` returns `TagAppender<Item,Item>`, while `BlockItemTagsProvider.tag(TagKey<Block>,TagKey<Item>)` requires `TagAppender<Block,Block>`. Change the custom item helper to `TagAppender<Item,Item>` and implement the nested adapter with a mapped block-to-item appender plus a narrowly scoped generic bridge. | IN PROGRESS |
 | B323-06 | `HexItemTagProvider.java` | CI 32214949604 shows `TagAppender<Item,Item>.add(...)` accepts `Item`, not `ResourceKey<Item>`. Add intrinsic item values directly while retaining resource-key values only for the block/action providers whose appender type requires them. | IN PROGRESS |
 
+## Current consolidated diagnostic inventory: CI run 32215235905
+
+Run 32215235905 passed Java compilation and exposed the next Kotlin client/API family. The complete workflow output is stored in `docs/CI_32215235905_FAILED.log`; all Kotlin source diagnostics are indexed in `docs/CI_32215235905_KOTLIN_ERROR_INDEX.txt`.
+
+| Batch ID | Affected file(s) | Complete fix scope recorded from run 32215235905 | Status |
+|---|---|---|---|
+| B324-01 | `FabricHexClientInitializer.kt` | Move `WorldRenderEvents` to `net.fabricmc.fabric.api.client.rendering.v1.world`, replace removed `AFTER_TRANSLUCENT`/`START` callbacks with the exact 1.21.11 event equivalents, and use `WorldRenderContext.matrices()` plus Minecraft’s delta tracker instead of removed `matrixStack()`/`tickCounter()`. | IN PROGRESS |
+| B324-02 | `FabricHexClientInitializer.kt` | Tighten the particle factory consumer from nullable `ParticleOptions?` to the exact non-null `ParticleOptions` bound and register the pending factory with the 1.21.11 Fabric API. | IN PROGRESS |
+| B324-03 | `FabricHexClientInitializer.kt`, `RegisterClientStuff.java` | Migrate block-entity renderer registration to the two-parameter `BlockEntityRendererProvider<T,S>` contract and the existing renderer state types without changing registrations. | IN PROGRESS |
+| B324-04 | `FabricHexClientInitializer.kt` | Replace removed `ColorProviderRegistry.ITEM` with the exact 1.21.11 item-color registration mechanism while preserving all item colorizers; retain Fabric block color registration. | IN PROGRESS |
+| B324-05 | `FabricHexClientInitializer.kt`, `FabricModelManagerMixin.java`, `RegisterClientStuff.java` | Replace removed `ModelLoadingPlugin.Context.addModels(Identifier)` with the exact 1.21.11 keyed `addModel(ExtraModelKey, SimpleUnbakedExtraModel)` flow and bridge baked extra models into the existing variant map without feature changes. | IN PROGRESS |
+| B324-06 | `FabricHexInitializer.kt` | Constrain the generic `bind` helper to `T : Any` and resolve the remaining Kotlin overload/type-bound diagnostic. | IN PROGRESS |
+| B324-07 | Cross-cutting Kotlin validation | Re-run the full Fabric Kotlin compiler after the grouped client/API fixes and record any new diagnostics before further edits. | IN PROGRESS |
+
 
 ### Local validation constraint
 

@@ -1,0 +1,15 @@
+B324 source audit for CI run 32215235905
+
+1. Exact Fabric rendering API 16.2.10+0290ad933e19 places WorldRenderEvents under net.fabricmc.fabric.api.client.rendering.v1.world. It exposes BEFORE_TRANSLUCENT and START_MAIN, while the old v1 package wildcard and old START/AFTER_TRANSLUCENT references do not resolve. WorldRenderContext exposes matrices(); Minecraft.getInstance().getDeltaTracker() exposes gameTimeDeltaTicks and gameTimeDeltaPartialTick(boolean).
+
+2. Exact Fabric particles API 4.2.12+6573ed8c19 requires ParticleOptions with a non-null bound. FabricSpriteProvider extends the vanilla SpriteSet contract, so the existing Function<SpriteSet, ParticleProvider<T>> factory bridge remains behaviorally compatible through the pending registration overload.
+
+3. Exact Minecraft 1.21.11 BlockEntityRendererProvider has two type parameters: the block entity type and BlockEntityRenderState. RegisterClientStuff’s bridge now exposes both parameters, matching all existing renderer state classes.
+
+4. ColorProviderRegistry.ITEM was removed in the post-1.21.3 item-model pipeline. A Fabric-only HexItemTintSource bridge was added using Minecraft’s ItemTintSources.ID_MAPPER, retaining the existing RegisterClientStuff.ItemColor callback semantics. Block colors remain on ColorProviderRegistry.BLOCK.
+
+5. Exact Fabric model-loading API 6.0.15+4fc5413f3e exposes Context.addModel(ExtraModelKey, SimpleUnbakedExtraModel), not addModels(Identifier). FabricHexClientInitializer now registers keyed BlockStateModels, and FabricModelManagerMixin retrieves those models through FabricBakedModelManager before invoking the existing variant-map population.
+
+6. FabricHexInitializer.bind now uses T : Any and Registry<T>, matching the 1.21.11 Registry<T : Any> bound and Registry.register overload.
+
+7. Full CI diagnostics are stored in docs/CI_32215235905_FAILED.log and docs/CI_32215235905_KOTLIN_ERROR_INDEX.txt. The B324 source batch remains pending GitHub Actions validation.

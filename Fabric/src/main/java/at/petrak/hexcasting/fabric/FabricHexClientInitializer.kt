@@ -11,6 +11,12 @@ import at.petrak.hexcasting.common.lib.HexParticles
 import at.petrak.hexcasting.fabric.event.MouseScrollCallback
 import at.petrak.hexcasting.fabric.network.FabricPacketHandler
 import at.petrak.hexcasting.interop.HexInterop
+import net.fabricmc.fabric.api.client.model.loading.v1.ExtraModelKey
+import net.fabricmc.fabric.api.client.model.loading.v1.SimpleUnbakedExtraModel
+import net.fabricmc.fabric.api.client.rendering.v1.world.WorldRenderEvents
+import net.minecraft.client.Minecraft
+import net.minecraft.client.renderer.block.model.BlockStateModel
+import net.minecraft.resources.Identifier
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin
@@ -27,14 +33,22 @@ import net.minecraft.world.level.block.entity.BlockEntityType
 import java.util.function.Function
 
 object FabricHexClientInitializer : ClientModInitializer {
+    @JvmField
+    val EXTRA_MODEL_KEYS: MutableMap<Identifier, ExtraModelKey<BlockStateModel>> = mutableMapOf()
+
     override fun onInitializeClient() {
         FabricPacketHandler.initClient()
 
-        WorldRenderEvents.AFTER_TRANSLUCENT.register { ctx ->
-            HexAdditionalRenderers.overlayLevel(ctx.matrixStack(), ctx.tickCounter().gameTimeDeltaTicks)
+        WorldRenderEvents.BEFORE_TRANSLUCENT.register { ctx ->
+            HexAdditionalRenderers.overlayLevel(
+                ctx.matrices(),
+                Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false)
+            )
         }
         HudRenderCallback.EVENT.register(HexAdditionalRenderers::overlayGui)
-        WorldRenderEvents.START.register { ClientTickCounter.renderTickStart(it.tickCounter().gameTimeDeltaTicks) }
+        WorldRenderEvents.START_MAIN.register {
+            ClientTickCounter.renderTickStart(Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaTicks())
+        }
         ClientTickEvents.END_CLIENT_TICK.register {
             ClientTickCounter.clientTickEnd()
             ShiftScrollListener.clientTickEnd()
@@ -51,17 +65,17 @@ object FabricHexClientInitializer : ClientModInitializer {
 
 
         HexParticles.FactoryHandler.registerFactories(object : HexParticles.FactoryHandler.Consumer {
-            override fun <T : ParticleOptions?> register(type: ParticleType<T>, constructor: Function<SpriteSet, ParticleProvider<T>>) {
-                ParticleFactoryRegistry.getInstance().register(type, constructor::apply)
+            override fun <T : ParticleOptions> register(type: ParticleType<T>, constructor: Function<SpriteSet, ParticleProvider<T>>) {
+                ParticleFactoryRegistry.getInstance().register(type) { spriteSet -> constructor.apply(spriteSet) }
             }
         })
 
         // how ergonomic
         RegisterClientStuff.registerBlockEntityRenderers(object :
             RegisterClientStuff.BlockEntityRendererRegisterererer {
-            override fun <T : BlockEntity> registerBlockEntityRenderer(
+            override fun <T : BlockEntity, S : net.minecraft.client.renderer.blockentity.state.BlockEntityRenderState> registerBlockEntityRenderer(
                 type: BlockEntityType<T>,
-                berp: BlockEntityRendererProvider<in T>
+                berp: BlockEntityRendererProvider<in T, in S>
             ) {
                 BlockEntityRendererRegistry.register(type, berp)
             }
@@ -69,11 +83,13 @@ object FabricHexClientInitializer : ClientModInitializer {
 
         HexInterop.clientInit()
         RegisterClientStuff.registerColorProviders(
-            { colorizer, item -> ColorProviderRegistry.ITEM.register({ stack, tintIndex -> colorizer.getColor(stack, tintIndex) }, item) },
+            { colorizer, item -> FabricItemTintRegistrar.register(colorizer, item) },
             { colorizer, block -> ColorProviderRegistry.BLOCK.register(colorizer, block) })
-        ModelLoadingPlugin.register {
-            context -> RegisterClientStuff.onModelRegister {
-                id -> context.addModels(id)
+        ModelLoadingPlugin.register { context ->
+            RegisterClientStuff.onModelRegister { id ->
+                val key = ExtraModelKey.create<BlockStateModel> { id.toString() }
+                EXTRA_MODEL_KEYS[id] = key
+                context.addModel(key, SimpleUnbakedExtraModel.blockStateModel(id))
             }
         }
     }

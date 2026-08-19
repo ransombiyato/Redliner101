@@ -349,6 +349,6 @@ object FabricHexInitializer : ModInitializer {
         }
     }
 
-    private fun <T> bind(registry: Registry<in T>): BiConsumer<T, Identifier> =
+    private fun <T : Any> bind(registry: Registry<T>): BiConsumer<T, Identifier> =
         BiConsumer<T, Identifier> { t, id -> Registry.register(registry, id, t) }
 }

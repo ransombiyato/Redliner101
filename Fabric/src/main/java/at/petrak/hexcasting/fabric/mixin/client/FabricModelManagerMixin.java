@@ -1,6 +1,8 @@
 package at.petrak.hexcasting.fabric.mixin.client;
 
 import at.petrak.hexcasting.client.RegisterClientStuff;
+import at.petrak.hexcasting.fabric.FabricHexClientInitializer;
+import net.fabricmc.fabric.api.client.model.loading.v1.FabricBakedModelManager;
 import net.minecraft.client.renderer.block.model.BlockStateModel;
 import net.minecraft.client.resources.model.ModelManager;
 import net.minecraft.resources.Identifier;
@@ -15,9 +17,14 @@ import java.util.Map;
 public class FabricModelManagerMixin {
     @Inject(method = "apply", at = @At("TAIL"))
     private void onModelBake(ModelManager.ReloadState reloadState, CallbackInfo ci) {
-        @SuppressWarnings("unchecked")
-        Map<Identifier, BlockStateModel> models = (Map<Identifier, BlockStateModel>) (Map<?, ?>)
-            reloadState.bakedModels().blockStateModels();
+        Map<Identifier, BlockStateModel> models = new java.util.HashMap<>();
+        var modelManager = (FabricBakedModelManager) (Object) this;
+        FabricHexClientInitializer.EXTRA_MODEL_KEYS.forEach((id, key) -> {
+            var model = modelManager.getModel(key);
+            if (model != null) {
+                models.put(id, model);
+            }
+        });
         RegisterClientStuff.onModelBake(null, models);
     }
 }
