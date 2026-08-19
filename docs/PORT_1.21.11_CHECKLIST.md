@@ -146,6 +146,17 @@ The 1.21.11 mappings show that `Level.recipeAccess()` exposes a `RecipeAccess` i
 
 The 1.21.11 `ShapedRecipeBuilder` and `ShapelessRecipeBuilder` mappings expose only `save(RecipeOutput, ResourceKey)`. Every remaining parameterless `.save(recipes)` in `HexplatRecipes` is consequently tracked under B322-01 and must receive an explicit key derived from the original result/recipe ID before the batch can be considered resolved. The full current line inventory was captured by the source audit before editing.
 
+## Current consolidated diagnostic inventory: CI run 32214152007
+
+Run 32214152007 compiled the pushed B322 commit and reduced the prior hundreds of errors to seven Java diagnostics in the tag-provider and Patchouli registry families. The complete workflow output is stored in `docs/CI_32214152007_FAILED.log`, and the indexed diagnostic lines are stored in `docs/CI_32214152007_ERROR_INDEX.txt`.
+
+| Batch ID | Affected file(s) | Complete fix scope recorded from run 32214152007 | Status |
+|---|---|---|---|
+| B323-01 | `HexItemTagProvider.java`, `HexBlockTagProvider.java`, `HexActionTagProvider.java` | `TagAppender` has two type parameters in the exact 1.21.11 class (`TagAppender<E,T>`); update every custom appender declaration and nested BlockItemTagsProvider adapter to use the element key type plus registry value type. | IN PROGRESS |
+| B323-02 | `HexActionTagProvider.java` | The non-Fabric branch returns `TagKey<? extends ActionRegistryEntry>` and requires a narrowly scoped typed cast to `TagKey<ActionRegistryEntry>`. | IN PROGRESS |
+| B323-03 | `LookupPatternComponent.java` | `Registry<ActionRegistryEntry>` has no `getHolderOrThrow(ResourceKey)`; obtain the value with `getValueOrThrow` and bridge it with `wrapAsHolder` before tag/prototype access. | IN PROGRESS |
+| B323-04 | Cross-cutting validation | Re-run source-wide searches after this grouped fix, then commit and push only after all B323 diagnostics are recorded and addressed. | IN PROGRESS |
+
 
 ### Local validation constraint
 

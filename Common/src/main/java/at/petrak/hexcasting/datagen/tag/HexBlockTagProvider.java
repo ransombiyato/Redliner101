@@ -10,6 +10,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagAppender;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
@@ -145,11 +146,11 @@ public class HexBlockTagProvider extends TagsProvider<Block> {
         tag(createBrittle).addOptional(BuiltInRegistries.BLOCK.getResourceKey(HexBlocks.SLATE).orElseThrow());
     }
 
-    private TagAppender<Block> tag(TagKey<Block> key) {
+    private TagAppender<ResourceKey<Block>, Block> tag(TagKey<Block> key) {
         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
     }
 
-    void add(TagAppender<Block> appender, Block... blocks) {
+    void add(TagAppender<ResourceKey<Block>, Block> appender, Block... blocks) {
         for (Block block : blocks) {
             appender.add(BuiltInRegistries.BLOCK.getResourceKey(block).orElseThrow());
         }

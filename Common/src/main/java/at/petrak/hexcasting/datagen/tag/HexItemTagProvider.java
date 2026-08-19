@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.tags.BlockItemTagsProvider;
 import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
 import net.minecraft.data.tags.TagAppender;
@@ -85,12 +86,12 @@ public class HexItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
         }
 
         @Override
-        protected TagAppender<Item> tag(net.minecraft.tags.TagKey<Block> blockTag, net.minecraft.tags.TagKey<Item> itemTag) {
+        protected TagAppender<ResourceKey<Item>, Item> tag(net.minecraft.tags.TagKey<Block> blockTag, net.minecraft.tags.TagKey<Item> itemTag) {
             return HexItemTagProvider.this.tag(itemTag);
         }
     }
 
-    void add(TagAppender<Item> appender, Item... items) {
+    void add(TagAppender<ResourceKey<Item>, Item> appender, Item... items) {
         for (Item item : items) {
             appender.add(BuiltInRegistries.ITEM.getResourceKey(item).orElseThrow());
         }

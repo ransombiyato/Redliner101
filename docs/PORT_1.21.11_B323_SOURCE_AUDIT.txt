@@ -1,0 +1,11 @@
+B323 source audit for CI run 32214152007
+
+1. The exact 1.21.11 TagAppender class decompiles as TagAppender<E, T>. Its static forBuilder(TagBuilder) returns a key-element appender whose first type is ResourceKey<T> and second type is T. Custom providers now use TagAppender<ResourceKey<Block>, Block>, TagAppender<ResourceKey<Item>, Item>, and TagAppender<ResourceKey<ActionRegistryEntry>, ActionRegistryEntry>.
+
+2. BlockItemTagsProvider.tag(TagKey<Block>, TagKey<Item>) is overridden by the nested adapter with the exact two-parameter item appender type. The adapter still delegates all vanilla mappings through its protected run() method.
+
+3. Registry<ActionRegistryEntry> in 1.21.11 exposes getValueOrThrow(ResourceKey) and wrapAsHolder(Object), but not getHolderOrThrow(ResourceKey). LookupPatternComponent now bridges the resolved value to a holder before checking tags and reading the prototype.
+
+4. HexActionTagProvider’s wildcard TagKey return is narrowed only at the method boundary with a suppressed unchecked cast; the Fabric fake-key behavior and identifiers are unchanged.
+
+5. The new CI error inventory is stored in docs/CI_32214152007_ERROR_INDEX.txt and docs/CI_32214152007_FAILED.log. No source edit will be pushed until this B323 family has been reviewed as a batch.

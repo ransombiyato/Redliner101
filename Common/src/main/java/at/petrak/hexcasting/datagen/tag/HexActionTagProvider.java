@@ -38,7 +38,7 @@ public class HexActionTagProvider extends TagsProvider<ActionRegistryEntry> {
         // deciding that akashic write can be just a normal spell (as a treat)
     }
 
-    private TagAppender<ActionRegistryEntry> tag(TagKey<ActionRegistryEntry> key) {
+    private TagAppender<ResourceKey<ActionRegistryEntry>, ActionRegistryEntry> tag(TagKey<ActionRegistryEntry> key) {
         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
     }
 
@@ -52,7 +52,7 @@ public class HexActionTagProvider extends TagsProvider<ActionRegistryEntry> {
                 Identifier.fromNamespaceAndPath("foobar", "hexcasting/tags/action"));
             return TagKey.<ActionRegistryEntry>create(fakeKey, real.location());
         } else {
-            return real;
+            return (TagKey<ActionRegistryEntry>) (TagKey<?>) real;
         }
     }
 }

@@ -26,7 +26,7 @@ public class LookupPatternComponent extends AbstractPatternComponent {
     public List<HexPattern> getPatterns(UnaryOperator<IVariable> lookup) {
         var key = ResourceKey.create(IXplatAbstractions.INSTANCE.getActionRegistry().key(), this.opName);
         var registry = IXplatAbstractions.INSTANCE.getActionRegistry();
-        var entry = registry.getHolderOrThrow(key);
+        var entry = registry.wrapAsHolder(registry.getValueOrThrow(key));
 
         this.strokeOrder = !entry.is(HexTags.Actions.PER_WORLD_PATTERN);
         return List.of(entry.value().prototype());
