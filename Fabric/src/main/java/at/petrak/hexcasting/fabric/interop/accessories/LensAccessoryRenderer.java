@@ -12,7 +12,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.player.PlayerModel;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,11 +26,11 @@ import net.minecraft.world.item.ItemStack;
 public class LensAccessoryRenderer implements AccessoryRenderer {
     @Override
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public <M extends EntityRenderState> void render(ItemStack stack, SlotReference slotReference,
+    public <M extends LivingEntity> void render(ItemStack stack, SlotReference slotReference,
         PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
         float v, float v1, float v2, float v3, float v4, float v5) {
         if (stack.is(HexItems.SCRYING_LENS) &&
-                model instanceof PlayerModel<?> && slotReference.entity() instanceof Player) {
+                model instanceof PlayerModel && slotReference.entity() instanceof Player) {
 
             // from https://github.com/Creators-of-Create/Create/blob/ee33823ed0b5084af10ed131a1626ce71db4c07e/src/main/java/com/simibubi/create/compat/curios/GogglesCurioRenderer.java
 

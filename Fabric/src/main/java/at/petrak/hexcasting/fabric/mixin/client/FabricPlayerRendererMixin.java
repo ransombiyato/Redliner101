@@ -15,11 +15,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(AvatarRenderer.class)
 public abstract class FabricPlayerRendererMixin
-    extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel<AvatarRenderState>> {
+    extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel> {
 
     public FabricPlayerRendererMixin(EntityRendererProvider.Context context, boolean slim) {
         super(context,
-            new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+            new PlayerModel(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
             0.5f);
     }
 

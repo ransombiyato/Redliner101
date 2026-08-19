@@ -109,7 +109,7 @@ public class HexFabricDataGenerators implements DataGeneratorEntrypoint {
 
         @Override
         public Ingredient whenModIngredient(Ingredient defaultIngredient, String modid, Ingredient modIngredient) {
-            return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+            return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient).toVanilla();
         }
 
         private final FarmersDelightToolIngredient AXE_INGREDIENT = () -> {

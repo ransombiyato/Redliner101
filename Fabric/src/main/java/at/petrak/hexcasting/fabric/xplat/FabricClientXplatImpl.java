@@ -39,7 +39,7 @@ public class FabricClientXplatImpl implements IClientXplatAbstractions {
 
     @Override
     public void setRenderLayer(Block block, RenderType type) {
-        BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+        BlockRenderLayerMap.putBlock(block, type);
     }
 
     @Override

@@ -209,3 +209,21 @@ No B325 row is marked `DONE` from source edits alone. These findings are recorde
 ### B325 repository-wide audit result
 
 The pre-commit authored-source audit is persisted in `docs/PORT_1.21.11_REPOSITORY_WIDE_AUDIT_B325.txt`. It found zero remaining hits for `readFromNbt`, `writeToNbt`, `getMatchingStacks`, `getCodec(boolean)`, custom-ingredient inheritance from final `Ingredient`, `renderStatic`, `CONJURE_RENDER_TYPE`, `InteractionResult.getResult()`, the removed `PlayerRenderer` class, the old `PlayerModel` package, the removed BlockRenderLayerMap package, `ResourceKey.location()`, `getAllRecipesFor`, `registryOrThrow`, and `Ingredient.EMPTY`. The single `getRecipeManager()` reference is the current EMI registry API used by `HexEMIPlugin`; the two `ItemTagsProvider` hits are the valid `BlockItemTagsProvider` compatibility implementation and are not stale direct inheritance. `git diff --check` passes. The full uncommitted source batch remains pending CI compilation and is therefore not marked `DONE`.
+
+### CI run 32218215109 diagnostic inventory — B326 intake
+
+Run `32218215109` was compiled from commit `7d150a2` and failed at `:Fabric:compileJava` with **14 compiler errors** represented by 15 unique source-location entries. The complete raw log is `docs/CI_32218215109_FAILED.log`, the sorted location inventory is `docs/CI_32218215109_UNIQUE_ERRORS.txt`, and grouped context is `docs/CI_32218215109_DIAGNOSTIC_CONTEXTS.txt`. These diagnostics are recorded before the next edit:
+
+| API family | Affected source locations | Diagnostic family |
+|---|---|---|
+| Custom ingredients and datagen | `HexFabricDataGenerators.java:112`; `FabricModConditionalIngredient.java:62` | Custom ingredient must be converted with `toVanilla()` where an `Ingredient` is required; `CustomIngredient.getMatchingItems()` already yields `Stream<Holder<Item>>`, so no `ItemStack.getItem()` mapping is valid. |
+| Accessories and player model generics | `LensAccessoryRenderer.java:27-34`; `FabricPlayerRendererMixin.java:18,22` | Installed Accessories API still declares `<M extends LivingEntity>`; the 1.21.11 `PlayerModel` class is non-generic, so use the raw `PlayerModel` type while retaining the new `AvatarRenderer`/`AvatarRenderState` hierarchy. |
+| Fabric client rendering | `FabricClientXplatImpl.java:42` | `BlockRenderLayerMap` has no `INSTANCE` field in the installed 1.21.11 Fabric API; verify and use its exact static registration API. |
+| Registry generic capture | `FabricRegister.java:21,27` | `BuiltInRegistries.REGISTRY.getValueOrThrow` rejects `ResourceKey<Registry<B>>` against the captured registry wildcard; apply a narrowly scoped raw-key cast or exact typed registry bridge. |
+| Platform shears predicates | `FabricXplatImpl.java:388,389` | `BuiltInRegistries` is referenced but not imported in this source file. |
+
+No source edits are being made until this complete grouped inventory is recorded and the exact current APIs are verified.
+
+### B326 grouped source-fix result before CI
+
+The complete B326 inventory has now been addressed as API families. The custom-ingredient family returns `toUse.items()` directly and converts `FabricModConditionalIngredient` with `.toVanilla()` at the shared `Ingredient` boundary. The Accessories/player-model family matches the installed Accessories `<M extends LivingEntity>` contract and uses raw non-generic `PlayerModel` in the 1.21.11 renderer hierarchy. The Fabric platform family uses static `BlockRenderLayerMap.putBlock`, imports `BuiltInRegistries` for the shears predicates, and applies a localized raw `ResourceKey` bridge for `Registry.getValueOrThrow`. A post-fix repository audit found no remaining hits for the known obsolete B325/B326 API patterns, and `git diff --check` passes. These items remain pending CI confirmation.

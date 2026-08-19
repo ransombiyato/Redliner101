@@ -1,0 +1,614 @@
+CI 32218215109 DIAGNOSTIC CONTEXTS — grouped before edits
+
+=== HexFabricDataGenerators.java ===
+399-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7886301Z         return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+400-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7901261Z                                                                                    ^
+401-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7902076Z   symbol:   method getItem()
+402-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7902738Z   location: variable stack of type Holder<Item>
+403:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7904743Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+404-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7907256Z             return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+405-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7908314Z                                                     ^
+406-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7909704Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+407-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7911518Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+408-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7912637Z                                                                   ^
+409-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7913375Z   symbol:   variable BuiltInRegistries
+410-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7914032Z   location: class FabricXplatImpl
+411-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7915409Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389: error: cannot find symbol
+412-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7917640Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+413-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7918648Z                                                                   ^
+414-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7919390Z   symbol:   variable BuiltInRegistries
+415-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7920067Z   location: class FabricXplatImpl
+--
+470-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0148157Z     where M#1,M#2 are type-variables:
+471-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0149785Z       M#1 extends EntityRenderState declared in method <M#1>render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float)
+472-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0152326Z       M#2 extends LivingEntity declared in method <M#2>render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float)
+473-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0154466Z   Note: Recompile with -Xlint:deprecation for details.
+474:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0156513Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+475-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0159730Z               return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+476-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0171874Z                                                       ^
+477-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0173855Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+478-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0176081Z           this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+479-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0177514Z                                                                                    ^
+480-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0178345Z     where B is a type-variable:
+481-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0179100Z       B extends Object declared in class FabricRegister
+482-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0179903Z     where CAP#1 is a fresh type-variable:
+483-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0180731Z       CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+484-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0183032Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+485-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0185162Z           this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+486-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0186237Z                                                                                    ^
+--
+611-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0409248Z   where M#1,M#2 are type-variables:
+612-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0410768Z     M#1 extends EntityRenderState declared in method <M#1>render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float)
+613-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0413142Z     M#2 extends LivingEntity declared in method <M#2>render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float)
+614-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0414708Z Note: Recompile with -Xlint:deprecation for details.
+615:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0416602Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+616-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0419089Z             return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+617-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0420161Z                                                     ^
+618-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0421934Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+619-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0424110Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+620-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0425217Z                                                                                  ^
+621-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0425956Z   where B is a type-variable:
+622-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0426890Z     B extends Object declared in class FabricRegister
+623-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0427759Z   where CAP#1 is a fresh type-variable:
+624-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0428539Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+625-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0430396Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+626-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0432246Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+627-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0433123Z                                                                                  ^
+
+=== LensAccessoryRenderer.java ===
+377-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6865543Z
+378-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6866155Z     extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel<AvatarRenderState>> {
+379-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6867523Z > Task :Fabric:compileJava
+380-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6887731Z                                                                        ^
+381:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6894478Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: LensAccessoryRenderer is not abstract and does not override abstract method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer
+382-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6898272Z public class LensAccessoryRenderer implements AccessoryRenderer {
+383-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6899158Z        ^
+384-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6899767Z   where M is a type-variable:
+385-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6901200Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+386:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6905823Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: name clash: render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float) in LensAccessoryRenderer and render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer have the same erasure, yet neither overrides the other
+387-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6910126Z     public <M extends EntityRenderState> void render(ItemStack stack, SlotReference slotReference,
+388-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6911149Z                                               ^
+389-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6911857Z   where M#1,M#2 are type-variables:
+390-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6913422Z     M#1 extends EntityRenderState declared in method <M#1>render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float)
+391-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6915817Z     M#2 extends LivingEntity declared in method <M#2>render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float)
+392:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6918873Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+393-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6929620Z     @Override
+394-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6930189Z     ^
+395:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6931707Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:34: error: type PlayerModel does not take parameters
+396-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6933650Z                 model instanceof PlayerModel<?> && slotReference.entity() instanceof Player) {
+397-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6934590Z                                             ^
+398-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7870317Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+399-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7886301Z         return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+400-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7901261Z                                                                                    ^
+401-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7902076Z   symbol:   method getItem()
+402-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7902738Z   location: variable stack of type Holder<Item>
+403-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7904743Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+404-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7907256Z             return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+405-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7908314Z                                                     ^
+406-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7909704Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+407-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7911518Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+--
+460-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0037523Z > Compilation failed; see the compiler output below.
+461-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0069622Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:18: error: type PlayerModel does not take parameters
+462-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0105316Z       extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel<AvatarRenderState>> {
+463-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0108732Z                                                                          ^
+464:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0127946Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:34: error: type PlayerModel does not take parameters
+465-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0136053Z                   model instanceof PlayerModel<?> && slotReference.entity() instanceof Player) {
+466-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0137455Z                                               ^
+467:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0141376Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: name clash: render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float) in LensAccessoryRenderer and render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer have the same erasure, yet neither overrides the other
+468-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0145950Z       public <M extends EntityRenderState> void render(ItemStack stack, SlotReference slotReference,
+469-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0147397Z                                                 ^
+470-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0148157Z     where M#1,M#2 are type-variables:
+471-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0149785Z       M#1 extends EntityRenderState declared in method <M#1>render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float)
+472-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0152326Z       M#2 extends LivingEntity declared in method <M#2>render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float)
+473-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0154466Z   Note: Recompile with -Xlint:deprecation for details.
+474-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0156513Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+475-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0159730Z               return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+476-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0171874Z                                                       ^
+477-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0173855Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+478-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0176081Z           this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+479-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0177514Z                                                                                    ^
+--
+487-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0187379Z     where B is a type-variable:
+488-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0188120Z       B extends Object declared in class FabricRegister
+489-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0188910Z     where CAP#1 is a fresh type-variable:
+490-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0189760Z       CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+491:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0192769Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: LensAccessoryRenderer is not abstract and does not override abstract method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer
+492-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0195836Z   public class LensAccessoryRenderer implements AccessoryRenderer {
+493-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0196902Z          ^
+494-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0197552Z     where M is a type-variable:
+495-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0199134Z       M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+496-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0201461Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+497-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0203338Z               MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+498-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0204471Z                                                                     ^
+499-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0205234Z     symbol:   variable BuiltInRegistries
+500-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0205932Z     location: class FabricXplatImpl
+501-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0207582Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389: error: cannot find symbol
+502-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0209396Z               MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+503-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0210499Z                                                                     ^
+--
+509-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0221296Z     symbol:   variable INSTANCE
+510-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0221969Z     location: class BlockRenderLayerMap
+511-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0222743Z   Note: Recompile with -Xlint:unchecked for details.
+512-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0223578Z   Note: Some input files use or override a deprecated API.
+513:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0225444Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+514-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0227491Z       @Override
+515-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0228028Z       ^
+516-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0228856Z   Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+517-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0230863Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+518-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0232984Z               new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+519-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0234371Z                              ^
+520-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0235096Z     reason: cannot use '<>' with non-generic class PlayerModel
+521-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0236056Z   Note: Some input files use unchecked or unsafe operations.
+522-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0237945Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+523-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0239929Z           return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+524-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241057Z                                                                                      ^
+525-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241851Z     symbol:   method getItem()
+--
+601-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0388345Z Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler output below.
+602-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0390542Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:18: error: type PlayerModel does not take parameters
+603-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0392673Z     extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel<AvatarRenderState>> {
+604-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0394324Z                                                                        ^
+605:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0396015Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:34: error: type PlayerModel does not take parameters
+606-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0398257Z                 model instanceof PlayerModel<?> && slotReference.entity() instanceof Player) {
+607-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0399276Z                                             ^
+608:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0402984Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: name clash: render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float) in LensAccessoryRenderer and render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer have the same erasure, yet neither overrides the other
+609-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0407367Z     public <M extends EntityRenderState> void render(ItemStack stack, SlotReference slotReference,
+610-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0408359Z                                               ^
+611-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0409248Z   where M#1,M#2 are type-variables:
+612-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0410768Z     M#1 extends EntityRenderState declared in method <M#1>render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float)
+613-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0413142Z     M#2 extends LivingEntity declared in method <M#2>render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float)
+614-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0414708Z Note: Recompile with -Xlint:deprecation for details.
+615-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0416602Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+616-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0419089Z             return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+617-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0420161Z                                                     ^
+618-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0421934Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+619-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0424110Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+620-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0425217Z                                                                                  ^
+--
+628-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0433873Z   where B is a type-variable:
+629-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0434509Z     B extends Object declared in class FabricRegister
+630-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0435203Z   where CAP#1 is a fresh type-variable:
+631-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0435925Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+632:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0438961Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: LensAccessoryRenderer is not abstract and does not override abstract method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer
+633-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0442252Z public class LensAccessoryRenderer implements AccessoryRenderer {
+634-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0443046Z        ^
+635-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0443541Z   where M is a type-variable:
+636-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0444928Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+637-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0447351Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+638-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0449184Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+639-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0450360Z                                                                   ^
+640-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0451181Z   symbol:   variable BuiltInRegistries
+641-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0451850Z   location: class FabricXplatImpl
+642-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0453193Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389: error: cannot find symbol
+643-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0455113Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+644-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0456070Z                                                                   ^
+--
+650-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0461654Z   symbol:   variable INSTANCE
+651-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0462166Z   location: class BlockRenderLayerMap
+652-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0462738Z Note: Recompile with -Xlint:unchecked for details.
+653-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0463382Z Note: Some input files use or override a deprecated API.
+654:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0464845Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+655-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0466295Z     @Override
+656-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0466979Z     ^
+657-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0467649Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+658-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0469169Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+659-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0470755Z             new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+660-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0471570Z                            ^
+661-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0472117Z   reason: cannot use '<>' with non-generic class PlayerModel
+662-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0472799Z Note: Some input files use unchecked or unsafe operations.
+663-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0474046Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+664-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0475476Z         return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+665-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0476374Z                                                                                    ^
+666-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0477191Z   symbol:   method getItem()
+
+=== FabricPlayerRendererMixin.java ===
+372-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:51.2887223Z
+373-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:51.2888138Z > Task :Common:transformProductionFabric
+374-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:51.2912774Z [Architectury Transformer] Read classpath in 1.464 s
+375-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:51.6863334Z [Architectury Transformer] Transformed jar with 5 transformer(s) in 2.015 s
+376:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6864147Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:18: error: type PlayerModel does not take parameters
+377-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6865543Z
+378-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6866155Z     extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel<AvatarRenderState>> {
+379-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6867523Z > Task :Fabric:compileJava
+380-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6887731Z                                                                        ^
+381-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6894478Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: LensAccessoryRenderer is not abstract and does not override abstract method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer
+382-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6898272Z public class LensAccessoryRenderer implements AccessoryRenderer {
+383-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6899158Z        ^
+384-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6899767Z   where M is a type-variable:
+385-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6901200Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+386-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6905823Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: name clash: render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float) in LensAccessoryRenderer and render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer have the same erasure, yet neither overrides the other
+387-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6910126Z     public <M extends EntityRenderState> void render(ItemStack stack, SlotReference slotReference,
+388-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6911149Z                                               ^
+--
+436-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9028156Z         BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+437-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9067254Z                            ^
+438-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9081426Z   symbol:   variable INSTANCE
+439-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9117358Z   location: class BlockRenderLayerMap
+440:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9119029Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+441-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9120838Z             new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+442-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9121702Z                            ^
+443-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9122241Z   reason: cannot use '<>' with non-generic class PlayerModel
+444-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9122923Z Note: Some input files use or override a deprecated API.
+445-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9123576Z Note: Recompile with -Xlint:deprecation for details.
+446-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9124239Z Note: Some input files use unchecked or unsafe operations.
+447-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9124862Z Note: Recompile with -Xlint:unchecked for details.
+448-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9125709Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+449-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9126458Z 14 errors
+450-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9870643Z
+451-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9870705Z
+452-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9871439Z > Task :Fabric:compileJava FAILED
+--
+457-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9997571Z
+458-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0017548Z Execution failed for task ':Fabric:compileJava'.
+459-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0030476Z [Incubating] Problems report is available at: file:///home/runner/work/Redliner101/Redliner101/build/reports/problems/problems-report.html
+460-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0037523Z > Compilation failed; see the compiler output below.
+461:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0069622Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:18: error: type PlayerModel does not take parameters
+462-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0105316Z       extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel<AvatarRenderState>> {
+463-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0108732Z                                                                          ^
+464-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0127946Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:34: error: type PlayerModel does not take parameters
+465-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0136053Z                   model instanceof PlayerModel<?> && slotReference.entity() instanceof Player) {
+466-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0137455Z                                               ^
+467-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0141376Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: name clash: render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float) in LensAccessoryRenderer and render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer have the same erasure, yet neither overrides the other
+468-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0145950Z       public <M extends EntityRenderState> void render(ItemStack stack, SlotReference slotReference,
+469-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0147397Z                                                 ^
+470-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0148157Z     where M#1,M#2 are type-variables:
+471-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0149785Z       M#1 extends EntityRenderState declared in method <M#1>render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float)
+472-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0152326Z       M#2 extends LivingEntity declared in method <M#2>render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float)
+473-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0154466Z   Note: Recompile with -Xlint:deprecation for details.
+--
+513-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0225444Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+514-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0227491Z       @Override
+515-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0228028Z       ^
+516-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0228856Z   Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+517:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0230863Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+518-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0232984Z               new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+519-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0234371Z                              ^
+520-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0235096Z     reason: cannot use '<>' with non-generic class PlayerModel
+521-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0236056Z   Note: Some input files use unchecked or unsafe operations.
+522-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0237945Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+523-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0239929Z           return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+524-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241057Z                                                                                      ^
+525-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241851Z     symbol:   method getItem()
+526-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0242568Z     location: variable stack of type Holder<Item>
+527-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0244017Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol
+528-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0245765Z           return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+529-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0247243Z                         ^
+--
+598-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0383122Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+599-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0384794Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+600-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0386368Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+601-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0388345Z Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler output below.
+602:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0390542Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:18: error: type PlayerModel does not take parameters
+603-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0392673Z     extends LivingEntityRenderer<Avatar, AvatarRenderState, PlayerModel<AvatarRenderState>> {
+604-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0394324Z                                                                        ^
+605-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0396015Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:34: error: type PlayerModel does not take parameters
+606-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0398257Z                 model instanceof PlayerModel<?> && slotReference.entity() instanceof Player) {
+607-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0399276Z                                             ^
+608-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0402984Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: name clash: render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float) in LensAccessoryRenderer and render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer have the same erasure, yet neither overrides the other
+609-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0407367Z     public <M extends EntityRenderState> void render(ItemStack stack, SlotReference slotReference,
+610-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0408359Z                                               ^
+611-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0409248Z   where M#1,M#2 are type-variables:
+612-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0410768Z     M#1 extends EntityRenderState declared in method <M#1>render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float)
+613-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0413142Z     M#2 extends LivingEntity declared in method <M#2>render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float)
+614-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0414708Z Note: Recompile with -Xlint:deprecation for details.
+--
+654-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0464845Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+655-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0466295Z     @Override
+656-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0466979Z     ^
+657-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0467649Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+658:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0469169Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+659-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0470755Z             new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+660-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0471570Z                            ^
+661-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0472117Z   reason: cannot use '<>' with non-generic class PlayerModel
+662-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0472799Z Note: Some input files use unchecked or unsafe operations.
+663-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0474046Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+664-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0475476Z         return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+665-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0476374Z                                                                                    ^
+666-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0477191Z   symbol:   method getItem()
+667-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0477702Z   location: variable stack of type Holder<Item>
+668-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0478799Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol
+669-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0480404Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+670-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0481146Z                       ^
+
+=== FabricModConditionalIngredient.java ===
+394-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6930189Z     ^
+395-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6931707Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:34: error: type PlayerModel does not take parameters
+396-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6933650Z                 model instanceof PlayerModel<?> && slotReference.entity() instanceof Player) {
+397-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.6934590Z                                             ^
+398:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7870317Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+399-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7886301Z         return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+400-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7901261Z                                                                                    ^
+401-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7902076Z   symbol:   method getItem()
+402-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7902738Z   location: variable stack of type Holder<Item>
+403-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7904743Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+404-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7907256Z             return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+405-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7908314Z                                                     ^
+406-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7909704Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+407-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7911518Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+408-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7912637Z                                                                   ^
+409-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7913375Z   symbol:   variable BuiltInRegistries
+410-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7914032Z   location: class FabricXplatImpl
+--
+518-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0232984Z               new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+519-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0234371Z                              ^
+520-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0235096Z     reason: cannot use '<>' with non-generic class PlayerModel
+521-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0236056Z   Note: Some input files use unchecked or unsafe operations.
+522:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0237945Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+523-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0239929Z           return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+524-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241057Z                                                                                      ^
+525-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241851Z     symbol:   method getItem()
+526-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0242568Z     location: variable stack of type Holder<Item>
+527-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0244017Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol
+528-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0245765Z           return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+529-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0247243Z                         ^
+530-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0248154Z     symbol:   method result()
+531-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0248952Z     location: variable success of type InteractionResult
+532-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0249714Z   14 errors
+533-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0250080Z
+534-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0250325Z * Try:
+--
+659-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0470755Z             new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+660-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0471570Z                            ^
+661-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0472117Z   reason: cannot use '<>' with non-generic class PlayerModel
+662-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0472799Z Note: Some input files use unchecked or unsafe operations.
+663:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0474046Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+664-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0475476Z         return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+665-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0476374Z                                                                                    ^
+666-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0477191Z   symbol:   method getItem()
+667-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0477702Z   location: variable stack of type Holder<Item>
+668-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0478799Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol
+669-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0480404Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+670-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0481146Z                       ^
+671-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0481583Z   symbol:   method result()
+672-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0482103Z   location: variable success of type InteractionResult
+673-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0482719Z 14 errors
+674-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0483418Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:89)
+675-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0484495Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:50)
+
+=== FabricClientXplatImpl.java ===
+431-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9001700Z   where B is a type-variable:
+432-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9002185Z     B extends Object declared in class FabricRegister
+433-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9002725Z   where CAP#1 is a fresh type-variable:
+434-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9003306Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+435:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9004937Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: cannot find symbol
+436-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9028156Z         BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+437-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9067254Z                            ^
+438-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9081426Z   symbol:   variable INSTANCE
+439-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9117358Z   location: class BlockRenderLayerMap
+440-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9119029Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+441-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9120838Z             new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+442-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9121702Z                            ^
+443-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9122241Z   reason: cannot use '<>' with non-generic class PlayerModel
+444-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9122923Z Note: Some input files use or override a deprecated API.
+445-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9123576Z Note: Recompile with -Xlint:deprecation for details.
+446-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9124239Z Note: Some input files use unchecked or unsafe operations.
+447-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9124862Z Note: Recompile with -Xlint:unchecked for details.
+--
+502-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0209396Z               MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+503-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0210499Z                                                                     ^
+504-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0211258Z     symbol:   variable BuiltInRegistries
+505-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0211955Z     location: class FabricXplatImpl
+506:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0213351Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: cannot find symbol
+507-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0219726Z           BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+508-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0220653Z                              ^
+509-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0221296Z     symbol:   variable INSTANCE
+510-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0221969Z     location: class BlockRenderLayerMap
+511-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0222743Z   Note: Recompile with -Xlint:unchecked for details.
+512-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0223578Z   Note: Some input files use or override a deprecated API.
+513-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0225444Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+514-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0227491Z       @Override
+515-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0228028Z       ^
+516-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0228856Z   Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+517-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0230863Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+518-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0232984Z               new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+--
+643-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0455113Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+644-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0456070Z                                                                   ^
+645-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0457048Z   symbol:   variable BuiltInRegistries
+646-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0457734Z   location: class FabricXplatImpl
+647:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0459138Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: cannot find symbol
+648-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0460576Z         BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+649-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0461187Z                            ^
+650-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0461654Z   symbol:   variable INSTANCE
+651-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0462166Z   location: class BlockRenderLayerMap
+652-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0462738Z Note: Recompile with -Xlint:unchecked for details.
+653-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0463382Z Note: Some input files use or override a deprecated API.
+654-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0464845Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+655-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0466295Z     @Override
+656-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0466979Z     ^
+657-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0467649Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+658-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0469169Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+659-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0470755Z             new PlayerModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), slim),
+
+=== FabricRegister.java ===
+417-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8907759Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+418-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8928208Z                       ^
+419-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8937304Z   symbol:   method result()
+420-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8967330Z   location: variable success of type InteractionResult
+421:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8968985Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+422-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8970862Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+423-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8971704Z                                                                                  ^
+424-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8972246Z   where B is a type-variable:
+425-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8972725Z     B extends Object declared in class FabricRegister
+426-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8973245Z   where CAP#1 is a fresh type-variable:
+427-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8973879Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+428:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8998336Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+429-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9000287Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+430-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9001156Z                                                                                  ^
+431-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9001700Z   where B is a type-variable:
+432-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9002185Z     B extends Object declared in class FabricRegister
+433-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9002725Z   where CAP#1 is a fresh type-variable:
+434-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9003306Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+435-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9004937Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: cannot find symbol
+436-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9028156Z         BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+437-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9067254Z                            ^
+438-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9081426Z   symbol:   variable INSTANCE
+439-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9117358Z   location: class BlockRenderLayerMap
+440-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.9119029Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+--
+473-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0154466Z   Note: Recompile with -Xlint:deprecation for details.
+474-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0156513Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+475-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0159730Z               return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+476-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0171874Z                                                       ^
+477:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0173855Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+478-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0176081Z           this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+479-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0177514Z                                                                                    ^
+480-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0178345Z     where B is a type-variable:
+481-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0179100Z       B extends Object declared in class FabricRegister
+482-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0179903Z     where CAP#1 is a fresh type-variable:
+483-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0180731Z       CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+484:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0183032Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+485-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0185162Z           this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+486-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0186237Z                                                                                    ^
+487-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0187379Z     where B is a type-variable:
+488-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0188120Z       B extends Object declared in class FabricRegister
+489-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0188910Z     where CAP#1 is a fresh type-variable:
+490-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0189760Z       CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+491-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0192769Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: LensAccessoryRenderer is not abstract and does not override abstract method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer
+492-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0195836Z   public class LensAccessoryRenderer implements AccessoryRenderer {
+493-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0196902Z          ^
+494-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0197552Z     where M is a type-variable:
+495-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0199134Z       M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+496-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0201461Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+--
+614-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0414708Z Note: Recompile with -Xlint:deprecation for details.
+615-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0416602Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+616-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0419089Z             return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+617-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0420161Z                                                     ^
+618:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0421934Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+619-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0424110Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+620-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0425217Z                                                                                  ^
+621-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0425956Z   where B is a type-variable:
+622-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0426890Z     B extends Object declared in class FabricRegister
+623-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0427759Z   where CAP#1 is a fresh type-variable:
+624-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0428539Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+625:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0430396Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+626-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0432246Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+627-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0433123Z                                                                                  ^
+628-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0433873Z   where B is a type-variable:
+629-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0434509Z     B extends Object declared in class FabricRegister
+630-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0435203Z   where CAP#1 is a fresh type-variable:
+631-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0435925Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+632-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0438961Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: LensAccessoryRenderer is not abstract and does not override abstract method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer
+633-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0442252Z public class LensAccessoryRenderer implements AccessoryRenderer {
+634-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0443046Z        ^
+635-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0443541Z   where M is a type-variable:
+636-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0444928Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+637-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0447351Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+
+=== FabricXplatImpl.java ===
+402-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7902738Z   location: variable stack of type Holder<Item>
+403-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7904743Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+404-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7907256Z             return FabricModConditionalIngredient.of(defaultIngredient, modid, modIngredient);
+405-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7908314Z                                                     ^
+406:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7909704Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+407-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7911518Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+408-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7912637Z                                                                   ^
+409-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7913375Z   symbol:   variable BuiltInRegistries
+410-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7914032Z   location: class FabricXplatImpl
+411:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7915409Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389: error: cannot find symbol
+412-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7917640Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+413-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7918648Z                                                                   ^
+414-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7919390Z   symbol:   variable BuiltInRegistries
+415-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.7920067Z   location: class FabricXplatImpl
+416:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8878425Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol
+417-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8907759Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+418-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8928208Z                       ^
+419-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8937304Z   symbol:   method result()
+420-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8967330Z   location: variable success of type InteractionResult
+421-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8968985Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+422-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8970862Z         this.register = (Registry<B>) BuiltInRegistries.REGISTRY.getValueOrThrow(registryKey);
+423-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8971704Z                                                                                  ^
+424-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8972246Z   where B is a type-variable:
+425-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8972725Z     B extends Object declared in class FabricRegister
+426-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8973245Z   where CAP#1 is a fresh type-variable:
+427-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8973879Z     CAP#1 extends Registry<?> from capture of ? extends Registry<?>
+428-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:53.8998336Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+--
+492-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0195836Z   public class LensAccessoryRenderer implements AccessoryRenderer {
+493-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0196902Z          ^
+494-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0197552Z     where M is a type-variable:
+495-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0199134Z       M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+496:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0201461Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+497-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0203338Z               MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+498-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0204471Z                                                                     ^
+499-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0205234Z     symbol:   variable BuiltInRegistries
+500-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0205932Z     location: class FabricXplatImpl
+501:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0207582Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389: error: cannot find symbol
+502-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0209396Z               MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+503-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0210499Z                                                                     ^
+504-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0211258Z     symbol:   variable BuiltInRegistries
+505-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0211955Z     location: class FabricXplatImpl
+506-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0213351Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: cannot find symbol
+507-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0219726Z           BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+508-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0220653Z                              ^
+509-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0221296Z     symbol:   variable INSTANCE
+510-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0221969Z     location: class BlockRenderLayerMap
+511-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0222743Z   Note: Recompile with -Xlint:unchecked for details.
+512-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0223578Z   Note: Some input files use or override a deprecated API.
+513-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0225444Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+--
+523-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0239929Z           return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+524-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241057Z                                                                                      ^
+525-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0241851Z     symbol:   method getItem()
+526-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0242568Z     location: variable stack of type Holder<Item>
+527:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0244017Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol
+528-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0245765Z           return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+529-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0247243Z                         ^
+530-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0248154Z     symbol:   method result()
+531-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0248952Z     location: variable success of type InteractionResult
+532-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0249714Z   14 errors
+533-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0250080Z
+534-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0250325Z * Try:
+535-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0250933Z > Check your code and dependencies to fix the compilation error(s)
+536-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0251728Z > Run with --scan to get full insights.
+537-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0252275Z
+538-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0252573Z * Exception is:
+539-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0253450Z org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':Fabric:compileJava'.
+--
+633-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0442252Z public class LensAccessoryRenderer implements AccessoryRenderer {
+634-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0443046Z        ^
+635-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0443541Z   where M is a type-variable:
+636-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0444928Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+637:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0447351Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+638-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0449184Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM, Items.SHEARS)),
+639-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0450360Z                                                                   ^
+640-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0451181Z   symbol:   variable BuiltInRegistries
+641-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0451850Z   location: class FabricXplatImpl
+642:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0453193Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389: error: cannot find symbol
+643-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0455113Z             MatchTool.toolMatches(ItemPredicate.Builder.item().of(BuiltInRegistries.ITEM,
+644-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0456070Z                                                                   ^
+645-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0457048Z   symbol:   variable BuiltInRegistries
+646-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0457734Z   location: class FabricXplatImpl
+647-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0459138Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: cannot find symbol
+648-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0460576Z         BlockRenderLayerMap.INSTANCE.putBlock(block, type);
+649-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0461187Z                            ^
+650-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0461654Z   symbol:   variable INSTANCE
+651-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0462166Z   location: class BlockRenderLayerMap
+652-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0462738Z Note: Recompile with -Xlint:unchecked for details.
+653-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0463382Z Note: Some input files use or override a deprecated API.
+654-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0464845Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+--
+664-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0475476Z         return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+665-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0476374Z                                                                                    ^
+666-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0477191Z   symbol:   method getItem()
+667-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0477702Z   location: variable stack of type Holder<Item>
+668:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0478799Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol
+669-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0480404Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+670-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0481146Z                       ^
+671-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0481583Z   symbol:   method result()
+672-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0482103Z   location: variable success of type InteractionResult
+673-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0482719Z 14 errors
+674-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0483418Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:89)
+675-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0484495Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:50)
+676-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0485902Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
+677-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0487780Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:52)
+678-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0489450Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
+679-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0491364Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:52)
+680-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:10:54.0493513Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:38)
+
+=== API-family classification ===
+Ingredient normalization: HexFabricDataGenerators:112 and FabricModConditionalIngredient:62.
+Player model/accessories: LensAccessoryRenderer:27-34 and FabricPlayerRendererMixin:18-22; PlayerModel is non-generic in 1.21.11 and Accessories renderer generic must match exact bound.
+Platform registry/rendering: FabricClientXplatImpl:42, FabricRegister:21/27, FabricXplatImpl:388/389/519.

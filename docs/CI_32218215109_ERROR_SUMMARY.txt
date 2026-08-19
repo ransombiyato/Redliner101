@@ -1,0 +1,17 @@
+=== error-line count ===
+14 docs/CI_32218215109_UNIQUE_ERRORS.txt
+=== Java/Kotlin diagnostic inventory ===
+Fabric/src/main/java/at/petrak/hexcasting/fabric/datagen/HexFabricDataGenerators.java:112: error: incompatible types: FabricModConditionalIngredient cannot be converted to Ingredient
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:27: error: LensAccessoryRenderer is not abstract and does not override abstract method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:28: error: method does not override or implement a method from a supertype
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: name clash: render(ItemStack,SlotReference,PoseStack,EntityModel<M#1>,MultiBufferSource,int,float,float,float,float,float,float) in LensAccessoryRenderer and render(ItemStack,SlotReference,PoseStack,EntityModel<M#2>,MultiBufferSource,int,float,float,float,float,float,float) in AccessoryRenderer have the same erasure, yet neither overrides the other
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:34: error: type PlayerModel does not take parameters
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:18: error: type PlayerModel does not take parameters
+Fabric/src/main/java/at/petrak/hexcasting/fabric/mixin/client/FabricPlayerRendererMixin.java:22: error: cannot infer type arguments for PlayerModel
+Fabric/src/main/java/at/petrak/hexcasting/fabric/recipe/FabricModConditionalIngredient.java:62: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:21: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricRegister.java:27: error: incompatible types: ResourceKey<Registry<B>> cannot be converted to ResourceKey<CAP#1>
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:388: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:389: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:519: error: cannot find symbol

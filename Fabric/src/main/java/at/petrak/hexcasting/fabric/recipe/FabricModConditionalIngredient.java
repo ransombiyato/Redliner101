@@ -7,7 +7,6 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredient;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -59,7 +58,7 @@ public class FabricModConditionalIngredient implements CustomIngredient {
 
     @Override
     public Stream<Holder<Item>> getMatchingItems() {
-        return toUse.items().map(stack -> BuiltInRegistries.ITEM.wrapAsHolder(stack.getItem()));
+        return toUse.items();
     }
 
     @Override

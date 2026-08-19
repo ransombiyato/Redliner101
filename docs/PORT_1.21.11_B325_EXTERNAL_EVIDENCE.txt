@@ -1,0 +1,43 @@
+B325 EXTERNAL API EVIDENCE
+Generated: 2026-08-19
+Target: Minecraft 1.21.11 Fabric
+
+1. Fabric Yarn ItemRenderer API, Minecraft 1.21.11:
+https://maven.fabricmc.net/docs/yarn-1.21.11+build.1/net/minecraft/client/render/item/ItemRenderer.html
+The public API exposes low-level renderItem(ItemDisplayContext, MatrixStack, VertexConsumerProvider, int, int, int[], List, RenderLayer, ItemRenderState.Glint); the former ItemRenderer.renderStatic(ItemStack, ...) entry is absent.
+
+2. Fabric Yarn ItemModelManager API, Minecraft 1.21.11:
+https://maven.fabricmc.net/docs/yarn-1.21.11+build.4/net/minecraft/client/item/ItemModelManager.html
+The item-model manager exposes updateForLivingEntity/update-style methods that populate ItemRenderState for a living entity.
+
+3. Fabric Yarn ItemRenderState API, Minecraft 1.21.11:
+https://maven.fabricmc.net/docs/yarn-1.21.11+build.1/net/minecraft/client/render/item/ItemRenderState.html
+ItemRenderState renders through the new command-queue path; its internal layer state carries model quads, transforms, render layers, tint layers, and foil state. The port uses narrowly scoped Fabric accessors plus the mapped low-level ItemRenderer invoker to retain the Accessories MultiBufferSource bridge.
+
+4. Fabric Yarn ItemRenderState.LayerRenderState API, Minecraft 1.21.11:
+https://maven.fabricmc.net/docs/yarn-1.21.11+build.1/net/minecraft/client/render/item/ItemRenderState.LayerRenderState.html
+The nested layer state has the render, transform, render-layer, tint, and foil concepts required by the lens compatibility bridge.
+
+5. Fabric Yarn LivingEntityRenderer API, Minecraft 1.21.11:
+https://maven.fabricmc.net/docs/yarn-1.21.11+build.1/net/minecraft/client/render/entity/LivingEntityRenderer.html
+The exact hierarchy is LivingEntityRenderer<T extends LivingEntity, S extends LivingEntityRenderState, M extends EntityModel<? super S>>. The player renderer migration therefore uses Avatar, AvatarRenderState, and PlayerModel<AvatarRenderState>.
+
+6. Fabric GUI graphics guidance for 1.21.11:
+https://docs.fabricmc.net/develop/rendering/gui-graphics
+GUI texture blits are pipeline-first using RenderPipelines.GUI_TEXTURED. GuiGraphics.pose() is Matrix3x2fStack, whose transforms use pushMatrix/popMatrix, translate(x,y), and scale(x,y).
+
+7. Fabric basic rendering guidance:
+https://docs.fabricmc.net/develop/rendering/basic-concepts
+The post-1.21.8 GUI rendering model uses Matrix3x2fStack during submission and the RenderPipeline/RenderState architecture; direct RenderSystem shader-color calls are obsolete in the migrated EMI GUI code.
+
+8. NeoForge 1.21.11 GUI rendering guidance, used only as corroborating API documentation:
+https://docs.neoforged.net/docs/1.21.11/rendering/screens
+The GUI submission path confirms the same Matrix3x2fStack pushMatrix/popMatrix transform model and pipeline-first GUI texture rendering.
+
+9. EMI 1.1.18 API source:
+Local source jar: ~/.gradle/caches/modules-2/files-2.1/dev.emi/emi-xplat-intermediary/1.1.18+1.21.1/2bc18d5f28bb370534d1338fbba0244e9ca3d4c8/emi-xplat-intermediary-1.1.18+1.21.1-sources.jar
+The installed EMI API uses GuiGraphics and current EmiStack/SlotWidget rendering; the source confirms the custom EMI classes must follow the Minecraft 1.21.11 GUI matrix and pipeline APIs.
+
+10. Minecraft 1.21.11 official ProGuard mappings:
+Local mapping file: /home/ubuntu/mc12111/client.txt
+Verified entries include AvatarRenderer(Context, boolean), PlayerModel(ModelPart, boolean), ItemModelResolver.updateForLiving(ItemStackRenderState, ItemStack, ItemDisplayContext, LivingEntity), ItemStackRenderState layer fields, ItemTransform.apply(boolean, PoseStack.Pose), ItemRenderer.renderItem(...), and the absence of PlayerRenderer and ItemRenderer.renderStatic.
