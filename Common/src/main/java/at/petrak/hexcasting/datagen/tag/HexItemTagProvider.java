@@ -86,12 +86,13 @@ public class HexItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
         }
 
         @Override
-        protected TagAppender<ResourceKey<Item>, Item> tag(net.minecraft.tags.TagKey<Block> blockTag, net.minecraft.tags.TagKey<Item> itemTag) {
-            return HexItemTagProvider.this.tag(itemTag);
+        @SuppressWarnings({"unchecked", "rawtypes"})
+        protected TagAppender<Block, Block> tag(net.minecraft.tags.TagKey<Block> blockTag, net.minecraft.tags.TagKey<Item> itemTag) {
+            return (TagAppender) HexItemTagProvider.this.tag(itemTag).map(Block::asItem);
         }
     }
 
-    void add(TagAppender<ResourceKey<Item>, Item> appender, Item... items) {
+    void add(TagAppender<Item, Item> appender, Item... items) {
         for (Item item : items) {
             appender.add(BuiltInRegistries.ITEM.getResourceKey(item).orElseThrow());
         }

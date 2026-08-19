@@ -156,6 +156,7 @@ Run 32214152007 compiled the pushed B322 commit and reduced the prior hundreds o
 | B323-02 | `HexActionTagProvider.java` | The non-Fabric branch returns `TagKey<? extends ActionRegistryEntry>` and requires a narrowly scoped typed cast to `TagKey<ActionRegistryEntry>`. | IN PROGRESS |
 | B323-03 | `LookupPatternComponent.java` | `Registry<ActionRegistryEntry>` has no `getHolderOrThrow(ResourceKey)`; obtain the value with `getValueOrThrow` and bridge it with `wrapAsHolder` before tag/prototype access. | IN PROGRESS |
 | B323-04 | Cross-cutting validation | Re-run source-wide searches after this grouped fix, then commit and push only after all B323 diagnostics are recorded and addressed. | IN PROGRESS |
+| B323-05 | `HexItemTagProvider.java` | CI 32214641759 shows `IntrinsicHolderTagsProvider<Item>.tag(...)` returns `TagAppender<Item,Item>`, while `BlockItemTagsProvider.tag(TagKey<Block>,TagKey<Item>)` requires `TagAppender<Block,Block>`. Change the custom item helper to `TagAppender<Item,Item>` and implement the nested adapter with a mapped block-to-item appender plus a narrowly scoped generic bridge. | IN PROGRESS |
 
 
 ### Local validation constraint

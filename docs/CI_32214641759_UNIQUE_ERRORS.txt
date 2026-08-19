@@ -1,0 +1,18 @@
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:35: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:37: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:40: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:48: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:50: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:53: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:56: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:61: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:63: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:65: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:67: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:70: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:73: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:76: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:83: error: HexItemTagProvider.StandardBlockItemTags is not abstract and does not override abstract method tag(TagKey<Block>,TagKey<Item>) in BlockItemTagsProvider
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:88: error: method does not override or implement a method from a supertype
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:89: error: tag(TagKey<Block>,TagKey<Item>) in HexItemTagProvider.StandardBlockItemTags cannot override tag(TagKey<Block>,TagKey<Item>) in BlockItemTagsProvider
+at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:90: error: incompatible types: TagAppender<Item,Item> cannot be converted to TagAppender<ResourceKey<Item>,Item>
