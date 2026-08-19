@@ -38,18 +38,19 @@ public class HexActionTagProvider extends TagsProvider<ActionRegistryEntry> {
         // deciding that akashic write can be just a normal spell (as a treat)
     }
 
-    private TagAppender tag(TagKey<?> key) {
+    private TagAppender<ActionRegistryEntry> tag(TagKey<ActionRegistryEntry> key) {
         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
     }
 
-    private static TagKey<ActionRegistryEntry> ersatzActionTag(TagKey<ActionRegistryEntry> real) {
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    private static TagKey<ActionRegistryEntry> ersatzActionTag(TagKey<? extends ActionRegistryEntry> real) {
         if (IXplatAbstractions.INSTANCE.platform() == Platform.FABRIC) {
             // Vanilla (and Fabric) has a bug here where it *writes* hexcasting action tags to `.../tags/action`
             // instead of `.../tags/hexcasting/action`.
             // So we pull this bullshit
             var fakeKey = ResourceKey.<ActionRegistryEntry>createRegistryKey(
                 Identifier.fromNamespaceAndPath("foobar", "hexcasting/tags/action"));
-            return TagKey.create(fakeKey, real.location());
+            return TagKey.<ActionRegistryEntry>create(fakeKey, real.location());
         } else {
             return real;
         }

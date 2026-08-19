@@ -45,7 +45,7 @@ public class FarmersDelightCuttingRecipeBuilder implements RecipeBuilder {
     }
 
     public FarmersDelightCuttingRecipeBuilder withInput(ItemStack stack) {
-        return withInput(Ingredient.of(stack));
+        return withInput(Ingredient.of(stack.getItem()));
     }
 
     public FarmersDelightCuttingRecipeBuilder withInput(Ingredient ingredient) {

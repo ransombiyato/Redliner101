@@ -48,7 +48,7 @@ public class CreateCrushingRecipeBuilder implements RecipeBuilder {
     }
 
     public CreateCrushingRecipeBuilder withInput(ItemStack stack) {
-        return withInput(Ingredient.of(stack));
+        return withInput(Ingredient.of(stack.getItem()));
     }
 
     public CreateCrushingRecipeBuilder withInput(Ingredient ingredient) {

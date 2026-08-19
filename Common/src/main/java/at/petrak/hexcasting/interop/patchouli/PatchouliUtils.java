@@ -24,11 +24,14 @@ public class PatchouliUtils {
         if (Minecraft.getInstance().level == null) {
             return null;
         } else {
-            var manager = Minecraft.getInstance().level.getRecipeManager();
+            var manager = (RecipeManager) Minecraft.getInstance().level.recipeAccess();
 
-            return (T) manager.byKey(id)
+            return (T) manager.getRecipes().stream()
+                .filter(holder -> holder.id().identifier().equals(id))
                 .map(RecipeHolder::value)
-                .filter((recipe) -> recipe.getType() == type).orElse(null);
+                .filter(recipe -> recipe.getType() == type)
+                .findFirst()
+                .orElse(null);
         }
     }
 

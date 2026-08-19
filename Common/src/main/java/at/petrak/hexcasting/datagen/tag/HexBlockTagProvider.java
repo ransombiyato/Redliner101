@@ -141,15 +141,15 @@ public class HexBlockTagProvider extends TagsProvider<Block> {
             HexBlocks.QUENCHED_ALLAY, HexBlocks.QUENCHED_ALLAY_BRICKS, HexBlocks.QUENCHED_ALLAY_BRICKS_SMALL, HexBlocks.QUENCHED_ALLAY_TILES);
 
         // this is a hack but fixes #532
-        var createBrittle = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("create", "brittle"));
-        tag(createBrittle).addOptionalTag(BuiltInRegistries.BLOCK.getKey(HexBlocks.SLATE));
+        TagKey<Block> createBrittle = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("create", "brittle"));
+        tag(createBrittle).addOptional(BuiltInRegistries.BLOCK.getResourceKey(HexBlocks.SLATE).orElseThrow());
     }
 
-    private TagAppender tag(TagKey<?> key) {
+    private TagAppender<Block> tag(TagKey<Block> key) {
         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
     }
 
-    void add(TagAppender appender, Block... blocks) {
+    void add(TagAppender<Block> appender, Block... blocks) {
         for (Block block : blocks) {
             appender.add(BuiltInRegistries.BLOCK.getResourceKey(block).orElseThrow());
         }

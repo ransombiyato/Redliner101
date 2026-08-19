@@ -31,8 +31,9 @@ public class ScrungledPatternsSave extends SavedData {
     private static final String TAG_DIR = "startDir";
     private static final String TAG_KEY = "key";
 
+    @SuppressWarnings({"unchecked", "rawtypes"})
     private static ResourceKey<Registry<ActionRegistryEntry>> actionRegistryKey() {
-        return IXplatAbstractions.INSTANCE.getActionRegistry().key();
+        return (ResourceKey) IXplatAbstractions.INSTANCE.getActionRegistry().key();
     }
 
     private static final Codec<ResourceKey<ActionRegistryEntry>> ACTION_KEY_CODEC = Codec.STRING.xmap(

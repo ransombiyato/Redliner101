@@ -67,6 +67,7 @@ public class HexLootTables extends PaucalLootTableSubProvider {
             HexBlocks.EDIFIED_BUTTON);
 
         HolderLookup.RegistryLookup<Enchantment> enchRegistryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        HolderLookup.RegistryLookup<net.minecraft.world.item.Item> itemRegistryLookup = this.registries.lookupOrThrow(Registries.ITEM);
 
         makeSlabTable(blockTables, HexBlocks.EDIFIED_SLAB);
 
@@ -90,7 +91,7 @@ public class HexLootTables extends PaucalLootTableSubProvider {
 
         var silkTouchCond = MatchTool.toolMatches(
             ItemPredicate.Builder.item().withComponents(
-                    new DataComponentMatchers.Builder()
+                    DataComponentMatchers.Builder.components()
                             .partial(DataComponentPredicates.ENCHANTMENTS,
                                     EnchantmentsPredicate.enchantments(
                                             List.of(new EnchantmentPredicate(enchRegistryLookup.getOrThrow(Enchantments.SILK_TOUCH), MinMaxBounds.Ints.atLeast(1)))))
@@ -98,7 +99,7 @@ public class HexLootTables extends PaucalLootTableSubProvider {
             ));
         var noSilkTouchCond = silkTouchCond.invert();
         var goodAtAmethystingCond = MatchTool.toolMatches(
-            ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)
+            ItemPredicate.Builder.item().of(itemRegistryLookup, ItemTags.CLUSTER_MAX_HARVESTABLES)
         );
 
         var dustPoolWhenGood = LootPool.lootPool()
@@ -153,7 +154,7 @@ public class HexLootTables extends PaucalLootTableSubProvider {
             .when(AnyOfCondition.anyOf(
                 IXplatAbstractions.INSTANCE.isShearsCondition(),
                 MatchTool.toolMatches(ItemPredicate.Builder.item().withComponents(
-                        new DataComponentMatchers.Builder()
+                        DataComponentMatchers.Builder.components()
                                 .partial(DataComponentPredicates.ENCHANTMENTS,
                                         EnchantmentsPredicate.enchantments(
                                                 List.of(new EnchantmentPredicate(enchRegistryLookup.getOrThrow(Enchantments.SILK_TOUCH), MinMaxBounds.Ints.atLeast(1)))))

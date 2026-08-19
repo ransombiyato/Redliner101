@@ -76,7 +76,9 @@ public class VillagerIngredient extends BrainsweepeeIngredient {
 
     @Override
     public Entity exampleEntity(Level level) {
-        var biome = Objects.requireNonNullElse(this.biome, VillagerType.PLAINS);
+        var biome = Objects.requireNonNullElse(
+            this.biome,
+            BuiltInRegistries.VILLAGER_TYPE.getValueOrThrow(VillagerType.PLAINS));
         var profession = Objects.requireNonNullElse(
             this.profession,
             BuiltInRegistries.VILLAGER_PROFESSION.getValueOrThrow(VillagerProfession.TOOLSMITH));

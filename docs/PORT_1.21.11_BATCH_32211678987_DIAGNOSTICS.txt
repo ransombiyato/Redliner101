@@ -1,0 +1,1188 @@
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.0546172Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:66: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.0549604Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.0549805Z > Task :Common:compileJava
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.0570747Z         @Nonnull BlockState facingState, @Nonnull RandomSource random) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.0580973Z                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.0620234Z   symbol:   class RandomSource
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.1561544Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:207: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.1563583Z         BlockPos pCurrentPos, Direction pFacing, BlockPos pFacingPos, BlockState pFacingState, RandomSource pRandom) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.1565390Z                                                                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.1566083Z   symbol:   class RandomSource
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.1589221Z   location: class BlockSlate
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.2542873Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:9: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.2624580Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:19: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.2626080Z public class HexItemTagProvider extends ItemTagsProvider {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.2626806Z                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.2627447Z   symbol: class ItemTagsProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.2628773Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:22: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:06.2631339Z     public HexItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, CompletableFuture<TagLookup<Block>> pBlockTagsProvider, IXplatTags xtags) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.4542868Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:89: error: incompatible types: Object cannot be converted to VillagerType
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.4550732Z             .withType(BuiltInRegistries.VILLAGER_TYPE.wrapAsHolder(biome))
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.4551748Z                                                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.5542071Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java:88: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.5557245Z     @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.5557962Z     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.6542637Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:102: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.6550133Z     @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.6550813Z     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.7541911Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:62: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.7544660Z     @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.7545338Z     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.8542432Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:43: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.8565922Z                 .getHolder(treeFeatureKey)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.8566903Z                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.8567622Z   symbol:   method getHolder(ResourceKey<ConfiguredFeature<?,?>>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:07.8568544Z   location: interface Registry<ConfiguredFeature<?,?>>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2542690Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:29: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2632581Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:33: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2634093Z 		var recman = level.getRecipeManager();
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2634771Z 		                  ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2635321Z   symbol:   method getRecipeManager()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2636012Z   location: variable level of type Level
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2637375Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2643347Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:61: error: ContextMap(Map<ContextKey<?>,Object>) is not public in ContextMap; cannot be accessed from outside package
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2645629Z         return recipe.display().getLast().result().resolveForFirstStack(new ContextMap(Map.of()));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2646948Z                                                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2648469Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:83: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2650286Z                         ingredients.add(Ingredient.EMPTY);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2651062Z                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2653745Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:87: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2655565Z                         ingredients.add(list.size() > realIndex ? list.get(realIndex) : Ingredient.EMPTY);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2656616Z                                                                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2657409Z   symbol:   variable EMPTY
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2658005Z   location: class Ingredient
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2659632Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:92: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2665193Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: error: HoverEvent is abstract; cannot be instantiated
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2666978Z         HoverEvent he = new HoverEvent(new HoverEvent.ShowItem(scrollStack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2667836Z                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2669519Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:48: error: ClickEvent is abstract; cannot be instantiated
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2671447Z         ClickEvent ce = new ClickEvent(new ClickEvent.CopyToClipboard(pattern.toString()));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2672381Z                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2673966Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:64: error: incompatible types: Style cannot be converted to InlineStyle
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2675962Z         int glowyParentColor = ((InlineStyle) style).getComponent(InlineStyle.GLOWY_PARENT_COMP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2677229Z                                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2678934Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:71: error: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2681174Z         boolean isFlat = InlineRenderer.isFlat(drawContext.pose(), trContext.layerType());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2682146Z                                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2683631Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:93: error: Builder() has private access in Builder
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2685176Z                     new DataComponentMatchers.Builder()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2687731Z                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2689531Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:101: error: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2691435Z             ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.2692347Z                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3562774Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:156: error: Builder() has private access in Builder
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3601450Z                         new DataComponentMatchers.Builder()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3621085Z                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3622796Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:82: error: incompatible types: PackOutput cannot be converted to Provider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3624403Z         super(output, registries);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3624947Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3626260Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:106: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3628332Z         staffRecipe(recipes, HexItems.STAFF_MINDSPLICE, Ingredient.of(this.items.getOrThrow(HexTags.Items.MINDFLAYED_CIRCLE_COMPONENTS)));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3629849Z                                                                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3631428Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:108: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3633198Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.TOOLS, HexItems.THOUGHT_KNOT)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3634132Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3635579Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:113: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3637292Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.FOCUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3638156Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3639778Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:123: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3641538Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.FOCUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3642381Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3643790Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:134: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3645514Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.SPELLBOOK)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3646387Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3647805Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:158: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3650199Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.ARTIFACT)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3651096Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3652523Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:172: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3654230Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.ABACUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3655081Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3656492Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:182: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3658269Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.FOOD, HexItems.SUBMARINE_SANDWICH)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3659199Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3660860Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:194: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3662894Z             ShapedRecipeBuilder.shaped(this.items, RecipeCategory.MISC, item)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3663693Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3665113Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:232: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3666904Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_SMOL)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3674456Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3675957Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:239: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3700367Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_MEDIUM)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3725818Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3727287Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:247: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3729021Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_LARGE)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3730225Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3731692Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:255: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3733402Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SLATE, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3734318Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3735728Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:262: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3737471Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.JEWELER_HAMMER)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3750771Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3752324Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:272: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3754208Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, HexItems.AMETHYST_DUST,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3755209Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3756662Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:278: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3758734Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, Items.AMETHYST_SHARD,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3759939Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3761370Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:284: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3763517Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, HexItems.CHARGED_AMETHYST,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3764509Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3765935Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:291: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3767783Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_BLOCK)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3768750Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3770357Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:307: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3772330Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.ANCIENT_SCROLL_PAPER, 8)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3773668Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3775088Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:318: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3777066Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, HexBlocks.ANCIENT_SCROLL_PAPER_LANTERN, 8)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3778237Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3779900Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:329: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3781849Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_PLANKS, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3783000Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3784491Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:336: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3786313Z             ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, wood, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3787275Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3810827Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:347: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3812905Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_TILE, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3813952Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3815383Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:354: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3817026Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_DOOR, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3840148Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3851112Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:361: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3853254Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_TRAPDOOR, 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3854350Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3855902Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:367: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3858284Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_STAIRS, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3859689Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3861248Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:374: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3863267Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3864361Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3866082Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:381: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3868334Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE_GATE, 1)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3869902Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3871356Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:389: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3873450Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_SLAB, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3874624Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3875991Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:394: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3877999Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_PRESSURE_PLATE, 1)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3879105Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3880684Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:399: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3881885Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_BUTTON)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3895966Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3897460Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:404: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3899572Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.IMPETUS_EMPTY)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3900488Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3901876Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:414: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3903672Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EMPTY_DIRECTRIX)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3904556Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3905978Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:424: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3907714Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.AKASHIC_BOOKSHELF)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3908619Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3910221Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:433: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3912041Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.AKASHIC_LIGATURE, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3912970Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3914352Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:455: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3916666Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3917747Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3919130Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:460: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3921483Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS_SMALL.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3922635Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3924034Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:465: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3926008Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_TILES.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3927129Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3928461Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:470: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3930799Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_PILLAR.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3931780Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3933037Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:593: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3934656Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, staff)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3935382Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3936761Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:606: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3938304Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.MISC, colorizer)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3938962Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3940796Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:622: error: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3942543Z         return paucalInventoryTrigger(ItemPredicate.Builder.item().of(itemLike).build());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3943411Z                                                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3944924Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:626: error: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3946789Z         return paucalInventoryTrigger(ItemPredicate.Builder.item().of(itemLike).build());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3947605Z                                                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3948958Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:651: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3951596Z         return ring(category, out, count, Ingredient.of(outer), ingredientOf(inner));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3952299Z                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3960577Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:680: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3962265Z         var builder = ShapedRecipeBuilder.shaped(this.items, category, out, count);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3963049Z                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3964452Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:706: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3966078Z         return ShapedRecipeBuilder.shaped(this.items, category, out, count)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.3966822Z                                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4591259Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:718: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4600039Z         return stack(category, out, count, Ingredient.of(top), Ingredient.of(bottom));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4629842Z                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4659884Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4680232Z       (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4689890Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4720849Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:718: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4750003Z         return stack(category, out, count, Ingredient.of(top), Ingredient.of(bottom));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4750801Z                                                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4751403Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4752062Z       (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4752741Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4758292Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:731: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4760010Z         return stick(category, out, count, Ingredient.of(input));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4760609Z                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4761138Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4761821Z       (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4762839Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4768845Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:738: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4770646Z         var pack = ShapedRecipeBuilder.shaped(this.items, category, compressed)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4771353Z                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4772699Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:747: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4774331Z         ShapelessRecipeBuilder.shapeless(this.items, category, free, largeSize ? 9 : 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4775319Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4776891Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:759: error: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4778560Z         return item == null ? null : Ingredient.of(item);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4779098Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4809964Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4810948Z       (argument mismatch; @org.jetbrains.annotations.Nullable TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4811921Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4818875Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:766: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4820710Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, bricks, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4821486Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4822785Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:774: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4825483Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, bricks)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4826290Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4827600Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:780: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4829459Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, smallBricks)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4830275Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4831593Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:786: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4833474Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, tiles, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4834240Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4835569Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:795: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4837244Z             ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, pillar, 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4838030Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4849827Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:811: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4851853Z             SingleItemRecipeBuilder.stonecutting(Ingredient.of(this.items.getOrThrow(tagKey)), RecipeCategory.BUILDING_BLOCKS, result)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4852938Z                                                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4854465Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:51: error: no suitable method found for of(ItemStack)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4856292Z         return withInput(Ingredient.of(stack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4856777Z                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4857270Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4857928Z       (argument mismatch; ItemStack cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4858605Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4864489Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:48: error: no suitable method found for of(ItemStack)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4866228Z         return withInput(Ingredient.of(stack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4866879Z                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4867384Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4868047Z       (argument mismatch; ItemStack cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4868732Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4874409Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:27: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4875824Z     @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4876122Z     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4877144Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:50: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4878494Z         this.copy(HexTags.Blocks.EDIFIED_LOGS, HexTags.Items.EDIFIED_LOGS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4879097Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4880842Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:51: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4882434Z         this.copy(HexTags.Blocks.EDIFIED_PLANKS, HexTags.Items.EDIFIED_PLANKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4883062Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4883446Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4884604Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:52: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4885902Z         this.copy(HexTags.Blocks.IMPETI, HexTags.Items.IMPETI);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4888042Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:53: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4889582Z         this.copy(HexTags.Blocks.DIRECTRICES, HexTags.Items.DIRECTRICES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4890215Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4890592Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4891801Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:54: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4893592Z         this.copy(HexTags.Blocks.MINDFLAYED_CIRCLE_COMPONENTS, HexTags.Items.MINDFLAYED_CIRCLE_COMPONENTS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4896017Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:55: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4897459Z         this.copy(HexTags.Blocks.SLATE_BLOCKS, HexTags.Items.SLATE_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4898057Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4898426Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4899820Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:56: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4901174Z         this.copy(HexTags.Blocks.AMETHYST_BLOCKS, HexTags.Items.AMETHYST_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4903373Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:57: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4904830Z         this.copy(HexTags.Blocks.QUENCHED_ALLAY_BLOCKS, HexTags.Items.QUENCHED_ALLAY_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4905568Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4905955Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4907184Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:58: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4908511Z         this.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4910909Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:59: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4912166Z         this.copy(BlockTags.LOGS, ItemTags.LOGS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4912646Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4913030Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4914263Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:60: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4915544Z         this.copy(BlockTags.PLANKS, ItemTags.PLANKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4917688Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:61: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4919166Z         this.copy(BlockTags.SLABS, ItemTags.SLABS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4919872Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4920263Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4921900Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:62: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4923276Z         this.copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4925485Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:63: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4926764Z         this.copy(BlockTags.DOORS, ItemTags.DOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4927267Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4927672Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4928917Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:64: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4930440Z         this.copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4932874Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:65: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4934181Z         this.copy(BlockTags.TRAPDOORS, ItemTags.TRAPDOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4934729Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4935114Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4936327Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:66: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4937680Z         this.copy(BlockTags.WOODEN_TRAPDOORS, ItemTags.WOODEN_TRAPDOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4940061Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:67: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4941313Z         this.copy(BlockTags.LEAVES, ItemTags.LEAVES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4941815Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4942180Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4943388Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:69: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4944788Z         this.copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4947022Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:70: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4948296Z         this.copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4948815Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4949202Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4950624Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:71: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4951962Z         this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4954201Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:75: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4955495Z         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4956385Z                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4956895Z   symbol:   method getOrCreateRawBuilder(TagKey<CAP#1>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4957441Z   location: class HexItemTagProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4957915Z   where CAP#1 is a fresh type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4960451Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:42: error: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<ActionRegistryEntry>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4962216Z         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4962844Z                                                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4963349Z   where CAP#1 is a fresh type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4963825Z     CAP#1 extends Object from capture of ?
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4965291Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:145: error: incompatible types: Identifier cannot be converted to TagKey
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4969810Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:149: error: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<Block>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4971486Z         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4972108Z                                                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4972598Z   where CAP#1 is a fresh type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4973058Z     CAP#1 extends Object from capture of ?
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4974430Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:45: error: incompatible types: inference variable T has incompatible bounds
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4979846Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:57: error: incompatible types: inference variable T has incompatible bounds
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4981441Z             .display(new DisplayInfo(new ItemStack(HexItems.CREATIVE_UNLOCKER),
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4982078Z                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4982452Z     equality constraints: ResourceTexture
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4982919Z     lower bounds: Identifier
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.4983325Z   where T is a type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5571342Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:20: error: incompatible types: cannot infer type-variable(s) O
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5573561Z             RecordCodecBuilder.create(instance -> instance.group(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5605998Z                                                                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5630026Z     (argument mismatch; invalid method reference
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5660135Z       method min in record Bounds<T> cannot be applied to given types
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5689856Z         required: no arguments
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5851556Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:26: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5879949Z             bounds -> bounds.min().isPresent() && bounds.max().isPresent()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5900065Z                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5900615Z   symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5901167Z   location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5902446Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:26: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5907002Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5908643Z                     && bounds.min().get().equals(bounds.max().get())
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5909495Z                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5910007Z   symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5910527Z   location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5911778Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5916132Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:28: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5917418Z                     ? Either.left(bounds.min().get())
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5918031Z                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5918547Z   symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5919069Z   location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5920532Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:30: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5925149Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:30: error: incompatible types: Codec<Object> cannot be converted to Codec<Bounds<Long>>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5926781Z     ).validate(bounds -> bounds.areSwapped()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5927353Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5929020Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:35: error: incompatible types: ResourceKey<CAP#1> cannot be converted to ResourceKey<Registry<ActionRegistryEntry>>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5931267Z         return IXplatAbstractions.INSTANCE.getActionRegistry().key();
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.5932042Z                                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8642252Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:651: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8644050Z           return ring(category, out, count, Ingredient.of(outer), ingredientOf(inner));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8644915Z                                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8645668Z       method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8646497Z         (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8647343Z       method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8655061Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:718: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8656832Z           return stack(category, out, count, Ingredient.of(top), Ingredient.of(bottom));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8657743Z                                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8658478Z       method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8659569Z         (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8660498Z       method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8667060Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:718: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8668745Z           return stack(category, out, count, Ingredient.of(top), Ingredient.of(bottom));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8670021Z                                                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8671209Z       method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8672137Z         (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8673093Z       method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8680187Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:731: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8681948Z           return stick(category, out, count, Ingredient.of(input));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8682731Z                                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8683460Z       method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8684623Z         (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8685587Z       method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8693488Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:759: error: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8695374Z           return item == null ? null : Ingredient.of(item);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8696100Z                                                  ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8697105Z       method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8698240Z         (argument mismatch; @org.jetbrains.annotations.Nullable TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8699574Z       method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8707198Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:51: error: no suitable method found for of(ItemStack)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8708832Z           return withInput(Ingredient.of(stack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8709645Z                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8710192Z       method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8710921Z         (argument mismatch; ItemStack cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8711684Z       method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8717978Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:48: error: no suitable method found for of(ItemStack)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8790266Z           return withInput(Ingredient.of(stack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8790860Z                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8791430Z       method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8792162Z         (argument mismatch; ItemStack cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8792938Z       method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8799914Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:66: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8801378Z           @Nonnull BlockState facingState, @Nonnull RandomSource random) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8802071Z                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8802602Z     symbol:   class RandomSource
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8803086Z     location: class BlockConjuredLight
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8804334Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:207: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8809514Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:9: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8810855Z   import net.minecraft.data.tags.ItemTagsProvider;
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8811458Z                                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8811927Z     symbol:   class ItemTagsProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8812435Z     location: package net.minecraft.data.tags
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8813682Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:22: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8890186Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:83: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8891869Z                           ingredients.add(Ingredient.EMPTY);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8892437Z                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8892922Z     symbol:   variable EMPTY
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8893361Z     location: class Ingredient
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8894609Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:87: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8899600Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:92: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8901155Z                       ingredients.add(list.size() > index ? list.get(index) : Ingredient.EMPTY);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8901954Z                                                                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8902749Z     symbol:   variable EMPTY
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8903172Z     location: class Ingredient
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8904398Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:93: error: Builder() has private access in Builder
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8907382Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:156: error: Builder() has private access in Builder
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8908717Z                           new DataComponentMatchers.Builder()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8909247Z                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8910769Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:106: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8912769Z           staffRecipe(recipes, HexItems.STAFF_MINDSPLICE, Ingredient.of(this.items.getOrThrow(HexTags.Items.MINDFLAYED_CIRCLE_COMPONENTS)));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8913942Z                                                                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8915350Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:108: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8917081Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.TOOLS, HexItems.THOUGHT_KNOT)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8917933Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8949709Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:113: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8951496Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.FOCUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8952271Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8953599Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:123: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8955238Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.FOCUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8955983Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8957305Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:134: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8958963Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.SPELLBOOK)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8960246Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8961579Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:158: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8963220Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.ARTIFACT)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8963981Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8965303Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:172: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8966935Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.ABACUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8967708Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8969021Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:182: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8988707Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.FOOD, HexItems.SUBMARINE_SANDWICH)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8989944Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8991566Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:194: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8993107Z               ShapedRecipeBuilder.shaped(this.items, RecipeCategory.MISC, item)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8993807Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8995127Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:232: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8996817Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_SMOL)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8997659Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.8998986Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:239: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9000933Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_MEDIUM)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9001777Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9003078Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:247: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9004793Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_LARGE)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9005635Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9006936Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:255: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9008623Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SLATE, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9009638Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9010967Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:262: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9012658Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.JEWELER_HAMMER)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9013461Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9014771Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:272: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9016488Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, HexItems.AMETHYST_DUST,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9017331Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9018903Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:278: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9027862Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, Items.AMETHYST_SHARD,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9028735Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9030331Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:284: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9032046Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, HexItems.CHARGED_AMETHYST,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9032918Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9034256Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:291: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9035916Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_BLOCK)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9036803Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9038154Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:307: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9040664Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.ANCIENT_SCROLL_PAPER, 8)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9041709Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9043108Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:318: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9045073Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, HexBlocks.ANCIENT_SCROLL_PAPER_LANTERN, 8)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9046169Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9047573Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:329: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9052191Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_PLANKS, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9053247Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9054666Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:336: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9056402Z               ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, wood, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9057241Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9058651Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:347: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9060758Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_TILE, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9061703Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9063105Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:354: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9064817Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_DOOR, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9065659Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9066989Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:361: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9068735Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_TRAPDOOR, 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9070206Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9071568Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:367: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9095896Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_STAIRS, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9096844Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9098215Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:374: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9100317Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9101237Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9102585Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:381: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9104392Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE_GATE, 1)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9105547Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9106852Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:389: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9108619Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_SLAB, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9109842Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9111199Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:394: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9113013Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_PRESSURE_PLATE, 1)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9113902Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9115257Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:399: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9117003Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_BUTTON)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9117885Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9119233Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:404: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9121205Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.IMPETUS_EMPTY)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9122049Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9123476Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:414: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9125232Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EMPTY_DIRECTRIX)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9126104Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9127455Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:424: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9129192Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.AKASHIC_BOOKSHELF)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9130392Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9131700Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:433: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9133456Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.AKASHIC_LIGATURE, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9134563Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9135894Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:455: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9137805Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9138867Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9140423Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:460: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9148292Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS_SMALL.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9149758Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9151147Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:465: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9153090Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_TILES.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9154372Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9155722Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:470: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9157644Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_PILLAR.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9158685Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9160348Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:593: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9161926Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, staff)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9162612Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9163942Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:606: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9165526Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.MISC, colorizer)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9166256Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9167573Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:680: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9169144Z           var builder = ShapedRecipeBuilder.shaped(this.items, category, out, count);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9176309Z                                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9177752Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:706: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9179618Z           return ShapedRecipeBuilder.shaped(this.items, category, out, count)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9180364Z                                                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9181736Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:738: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9183523Z           var pack = ShapedRecipeBuilder.shaped(this.items, category, compressed)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9184258Z                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9185632Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:747: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9187533Z           ShapelessRecipeBuilder.shapeless(this.items, category, free, largeSize ? 9 : 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9188500Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9190054Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:766: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9191709Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, bricks, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9192469Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9193783Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:774: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9195462Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, bricks)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9196285Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9197656Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:780: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9199813Z           ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, smallBricks)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9200954Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9202326Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:786: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9203969Z           ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, tiles, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9204748Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9206113Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:795: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9207764Z               ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, pillar, 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9208568Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9210221Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:811: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9212198Z               SingleItemRecipeBuilder.stonecutting(Ingredient.of(this.items.getOrThrow(tagKey)), RecipeCategory.BUILDING_BLOCKS, result)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9213295Z                                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9215112Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:61: error: ContextMap(Map<ContextKey<?>,Object>) is not public in ContextMap; cannot be accessed from outside package
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9217274Z           return recipe.display().getLast().result().resolveForFirstStack(new ContextMap(Map.of()));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9218156Z                                                                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9218755Z   Note: Recompile with -Xlint:unchecked for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9219630Z   Note: Some input files use or override a deprecated API.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9221169Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java:88: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9224421Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:102: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9225969Z       @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9226287Z       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9230902Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:62: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9232659Z       @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9232977Z       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9234320Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:27: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9235773Z       @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9236076Z       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9236501Z   Note: Some input files use unchecked or unsafe operations.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9237809Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:43: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9239036Z                   .getHolder(treeFeatureKey)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9244420Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:29: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9245989Z           var entry = registry.getHolderOrThrow(key);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9246501Z                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9247070Z     symbol:   method getHolderOrThrow(ResourceKey<ActionRegistryEntry>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9247886Z     location: variable registry of type Registry<ActionRegistryEntry>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9249560Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:33: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9254133Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9255734Z               var manager = Minecraft.getInstance().level.getRecipeManager();
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9275221Z                                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9275789Z     symbol:   method getRecipeManager()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9276329Z     location: variable level of type ClientLevel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9277549Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:75: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9283190Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:26: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9284620Z               bounds -> bounds.min().isPresent() && bounds.max().isPresent()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9285253Z                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9285685Z     symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9286133Z     location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9287337Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:26: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9292101Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9295330Z                       && bounds.min().get().equals(bounds.max().get())
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9295925Z                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9296367Z     symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9296825Z     location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9298466Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9303285Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:28: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9305089Z                       ? Either.left(bounds.min().get())
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9305619Z                                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9306083Z     symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9306525Z     location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9307735Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:30: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9312072Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:50: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9313541Z           this.copy(HexTags.Blocks.EDIFIED_LOGS, HexTags.Items.EDIFIED_LOGS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9314237Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9314659Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9315913Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:51: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9317375Z           this.copy(HexTags.Blocks.EDIFIED_PLANKS, HexTags.Items.EDIFIED_PLANKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9320093Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:52: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9321469Z           this.copy(HexTags.Blocks.IMPETI, HexTags.Items.IMPETI);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9322051Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9322448Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9323759Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:53: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9325180Z           this.copy(HexTags.Blocks.DIRECTRICES, HexTags.Items.DIRECTRICES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9327538Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:54: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9329176Z           this.copy(HexTags.Blocks.MINDFLAYED_CIRCLE_COMPONENTS, HexTags.Items.MINDFLAYED_CIRCLE_COMPONENTS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9330301Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9330715Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9332241Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:55: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9333677Z           this.copy(HexTags.Blocks.SLATE_BLOCKS, HexTags.Items.SLATE_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9336038Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:56: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9337460Z           this.copy(HexTags.Blocks.AMETHYST_BLOCKS, HexTags.Items.AMETHYST_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9338130Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9338538Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9340057Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:57: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9341599Z           this.copy(HexTags.Blocks.QUENCHED_ALLAY_BLOCKS, HexTags.Items.QUENCHED_ALLAY_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9344291Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:58: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9345694Z           this.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9346289Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9346678Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9347915Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:59: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9349211Z           this.copy(BlockTags.LOGS, ItemTags.LOGS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9351678Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:60: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9352959Z           this.copy(BlockTags.PLANKS, ItemTags.PLANKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9353481Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9353870Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9355288Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:61: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9356595Z           this.copy(BlockTags.SLABS, ItemTags.SLABS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9358737Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:62: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9360318Z           this.copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9360875Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9361426Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9362669Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:63: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9363884Z           this.copy(BlockTags.DOORS, ItemTags.DOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9366028Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:64: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9367480Z           this.copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9368026Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9368422Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9392985Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:65: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9394373Z           this.copy(BlockTags.TRAPDOORS, ItemTags.TRAPDOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9396561Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:66: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9397932Z           this.copy(BlockTags.WOODEN_TRAPDOORS, ItemTags.WOODEN_TRAPDOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9398575Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9398999Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9430726Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:67: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9431974Z           this.copy(BlockTags.LEAVES, ItemTags.LEAVES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9434047Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:69: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9436041Z           this.copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9436763Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9437172Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9438434Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:70: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9439939Z           this.copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9442083Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:71: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9443472Z           this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9444078Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9444480Z     symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9445910Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: error: HoverEvent is abstract; cannot be instantiated
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9447524Z           HoverEvent he = new HoverEvent(new HoverEvent.ShowItem(scrollStack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9449716Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:48: error: ClickEvent is abstract; cannot be instantiated
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9451402Z           ClickEvent ce = new ClickEvent(new ClickEvent.CopyToClipboard(pattern.toString()));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9452203Z                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9453748Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:89: error: incompatible types: Object cannot be converted to VillagerType
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9455589Z               .withType(BuiltInRegistries.VILLAGER_TYPE.wrapAsHolder(biome))
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9456285Z                                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9457825Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:64: error: incompatible types: Style cannot be converted to InlineStyle
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9481026Z           int glowyParentColor = ((InlineStyle) style).getComponent(InlineStyle.GLOWY_PARENT_COMP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9481941Z                                                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9483554Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:71: error: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9485725Z           boolean isFlat = InlineRenderer.isFlat(drawContext.pose(), trContext.layerType());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9486581Z                                                                  ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9488112Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:101: error: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9490084Z               ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9490776Z                                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9492202Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:82: error: incompatible types: PackOutput cannot be converted to Provider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9493791Z           super(output, registries);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9494223Z                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9495608Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:622: error: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9497650Z           return paucalInventoryTrigger(ItemPredicate.Builder.item().of(itemLike).build());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9498476Z                                                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9500276Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:626: error: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9502200Z           return paucalInventoryTrigger(ItemPredicate.Builder.item().of(itemLike).build());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9530490Z                                                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9532231Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:42: error: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<ActionRegistryEntry>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9533998Z           return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9534643Z                                                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9535159Z     where CAP#1 is a fresh type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9535656Z       CAP#1 extends Object from capture of ?
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9537125Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:145: error: incompatible types: Identifier cannot be converted to TagKey
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9541608Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:149: error: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<Block>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9543305Z           return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9543970Z                                                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9544503Z     where CAP#1 is a fresh type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9545009Z       CAP#1 extends Object from capture of ?
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9546530Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:45: error: incompatible types: inference variable T has incompatible bounds
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9552584Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:57: error: incompatible types: inference variable T has incompatible bounds
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9554220Z               .display(new DisplayInfo(new ItemStack(HexItems.CREATIVE_UNLOCKER),
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9554868Z                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9555271Z       equality constraints: ResourceTexture
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9555749Z       lower bounds: Identifier
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9556165Z     where T is a type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9558049Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:20: error: incompatible types: cannot infer type-variable(s) O
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9589983Z               RecordCodecBuilder.create(instance -> instance.group(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9590695Z                                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9591564Z       (argument mismatch; invalid method reference
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9592221Z         method min in record Bounds<T> cannot be applied to given types
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9592824Z           required: no arguments
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9597773Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:30: error: incompatible types: Codec<Object> cannot be converted to Codec<Bounds<Long>>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9599584Z       ).validate(bounds -> bounds.areSwapped()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9600076Z                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9601752Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:35: error: incompatible types: ResourceKey<CAP#1> cannot be converted to ResourceKey<Registry<ActionRegistryEntry>>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9603778Z           return IXplatAbstractions.INSTANCE.getActionRegistry().key();
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9604445Z                                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9608598Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:19: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9610190Z   public class HexItemTagProvider extends ItemTagsProvider {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9610770Z                                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9611225Z     symbol: class ItemTagsProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9611630Z   122 errors
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9611804Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9804789Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:651: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9806414Z         return ring(category, out, count, Ingredient.of(outer), ingredientOf(inner));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9807157Z                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9807764Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9808460Z       (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9809803Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9815439Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:718: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9817088Z         return stack(category, out, count, Ingredient.of(top), Ingredient.of(bottom));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9817848Z                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9818412Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9819131Z       (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9820307Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9826154Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:718: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9827737Z         return stack(category, out, count, Ingredient.of(top), Ingredient.of(bottom));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9828390Z                                                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9828727Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9829108Z       (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9829956Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9833356Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:731: error: no suitable method found for of(TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9834153Z         return stick(category, out, count, Ingredient.of(input));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9834487Z                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9834786Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9835156Z       (argument mismatch; TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9835536Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9839125Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:759: error: no suitable method found for of(@org.jetbrains.annotations.Nullable TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9840360Z         return item == null ? null : Ingredient.of(item);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9840677Z                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9840979Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9841480Z       (argument mismatch; @org.jetbrains.annotations.Nullable TagKey<Item> cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9842002Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9845858Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java:51: error: no suitable method found for of(ItemStack)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9846684Z         return withInput(Ingredient.of(stack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9846958Z                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9847238Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9847600Z       (argument mismatch; ItemStack cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9847972Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9851371Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java:48: error: no suitable method found for of(ItemStack)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9852364Z         return withInput(Ingredient.of(stack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9852796Z                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9853166Z     method Ingredient.of(ItemLike) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9853582Z       (argument mismatch; ItemStack cannot be converted to ItemLike)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9853985Z     method Ingredient.of(ItemLike...) is not applicable
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9857213Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java:66: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9857979Z         @Nonnull BlockState facingState, @Nonnull RandomSource random) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9858331Z                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9858731Z   symbol:   class RandomSource
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9858976Z   location: class BlockConjuredLight
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9859968Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:207: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9864393Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:9: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9865103Z import net.minecraft.data.tags.ItemTagsProvider;
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9865399Z                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9865643Z   symbol:   class ItemTagsProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9865912Z   location: package net.minecraft.data.tags
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9866561Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:22: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9870508Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:83: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9871230Z                         ingredients.add(Ingredient.EMPTY);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9871535Z                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9871804Z   symbol:   variable EMPTY
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9872027Z   location: class Ingredient
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9872668Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:87: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9875351Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:92: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9876161Z                     ingredients.add(list.size() > index ? list.get(index) : Ingredient.EMPTY);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9876588Z                                                                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9876895Z   symbol:   variable EMPTY
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9877111Z   location: class Ingredient
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9877897Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:93: error: Builder() has private access in Builder
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9879757Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:156: error: Builder() has private access in Builder
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9880503Z                         new DataComponentMatchers.Builder()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9880793Z                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9881618Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:106: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9882672Z         staffRecipe(recipes, HexItems.STAFF_MINDSPLICE, Ingredient.of(this.items.getOrThrow(HexTags.Items.MINDFLAYED_CIRCLE_COMPONENTS)));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9883281Z                                                                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9884030Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:108: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9884931Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.TOOLS, HexItems.THOUGHT_KNOT)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9885396Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9886111Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:113: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9886971Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.FOCUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9887380Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9888088Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:123: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9888942Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.FOCUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9889619Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9890383Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:134: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9891269Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.SPELLBOOK)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9891682Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9892382Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:158: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9893240Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.ARTIFACT)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9893644Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9894336Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:172: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9895182Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.ABACUS)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9895592Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9896421Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:182: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9897315Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.FOOD, HexItems.SUBMARINE_SANDWICH)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9897763Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9898467Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:194: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9899551Z             ShapedRecipeBuilder.shaped(this.items, RecipeCategory.MISC, item)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9899946Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9900653Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:232: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9901547Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_SMOL)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9901990Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9902682Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:239: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9903718Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_MEDIUM)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9904162Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9904846Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:247: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9905736Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SCROLL_LARGE)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9906172Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9906857Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:255: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9907741Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.DECORATIONS, HexItems.SLATE, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9908173Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9908861Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:262: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9909970Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, HexItems.JEWELER_HAMMER)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9910394Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9911086Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:272: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9911986Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, HexItems.AMETHYST_DUST,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9912444Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9913149Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:278: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9914041Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, Items.AMETHYST_SHARD,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9914484Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9915185Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:284: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9916093Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.MISC, HexItems.CHARGED_AMETHYST,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9916556Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9917268Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:291: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9918297Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_BLOCK)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9918749Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9919955Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:307: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9921160Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.ANCIENT_SCROLL_PAPER, 8)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9921725Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9922446Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:318: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9923513Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.DECORATIONS, HexBlocks.ANCIENT_SCROLL_PAPER_LANTERN, 8)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9924120Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9924842Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:329: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9926129Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_PLANKS, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9926646Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9927348Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:336: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9928341Z             ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, wood, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9928764Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9929761Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:347: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9930840Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_TILE, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9931318Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9932119Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:354: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9933204Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_DOOR, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9933721Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9934433Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:361: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9935367Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_TRAPDOOR, 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9935842Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9936550Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:367: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9937530Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_STAIRS, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9938021Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9938723Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:374: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9940028Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE, 3)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9940510Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9941206Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:381: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9942328Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_FENCE_GATE, 1)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9942828Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9943523Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:389: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9944450Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.EDIFIED_SLAB, 6)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9944913Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9945604Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:394: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9946576Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_PRESSURE_PLATE, 1)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9947071Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9948265Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:399: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9950639Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.REDSTONE, HexBlocks.EDIFIED_BUTTON)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9951588Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9952914Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:404: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9954669Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.IMPETUS_EMPTY)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9955524Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9956865Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:414: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9958728Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.EMPTY_DIRECTRIX)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9959870Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9961689Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:424: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9963459Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.AKASHIC_BOOKSHELF)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9964295Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9965626Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:433: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9967397Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.REDSTONE, HexBlocks.AKASHIC_LIGATURE, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9968284Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9969885Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:455: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9971838Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9972893Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9974235Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:460: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9976240Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_BRICKS_SMALL.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9977345Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9978694Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:465: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9981178Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_TILES.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9982262Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9983620Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:470: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9985578Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, HexBlocks.SLATE_AMETHYST_PILLAR.asItem(), 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9986629Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9987946Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:593: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9989721Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.TOOLS, staff)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9990418Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9991750Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:606: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9993045Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.MISC, colorizer)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9993453Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9994169Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:680: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9995411Z         var builder = ShapedRecipeBuilder.shaped(this.items, category, out, count);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9996185Z                                                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9997504Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:706: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9998408Z         return ShapedRecipeBuilder.shaped(this.items, category, out, count)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9998802Z                                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:08.9999887Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:738: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0000833Z         var pack = ShapedRecipeBuilder.shaped(this.items, category, compressed)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0001228Z                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0001951Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:747: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0002814Z         ShapelessRecipeBuilder.shapeless(this.items, category, free, largeSize ? 9 : 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0003243Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0003950Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:766: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0004951Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, bricks, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0005760Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0007121Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:774: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0008837Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, bricks)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0009938Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0011270Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:780: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0012661Z         ShapelessRecipeBuilder.shapeless(this.items, RecipeCategory.BUILDING_BLOCKS, smallBricks)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0013252Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0014162Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:786: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0015054Z         ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, tiles, 4)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0015475Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0016182Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:795: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0017070Z             ShapedRecipeBuilder.shaped(this.items, RecipeCategory.BUILDING_BLOCKS, pillar, 2)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0017501Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0018223Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:811: error: items has private access in RecipeProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0019250Z             SingleItemRecipeBuilder.stonecutting(Ingredient.of(this.items.getOrThrow(tagKey)), RecipeCategory.BUILDING_BLOCKS, result)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0020406Z                                                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0021528Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:61: error: ContextMap(Map<ContextKey<?>,Object>) is not public in ContextMap; cannot be accessed from outside package
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0023810Z         return recipe.display().getLast().result().resolveForFirstStack(new ContextMap(Map.of()));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0024324Z                                                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0024689Z Note: Recompile with -Xlint:unchecked for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0025043Z Note: Some input files use or override a deprecated API.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0028122Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java:88: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0031039Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java:102: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0031926Z     @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0032105Z     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0032825Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java:62: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0033604Z     @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0033787Z     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0034480Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:27: error: method does not override or implement a method from a supertype
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0035245Z     @Override
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0035413Z     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0035647Z Note: Some input files use unchecked or unsafe operations.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0036345Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java:43: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0036998Z                 .getHolder(treeFeatureKey)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0038633Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java:29: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0039817Z         var entry = registry.getHolderOrThrow(key);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0040111Z                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0040426Z   symbol:   method getHolderOrThrow(ResourceKey<ActionRegistryEntry>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0040925Z   location: variable registry of type Registry<ActionRegistryEntry>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0041683Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java:33: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0043762Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0044507Z             var manager = Minecraft.getInstance().level.getRecipeManager();
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0044880Z                                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0045161Z   symbol:   method getRecipeManager()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0045572Z   location: variable level of type ClientLevel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0046232Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:75: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0049041Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:26: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0051498Z             bounds -> bounds.min().isPresent() && bounds.max().isPresent()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0051873Z                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0052118Z   symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0052509Z   location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0053206Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:26: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0055507Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0056193Z                     && bounds.min().get().equals(bounds.max().get())
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0056495Z                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0056715Z   symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0056952Z   location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0057590Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:27: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0060280Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:28: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0061821Z                     ? Either.left(bounds.min().get())
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0062342Z                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0062797Z   symbol:   method min()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0063217Z   location: variable bounds of type Object
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0064442Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:30: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0067176Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:50: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0068599Z         this.copy(HexTags.Blocks.EDIFIED_LOGS, HexTags.Items.EDIFIED_LOGS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0069551Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0069988Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0071248Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:51: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0072965Z         this.copy(HexTags.Blocks.EDIFIED_PLANKS, HexTags.Items.EDIFIED_PLANKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0075320Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:52: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0076664Z         this.copy(HexTags.Blocks.IMPETI, HexTags.Items.IMPETI);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0077231Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0077623Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0078879Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:53: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0080639Z         this.copy(HexTags.Blocks.DIRECTRICES, HexTags.Items.DIRECTRICES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0082509Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:54: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0083822Z         this.copy(HexTags.Blocks.MINDFLAYED_CIRCLE_COMPONENTS, HexTags.Items.MINDFLAYED_CIRCLE_COMPONENTS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0084747Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0085172Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0086320Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:55: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0087124Z         this.copy(HexTags.Blocks.SLATE_BLOCKS, HexTags.Items.SLATE_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0091870Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:56: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0092680Z         this.copy(HexTags.Blocks.AMETHYST_BLOCKS, HexTags.Items.AMETHYST_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0093060Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0093290Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0093969Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:57: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0094772Z         this.copy(HexTags.Blocks.QUENCHED_ALLAY_BLOCKS, HexTags.Items.QUENCHED_ALLAY_BLOCKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0096064Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:58: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0097083Z         this.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0097407Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0097700Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0098447Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:59: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0098592Z         this.copy(BlockTags.LOGS, ItemTags.LOGS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0100018Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:60: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0100246Z         this.copy(BlockTags.PLANKS, ItemTags.PLANKS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0100334Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0100651Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0101146Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:61: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0101333Z         this.copy(BlockTags.SLABS, ItemTags.SLABS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0102322Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:62: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0102564Z         this.copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0102700Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0102846Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0103383Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:63: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0103587Z         this.copy(BlockTags.DOORS, ItemTags.DOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0104399Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:64: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0104584Z         this.copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0104748Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0104904Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0105420Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:65: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0105594Z         this.copy(BlockTags.TRAPDOORS, ItemTags.TRAPDOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0106466Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:66: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0119676Z         this.copy(BlockTags.WOODEN_TRAPDOORS, ItemTags.WOODEN_TRAPDOORS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0119859Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0120040Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0120545Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:67: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0120686Z         this.copy(BlockTags.LEAVES, ItemTags.LEAVES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0121381Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:69: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0121620Z         this.copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0121943Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0122071Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0122551Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:70: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0122707Z         this.copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0123386Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:71: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0123572Z         this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0123643Z             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0123811Z   symbol: method copy(TagKey<Block>,TagKey<Item>)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0124572Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:47: error: HoverEvent is abstract; cannot be instantiated
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0124790Z         HoverEvent he = new HoverEvent(new HoverEvent.ShowItem(scrollStack));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0125575Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java:48: error: ClickEvent is abstract; cannot be instantiated
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0125831Z         ClickEvent ce = new ClickEvent(new ClickEvent.CopyToClipboard(pattern.toString()));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0125907Z                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0126625Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java:89: error: incompatible types: Object cannot be converted to VillagerType
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0126806Z             .withType(BuiltInRegistries.VILLAGER_TYPE.wrapAsHolder(biome))
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0126924Z                                                                    ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0127556Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:64: error: incompatible types: Style cannot be converted to InlineStyle
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0127826Z         int glowyParentColor = ((InlineStyle) style).getComponent(InlineStyle.GLOWY_PARENT_COMP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0127926Z                                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0128589Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java:71: error: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0128834Z         boolean isFlat = InlineRenderer.isFlat(drawContext.pose(), trContext.layerType());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0128936Z                                                                ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0129788Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java:101: error: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0130001Z             ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0130109Z                                                     ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0130711Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:82: error: incompatible types: PackOutput cannot be converted to Provider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0130813Z         super(output, registries);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0130890Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0131517Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:622: error: incompatible types: ItemLike cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0131771Z         return paucalInventoryTrigger(ItemPredicate.Builder.item().of(itemLike).build());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0132010Z                                                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0132664Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java:626: error: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0132908Z         return paucalInventoryTrigger(ItemPredicate.Builder.item().of(itemLike).build());
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0133017Z                                                                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0133711Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java:42: error: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<ActionRegistryEntry>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0133881Z         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0133988Z                                                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0134096Z   where CAP#1 is a fresh type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0134201Z     CAP#1 extends Object from capture of ?
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0134811Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:145: error: incompatible types: Identifier cannot be converted to TagKey
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0135931Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java:149: error: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<Block>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0136094Z         return TagAppender.forBuilder(getOrCreateRawBuilder(key));
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0136198Z                                                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0136300Z   where CAP#1 is a fresh type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0136406Z     CAP#1 extends Object from capture of ?
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0137000Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:45: error: incompatible types: inference variable T has incompatible bounds
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0138252Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java:57: error: incompatible types: inference variable T has incompatible bounds
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0138443Z             .display(new DisplayInfo(new ItemStack(HexItems.CREATIVE_UNLOCKER),
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0138521Z                      ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0138624Z     equality constraints: ResourceTexture
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0138709Z     lower bounds: Identifier
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0138802Z   where T is a type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0139740Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:20: error: incompatible types: cannot infer type-variable(s) O
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0139913Z             RecordCodecBuilder.create(instance -> instance.group(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0140016Z                                                                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0140131Z     (argument mismatch; invalid method reference
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0140293Z       method min in record Bounds<T> cannot be applied to given types
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0140384Z         required: no arguments
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0141906Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java:30: error: incompatible types: Codec<Object> cannot be converted to Codec<Bounds<Long>>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0142023Z     ).validate(bounds -> bounds.areSwapped()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0142100Z               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0142841Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java:35: error: incompatible types: ResourceKey<CAP#1> cannot be converted to ResourceKey<Registry<ActionRegistryEntry>>
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0143038Z         return IXplatAbstractions.INSTANCE.getActionRegistry().key();
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0143139Z                                                                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0144357Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:19: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0144518Z public class HexItemTagProvider extends ItemTagsProvider {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0144600Z                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0144704Z   symbol: class ItemTagsProvider
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0144776Z 122 errors
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T03:23:09.0145069Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:89)

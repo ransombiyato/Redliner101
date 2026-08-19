@@ -10,6 +10,7 @@ import net.minecraft.util.ProblemReporter;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.TagValueOutput;
@@ -30,14 +31,15 @@ public class BrainsweepProcessor implements IComponentProcessor {
 	public void setup(Level level, IVariableProvider vars) {
 		var id = Identifier.parse(vars.get("recipe", level.registryAccess()).asString());
 
-		var recman = level.getRecipeManager();
-		var brainsweepings = recman.getAllRecipesFor(HexRecipeStuffRegistry.BRAINSWEEP_TYPE);
-		for (var poisonApples : brainsweepings) {
-			if (poisonApples.id().equals(id)) {
-				this.recipe = poisonApples.value();
-				break;
-			}
-		}
+		            var recman = (RecipeManager) level.recipeAccess();
+            for (var holder : recman.getRecipes()) {
+                if (holder.value() instanceof BrainsweepRecipe candidate
+                        && holder.id().identifier().equals(id)) {
+                    this.recipe = candidate;
+                    break;
+                }
+            }
+
 	}
 
 	@Override

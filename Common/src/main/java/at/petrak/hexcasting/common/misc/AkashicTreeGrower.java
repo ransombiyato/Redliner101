@@ -40,8 +40,7 @@ public class AkashicTreeGrower {
         }
         Holder<ConfiguredFeature<?, ?>> holder1 = level.registryAccess()
                 .lookupOrThrow(Registries.CONFIGURED_FEATURE)
-                .getHolder(treeFeatureKey)
-                .orElse(null);
+                .getOrThrow(treeFeatureKey);
         level.setBlock(pos, Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL);
 
         ConfiguredFeature<?, ?> configuredFeature = holder1.value();

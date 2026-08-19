@@ -15,21 +15,25 @@ public record MinMaxLongs(
         Optional<Long> min,
         Optional<Long> max
 ) implements MinMaxBounds<Long> {
-    private static final Codec<MinMaxBounds.Bounds<Long>> BOUNDS_CODEC = Codec.either(
-            Codec.LONG,
-            RecordCodecBuilder.create(instance -> instance.group(
-                    Codec.LONG.optionalFieldOf("min").forGetter(MinMaxBounds.Bounds::min),
-                    Codec.LONG.optionalFieldOf("max").forGetter(MinMaxBounds.Bounds::max)
-            ).apply(instance, MinMaxBounds.Bounds::new))
-    ).xmap(
-            either -> either.map(MinMaxBounds.Bounds::exactly, Function.identity()),
-            bounds -> bounds.min().isPresent() && bounds.max().isPresent()
-                    && bounds.min().get().equals(bounds.max().get())
-                    ? Either.left(bounds.min().get())
-                    : Either.right(bounds)
-    ).validate(bounds -> bounds.areSwapped()
-            ? DataResult.error(() -> "min must be less than or equal to max")
-            : DataResult.success(bounds));
+    private static final Codec<MinMaxBounds.Bounds<Long>> BOUNDS_CODEC =
+            Codec.<Long, MinMaxBounds.Bounds<Long>>either(
+                    Codec.LONG,
+                    RecordCodecBuilder.<MinMaxBounds.Bounds<Long>>create(instance -> instance.group(
+                            Codec.LONG.optionalFieldOf("min").forGetter(bounds -> bounds.min()),
+                            Codec.LONG.optionalFieldOf("max").forGetter(bounds -> bounds.max())
+                    ).apply(instance, (min, max) -> new MinMaxBounds.Bounds<>(min, max)))
+            ).xmap(
+                    either -> either.map(
+                            value -> new MinMaxBounds.Bounds<Long>(Optional.of(value), Optional.of(value)),
+                            bounds -> bounds
+                    ),
+                    bounds -> bounds.min().isPresent() && bounds.max().isPresent()
+                            && bounds.min().get().equals(bounds.max().get())
+                            ? Either.left(bounds.min().get())
+                            : Either.right(bounds)
+            ).validate(bounds -> bounds.areSwapped()
+                    ? DataResult.error(() -> "min must be less than or equal to max")
+                    : DataResult.success(bounds));
 
     public static final Codec<MinMaxLongs> CODEC = BOUNDS_CODEC
             .xmap(bounds -> new MinMaxLongs(bounds.min(), bounds.max()), MinMaxLongs::bounds);

@@ -61,14 +61,14 @@ public class InlinePatternRenderer implements InlineRenderer<InlinePatternData> 
 
     public int render(InlinePatternData data, GuiGraphics drawContext, int index, Style style, int codepoint, TextRenderingContext trContext){
         if(trContext.isGlowy()) return charWidth(data, style, codepoint);
-        int glowyParentColor = ((InlineStyle) style).getComponent(InlineStyle.GLOWY_PARENT_COMP);
+        int glowyParentColor = ((InlineStyle) (Object) style).getComponent(InlineStyle.GLOWY_PARENT_COMP);
         boolean isGlowy = glowyParentColor != -1;
         var poseStack = new PoseStack();
         poseStack.pushPose();
         poseStack.translate(isGlowy ? -1f : 0, isGlowy ? -1.5f : -0.5f, 0f);
         int color = trContext.usableColor();
         // Why are patterns rendering either fullbright or too dark on signs, this is bullshit
-        boolean isFlat = InlineRenderer.isFlat(drawContext.pose(), trContext.layerType());
+        boolean isFlat = InlineRenderer.isFlat(new PoseStack(), trContext.layerType());
 
         PatternRenderer.renderPattern(data.pattern, poseStack, isFlat ? null : new PatternRenderer.WorldlyBits(null, trContext.light(), new Vec3(0, 0, 1)),
                 isGlowy ? INLINE_SETTINGS_GLOWY : INLINE_SETTINGS,

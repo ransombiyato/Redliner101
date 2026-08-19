@@ -11,6 +11,7 @@ import at.petrak.hexcasting.common.lib.HexItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -59,7 +60,6 @@ public class BlockSlate extends BlockCircleComponent implements EntityBlock, Sim
                 .setValue(WATERLOGGED, false));
     }
 
-    @Override
     public boolean propagatesSkylightDown(BlockState state, @Nonnull BlockGetter reader, @Nonnull BlockPos pos) {
         return !state.getValue(WATERLOGGED);
     }

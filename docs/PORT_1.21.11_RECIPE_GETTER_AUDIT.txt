@@ -1,0 +1,24 @@
+CRAFTING_GETTERS
+Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java:77:	public ItemStack getResultItem(HolderLookup.Provider registries) {
+RECIPE_DISPLAY
+Common/src/main/java/at/petrak/hexcasting/api/casting/eval/vm/CastingVM.kt:297:            } else iota.display()
+Common/src/main/java/at/petrak/hexcasting/api/casting/iota/ListIota.java:107:            out.append(sub.display());
+Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/circle/MishapBoolDirectrixNotBool.kt:24:        error("circle.bool_directrix_no_bool", pos.toShortString(), perpetrator.display())
+Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapDivideByZero.kt:80:            else -> datum.display()
+Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapDivideByZero.kt:87:            else -> datum.display()
+Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInvalidIota.kt:35:            perpDesc, perpetrator.display()
+Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInvalidOperatorArgs.kt:30:                perpetrators[0].display()
+Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapInvalidOperatorArgs.kt:38:                ComponentUtils.formatList(perpetrators.map { it.display() }, ", ".asTextComponent)
+Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapUnescapedValue.kt:34:        error("unescaped", perpetrator.display())
+Common/src/main/java/at/petrak/hexcasting/api/item/IotaHolderItem.java:77:            var cmp = datum.display();
+Common/src/main/java/at/petrak/hexcasting/client/render/ScryingLensOverlays.java:66:                        var display = iota.display();
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/rw/OpWrite.kt:38:            throw MishapBadOffhandItem.of(handStack, "iota.readonly", datum.display())
+Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpPrint.kt:37:            env.printMessage(datum.display())
+Common/src/main/java/at/petrak/hexcasting/common/command/ListPerWorldPatternsCommand.java:79:                .append(new PatternIota(pat).display()), false);
+Common/src/main/java/at/petrak/hexcasting/common/items/magic/ItemAncientCypher.java:52:                storedHex.append(iota.display().plainCopy().withStyle(ChatFormatting.DARK_PURPLE));
+Common/src/main/java/at/petrak/hexcasting/common/msgs/MsgShiftScrollC2S.java:139:            var popup = datum.display();
+Common/src/main/java/at/petrak/hexcasting/common/recipe/BrainsweepRecipe.java:46:    public PlacementInfo placementInfo() {
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:47:                for (Ingredient ingredient : recipe.placementInfo().ingredients()) {
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:61:        return recipe.display().getLast().result().resolveForFirstStack(new ContextMap(Map.of()));
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:86:                        List<Ingredient> list = recipe.placementInfo().ingredients();
+Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java:91:                    List<Ingredient> list = recipe.placementInfo().ingredients();

@@ -1,0 +1,150 @@
+files=22 errors=366
+
+177 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/HexplatRecipes.java
+    log:456 source:82: incompatible types: PackOutput cannot be converted to Provider
+    log:459 source:106: items has private access in RecipeProvider
+    log:462 source:108: items has private access in RecipeProvider
+    log:465 source:113: items has private access in RecipeProvider
+    log:468 source:123: items has private access in RecipeProvider
+    log:471 source:134: items has private access in RecipeProvider
+    log:474 source:158: items has private access in RecipeProvider
+    log:477 source:172: items has private access in RecipeProvider
+    log:480 source:182: items has private access in RecipeProvider
+    log:483 source:194: items has private access in RecipeProvider
+    log:486 source:232: items has private access in RecipeProvider
+    log:489 source:239: items has private access in RecipeProvider
+    ... 165 more
+ 78 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java
+    log:371 source:9: cannot find symbol
+    log:376 source:19: cannot find symbol
+    log:380 source:22: cannot find symbol
+    log:695 source:27: method does not override or implement a method from a supertype
+    log:698 source:50: cannot find symbol
+    log:702 source:51: cannot find symbol
+    log:706 source:52: cannot find symbol
+    log:710 source:53: cannot find symbol
+    log:714 source:54: cannot find symbol
+    log:718 source:55: cannot find symbol
+    log:722 source:56: cannot find symbol
+    log:726 source:57: cannot find symbol
+    ... 66 more
+ 24 Common/src/main/java/at/petrak/hexcasting/api/advancements/MinMaxLongs.java
+    log:816 source:20: incompatible types: cannot infer type-variable(s) O
+    log:828 source:26: cannot find symbol
+    log:833 source:26: cannot find symbol
+    log:838 source:27: cannot find symbol
+    log:843 source:27: cannot find symbol
+    log:848 source:28: cannot find symbol
+    log:853 source:30: cannot find symbol
+    log:858 source:30: incompatible types: Codec<Object> cannot be converted to Codec<Bounds<Long>>
+    log:1200 source:26: cannot find symbol
+    log:1205 source:26: cannot find symbol
+    log:1210 source:27: cannot find symbol
+    log:1215 source:27: cannot find symbol
+    ... 12 more
+ 12 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/MultiCraftingProcessor.java
+    log:417 source:61: ContextMap(Map<ContextKey<?>,Object>) is not public in ContextMap; cannot be accessed from outside package
+    log:420 source:83: cannot find symbol
+    log:425 source:87: cannot find symbol
+    log:430 source:92: cannot find symbol
+    log:981 source:83: cannot find symbol
+    log:986 source:87: cannot find symbol
+    log:991 source:92: cannot find symbol
+    log:1155 source:61: ContextMap(Map<ContextKey<?>,Object>) is not public in ContextMap; cannot be accessed from outside package
+    log:1561 source:83: cannot find symbol
+    log:1566 source:87: cannot find symbol
+    log:1571 source:92: cannot find symbol
+    log:1735 source:61: ContextMap(Map<ContextKey<?>,Object>) is not public in ContextMap; cannot be accessed from outside package
+  9 Common/src/main/java/at/petrak/hexcasting/datagen/HexLootTables.java
+    log:447 source:93: Builder() has private access in Builder
+    log:450 source:101: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+    log:453 source:156: Builder() has private access in Builder
+    log:996 source:93: Builder() has private access in Builder
+    log:999 source:156: Builder() has private access in Builder
+    log:1329 source:101: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+    log:1576 source:93: Builder() has private access in Builder
+    log:1579 source:156: Builder() has private access in Builder
+    log:1909 source:101: incompatible types: TagKey<Item> cannot be converted to HolderGetter<Item>
+  6 Common/src/main/java/at/petrak/hexcasting/common/blocks/circles/BlockSlate.java
+    log:366 source:207: cannot find symbol
+    log:394 source:62: method does not override or implement a method from a supertype
+    log:966 source:207: cannot find symbol
+    log:1166 source:62: method does not override or implement a method from a supertype
+    log:1546 source:207: cannot find symbol
+    log:1746 source:62: method does not override or implement a method from a supertype
+  6 Common/src/main/java/at/petrak/hexcasting/datagen/HexAdvancements.java
+    log:802 source:45: incompatible types: inference variable T has incompatible bounds
+    log:809 source:57: incompatible types: inference variable T has incompatible bounds
+    log:1354 source:45: incompatible types: inference variable T has incompatible bounds
+    log:1361 source:57: incompatible types: inference variable T has incompatible bounds
+    log:1934 source:45: incompatible types: inference variable T has incompatible bounds
+    log:1941 source:57: incompatible types: inference variable T has incompatible bounds
+  6 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexBlockTagProvider.java
+    log:794 source:145: incompatible types: Identifier cannot be converted to TagKey
+    log:797 source:149: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<Block>
+    log:1346 source:145: incompatible types: Identifier cannot be converted to TagKey
+    log:1349 source:149: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<Block>
+    log:1926 source:145: incompatible types: Identifier cannot be converted to TagKey
+    log:1929 source:149: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<Block>
+  6 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternData.java
+    log:435 source:47: HoverEvent is abstract; cannot be instantiated
+    log:438 source:48: ClickEvent is abstract; cannot be instantiated
+    log:1314 source:47: HoverEvent is abstract; cannot be instantiated
+    log:1317 source:48: ClickEvent is abstract; cannot be instantiated
+    log:1894 source:47: HoverEvent is abstract; cannot be instantiated
+    log:1897 source:48: ClickEvent is abstract; cannot be instantiated
+  6 Common/src/main/java/at/petrak/hexcasting/interop/inline/InlinePatternRenderer.java
+    log:441 source:64: incompatible types: Style cannot be converted to InlineStyle
+    log:444 source:71: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+    log:1323 source:64: incompatible types: Style cannot be converted to InlineStyle
+    log:1326 source:71: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+    log:1903 source:64: incompatible types: Style cannot be converted to InlineStyle
+    log:1906 source:71: incompatible types: Matrix3x2fStack cannot be converted to PoseStack
+  3 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjured.java
+    log:388 source:88: method does not override or implement a method from a supertype
+    log:1160 source:88: method does not override or implement a method from a supertype
+    log:1740 source:88: method does not override or implement a method from a supertype
+  3 Common/src/main/java/at/petrak/hexcasting/common/blocks/BlockConjuredLight.java
+    log:359 source:66: cannot find symbol
+    log:961 source:66: cannot find symbol
+    log:1541 source:66: cannot find symbol
+  3 Common/src/main/java/at/petrak/hexcasting/common/blocks/akashic/BlockAkashicBookshelf.java
+    log:391 source:102: method does not override or implement a method from a supertype
+    log:1163 source:102: method does not override or implement a method from a supertype
+    log:1743 source:102: method does not override or implement a method from a supertype
+  3 Common/src/main/java/at/petrak/hexcasting/common/misc/AkashicTreeGrower.java
+    log:397 source:43: cannot find symbol
+    log:1173 source:43: cannot find symbol
+    log:1753 source:43: cannot find symbol
+  3 Common/src/main/java/at/petrak/hexcasting/common/recipe/ingredient/brainsweep/VillagerIngredient.java
+    log:385 source:89: incompatible types: Object cannot be converted to VillagerType
+    log:1320 source:89: incompatible types: Object cannot be converted to VillagerType
+    log:1900 source:89: incompatible types: Object cannot be converted to VillagerType
+  3 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/CreateCrushingRecipeBuilder.java
+    log:673 source:51: no suitable method found for of(ItemStack)
+    log:938 source:51: no suitable method found for of(ItemStack)
+    log:1518 source:51: no suitable method found for of(ItemStack)
+  3 Common/src/main/java/at/petrak/hexcasting/datagen/recipe/builders/FarmersDelightCuttingRecipeBuilder.java
+    log:684 source:48: no suitable method found for of(ItemStack)
+    log:949 source:48: no suitable method found for of(ItemStack)
+    log:1529 source:48: no suitable method found for of(ItemStack)
+  3 Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexActionTagProvider.java
+    log:789 source:42: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<ActionRegistryEntry>
+    log:1341 source:42: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<ActionRegistryEntry>
+    log:1921 source:42: incompatible types: TagKey<CAP#1> cannot be converted to TagKey<ActionRegistryEntry>
+  3 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/BrainsweepProcessor.java
+    log:407 source:33: cannot find symbol
+    log:1183 source:33: cannot find symbol
+    log:1763 source:33: cannot find symbol
+  3 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/LookupPatternComponent.java
+    log:402 source:29: cannot find symbol
+    log:1178 source:29: cannot find symbol
+    log:1758 source:29: cannot find symbol
+  3 Common/src/main/java/at/petrak/hexcasting/interop/patchouli/PatchouliUtils.java
+    log:412 source:27: cannot find symbol
+    log:1188 source:27: cannot find symbol
+    log:1768 source:27: cannot find symbol
+  3 Common/src/main/java/at/petrak/hexcasting/server/ScrungledPatternsSave.java
+    log:861 source:35: incompatible types: ResourceKey<CAP#1> cannot be converted to ResourceKey<Registry<ActionRegistryEntry>>
+    log:1383 source:35: incompatible types: ResourceKey<CAP#1> cannot be converted to ResourceKey<Registry<ActionRegistryEntry>>
+    log:1963 source:35: incompatible types: ResourceKey<CAP#1> cannot be converted to ResourceKey<Registry<ActionRegistryEntry>>

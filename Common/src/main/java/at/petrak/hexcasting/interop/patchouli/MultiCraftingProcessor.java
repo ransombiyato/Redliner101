@@ -16,6 +16,7 @@ import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import vazkii.patchouli.api.IComponentProcessor;
@@ -24,7 +25,6 @@ import vazkii.patchouli.api.IVariableProvider;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MultiCraftingProcessor implements IComponentProcessor {
@@ -58,7 +58,7 @@ public class MultiCraftingProcessor implements IComponentProcessor {
     }
 
     private static ItemStack resultItem(CraftingRecipe recipe) {
-        return recipe.display().getLast().result().resolveForFirstStack(new ContextMap(Map.of()));
+        return recipe.display().getLast().result().resolveForFirstStack(new ContextMap.Builder().create(new net.minecraft.util.context.ContextKeySet.Builder().build()));
     }
 
     @Override
@@ -80,16 +80,16 @@ public class MultiCraftingProcessor implements IComponentProcessor {
             for (CraftingRecipe recipe : recipes) {
                 if (recipe instanceof ShapedRecipe shaped) {
                     if (shaped.getWidth() < shapedX + 1) {
-                        ingredients.add(Ingredient.EMPTY);
+                        ingredients.add(Ingredient.of(new ItemLike[0]));
                     } else {
                         int realIndex = index - (shapedY * (3 - shaped.getWidth()));
                         List<Ingredient> list = recipe.placementInfo().ingredients();
-                        ingredients.add(list.size() > realIndex ? list.get(realIndex) : Ingredient.EMPTY);
+                        ingredients.add(list.size() > realIndex ? list.get(realIndex) : Ingredient.of(new ItemLike[0]));
                     }
 
                 } else {
                     List<Ingredient> list = recipe.placementInfo().ingredients();
-                    ingredients.add(list.size() > index ? list.get(index) : Ingredient.EMPTY);
+                    ingredients.add(list.size() > index ? list.get(index) : Ingredient.of(new ItemLike[0]));
                 }
             }
             return PatchouliUtils.interweaveIngredients(ingredients, longestIngredientSize, level.registryAccess());

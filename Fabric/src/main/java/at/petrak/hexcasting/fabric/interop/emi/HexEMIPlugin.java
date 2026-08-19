@@ -45,17 +45,20 @@ public class HexEMIPlugin implements EmiPlugin {
 		registry.addWorkstation(PHIAL, EmiIngredient.of(HexTags.Items.STAVES));
 		registry.addWorkstation(EDIFY, EmiIngredient.of(HexTags.Items.STAVES));
 
-		for (RecipeHolder<BrainsweepRecipe> recipe : registry.getRecipeManager()
-			.getAllRecipesFor(HexRecipeStuffRegistry.BRAINSWEEP_TYPE)) {
-			var inputBlocks = EmiIngredient.of(recipe.value().blockIn().getDisplayedStacks().stream()
-				.map(EmiStack::of).toList());
-			var inputEntity = new BrainsweepeeEmiStack(recipe.value().entityIn());
-			var output = EmiStack.of(recipe.value().result().getBlock());
-            var outputId = output.getId().getNamespace().equals("minecraft") ? output.getId().getPath() : output.getId().toString();
-            var inputEntityId = inputEntity.getName().getString().toLowerCase().replaceAll(" ", "_");
-            var recipeId = modLoc("/brainsweep/" + (outputId.replaceAll(":", "/")) + "_from_" + inputEntityId);
-			registry.addRecipe(new EmiBrainsweepRecipe(inputBlocks, inputEntity, output, recipeId));
-		}
+		            for (var holder : registry.getRecipeManager().getRecipes()) {
+                if (!(holder.value() instanceof BrainsweepRecipe recipe)) {
+                    continue;
+                }
+                var inputBlocks = EmiIngredient.of(recipe.blockIn().getDisplayedStacks().stream()
+                    .map(EmiStack::of).toList());
+                var inputEntity = new BrainsweepeeEmiStack(recipe.entityIn());
+                var output = EmiStack.of(recipe.result().getBlock());
+
+                var outputId = output.getId().getNamespace().equals("minecraft") ? output.getId().getPath() : output.getId().toString();
+                var inputEntityId = inputEntity.getName().getString().toLowerCase().replaceAll(" ", "_");
+                var recipeId = modLoc("/brainsweep/" + (outputId.replaceAll(":", "/")) + "_from_" + inputEntityId);
+                registry.addRecipe(new EmiBrainsweepRecipe(inputBlocks, inputEntity, output, recipeId));
+            }
 
 		if (PhialRecipeStackBuilder.shouldAddRecipe()) {
 			registry.addRecipe(new EmiPhialRecipe());
