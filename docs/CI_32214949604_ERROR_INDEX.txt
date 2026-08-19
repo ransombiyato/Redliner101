@@ -1,0 +1,11 @@
+359:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.6041781Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:97: error: no suitable method found for add(ResourceKey<Item>)
+365:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.6072020Z       (argument mismatch; ResourceKey<Item> cannot be converted to Item)
+367:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.6073961Z       (varargs mismatch; ResourceKey<Item> cannot be converted to Item)
+379:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8085455Z Execution failed for task ':Common:compileJava'.
+381:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8087694Z   /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:97: error: no suitable method found for add(ResourceKey<Item>)
+385:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8091598Z         (argument mismatch; ResourceKey<Item> cannot be converted to Item)
+387:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8093574Z         (varargs mismatch; ResourceKey<Item> cannot be converted to Item)
+399:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8102131Z org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':Common:compileJava'.
+471:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8225282Z /home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/datagen/tag/HexItemTagProvider.java:97: error: no suitable method found for add(ResourceKey<Item>)
+475:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8229552Z       (argument mismatch; ResourceKey<Item> cannot be converted to Item)
+477:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T04:17:04.8231217Z       (varargs mismatch; ResourceKey<Item> cannot be converted to Item)

@@ -94,7 +94,7 @@ public class HexItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
 
     void add(TagAppender<Item, Item> appender, Item... items) {
         for (Item item : items) {
-            appender.add(BuiltInRegistries.ITEM.getResourceKey(item).orElseThrow());
+            appender.add(item);
         }
     }
 }
