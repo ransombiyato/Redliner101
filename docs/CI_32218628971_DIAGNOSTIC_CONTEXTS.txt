@@ -1,0 +1,122 @@
+CI 32218628971 DIAGNOSTIC CONTEXTS
+372-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:29.2608927Z
+373-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:29.2611255Z > Task :Common:transformProductionFabric
+374-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:29.2623570Z [Architectury Transformer] Read classpath in 1.578 s
+375-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:29.6613174Z [Architectury Transformer] Transformed jar with 5 transformer(s) in 2.091 s
+376-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7603223Z
+377:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7608706Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:283: error: cannot find symbol
+378-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7610084Z > Task :Fabric:compileJava FAILED
+379-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7656772Z     public <T extends BlockEntity> BlockEntityType<T> createBlockEntityType(BiFunction<BlockPos, BlockState, T> func,
+380-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7674472Z                                                                                        ^
+381-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7675351Z   symbol:   class BlockPos
+382-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7675910Z   location: class FabricXplatImpl
+383:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7679919Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:290: error: cannot find symbol
+384-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7681914Z     public boolean tryPlaceFluid(Level level, InteractionHand hand, BlockPos pos, Fluid fluid) {
+385-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7683030Z                                                                     ^
+386-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7683662Z   symbol:   class BlockPos
+387-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7684188Z   location: class FabricXplatImpl
+388:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7685383Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:307: error: cannot find symbol
+389-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7686787Z     public boolean drainAllFluid(Level level, BlockPos pos) {
+390-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7687499Z                                               ^
+391-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7688097Z   symbol:   class BlockPos
+392-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7688638Z   location: class FabricXplatImpl
+393:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7690079Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:505: error: cannot find symbol
+394-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7691894Z     public boolean isBreakingAllowed(ServerLevel world, BlockPos pos, BlockState state, @Nullable Player player) {
+395-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7693072Z                                                         ^
+396-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7693767Z   symbol:   class BlockPos
+397-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7694344Z   location: class FabricXplatImpl
+398:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7695570Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:513: error: cannot find symbol
+399-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7697266Z     public boolean isPlacingAllowed(ServerLevel world, BlockPos pos, ItemStack blockStack, @Nullable Player player) {
+400-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7698255Z                                                        ^
+401-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7698872Z   symbol:   class BlockPos
+402-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7699576Z   location: class FabricXplatImpl
+403-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.7700227Z 5 errors
+404-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8603987Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1787116431768.json
+405-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8642503Z
+406-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8642884Z
+407-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8702981Z FAILURE: Build failed with an exception.
+408-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8704429Z [Incubating] Problems report is available at: file:///home/runner/work/Redliner101/Redliner101/build/reports/problems/problems-report.html
+409-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8729936Z
+410-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8730300Z
+--
+414-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8742603Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+415-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8766922Z Execution failed for task ':Fabric:compileJava'.
+416-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8767499Z
+417-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8800507Z > Compilation failed; see the compiler output below.
+418-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8802013Z For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+419:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8840039Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:283: error: cannot find symbol
+420-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8841240Z 13 actionable tasks: 13 executed
+421-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8887746Z       public <T extends BlockEntity> BlockEntityType<T> createBlockEntityType(BiFunction<BlockPos, BlockState, T> func,
+422-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8920162Z                                                                                          ^
+423-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8946283Z     symbol:   class BlockPos
+424-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.8975739Z     location: class FabricXplatImpl
+425:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9010657Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:290: error: cannot find symbol
+426-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9040185Z       public boolean tryPlaceFluid(Level level, InteractionHand hand, BlockPos pos, Fluid fluid) {
+427-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9070032Z                                                                       ^
+428-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9070644Z     symbol:   class BlockPos
+429-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9071070Z     location: class FabricXplatImpl
+430:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9072193Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:307: error: cannot find symbol
+431-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9073442Z       public boolean drainAllFluid(Level level, BlockPos pos) {
+432-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9074004Z                                                 ^
+433-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9074437Z     symbol:   class BlockPos
+434-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9074834Z     location: class FabricXplatImpl
+435:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9075939Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:505: error: cannot find symbol
+436-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9077495Z       public boolean isBreakingAllowed(ServerLevel world, BlockPos pos, BlockState state, @Nullable Player player) {
+437-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9078406Z                                                           ^
+438-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9078872Z     symbol:   class BlockPos
+439-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9079436Z     location: class FabricXplatImpl
+440:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9080556Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:513: error: cannot find symbol
+441-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9081956Z       public boolean isPlacingAllowed(ServerLevel world, BlockPos pos, ItemStack blockStack, @Nullable Player player) {
+442-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9082884Z                                                          ^
+443-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9083337Z     symbol:   class BlockPos
+444-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9083734Z     location: class FabricXplatImpl
+445-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9084122Z   5 errors
+446-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9084282Z
+447-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9084403Z * Try:
+448-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9084839Z > Check your code and dependencies to fix the compilation error(s)
+449-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9085444Z > Run with --scan to get full insights.
+450-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9085746Z
+451-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9085872Z * Exception is:
+452-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9086544Z org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':Fabric:compileJava'.
+--
+481-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9201263Z 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+482-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9202499Z 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+483-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9203752Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+484-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9205006Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+485-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9212795Z Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler output below.
+486:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9214513Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:283: error: cannot find symbol
+487-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9216135Z     public <T extends BlockEntity> BlockEntityType<T> createBlockEntityType(BiFunction<BlockPos, BlockState, T> func,
+488-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9217110Z                                                                                        ^
+489-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9217637Z   symbol:   class BlockPos
+490-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9218034Z   location: class FabricXplatImpl
+491:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9219129Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:290: error: cannot find symbol
+492-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9221087Z     public boolean tryPlaceFluid(Level level, InteractionHand hand, BlockPos pos, Fluid fluid) {
+493-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9221893Z                                                                     ^
+494-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9222368Z   symbol:   class BlockPos
+495-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9222739Z   location: class FabricXplatImpl
+496:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9224157Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:307: error: cannot find symbol
+497-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9225427Z     public boolean drainAllFluid(Level level, BlockPos pos) {
+498-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9225999Z                                               ^
+499-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9226449Z   symbol:   class BlockPos
+500-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9226847Z   location: class FabricXplatImpl
+501:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9227974Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:505: error: cannot find symbol
+502-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9229807Z     public boolean isBreakingAllowed(ServerLevel world, BlockPos pos, BlockState state, @Nullable Player player) {
+503-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9230775Z                                                         ^
+504-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9231253Z   symbol:   class BlockPos
+505-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9231647Z   location: class FabricXplatImpl
+506:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9232777Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:513: error: cannot find symbol
+507-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9234460Z     public boolean isPlacingAllowed(ServerLevel world, BlockPos pos, ItemStack blockStack, @Nullable Player player) {
+508-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9235394Z                                                        ^
+509-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9235850Z   symbol:   class BlockPos
+510-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9236245Z   location: class FabricXplatImpl
+511-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9236643Z 5 errors
+512-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9237304Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:89)
+513-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9238414Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:50)
+514-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9239957Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
+515-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9241517Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:52)
+516-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9242943Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
+517-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9244631Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:52)
+518-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:17:31.9246553Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:38)
+
+=== classification ===
+All five diagnostics are in FabricXplatImpl and will be resolved together as one 1.21.11 platform/API family.

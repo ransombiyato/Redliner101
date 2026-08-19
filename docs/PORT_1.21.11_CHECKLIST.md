@@ -227,3 +227,11 @@ No source edits are being made until this complete grouped inventory is recorded
 ### B326 grouped source-fix result before CI
 
 The complete B326 inventory has now been addressed as API families. The custom-ingredient family returns `toUse.items()` directly and converts `FabricModConditionalIngredient` with `.toVanilla()` at the shared `Ingredient` boundary. The Accessories/player-model family matches the installed Accessories `<M extends LivingEntity>` contract and uses raw non-generic `PlayerModel` in the 1.21.11 renderer hierarchy. The Fabric platform family uses static `BlockRenderLayerMap.putBlock`, imports `BuiltInRegistries` for the shears predicates, and applies a localized raw `ResourceKey` bridge for `Registry.getValueOrThrow`. A post-fix repository audit found no remaining hits for the known obsolete B325/B326 API patterns, and `git diff --check` passes. These items remain pending CI confirmation.
+
+### CI run 32218628971 diagnostic inventory — B327 intake
+
+Run `32218628971` compiled commit `33db8f5` and failed with **5 compiler errors**, all in one platform source family. The complete raw log is `docs/CI_32218628971_FAILED.log`, the sorted inventory is `docs/CI_32218628971_UNIQUE_ERRORS.txt`, and grouped context is `docs/CI_32218628971_DIAGNOSTIC_CONTEXTS.txt`. Every diagnostic is a missing `BlockPos` symbol in `FabricXplatImpl.java` at lines 283, 290, 307, 505, and 513. The fix family is to restore the exact `net.minecraft.core.BlockPos` import; no behavior change is required.
+
+### B327 grouped source-fix result before CI
+
+The five B327 compiler diagnostics were one missing-import family. `net.minecraft.core.BlockPos` has been restored in `FabricXplatImpl`, covering all five affected declarations. The post-fix audit passes `git diff --check`, confirms all prior B325/B326 obsolete API searches remain clear, and leaves only the expected source name `FabricPlayerRendererMixin` (its target is `AvatarRenderer`, not the removed Minecraft `PlayerRenderer`). The raw B327 log and inventory are staged with this batch; CI confirmation remains pending.

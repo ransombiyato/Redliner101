@@ -1,0 +1,8 @@
+=== error-line count ===
+5 docs/CI_32218628971_UNIQUE_ERRORS.txt
+=== Java/Kotlin diagnostic inventory ===
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:283: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:290: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:307: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:505: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:513: error: cannot find symbol
