@@ -1,0 +1,437 @@
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9681548Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9682511Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9683063Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9684072Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:521: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9685419Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9686079Z                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9686423Z   symbol:   method result()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9687004Z   location: variable success of type InteractionResult
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9688797Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: incompatible types: RenderType cannot be converted to ChunkSectionLayer
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9690531Z         BlockRenderLayerMap.putBlock(block, type);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9691077Z                                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9691637Z Note: Some input files use or override a deprecated API.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9692226Z Note: Recompile with -Xlint:deprecation for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9692873Z Note: Some input files use unchecked or unsafe operations.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9693502Z Note: Recompile with -Xlint:unchecked for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9694599Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9695216Z 14 errors
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0367402Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0406600Z > Task :Fabric:compileJava FAILED
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0411574Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1787116758831.json
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0438171Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0468421Z [Incubating] Problems report is available at: file:///home/runner/work/Redliner101/Redliner101/build/reports/problems/problems-report.html
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1361649Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1426450Z FAILURE: Build failed with an exception.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1444177Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1467733Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1468471Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1498136Z * What went wrong:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1498504Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1518335Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1519863Z Execution failed for task ':Fabric:compileJava'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1520268Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1520734Z > Compilation failed; see the compiler output below.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1522531Z For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1530497Z   Note: Recompile with -Xlint:deprecation for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1531126Z 13 actionable tasks: 13 executed
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1558702Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:33: error: incompatible types: EntityModel<M> cannot be converted to PlayerModel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1569133Z                   model instanceof PlayerModel && slotReference.entity() instanceof Player) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1570190Z                   ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1570766Z     where M is a type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1572256Z       M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1574845Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: incompatible types: RenderType cannot be converted to ChunkSectionLayer
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1576572Z           BlockRenderLayerMap.putBlock(block, type);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1607595Z                                               ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1628220Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:292: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1643124Z           Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1644078Z                                                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1644749Z     symbol:   variable Direction
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1645309Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1646509Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:309: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1648177Z           Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1649083Z                                                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1649657Z     symbol:   variable Direction
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1650232Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1651570Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:409: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1653052Z           FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1653676Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1654493Z     symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1655011Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1656321Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:416: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1657796Z               FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1658475Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1659053Z     symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1659601Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1660877Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:422: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1662223Z           FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1662810Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1689148Z     symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1717416Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1750561Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:429: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1752199Z               FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1807397Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1847441Z     symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1847933Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1849004Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:436: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1850310Z               FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1850940Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1851424Z     symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1851889Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1852910Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:443: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1854236Z           FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1854860Z                                          ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1855338Z     symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1855835Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1857206Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:450: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1858494Z               FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1859195Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1897763Z     symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1917959Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1926094Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:458: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1938156Z               FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1939014Z                                              ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1939700Z     symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1940389Z     location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1941104Z   Note: Recompile with -Xlint:unchecked for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1941885Z   Note: Some input files use or override a deprecated API.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1942911Z   Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1944934Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: type argument M is not within bounds of type-variable T
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1947583Z           PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1948534Z                                           ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1949156Z     where M,T are type-variables:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1950645Z       M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1952278Z       T extends EntityRenderState declared in class EntityModel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1953115Z   Note: Some input files use unchecked or unsafe operations.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1954563Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:521: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1956226Z           return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1957381Z                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1957929Z     symbol:   method result()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1958574Z     location: variable success of type InteractionResult
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1959233Z   14 errors
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1959567Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1959818Z * Try:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1960428Z > Check your code and dependencies to fix the compilation error(s)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1961563Z > Run with --scan to get full insights.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1962008Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1962285Z * Exception is:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1963157Z org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':Fabric:compileJava'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1964846Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1966367Z 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1967916Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1969872Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1971978Z 	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:41)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1974149Z 	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1976177Z 	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1978321Z 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1980136Z 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1981912Z 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1983739Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1985393Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1987194Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1989133Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1991369Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1993388Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1995156Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1997189Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1999003Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2000582Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2002082Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2003632Z 	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2005185Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2007365Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2009497Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2011423Z 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2013466Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2015587Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2017551Z 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2019023Z 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2020172Z 	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2021622Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2023320Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2024852Z 	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2026337Z 	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2028253Z 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2030303Z 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2032368Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2034531Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2036508Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2038386Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2039979Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2041595Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2043204Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2044934Z 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2046792Z 	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2049047Z 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2050724Z 	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2052215Z 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2053672Z 	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2055358Z 	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2057419Z 	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2059217Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2060834Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2062585Z 	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2064228Z 	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2065805Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2067513Z 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2069057Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2070658Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2072169Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2073862Z Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler output below.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2075060Z Note: Recompile with -Xlint:deprecation for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2076639Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:33: error: incompatible types: EntityModel<M> cannot be converted to PlayerModel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2078499Z                 model instanceof PlayerModel && slotReference.entity() instanceof Player) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2079299Z                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2079793Z   where M is a type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2081124Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2083458Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: incompatible types: RenderType cannot be converted to ChunkSectionLayer
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2085143Z         BlockRenderLayerMap.putBlock(block, type);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2085818Z                                             ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2087247Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:292: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2088853Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2089770Z                                                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2090443Z   symbol:   variable Direction
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2091016Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2092276Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:309: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2094166Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2095146Z                                                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2095829Z   symbol:   variable Direction
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2096397Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2097829Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:409: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2099297Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2099984Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2100587Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2101168Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2102469Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:416: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2103946Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2104630Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2105226Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2105808Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2107518Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:422: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2108927Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2109636Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2110221Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2110806Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2112043Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:429: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2113464Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2114168Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2114761Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2115326Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2116619Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:436: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2118358Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2119102Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2119732Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2120363Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2121706Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:443: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2123211Z         FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2123958Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2124573Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2125206Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2126468Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:450: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2128140Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2128913Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2129522Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2130151Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2131405Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:458: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2132912Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2133694Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2134320Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2135159Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2135813Z Note: Recompile with -Xlint:unchecked for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2136542Z Note: Some input files use or override a deprecated API.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2137674Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2139692Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: type argument M is not within bounds of type-variable T
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2141609Z         PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2142541Z                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2143139Z   where M,T are type-variables:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2144574Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2146114Z     T extends EntityRenderState declared in class EntityModel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2147037Z Note: Some input files use unchecked or unsafe operations.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2148394Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:521: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2150263Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2151094Z                       ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2151528Z   symbol:   method result()
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2152116Z   location: variable success of type InteractionResult
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2152730Z 14 errors
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2153562Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:89)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2154939Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:50)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2156603Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2158461Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:52)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2160121Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2162077Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:52)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2164337Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:38)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2166574Z 	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2168894Z 	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:36)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2170860Z 	at org.gradle.jvm.toolchain.internal.DefaultToolchainJavaCompiler.execute(DefaultToolchainJavaCompiler.java:57)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2172476Z 	at org.gradle.api.tasks.compile.JavaCompile.lambda$createToolchainCompiler$3(JavaCompile.java:206)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2173977Z 	at org.gradle.api.internal.tasks.compile.CleaningJavaCompiler.execute(CleaningJavaCompiler.java:53)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2175970Z 	at org.gradle.api.internal.tasks.compile.incremental.IncrementalCompilerFactory.lambda$createRebuildAllCompiler$0(IncrementalCompilerFactory.java:55)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2178116Z 	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:70)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2179811Z 	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:44)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2181803Z 	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:66)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2184548Z 	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:52)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2187078Z 	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$1.call(CompileJavaBuildOperationReportingCompiler.java:64)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2189538Z 	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$1.call(CompileJavaBuildOperationReportingCompiler.java:48)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2191645Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2193754Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2195723Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2197287Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2198860Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2200729Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2202276Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2204221Z 	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler.execute(CompileJavaBuildOperationReportingCompiler.java:48)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2206028Z 	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:224)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2207425Z 	at org.gradle.api.tasks.compile.JavaCompile.performIncrementalCompilation(JavaCompile.java:165)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2208679Z 	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:150)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2209964Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2211227Z 	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2212488Z 	at org.gradle.api.internal.project.taskfactory.IncrementalTaskAction.doExecute(IncrementalTaskAction.java:45)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2214113Z 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2215673Z 	at org.gradle.api.internal.project.taskfactory.IncrementalTaskAction.execute(IncrementalTaskAction.java:26)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2217410Z 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2218820Z 	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2220267Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:30)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2221782Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:27)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2223296Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2224856Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2226466Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2228291Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2229922Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:48)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2231444Z 	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2232910Z 	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2234761Z 	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2236295Z 	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2237759Z 	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2239065Z 	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2240247Z 	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2241411Z 	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2243045Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2245158Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2247250Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2248931Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2250517Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2252000Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2253410Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2254676Z 	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2255821Z 	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2257250Z 	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2258743Z 	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2259990Z 	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2261328Z 	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2263002Z 	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2264650Z 	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2266231Z 	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2268063Z 	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2269772Z 	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2271551Z 	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2273489Z 	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2275258Z 	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2276823Z 	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2278518Z 	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2279934Z 	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2281031Z 	at org.gradle.internal.Either$Right.fold(Either.java:175)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2282300Z 	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2283518Z 	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2284790Z 	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2286169Z 	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2287874Z 	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2289413Z 	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2290891Z 	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2292307Z 	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2293688Z 	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2295422Z 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2297911Z 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2300136Z 	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2302990Z 	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2305578Z 	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2307705Z 	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2309377Z 	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2310879Z 	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2312239Z 	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:107)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2313492Z 	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:56)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2315267Z 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2317643Z 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2319807Z 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2321751Z 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:61)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2323382Z 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2325278Z 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2327447Z 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2329642Z 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2331434Z 	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2333020Z 	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2334985Z 	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2336642Z 	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2338371Z 	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2340145Z 	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2341654Z 	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2343108Z 	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2344944Z 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2347256Z 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2349412Z 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2351386Z 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2352826Z 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2354196Z 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2355472Z 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2357235Z 	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:64)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2359108Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2361181Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2363298Z 	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:41)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2365291Z 	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2367412Z 	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2369343Z 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2370752Z 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2372117Z 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2373677Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2375365Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2377096Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2378917Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2380973Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2382827Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2384393Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2386195Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2387903Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2389477Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2391073Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2392568Z 	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2394144Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2396006Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2398236Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2400135Z 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2402176Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2404290Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2406032Z 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2407620Z 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2408967Z 	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2410676Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2412406Z 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2413866Z 	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2415370Z 	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2417331Z 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2419344Z 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2421392Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2423433Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2425252Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2426829Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2428615Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2430225Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2431982Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2433896Z 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2435748Z 	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2437887Z 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2439512Z 	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2440977Z 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2442382Z 	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2444012Z 	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2445892Z 	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2447819Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2449542Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2451213Z 	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2452752Z 	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2454290Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2455848Z 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2457598Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2459214Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2460679Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2461643Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2461761Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2462018Z BUILD FAILED in 6m 9s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.5473690Z ##[error]Process completed with exit code 1.

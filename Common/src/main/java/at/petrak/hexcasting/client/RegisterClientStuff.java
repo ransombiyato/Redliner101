@@ -24,7 +24,7 @@ import at.petrak.hexcasting.common.lib.HexDataComponents;
 import at.petrak.hexcasting.common.lib.HexItems;
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions;
 import net.minecraft.client.color.block.BlockColor;
-import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.block.model.BlockStateModel;
 import net.minecraft.client.resources.model.ModelBakery;
@@ -116,19 +116,19 @@ public class RegisterClientStuff {
         registerGaslight4(HexBlocks.QUENCHED_ALLAY_BRICKS_SMALL.asItem());
         registerGaslight4(HexItems.QUENCHED_SHARD);
 
-        x.setRenderLayer(HexBlocks.CONJURED_LIGHT, RenderTypes.cutoutMovingBlock());
-        x.setRenderLayer(HexBlocks.CONJURED_BLOCK, RenderTypes.cutoutMovingBlock());
-        x.setRenderLayer(HexBlocks.EDIFIED_DOOR, RenderTypes.cutoutMovingBlock());
-        x.setRenderLayer(HexBlocks.EDIFIED_TRAPDOOR, RenderTypes.cutoutMovingBlock());
-        x.setRenderLayer(HexBlocks.AKASHIC_BOOKSHELF, RenderTypes.cutoutMovingBlock());
-        x.setRenderLayer(HexBlocks.SCONCE, RenderTypes.cutoutMovingBlock());
+        x.setRenderLayer(HexBlocks.CONJURED_LIGHT, ChunkSectionLayer.CUTOUT);
+        x.setRenderLayer(HexBlocks.CONJURED_BLOCK, ChunkSectionLayer.CUTOUT);
+        x.setRenderLayer(HexBlocks.EDIFIED_DOOR, ChunkSectionLayer.CUTOUT);
+        x.setRenderLayer(HexBlocks.EDIFIED_TRAPDOOR, ChunkSectionLayer.CUTOUT);
+        x.setRenderLayer(HexBlocks.AKASHIC_BOOKSHELF, ChunkSectionLayer.CUTOUT);
+        x.setRenderLayer(HexBlocks.SCONCE, ChunkSectionLayer.CUTOUT);
 
-        x.setRenderLayer(HexBlocks.AMETHYST_EDIFIED_LEAVES, RenderTypes.cutoutMovingBlock());
-        x.setRenderLayer(HexBlocks.AVENTURINE_EDIFIED_LEAVES, RenderTypes.cutoutMovingBlock());
-        x.setRenderLayer(HexBlocks.CITRINE_EDIFIED_LEAVES, RenderTypes.cutoutMovingBlock());
+        x.setRenderLayer(HexBlocks.AMETHYST_EDIFIED_LEAVES, ChunkSectionLayer.CUTOUT);
+        x.setRenderLayer(HexBlocks.AVENTURINE_EDIFIED_LEAVES, ChunkSectionLayer.CUTOUT);
+        x.setRenderLayer(HexBlocks.CITRINE_EDIFIED_LEAVES, ChunkSectionLayer.CUTOUT);
 
-        x.setRenderLayer(HexBlocks.AKASHIC_RECORD, RenderTypes.translucentMovingBlock());
-        x.setRenderLayer(HexBlocks.QUENCHED_ALLAY, RenderTypes.translucentMovingBlock());
+        x.setRenderLayer(HexBlocks.AKASHIC_RECORD, ChunkSectionLayer.TRANSLUCENT);
+        x.setRenderLayer(HexBlocks.QUENCHED_ALLAY, ChunkSectionLayer.TRANSLUCENT);
 
         x.registerEntityRenderer(HexEntities.WALL_SCROLL, WallScrollRenderer::new);
 

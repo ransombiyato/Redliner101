@@ -52,6 +52,9 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.advancements.criterion.ItemPredicate;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.DefaultedMappedRegistry;
+import net.minecraft.core.Direction;
+import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.protocol.Packet;
@@ -518,7 +521,7 @@ public class FabricXplatImpl implements IXplatAbstractions {
         player.setItemInHand(InteractionHand.MAIN_HAND, blockStack.copy());
         var success = UseItemCallback.EVENT.invoker().interact(player, world, InteractionHand.MAIN_HAND);
         player.setItemInHand(InteractionHand.MAIN_HAND, cached);
-        return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+        return success == InteractionResult.PASS; // No other mod tried to consume this
     }
 
     @Override

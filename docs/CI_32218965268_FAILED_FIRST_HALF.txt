@@ -1,0 +1,437 @@
+Fabric 1.21.11 build	Build Fabric artifact	﻿2026-08-19T05:19:11.8541145Z ##[group]Run ./gradlew --no-daemon --stacktrace :Fabric:build
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8541608Z ^[[36;1m./gradlew --no-daemon --stacktrace :Fabric:build^[[0m
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8563136Z shell: /usr/bin/bash -e {0}
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8563394Z env:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8563602Z   JAVA_VERSION: 21
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8563912Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8564382Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-8/x64
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8564780Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8565075Z   GRADLE_USER_HOME: /home/runner/.gradle
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8565350Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8565630Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8566045Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8566499Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8566807Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.8567351Z ##[endgroup]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:11.9737588Z Downloading https://services.gradle.org/distributions/gradle-8.14-bin.zip
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:13.3970396Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5395026Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5395756Z Welcome to Gradle 8.14!
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5396043Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5396200Z Here are the highlights of this release:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5396593Z  - Java 24 support
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5397105Z  - GraalVM Native Image toolchain selection
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5397568Z  - Enhancements to test reporting
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5397937Z  - Build Authoring improvements
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5398185Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5398467Z For more details see https://docs.gradle.org/8.14/release-notes.html
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.5399071Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:14.6375264Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:19:15.7398116Z Daemon will be stopped at the end of the build
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:09.3400228Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:09.3410391Z > Configure project :
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:09.3411355Z Architect Plugin: 3.4.164
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:11.0363031Z Architectury Loom: 1.13.469
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:11.0366126Z This version of Architectury Loom is in beta! Please report any issues you encounter: https://github.com/architectury/architectury-loom/issues
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0372664Z extension 'pkpcpbp'
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0389333Z w: ⚠️ Deprecated Gradle Version
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0418618Z The used Gradle version (Gradle 8.14) is deprecated and will not be supported in future Kotlin Gradle Plugin releases.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0420023Z The minimum supported Gradle version will become Gradle 8.14.4 in Kotlin 2.5.0.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0420764Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0421220Z This warning can be suppressed in 'gradle.properties':
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0422212Z     kotlin.suppressGradlePluginWarnings=DeprecatedGradleVersionWarning
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0426694Z Solution: Please update the Gradle version to at least Gradle 8.14.4.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:20:12.0427543Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.0390099Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.0392345Z > Configure project :Common
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.0399137Z :remapped 8 mods (intermediary -> named) in 4s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1362510Z ModInfoExtension{modID='hexcasting', mcVersion='1.21.11', modVersion='0.12.0-devel'}
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1363829Z SubprojExtension{platform='common', publish=false, cfJar=null, modrinthJar=null, cfDeps=[], modrinthDeps=[]}
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1365044Z isRelease: false; do publish: false
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1365744Z Batch B327: restore Fabric platform BlockPos import
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1366263Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1366710Z Jar manifest for hexcasting-common-1.21.11-0.12.0-devel-dev.jar:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1368536Z   Manifest-Version : 1.0
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1369132Z   Implementation-Vendor : petra-kat
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1369719Z   Implementation-Title : Common
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1370296Z   Specification-Version : 0.12.0-devel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1371006Z   Built-On-Minecraft : 1.21.11
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1371668Z   Implementation-Version : 0.12.0-devel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1385666Z   Built-On-Java : 21.0.12+8-LTS Eclipse Adoptium
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1386484Z   Specification-Title : hexcasting
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1387338Z   Implementation-Timestamp : 2026-08-19T05:21:47+0000
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1388066Z   Specification-Vendor : petra-kat
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:47.1388672Z   Timestamp : 1787116907111
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:49.2362457Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:49.2363242Z > Configure project :Fabric
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:21:49.2365063Z The mixin annotation is no longer enabled by default, you should remove any loom.mixin configuration. If you wish to continue to use the mixin AP you can set useLegacyMixinAp = true.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:12.9363281Z Mod was built with a newer version of Loom (1.14.10), you are using Loom (1.13.469)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:12.9377731Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.2388578Z Cannot remap lambda$updateBlockEntityTicker$9 because it does not exists in any of the targets [net/minecraft/class_2818]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.2412119Z Cannot remap lambda$updateBlockEntityTicker$9 because it does not exists in any of the targets [net/minecraft/class_2818]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.3378231Z Cannot remap getHeldItem because it does not exists in any of the targets [net/minecraft/class_3727]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.3379476Z Cannot remap lambda$create$5 because it does not exists in any of the targets [net/minecraft/class_4246]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.3380675Z Cannot remap lambda$create$8 because it does not exists in any of the targets [net/minecraft/class_4246]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.5370816Z Cannot remap lambda$create$6 because it does not exists in any of the targets [net/minecraft/class_4096]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.5408039Z Cannot remap lambda$create$8 because it does not exists in any of the targets [net/minecraft/class_4096]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.5409383Z Cannot remap lambda$create$8 because it does not exists in any of the targets [net/minecraft/class_4096]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.5410555Z Cannot remap modifiers because it does not exists in any of the targets [] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.6363773Z Cannot remap lambda$getTicker$0 because it does not exists in any of the targets [net/minecraft/class_8236]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.6381316Z Cannot remap lambda$getTicker$2 because it does not exists in any of the targets [net/minecraft/class_7268]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:15.6398163Z Cannot remap lambda$getTicker$1 because it does not exists in any of the targets [net/minecraft/class_5703]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:17.0361712Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:17.0362313Z > Configure project :Fabric
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:17.0362738Z :remapped 59 mods (intermediary -> named) in 4s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:19.7362539Z :remapped 1 mods (intermediary -> named) in 2s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6488549Z Cannot remap method_49106 because it does not exists in any of the targets [net/minecraft/class_1263] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6558132Z Cannot remap field_7601 because it does not exists in any of the targets [net/minecraft/class_1668] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6588282Z Cannot remap field_7600 because it does not exists in any of the targets [net/minecraft/class_1668] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6618006Z Cannot remap field_7599 because it does not exists in any of the targets [net/minecraft/class_1668] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6678058Z Cannot remap field_9190 because it does not exists in any of the targets [net/minecraft/class_1927] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6818306Z Cannot remap field_9190 because it does not exists in any of the targets [net/minecraft/class_1927] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6854703Z Cannot remap method_7490 because it does not exists in any of the targets [net/minecraft/class_1682] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6898434Z Cannot remap field_9190 because it does not exists in any of the targets [net/minecraft/class_1927] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6905757Z Cannot remap method_25928 because it does not exists in any of the targets [net/minecraft/class_2487] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.6968130Z Cannot remap method_25926 because it does not exists in any of the targets [net/minecraft/class_2487] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7028206Z Cannot remap field_11928 because it does not exists in any of the targets [net/minecraft/class_2595] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7059597Z Cannot remap field_17583 because it does not exists in any of the targets [net/minecraft/class_3719] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7083134Z Cannot remap method_10576 because it does not exists in any of the targets [net/minecraft/class_2487] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7138030Z Cannot remap method_10584 because it does not exists in any of the targets [net/minecraft/class_2487] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7198055Z Cannot remap field_7177 because it does not exists in any of the targets [net/minecraft/class_1536] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7231002Z Cannot remap field_9190 because it does not exists in any of the targets [net/minecraft/class_1927] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7257927Z Cannot remap field_5987 because it does not exists in any of the targets [net/minecraft/class_1297] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7268774Z Cannot remap field_6010 because it does not exists in any of the targets [net/minecraft/class_1297] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7318032Z Cannot remap field_6035 because it does not exists in any of the targets [net/minecraft/class_1297] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7378082Z Cannot remap method_5812 because it does not exists in any of the targets [net/minecraft/class_1297] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7407977Z Cannot remap method_17770 because it does not exists in any of the targets [net/minecraft/class_2680] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7428272Z Cannot remap method_11614 because it does not exists in any of the targets [net/minecraft/class_2680] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7437882Z Cannot remap field_3822 because it does not exists in any of the targets [net/minecraft/class_693] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7468002Z Cannot remap method_18758 because it does not exists in any of the targets [net/minecraft/class_3231] or their parents.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7497257Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7501860Z Cannot remap method_3994 because it does not exists in any of the targets [net/minecraft/class_915]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7527861Z Cannot remap method_3074 because it does not exists in any of the targets [net/minecraft/class_693]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7557829Z Cannot remap method_3232 because it does not exists in any of the targets [net/minecraft/class_759]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7587992Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_4760]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7607814Z Cannot remap method_61049 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7617934Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1668]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7647792Z Cannot remap method_61049 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7667735Z Cannot remap method_3926 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7677919Z Cannot remap method_7200 because it does not exists in any of the targets [net/minecraft/class_1642]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7707729Z Cannot remap method_5874 because it does not exists in any of the targets [net/minecraft/class_1642]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7737679Z Cannot remap method_5800 because it does not exists in any of the targets [net/minecraft/class_1646]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7747841Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_5136]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7767883Z Cannot remap method_33191 because it does not exists in any of the targets [net/minecraft/class_5762]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7797707Z Cannot remap method_18394 because it does not exists in any of the targets [net/minecraft/class_1606]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7827696Z Cannot remap method_6091 because it does not exists in any of the targets [net/minecraft/class_1496]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7848419Z Cannot remap method_5443 because it does not exists in any of the targets [net/minecraft/class_2609, net/minecraft/class_2589, net/minecraft/class_2621]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7857781Z Cannot remap method_31776 because it does not exists in any of the targets [net/minecraft/class_5573]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7887688Z Cannot remap method_4114 because it does not exists in any of the targets [net/minecraft/class_943]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7917724Z Cannot remap method_18074 because it does not exists in any of the targets [net/minecraft/class_1675]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7927941Z Cannot remap method_18419 because it does not exists in any of the targets [net/minecraft/class_4051]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7947744Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.7977674Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8007704Z Cannot remap method_7534 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8017722Z Cannot remap method_18382 because it does not exists in any of the targets [net/minecraft/class_1530]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8037762Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8067717Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8098007Z Cannot remap method_53511 because it does not exists in any of the targets [net/minecraft/class_1584]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8107841Z Cannot remap method_5643 because it does not exists in any of the targets [net/minecraft/class_1511]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8127751Z Cannot remap method_7534 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8157831Z Cannot remap method_26961 because it does not exists in any of the targets [net/minecraft/class_1676]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8187789Z Cannot remap method_5699 because it does not exists in any of the targets [net/minecraft/class_1530]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8189168Z Cannot remap method_9548 because it does not exists in any of the targets [net/minecraft/class_2423]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8217758Z Cannot remap method_7329 because it does not exists in any of the targets [net/minecraft/class_1657]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8247741Z Cannot remap method_19949 because it does not exists in any of the targets [net/minecraft/class_4215]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8267845Z Cannot remap method_19949 because it does not exists in any of the targets [net/minecraft/class_4215]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8277752Z Cannot remap method_31765 because it does not exists in any of the targets [net/minecraft/class_5572]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8307748Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_8153]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8337727Z Cannot remap method_31762 because it does not exists in any of the targets [net/minecraft/class_5572]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8358010Z Cannot remap method_3956 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8367718Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1542]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8397818Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8427789Z Cannot remap getOverlayBlock because it does not exists in any of the targets [net/minecraft/class_4603]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8431859Z Cannot remap method_7313 because it does not exists in any of the targets [net/minecraft/class_1657]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8457796Z Cannot remap method_31684 because it does not exists in any of the targets [net/minecraft/class_5561]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8487885Z Cannot remap method_31685 because it does not exists in any of the targets [net/minecraft/class_5561]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8517748Z Cannot remap method_31680 because it does not exists in any of the targets [net/minecraft/class_5561]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8527783Z Cannot remap method_49999 because it does not exists in any of the targets [net/minecraft/class_8162]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8547745Z Cannot remap method_3185 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8577784Z Cannot remap method_18077 because it does not exists in any of the targets [net/minecraft/class_1675]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8607691Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1665]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8608862Z Cannot remap method_2904 because it does not exists in any of the targets [net/minecraft/class_636]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8637757Z Cannot remap method_3185 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8667819Z Cannot remap method_3185 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8729331Z Cannot remap method_3186 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8758242Z Cannot remap method_3172 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8787642Z Cannot remap method_3178 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8788934Z Cannot remap method_3206 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8817780Z Cannot remap method_5435 because it does not exists in any of the targets [net/minecraft/class_3719]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8847755Z Cannot remap method_5432 because it does not exists in any of the targets [net/minecraft/class_3719]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8848979Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8849994Z Cannot remap method_52536 because it does not exists in any of the targets [net/minecraft/class_1309]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8851345Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8877812Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8907748Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8937716Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8939393Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8967804Z Cannot remap method_23206 because it does not exists in any of the targets [net/minecraft/class_1007]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.8997716Z Cannot remap method_7500 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9027709Z Cannot remap method_7500 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9037879Z Cannot remap method_7485 because it does not exists in any of the targets [net/minecraft/class_1682]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9057781Z Cannot remap method_12205 because it does not exists in any of the targets [net/minecraft/class_2818]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9087692Z Cannot remap method_18029 because it does not exists in any of the targets [net/minecraft/class_2818]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9117719Z Cannot remap method_12210 because it does not exists in any of the targets [net/minecraft/class_2818]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9137717Z Cannot remap method_29242 because it does not exists in any of the targets [net/minecraft/class_1309]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9147777Z Cannot remap method_7492 because it does not exists in any of the targets [net/minecraft/class_1684]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9177718Z Cannot remap method_4073 because it does not exists in any of the targets [net/minecraft/class_927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9207699Z Cannot remap method_4073 because it does not exists in any of the targets [net/minecraft/class_927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9227618Z Cannot remap method_3956 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9238048Z Cannot remap method_18377 because it does not exists in any of the targets [net/minecraft/class_1531]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9267696Z Cannot remap method_23177 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9297719Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9317646Z Cannot remap method_23177 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9327819Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9357723Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9377630Z Cannot remap method_17366 because it does not exists in any of the targets [net/minecraft/class_1706]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9388072Z Cannot remap method_5643 because it does not exists in any of the targets [net/minecraft/class_1309]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9417732Z Cannot remap method_3887 because it does not exists in any of the targets [net/minecraft/class_881]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9447729Z Cannot remap method_3887 because it does not exists in any of the targets [net/minecraft/class_881]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9467693Z Cannot remap method_5773 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9477754Z Cannot remap method_23177 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9507730Z Cannot remap method_5800 because it does not exists in any of the targets [net/minecraft/class_1452]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9537708Z Cannot remap method_7545 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9557630Z Cannot remap method_23177 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9567940Z Cannot remap method_6091 because it does not exists in any of the targets [net/minecraft/class_1452]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9609374Z Cannot remap method_7532 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9637851Z Cannot remap method_7534 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9667813Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9669149Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9697816Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9727796Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9739695Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9741107Z Cannot remap method_45346 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9742369Z Cannot remap method_45346 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9743621Z Cannot remap method_45346 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9744820Z Cannot remap method_45346 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9746098Z Cannot remap method_45346 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9747546Z Cannot remap method_45346 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9749532Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9754620Z Cannot remap method_18377 because it does not exists in any of the targets [net/minecraft/class_1657]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9755929Z Cannot remap method_18378 because it does not exists in any of the targets [net/minecraft/class_1309]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9758019Z Cannot remap method_7872 because it does not exists in any of the targets [net/minecraft/class_1792]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9759284Z Cannot remap method_18378 because it does not exists in any of the targets [net/minecraft/class_1309]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9760569Z Cannot remap method_3926 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9761852Z Cannot remap method_18074 because it does not exists in any of the targets [net/minecraft/class_1675]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9763012Z Cannot remap method_2486 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9764191Z Cannot remap method_2486 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9765406Z Cannot remap method_5643 because it does not exists in any of the targets [net/minecraft/class_1309]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9767324Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9768298Z Cannot remap method_48472 because it does not exists in any of the targets [net/minecraft/class_490]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9769348Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1665]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9770499Z Cannot remap method_7492 because it does not exists in any of the targets [net/minecraft/class_1681]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9771625Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9772778Z Cannot remap method_5643 because it does not exists in any of the targets [net/minecraft/class_1511]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9773983Z Cannot remap method_3926 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9775207Z Cannot remap method_6828 because it does not exists in any of the targets [net/minecraft/class_1510]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9776409Z Cannot remap method_3923 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9777714Z Cannot remap method_3939 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9780315Z Cannot remap method_5678 because it does not exists in any of the targets [net/minecraft/class_1531, net/minecraft/class_1547, net/minecraft/class_1559, net/minecraft/class_3732, net/minecraft/class_1614, net/minecraft/class_1642, net/minecraft/class_1429, net/minecraft/class_1657]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9782857Z Cannot remap method_5992 because it does not exists in any of the targets [net/minecraft/class_1642]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9784097Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_1501]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9785480Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_1690, net/minecraft/class_1584]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9787407Z Cannot remap method_5443 because it does not exists in any of the targets [net/minecraft/class_2609, net/minecraft/class_2589, net/minecraft/class_2621]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9789276Z Cannot remap method_5443 because it does not exists in any of the targets [net/minecraft/class_2609, net/minecraft/class_2589, net/minecraft/class_2621]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9791012Z Cannot remap method_5443 because it does not exists in any of the targets [net/minecraft/class_2609, net/minecraft/class_2589, net/minecraft/class_2621]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9792493Z Cannot remap method_3926 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9793717Z Cannot remap method_42280 because it does not exists in any of the targets [net/minecraft/class_7264]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9795226Z Cannot remap method_22973 because it does not exists in any of the targets [net/minecraft/class_757]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9796455Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_1506]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9797799Z Cannot remap method_53511 because it does not exists in any of the targets [net/minecraft/class_1308]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9799026Z Cannot remap method_3954 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9800204Z Cannot remap method_3954 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9801303Z Cannot remap method_3954 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9802455Z Cannot remap method_4016 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9803675Z Cannot remap method_4016 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9804829Z Cannot remap <init> because it does not exists in any of the targets [net/minecraft/class_1682]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9806026Z Cannot remap method_7498 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9807554Z Cannot remap method_7498 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9808711Z Cannot remap method_7498 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9809877Z Cannot remap method_7497 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9810989Z Cannot remap method_7497 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9812144Z Cannot remap method_7497 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9813315Z Cannot remap method_5621 because it does not exists in any of the targets [net/minecraft/class_1492]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9814477Z Cannot remap method_3956 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9815653Z Cannot remap method_5443 because it does not exists in any of the targets [net/minecraft/class_7264]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9816958Z Cannot remap method_18377 because it does not exists in any of the targets [net/minecraft/class_7689]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9818172Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9819336Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_1690]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9820552Z Cannot remap method_5651 because it does not exists in any of the targets [net/minecraft/class_1297]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9821790Z Cannot remap method_5647 because it does not exists in any of the targets [net/minecraft/class_1297]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9823034Z Cannot remap method_5699 because it does not exists in any of the targets [net/minecraft/class_1297]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9824248Z Cannot remap method_6121 because it does not exists in any of the targets [net/minecraft/class_1308]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9825478Z Cannot remap method_5992 because it does not exists in any of the targets [net/minecraft/class_1296]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9826716Z Cannot remap method_5435 because it does not exists in any of the targets [net/minecraft/class_2595]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9827981Z Cannot remap method_5432 because it does not exists in any of the targets [net/minecraft/class_2595]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9829185Z Cannot remap method_17765 because it does not exists in any of the targets [net/minecraft/class_2595]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9830416Z Cannot remap method_3074 because it does not exists in any of the targets [net/minecraft/class_693]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9831659Z Cannot remap method_7597 because it does not exists in any of the targets [net/minecraft/class_1724]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9833105Z Cannot remap method_5865 because it does not exists in any of the targets [net/minecraft/class_1501]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9834330Z Cannot remap method_18970 because it does not exists in any of the targets [net/minecraft/class_4111]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9835636Z Cannot remap method_23177 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9837016Z Cannot remap method_23177 because it does not exists in any of the targets [net/minecraft/class_918]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9838250Z Cannot remap method_5773 because it does not exists in any of the targets [net/minecraft/class_1530]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9839461Z Cannot remap method_33332 because it does not exists in any of the targets [net/minecraft/class_1606]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9840705Z Cannot remap method_3954 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9841998Z Cannot remap method_3954 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9843223Z Cannot remap method_3956 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9844470Z Cannot remap method_17366 because it does not exists in any of the targets [net/minecraft/class_1706]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9845874Z Cannot remap method_17366 because it does not exists in any of the targets [net/minecraft/class_1706]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9847089Z Cannot remap method_17366 because it does not exists in any of the targets [net/minecraft/class_1706]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9848341Z Cannot remap method_29243 because it does not exists in any of the targets [net/minecraft/class_1308]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9849569Z Cannot remap method_23163 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9850794Z Cannot remap method_3956 because it does not exists in any of the targets [net/minecraft/class_898]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9852032Z Cannot remap method_7498 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9853253Z Cannot remap method_7498 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9854465Z Cannot remap method_7498 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9855658Z Cannot remap method_7497 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9856985Z Cannot remap method_7497 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9858220Z Cannot remap method_7497 because it does not exists in any of the targets [net/minecraft/class_1686]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9859437Z Cannot remap method_4073 because it does not exists in any of the targets [net/minecraft/class_927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9860669Z Cannot remap method_7469 because it does not exists in any of the targets [net/minecraft/class_1674]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9861899Z Cannot remap method_5643 because it does not exists in any of the targets [net/minecraft/class_1511]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9863123Z Cannot remap method_3926 because it does not exists in any of the targets [net/minecraft/class_897]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:21.9864339Z Cannot remap method_4073 because it does not exists in any of the targets [net/minecraft/class_927]
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:23.5362235Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:23.5362956Z > Configure project :Fabric
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:23.5363705Z :remapped 3 mods (intermediary -> named) in 2s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:25.0361856Z :remapped 1 mods (intermediary -> named) in 2s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:27.9362251Z :remapped 52 mods (intermediary -> named) in 2s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1364869Z ModInfoExtension{modID='hexcasting', mcVersion='1.21.11', modVersion='0.12.0-devel'}
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1368992Z SubprojExtension{platform='fabric', publish=true, cfJar=task ':Fabric:remapJar' property 'archiveFile', modrinthJar=task ':Fabric:remapJar' property 'archiveFile', cfDeps=[paucal, patchouli, fabric-language-kotlin, inline, cloth-config, cardinal-components-api, fabric-api], modrinthDeps=[paucal:0.7.1-noelle+1.21.1-fabric, patchouli:1.21.1-92-fabric, fabric-language-kotlin:1.9.4+kotlin.1.8.21, inline:1.21.1-1.2.2-fabric, cloth-config:21.11.153+fabric, cardinal-components-api:7.3.2, fabric-api:0.141.6+1.21.11]}
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1372942Z isRelease: false; do publish: true
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1373711Z Batch B327: restore Fabric platform BlockPos import
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1374338Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1374904Z Jar manifest for hexcasting-fabric-1.21.11-0.12.0-devel-dev.jar:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1375523Z   Manifest-Version : 1.0
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1375965Z   Implementation-Vendor : petra-kat
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1376435Z   Implementation-Title : Fabric
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1377008Z   Specification-Version : 0.12.0-devel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1377466Z   Built-On-Minecraft : 1.21.11
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1377778Z   Implementation-Version : 0.12.0-devel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1378074Z   Built-On-Java : 21.0.12+8-LTS Eclipse Adoptium
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1378391Z   Specification-Title : hexcasting
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1378685Z   Implementation-Timestamp : 2026-08-19T05:23:28+0000
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1378996Z   Specification-Vendor : petra-kat
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:28.1379244Z   Timestamp : 1787117008093
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:29.2383922Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:29.2388170Z > Task :Common:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:29.2417667Z > Task :Fabric:exportClasspath
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:23:59.2361536Z > Task :Common:compileKotlin
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:28.0367944Z > Task :Common:processResources
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:28.0397678Z > Task :Fabric:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:29.3367986Z > Task :Fabric:processResources
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:29.7367946Z > Task :Fabric:processIncludeJars
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:30.0377917Z > Task :Fabric:sourcesJar
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:30.0427804Z > Task :Common:exportClasspath
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:30.0487793Z > Task :Fabric:processTestResources NO-SOURCE
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:30.8377953Z > Task :Fabric:validateAccessWidener
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7364080Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7387793Z > Task :Common:compileKotlin
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7450885Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/arithmetic/operator/Operator.kt:38:25 Unchecked cast of 'Iota' to 'T (of fun <T : Iota?> downcast)'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7455374Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapAlreadyBrainswept.kt:15:26 The corresponding parameter in the supertype 'Mishap' is named 'env'. This may cause problems when calling this function with named arguments.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7483279Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapAlreadyBrainswept.kt:16:13 'fun hurt(damageSource: DamageSource, f: Float): Unit' is deprecated. Deprecated in Java.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7486814Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadBlock.kt:18:26 The corresponding parameter in the supertype 'Mishap' is named 'env'. This may cause problems when calling this function with named arguments.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7526220Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadBrainsweep.kt:17:26 The corresponding parameter in the supertype 'Mishap' is named 'env'. This may cause problems when calling this function with named arguments.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7548617Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapBadEntity.kt:22:57 Elvis operator (?:) always returns the left operand of non-nullable type 'Component'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7558071Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapEntityTooFarAway.kt:20:53 Elvis operator (?:) always returns the left operand of non-nullable type 'Component'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7588734Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapImmuneEntity.kt:19:52 Elvis operator (?:) always returns the left operand of non-nullable type 'Component'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7592152Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/api/casting/mishaps/MishapOthersName.kt:18:26 The corresponding parameter in the supertype 'Mishap' is named 'env'. This may cause problems when calling this function with named arguments.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7601531Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/client/gui/GuiSpellcasting.kt:68:27 Unnecessary safe call on a non-null receiver of type 'Minecraft'.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7605080Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/circles/OpImpetusDir.kt:17:44 The corresponding parameter in the supertype 'ConstMediaAction' is named 'env'. This may cause problems when calling this function with named arguments.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7609199Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/circles/OpImpetusPos.kt:13:44 The corresponding parameter in the supertype 'ConstMediaAction' is named 'env'. This may cause problems when calling this function with named arguments.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7613379Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/selectors/OpGetCaster.kt:11:44 The corresponding parameter in the supertype 'ConstMediaAction' is named 'env'. This may cause problems when calling this function with named arguments.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7616251Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt:114:69 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7618423Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt:115:69 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7620382Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt:144:57 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7622296Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt:147:57 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7624211Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt:149:57 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7626153Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt:158:61 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7628489Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/OpFlight.kt:160:61 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:24:52.7630563Z w: file:///home/runner/work/Redliner101/Redliner101/Common/src/main/java/at/petrak/hexcasting/common/casting/actions/spells/great/OpAltiora.kt:63:53 No cast needed.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:02.2370895Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:02.2387980Z Note: Some input files use or override a deprecated API.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:02.2388665Z > Task :Common:compileJava
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:02.2409283Z Note: Recompile with -Xlint:deprecation for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:02.2447698Z Note: Some input files use unchecked or unsafe operations.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:02.2477809Z Note: Recompile with -Xlint:unchecked for details.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:08.5361610Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:08.5362412Z > Task :Common:classes
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:08.9362032Z > Task :Common:jar
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1361010Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1361790Z > Task :Fabric:compileKotlin
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1363362Z w: file:///home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexClientInitializer.kt:48:9 'interface HudRenderCallback : Any' is deprecated. Deprecated in Java.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1366278Z w: file:///home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexClientInitializer.kt:80:17 'class BlockEntityRendererRegistry : Any' is deprecated. Deprecated in Java.
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:17.9397550Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:17.9398532Z > Task :Common:transformProductionFabric
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:17.9427944Z [Architectury Transformer] Read classpath in 1.508 s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:18.3362577Z [Architectury Transformer] Transformed jar with 5 transformer(s) in 2.092 s
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7419442Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: type argument M is not within bounds of type-variable T
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7421205Z
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7436804Z         PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7437768Z > Task :Fabric:compileJava
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7457895Z                                         ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7497965Z   where M,T are type-variables:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7499577Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7501822Z     T extends EntityRenderState declared in class EntityModel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7503791Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:33: error: incompatible types: EntityModel<M> cannot be converted to PlayerModel
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7505853Z                 model instanceof PlayerModel && slotReference.entity() instanceof Player) {
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7506777Z                 ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7507433Z   where M is a type-variable:
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7508919Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9399090Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:292: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9428077Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9444086Z                                                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9484049Z   symbol:   variable Direction
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9487570Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9492846Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:309: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9518377Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9547635Z                                                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9577436Z   symbol:   variable Direction
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9607505Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9608748Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:409: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9637607Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9647641Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9648297Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9649013Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9650343Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:416: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9651672Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9652363Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9652935Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9653507Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9655092Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:422: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9656495Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9657390Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9657962Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9658515Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9659781Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:429: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9661281Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9661966Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9662548Z   symbol:   class MappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9663119Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9664406Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:436: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9665932Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9666642Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9667608Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9668212Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9669432Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:443: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9670923Z         FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9671669Z                                        ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9672266Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9672896Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9674230Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:450: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9675770Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9676539Z                                            ^
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9677284Z   symbol:   class DefaultedMappedRegistry
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9677928Z   location: class FabricXplatImpl
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9679246Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:458: error: cannot find symbol
+Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9680775Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(

@@ -235,3 +235,20 @@ Run `32218628971` compiled commit `33db8f5` and failed with **5 compiler errors*
 ### B327 grouped source-fix result before CI
 
 The five B327 compiler diagnostics were one missing-import family. `net.minecraft.core.BlockPos` has been restored in `FabricXplatImpl`, covering all five affected declarations. The post-fix audit passes `git diff --check`, confirms all prior B325/B326 obsolete API searches remain clear, and leaves only the expected source name `FabricPlayerRendererMixin` (its target is `AvatarRenderer`, not the removed Minecraft `PlayerRenderer`). The raw B327 log and inventory are staged with this batch; CI confirmation remains pending.
+
+### CI run 32218965268 diagnostic inventory — B328 intake
+
+The full failed build was read and persisted as `docs/CI_32218965268_FAILED.log`, split into `docs/CI_32218965268_FAILED_FIRST_HALF.txt` and `docs/CI_32218965268_FAILED_SECOND_HALF.txt`, with compiler-focused context in `docs/CI_32218965268_FAILED_CONTEXTS.txt`. Run `32218965268` compiled commit `25f6743` and failed with **14 errors** in these grouped families:
+
+| API family | Full-log findings |
+|---|---|
+| Accessories/entity-model bridge | `LensAccessoryRenderer.java:30` fails because the installed Accessories method uses `<M extends LivingEntity>` while 1.21.11 `EntityModel<T>` requires `T extends EntityRenderState`; `:33` also rejects the generic `EntityModel<M>` versus raw `PlayerModel` test. Implement the exact erased/raw `EntityModel` method boundary and retain the existing item rendering bridge. |
+| Block render-layer bridge | `FabricClientXplatImpl.java:42` rejects `RenderType` because Fabric 1.21.11 `BlockRenderLayerMap.putBlock` requires `ChunkSectionLayer`. Refactor the internal abstraction and its callers to pass `ChunkSectionLayer.CUTOUT` or `.TRANSLUCENT`, preserving all prior assignments. |
+| Fluid and registry imports | `FabricXplatImpl.java:292,309` lacks `Direction`; `:409,416,422,429` lack `MappedRegistry`; `:436,443,450,458` lack `DefaultedMappedRegistry`. Restore the exact `net.minecraft.core` imports. |
+| InteractionResult API | `FabricXplatImpl.java:521` rejects both `getResult()` and `result()`; the current callback result is the enum itself, so compare `success == InteractionResult.PASS`. |
+
+The complete first and second log halves were read through the saved compiler-focused excerpt. Kotlin compilation succeeded with only deprecation warnings for `HudRenderCallback` and `BlockEntityRendererRegistry`; no Kotlin errors were present.
+
+### B328 grouped source-fix result before CI
+
+The full-log B328 inventory has been addressed in grouped families. The internal render-layer abstraction and all callers now use `ChunkSectionLayer.CUTOUT` or `ChunkSectionLayer.TRANSLUCENT`, matching Fabric 1.21.11’s static `BlockRenderLayerMap.putBlock` API. `LensAccessoryRenderer` now uses the erased raw `EntityModel` boundary required to bridge the installed Accessories API to the 1.21.11 model bound. `Direction`, `MappedRegistry`, and `DefaultedMappedRegistry` imports were restored, and the callback result now compares directly with `InteractionResult.PASS`. The post-fix audit passes `git diff --check` and shows no remaining known legacy API patterns. The saved first-half, second-half, and compiler-context excerpts remain part of this batch for full-log traceability.

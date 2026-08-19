@@ -1,0 +1,14 @@
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: type argument M is not within bounds of type-variable T
+Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:33: error: incompatible types: EntityModel<M> cannot be converted to PlayerModel
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: incompatible types: RenderType cannot be converted to ChunkSectionLayer
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:292: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:309: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:409: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:416: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:422: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:429: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:436: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:443: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:450: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:458: error: cannot find symbol
+Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:521: error: cannot find symbol

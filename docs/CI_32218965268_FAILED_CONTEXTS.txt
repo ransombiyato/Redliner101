@@ -1,0 +1,318 @@
+368-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:08.5362412Z > Task :Common:classes
+369-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:08.9362032Z > Task :Common:jar
+370-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1361010Z
+371-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1361790Z > Task :Fabric:compileKotlin
+372-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1363362Z w: file:///home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexClientInitializer.kt:48:9 'interface HudRenderCallback : Any' is deprecated. Deprecated in Java.
+373-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:14.1366278Z w: file:///home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/FabricHexClientInitializer.kt:80:17 'class BlockEntityRendererRegistry : Any' is deprecated. Deprecated in Java.
+374-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:17.9397550Z
+375-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:17.9398532Z > Task :Common:transformProductionFabric
+376-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:17.9427944Z [Architectury Transformer] Read classpath in 1.508 s
+377-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:18.3362577Z [Architectury Transformer] Transformed jar with 5 transformer(s) in 2.092 s
+378:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7419442Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: type argument M is not within bounds of type-variable T
+379-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7421205Z
+380-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7436804Z         PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
+381-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7437768Z > Task :Fabric:compileJava
+382-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7457895Z                                         ^
+383-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7497965Z   where M,T are type-variables:
+384-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7499577Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+385-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7501822Z     T extends EntityRenderState declared in class EntityModel
+386:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7503791Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:33: error: incompatible types: EntityModel<M> cannot be converted to PlayerModel
+387-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7505853Z                 model instanceof PlayerModel && slotReference.entity() instanceof Player) {
+388-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7506777Z                 ^
+389-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7507433Z   where M is a type-variable:
+390-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.7508919Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+391:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9399090Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:292: error: cannot find symbol
+392-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9428077Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+393-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9444086Z                                                                            ^
+394-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9484049Z   symbol:   variable Direction
+395-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9487570Z   location: class FabricXplatImpl
+396:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9492846Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:309: error: cannot find symbol
+397-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9518377Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+398-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9547635Z                                                                            ^
+399-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9577436Z   symbol:   variable Direction
+400-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9607505Z   location: class FabricXplatImpl
+401:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9608748Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:409: error: cannot find symbol
+402-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9637607Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+403-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9647641Z                                        ^
+404-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9648297Z   symbol:   class MappedRegistry
+405-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9649013Z   location: class FabricXplatImpl
+406:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9650343Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:416: error: cannot find symbol
+407-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9651672Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+408-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9652363Z                                            ^
+409-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9652935Z   symbol:   class MappedRegistry
+410-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9653507Z   location: class FabricXplatImpl
+411:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9655092Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:422: error: cannot find symbol
+412-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9656495Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+413-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9657390Z                                        ^
+414-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9657962Z   symbol:   class MappedRegistry
+415-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9658515Z   location: class FabricXplatImpl
+416:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9659781Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:429: error: cannot find symbol
+417-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9661281Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+418-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9661966Z                                            ^
+419-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9662548Z   symbol:   class MappedRegistry
+420-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9663119Z   location: class FabricXplatImpl
+421:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9664406Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:436: error: cannot find symbol
+422-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9665932Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+423-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9666642Z                                            ^
+424-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9667608Z   symbol:   class DefaultedMappedRegistry
+425-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9668212Z   location: class FabricXplatImpl
+426:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9669432Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:443: error: cannot find symbol
+427-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9670923Z         FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+428-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9671669Z                                        ^
+429-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9672266Z   symbol:   class DefaultedMappedRegistry
+430-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9672896Z   location: class FabricXplatImpl
+431:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9674230Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:450: error: cannot find symbol
+432-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9675770Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+433-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9676539Z                                            ^
+434-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9677284Z   symbol:   class DefaultedMappedRegistry
+435-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9677928Z   location: class FabricXplatImpl
+436:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9679246Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:458: error: cannot find symbol
+437-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9680775Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+438-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9681548Z                                            ^
+439-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9682511Z   symbol:   class DefaultedMappedRegistry
+440-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9683063Z   location: class FabricXplatImpl
+441:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9684072Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:521: error: cannot find symbol
+442-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9685419Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+443-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9686079Z                       ^
+444-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9686423Z   symbol:   method result()
+445-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9687004Z   location: variable success of type InteractionResult
+446:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9688797Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: incompatible types: RenderType cannot be converted to ChunkSectionLayer
+447-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9690531Z         BlockRenderLayerMap.putBlock(block, type);
+448-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9691077Z                                             ^
+449-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9691637Z Note: Some input files use or override a deprecated API.
+450-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9692226Z Note: Recompile with -Xlint:deprecation for details.
+451-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9692873Z Note: Some input files use unchecked or unsafe operations.
+452-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9693502Z Note: Recompile with -Xlint:unchecked for details.
+453-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9694599Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+454-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:20.9695216Z 14 errors
+455-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0367402Z
+456:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0406600Z > Task :Fabric:compileJava FAILED
+457-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0411574Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1787116758831.json
+458-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0438171Z
+459-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.0468421Z [Incubating] Problems report is available at: file:///home/runner/work/Redliner101/Redliner101/build/reports/problems/problems-report.html
+460-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1361649Z
+461-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1426450Z FAILURE: Build failed with an exception.
+462-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1444177Z
+463-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1467733Z
+464-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1468471Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+465-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1498136Z * What went wrong:
+466-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1498504Z
+467-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1518335Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+468:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1519863Z Execution failed for task ':Fabric:compileJava'.
+469-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1520268Z
+470:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1520734Z > Compilation failed; see the compiler output below.
+471-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1522531Z For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+472-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1530497Z   Note: Recompile with -Xlint:deprecation for details.
+473-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1531126Z 13 actionable tasks: 13 executed
+474:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1558702Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:33: error: incompatible types: EntityModel<M> cannot be converted to PlayerModel
+475-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1569133Z                   model instanceof PlayerModel && slotReference.entity() instanceof Player) {
+476-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1570190Z                   ^
+477-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1570766Z     where M is a type-variable:
+478-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1572256Z       M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+479:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1574845Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: incompatible types: RenderType cannot be converted to ChunkSectionLayer
+480-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1576572Z           BlockRenderLayerMap.putBlock(block, type);
+481-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1607595Z                                               ^
+482:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1628220Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:292: error: cannot find symbol
+483-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1643124Z           Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+484-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1644078Z                                                                              ^
+485-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1644749Z     symbol:   variable Direction
+486-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1645309Z     location: class FabricXplatImpl
+487:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1646509Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:309: error: cannot find symbol
+488-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1648177Z           Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+489-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1649083Z                                                                              ^
+490-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1649657Z     symbol:   variable Direction
+491-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1650232Z     location: class FabricXplatImpl
+492:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1651570Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:409: error: cannot find symbol
+493-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1653052Z           FabricRegistryBuilder.from(new MappedRegistry<>(
+494-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1653676Z                                          ^
+495-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1654493Z     symbol:   class MappedRegistry
+496-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1655011Z     location: class FabricXplatImpl
+497:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1656321Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:416: error: cannot find symbol
+498-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1657796Z               FabricRegistryBuilder.from(new MappedRegistry<>(
+499-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1658475Z                                              ^
+500-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1659053Z     symbol:   class MappedRegistry
+501-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1659601Z     location: class FabricXplatImpl
+502:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1660877Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:422: error: cannot find symbol
+503-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1662223Z           FabricRegistryBuilder.from(new MappedRegistry<>(
+504-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1662810Z                                          ^
+505-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1689148Z     symbol:   class MappedRegistry
+506-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1717416Z     location: class FabricXplatImpl
+507:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1750561Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:429: error: cannot find symbol
+508-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1752199Z               FabricRegistryBuilder.from(new MappedRegistry<>(
+509-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1807397Z                                              ^
+510-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1847441Z     symbol:   class MappedRegistry
+511-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1847933Z     location: class FabricXplatImpl
+512:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1849004Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:436: error: cannot find symbol
+513-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1850310Z               FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+514-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1850940Z                                              ^
+515-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1851424Z     symbol:   class DefaultedMappedRegistry
+516-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1851889Z     location: class FabricXplatImpl
+517:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1852910Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:443: error: cannot find symbol
+518-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1854236Z           FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+519-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1854860Z                                          ^
+520-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1855338Z     symbol:   class DefaultedMappedRegistry
+521-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1855835Z     location: class FabricXplatImpl
+522:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1857206Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:450: error: cannot find symbol
+523-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1858494Z               FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+524-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1859195Z                                              ^
+525-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1897763Z     symbol:   class DefaultedMappedRegistry
+526-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1917959Z     location: class FabricXplatImpl
+527:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1926094Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:458: error: cannot find symbol
+528-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1938156Z               FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+529-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1939014Z                                              ^
+530-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1939700Z     symbol:   class DefaultedMappedRegistry
+531-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1940389Z     location: class FabricXplatImpl
+532-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1941104Z   Note: Recompile with -Xlint:unchecked for details.
+533-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1941885Z   Note: Some input files use or override a deprecated API.
+534-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1942911Z   Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+535:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1944934Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: type argument M is not within bounds of type-variable T
+536-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1947583Z           PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
+537-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1948534Z                                           ^
+538-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1949156Z     where M,T are type-variables:
+539-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1950645Z       M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+540-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1952278Z       T extends EntityRenderState declared in class EntityModel
+541-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1953115Z   Note: Some input files use unchecked or unsafe operations.
+542:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1954563Z   /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:521: error: cannot find symbol
+543-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1956226Z           return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+544-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1957381Z                         ^
+545-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1957929Z     symbol:   method result()
+546-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1958574Z     location: variable success of type InteractionResult
+547-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1959233Z   14 errors
+548-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1959567Z
+549-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1959818Z * Try:
+550-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1960428Z > Check your code and dependencies to fix the compilation error(s)
+551-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1961563Z > Run with --scan to get full insights.
+552-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1962008Z
+553-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1962285Z * Exception is:
+554:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1963157Z org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':Fabric:compileJava'.
+555-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1964846Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
+556-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1966367Z 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
+557-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1967916Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
+558-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1969872Z 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+559-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1971978Z 	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:41)
+560-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1974149Z 	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+561-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1976177Z 	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+562-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1978321Z 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+563-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1980136Z 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+564-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1981912Z 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+565-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1983739Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+566-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1985393Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+567-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1987194Z 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+568-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1989133Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+569-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1991369Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+570-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1993388Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+571-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1995156Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+572-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.1997189Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+--
+606-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2057419Z 	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+607-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2059217Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+608-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2060834Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+609-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2062585Z 	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+610-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2064228Z 	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+611-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2065805Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+612-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2067513Z 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+613-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2069057Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+614-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2070658Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+615-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2072169Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+616:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2073862Z Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler output below.
+617-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2075060Z Note: Recompile with -Xlint:deprecation for details.
+618:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2076639Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:33: error: incompatible types: EntityModel<M> cannot be converted to PlayerModel
+619-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2078499Z                 model instanceof PlayerModel && slotReference.entity() instanceof Player) {
+620-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2079299Z                 ^
+621-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2079793Z   where M is a type-variable:
+622-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2081124Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+623:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2083458Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricClientXplatImpl.java:42: error: incompatible types: RenderType cannot be converted to ChunkSectionLayer
+624-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2085143Z         BlockRenderLayerMap.putBlock(block, type);
+625-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2085818Z                                             ^
+626:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2087247Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:292: error: cannot find symbol
+627-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2088853Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+628-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2089770Z                                                                            ^
+629-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2090443Z   symbol:   variable Direction
+630-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2091016Z   location: class FabricXplatImpl
+631:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2092276Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:309: error: cannot find symbol
+632-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2094166Z         Storage<FluidVariant> target = FluidStorage.SIDED.find(level, pos, Direction.UP);
+633-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2095146Z                                                                            ^
+634-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2095829Z   symbol:   variable Direction
+635-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2096397Z   location: class FabricXplatImpl
+636:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2097829Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:409: error: cannot find symbol
+637-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2099297Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+638-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2099984Z                                        ^
+639-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2100587Z   symbol:   class MappedRegistry
+640-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2101168Z   location: class FabricXplatImpl
+641:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2102469Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:416: error: cannot find symbol
+642-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2103946Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+643-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2104630Z                                            ^
+644-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2105226Z   symbol:   class MappedRegistry
+645-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2105808Z   location: class FabricXplatImpl
+646:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2107518Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:422: error: cannot find symbol
+647-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2108927Z         FabricRegistryBuilder.from(new MappedRegistry<>(
+648-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2109636Z                                        ^
+649-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2110221Z   symbol:   class MappedRegistry
+650-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2110806Z   location: class FabricXplatImpl
+651:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2112043Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:429: error: cannot find symbol
+652-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2113464Z             FabricRegistryBuilder.from(new MappedRegistry<>(
+653-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2114168Z                                            ^
+654-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2114761Z   symbol:   class MappedRegistry
+655-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2115326Z   location: class FabricXplatImpl
+656:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2116619Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:436: error: cannot find symbol
+657-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2118358Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+658-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2119102Z                                            ^
+659-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2119732Z   symbol:   class DefaultedMappedRegistry
+660-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2120363Z   location: class FabricXplatImpl
+661:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2121706Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:443: error: cannot find symbol
+662-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2123211Z         FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+663-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2123958Z                                        ^
+664-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2124573Z   symbol:   class DefaultedMappedRegistry
+665-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2125206Z   location: class FabricXplatImpl
+666:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2126468Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:450: error: cannot find symbol
+667-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2128140Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+668-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2128913Z                                            ^
+669-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2129522Z   symbol:   class DefaultedMappedRegistry
+670-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2130151Z   location: class FabricXplatImpl
+671:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2131405Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:458: error: cannot find symbol
+672-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2132912Z             FabricRegistryBuilder.from(new DefaultedMappedRegistry<>(
+673-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2133694Z                                            ^
+674-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2134320Z   symbol:   class DefaultedMappedRegistry
+675-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2135159Z   location: class FabricXplatImpl
+676-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2135813Z Note: Recompile with -Xlint:unchecked for details.
+677-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2136542Z Note: Some input files use or override a deprecated API.
+678-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2137674Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+679:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2139692Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/interop/accessories/LensAccessoryRenderer.java:30: error: type argument M is not within bounds of type-variable T
+680-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2141609Z         PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
+681-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2142541Z                                         ^
+682-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2143139Z   where M,T are type-variables:
+683-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2144574Z     M extends LivingEntity declared in method <M>render(ItemStack,SlotReference,PoseStack,EntityModel<M>,MultiBufferSource,int,float,float,float,float,float,float)
+684-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2146114Z     T extends EntityRenderState declared in class EntityModel
+685-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2147037Z Note: Some input files use unchecked or unsafe operations.
+686:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2148394Z /home/runner/work/Redliner101/Redliner101/Fabric/src/main/java/at/petrak/hexcasting/fabric/xplat/FabricXplatImpl.java:521: error: cannot find symbol
+687-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2150263Z         return success.result() == InteractionResult.PASS; // No other mod tried to consume this
+688-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2151094Z                       ^
+689-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2151528Z   symbol:   method result()
+690-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2152116Z   location: variable success of type InteractionResult
+691-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2152730Z 14 errors
+692-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2153562Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:89)
+693-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2154939Z 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:50)
+694-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2156603Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
+695-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2158461Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:52)
+696-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2160121Z 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
+697-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2162077Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:52)
+698-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2164337Z 	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:38)
+699-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2166574Z 	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:46)
+700-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2168894Z 	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:36)
+701-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2170860Z 	at org.gradle.jvm.toolchain.internal.DefaultToolchainJavaCompiler.execute(DefaultToolchainJavaCompiler.java:57)
+702-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2172476Z 	at org.gradle.api.tasks.compile.JavaCompile.lambda$createToolchainCompiler$3(JavaCompile.java:206)
+703-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2173977Z 	at org.gradle.api.internal.tasks.compile.CleaningJavaCompiler.execute(CleaningJavaCompiler.java:53)
+704-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2175970Z 	at org.gradle.api.internal.tasks.compile.incremental.IncrementalCompilerFactory.lambda$createRebuildAllCompiler$0(IncrementalCompilerFactory.java:55)
+--
+863-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2449542Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+864-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2451213Z 	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+865-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2452752Z 	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+866-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2454290Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+867-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2455848Z 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+868-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2457598Z 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+869-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2459214Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+870-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2460679Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+871-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2461643Z
+872-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2461761Z
+873:Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.2462018Z BUILD FAILED in 6m 9s
+874-Fabric 1.21.11 build	Build Fabric artifact	2026-08-19T05:25:21.5473690Z ##[error]Process completed with exit code 1.

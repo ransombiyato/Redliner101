@@ -26,8 +26,8 @@ import net.minecraft.world.item.ItemStack;
 public class LensAccessoryRenderer implements AccessoryRenderer {
     @Override
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public <M extends LivingEntity> void render(ItemStack stack, SlotReference slotReference,
-        PoseStack matrices, EntityModel<M> model, MultiBufferSource multiBufferSource, int light,
+    public void render(ItemStack stack, SlotReference slotReference,
+        PoseStack matrices, EntityModel model, MultiBufferSource multiBufferSource, int light,
         float v, float v1, float v2, float v3, float v4, float v5) {
         if (stack.is(HexItems.SCRYING_LENS) &&
                 model instanceof PlayerModel && slotReference.entity() instanceof Player) {

@@ -2,7 +2,7 @@ package at.petrak.hexcasting.xplat;
 
 import at.petrak.hexcasting.api.HexAPI;
 import at.petrak.hexcasting.api.client.ClientCastingStack;
-import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.LivingEntity;
@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 public interface IClientXplatAbstractions {
     void sendPacketToServer(CustomPacketPayload packet);
 
-    void setRenderLayer(Block block, RenderType type);
+    void setRenderLayer(Block block, ChunkSectionLayer type);
 
     void initPlatformSpecific();
 
